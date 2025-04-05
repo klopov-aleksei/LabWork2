@@ -131,7 +131,7 @@ void CharacterCreation::ChooseArmor(PlayerCharacter& player)
     switch (choice) 
     {
         case 1:
-            chosenArmor = std::make_unique<Armor>("Light Armor", 5, 10);
+            chosenArmor = std::make_unique<Armor>("Light Armor", 10, 50);
             break;
         case 2:
             chosenArmor = std::make_unique<Armor>("Medium Armor", 3, 20);

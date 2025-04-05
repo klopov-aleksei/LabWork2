@@ -4,7 +4,8 @@
 #include <iostream>
 #include <algorithm>
 
-int Inventory::size() const { return inventorySize; }
+int Inventory::getItemCount() const { return static_cast<int>(m_items.size()); }
+bool Inventory::isFull() const { return m_items.size() >= static_cast<size_t>(inventorySize); }
 void Inventory::newSize() { inventorySize=10; }
 
 void Inventory::addItem(std::unique_ptr<Item> item) 
@@ -54,7 +55,7 @@ void Inventory::useItem(int index, Character& user, Character* enemy)
 
 void Inventory::display() const 
 {
-    if (m_items.empty()) 
+    if (isEmpty()) 
     {
         std::cout << "\nInventory is empty!\n";
         return;
@@ -75,4 +76,13 @@ void Inventory::display() const
         std::cout << "\n";
     }
     std::cout << "=================\n";
+}
+
+bool Inventory::isEmpty() const
+{
+    if (m_items.empty()) 
+    {
+        return true;
+    }
+    return false;
 }

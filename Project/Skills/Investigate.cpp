@@ -6,36 +6,29 @@
 #include "Random.h"
 
 #include <algorithm>
-#include <vector>
+#include <numeric>
 #include <sstream>
 
-const Investigate::ModifierProfile Investigate::commonProfile = {
-    /*weakChance*/ 80, /*mediocreChance*/ 20, /*strongChance*/ 0,
-    /*negativeChance*/ 5, /*minMods*/ 1, /*maxMods*/ 2
+const Investigate::ModifierProfile Investigate::commonProfile{ 
+    /*minMods=*/1, /*maxMods=*/2, /*negativeChance=*/5,
+    /*weakChance=*/100, /*weakMin=*/5, /*weakMax=*/10,
+    /*mediocreChance=*/0, /*mediocreMin=*/10, /*mediocreMax=*/20,
+    /*strongChance=*/0, /*strongMin=*/30, /*strongMax=*/40
 };
 
-const Investigate::ModifierProfile Investigate::uncommonProfile = {
-    /*weakChance*/ 50, /*mediocreChance*/ 40, /*strongChance*/ 10,
-    /*negativeChance*/ 10, /*minMods*/ 1, /*maxMods*/ 3
+const Investigate::ModifierProfile Investigate::uncommonProfile{ 
+    /*minMods=*/1, /*maxMods=*/3, /*negativeChance=*/10,
+    /*weakChance=*/70, /*weakMin=*/5, /*weakMax=*/10,
+    /*mediocreChance=*/30, /*mediocreMin=*/10, /*mediocreMax=*/20,
+    /*strongChance=*/0, /*strongMin=*/30, /*strongMax=*/40
 };
 
-const Investigate::ModifierProfile Investigate::rareProfile = {
-    /*weakChance*/ 20, /*mediocreChance*/ 50, /*strongChance*/ 30,
-    /*negativeChance*/ 5, /*minMods*/ 2, /*maxMods*/ 3
+const Investigate::ModifierProfile Investigate::rareProfile{ 
+    /*minMods=*/1, /*maxMods=*/2, /*negativeChance=*/0,
+    /*weakChance=*/20, /*weakMin=*/5, /*weakMax=*/10,
+    /*mediocreChance=*/60, /*mediocreMin=*/10, /*mediocreMax=*/20,
+    /*strongChance=*/40, /*strongMin=*/30, /*strongMax=*/40
 };
-
-const Investigate::ModifierProfile& Investigate::getProfileForRarity(Rarity rarity)
-{
-    switch(rarity)
-    {
-        case Rarity::rare:
-            return rareProfile;
-        case Rarity::uncommon:
-            return uncommonProfile;
-        default:
-            return commonProfile;
-    }
-}
 
 StatModifier Investigate::generateModifier(const ModifierProfile& profile)
 {
@@ -47,111 +40,203 @@ StatModifier Investigate::generateModifier(const ModifierProfile& profile)
     int statIndex = Random::get(0, static_cast<int>(possibleStats.size()-1));
     Stat chosenStat{ possibleStats[statIndex] };
     
-    // Decide if this modifier is negative.
-    bool negative = (Random::get(1, 100) <= profile.negativeChance);
-    
-    // Decide bonus strength.
-    int roll = Random::get(1, 100);
+    int tierRoll = Random::get(1, 100);
     int bonus = 0;
-    if (roll <= profile.weakChance)
-    {
-        bonus = 1;
-    }
-    else if (roll <= profile.weakChance + profile.mediocreChance)
-    {
-        bonus = 2;
-    }
+    if (tierRoll <= profile.weakChance)
+        bonus = Random::get(profile.weakMin, profile.weakMax);
+    else if (tierRoll <= profile.weakChance + profile.mediocreChance)
+        bonus = Random::get(profile.mediocreMin, profile.mediocreMax);
     else
+        bonus = Random::get(profile.strongMin, profile.strongMax);
+
+    bool negative = (Random::get(1, 100) <= profile.negativeChance);
+    if (negative)
     {
-        bonus = 3;
+        bonus = -bonus;
+        bonus = std::max(bonus, -profile.weakMax);
     }
     
-    // If negative, make the bonus negative.
-    if (negative)
-        bonus = -bonus;
-    
-    // Decide target:
-    // For "damage", a positive bonus means enemy damage, negative means self damage.
-    // For any other stat, effects apply to self.
     Target target = Target::self;
     if (chosenStat == Stat::damage)
     {
         target = (bonus > 0) ? Target::enemy : Target::self;
     }
+    // For repair, choose randomly between armor and weapon.
+    else if (chosenStat == Stat::repair)
+    {
+        target = (Random::get(0,1) == 0) ? Target::armor : Target::weapon;
+    }
+    // For other stats, effect applies to self.
     
     return StatModifier{ chosenStat, bonus, target };
 }
 
-// Helper: generate a generic item using the weighted chance for rarity.
-// The weighted chance for generic items (non–epic) is as follows:
-// Common: 60%, Uncommon: 30%, Rare: 8%.
-// (Epic items are handled separately.)
+std::string Investigate::getFriendlyNameForSingle(Stat stat, int bonus, Target target)
+{
+    if (stat == Stat::damage)
+    {
+        if(target == Target::enemy)
+        {
+            if(bonus >= 30) return "Lightning Bolt";
+            else if(bonus > 10) return "Fireball";
+            else return "Magic Scroll";
+        }
+        else
+            return "Backfire";
+    }
+
+    if (bonus <= 0)
+        return "Cursed Food";
+
+    switch(stat)
+    {
+        case Stat::health:
+            if (bonus >= 30) return "Health Elixir";
+            else if (bonus > 10) return "Health Potion";
+            else return "Food";
+        case Stat::mana:
+            if (bonus >= 30) return "Mana Elixir";
+            else if (bonus > 10) return "Mana Tonic";
+            else return "Mana Potion";
+        case Stat::maxHealth:
+            if (bonus >= 30) return "Miracle Salve";
+            else if (bonus > 10) return "Advanced Bandage";
+            else return "Bandage";
+        case Stat::maxMana:
+            if (bonus >= 30) return "Great Mystic Tonic";
+            else if (bonus > 10) return "Mystic Tonic";
+            else return "Mystic Herb";
+        case Stat::strength:
+            if (bonus >= 30) return "Power Drink";
+            else if (bonus > 10) return "Protein Shake";
+            else return "Dumbbell";
+        case Stat::intelligence:
+            if (bonus >= 30) return "Sage Elixir";
+            else if (bonus > 10) return "Mind Tonic";
+            else return "Herb";
+        case Stat::agility:
+            if (bonus >= 30) return "Windrunner Boots";
+            else if (bonus > 10) return "Swift Boots";
+            else return "Light Boots";
+        case Stat::actionPoints:
+            if (bonus >= 30) return "Legendary Amulet";
+            else if (bonus > 10) return "Strong Amulet";
+            else return "Amulet";
+        case Stat::repair:
+            // Here the effect is for equipment repair.
+            if (bonus >= 30) return "Master Repair Kit";
+            else if (bonus > 10) return "Toolbox";
+            else return "Repair Kit";
+        default:
+            return "Mysterious Item";
+    }
+}
+
+std::string Investigate::generateMultiModifierName(Rarity overallRarity, const std::vector<StatModifier>& mods)
+{
+    std::string baseName;
+    switch(overallRarity)
+    {
+        case Rarity::rare: baseName = "Relic"; break;
+        case Rarity::uncommon: baseName = "Talisman"; break;
+        default: baseName = "Trinket"; break;
+    }
+    
+    std::stringstream ss;
+    ss << baseName << " (";
+    for(size_t i = 0; i < mods.size(); ++i)
+    {
+        // Use a short label for the stat.
+        std::string statLabel;
+        switch (mods[i].stat)
+        {
+            case Stat::health: statLabel = "Health"; break;
+            case Stat::mana: statLabel = "Mana"; break;
+            case Stat::maxHealth: statLabel = "MaxHealth"; break;
+            case Stat::maxMana: statLabel = "MaxMana"; break;
+            case Stat::strength: statLabel = "Strength"; break;
+            case Stat::intelligence: statLabel = "Intell"; break;
+            case Stat::agility: statLabel = "Agility"; break;
+            case Stat::actionPoints: statLabel = "AP"; break;
+            case Stat::repair: statLabel = "Repair"; break;
+            case Stat::damage: statLabel = "Damage"; break;
+            default: statLabel = "Mystery"; break;
+        }
+        ss << statLabel << ":" << mods[i].value;
+        if(i < mods.size()-1)
+            ss << ", ";
+    }
+    ss << ")";
+    return ss.str();
+}
+
+bool Investigate::isSumValid(Rarity rarity, int totalSum)
+{
+    switch (rarity) 
+    {
+        case Rarity::common:   return (totalSum >= 5  && totalSum <= 10);
+        case Rarity::uncommon: return (totalSum >= 10 && totalSum <= 20);
+        case Rarity::rare:    return (totalSum >= 30 && totalSum <= 40);
+        default: return true;
+    }
+}
+
 std::unique_ptr<Item> Investigate::createGenericItem()
 {
     int roll = Random::get(1, 100);
-    Rarity targetRarity;
-    if (roll <= 8)       // 8% chance for rare
-        targetRarity = Rarity::rare;
-    else if (roll <= 8+30) // next 30% for uncommon
-        targetRarity = Rarity::uncommon;
-    else                  // remaining 60% for common
-        targetRarity = Rarity::common;
-    
-    const ModifierProfile& profile = getProfileForRarity(targetRarity);
-    int numMods = Random::get(profile.minMods, profile.maxMods);
-    std::vector<StatModifier> mods;
-    mods.reserve(numMods);
-    for (int i = 0; i < numMods; ++i)
+    Rarity rarity;
+    const ModifierProfile* profile = nullptr;
+    if(roll <= 60)
     {
-        mods.push_back(generateModifier(profile));
+        rarity = Rarity::common;
+        profile = &commonProfile;
     }
-    
-    // Safety check: if all modifiers are negative (i.e. only self–damage or other penalties),
-    // then convert them to positive so that the item is at least somewhat helpful.
-    bool hasPositive = false;
-    for (const auto& mod : mods)
+    else if(roll <= 90)
     {
-        if (mod.value > 0)
-        {
-            hasPositive = true;
-            break;
-        }
+        rarity = Rarity::uncommon;
+        profile = &uncommonProfile;
     }
-    if (!hasPositive)
+    else
     {
-        for (auto& mod : mods)
-        {
-            mod.value = std::abs(mod.value);
-        }
+        rarity = Rarity::rare;
+        profile = &rareProfile;
     }
-    
-    // Generate a name that incorporates the rarity and a summary of the modifiers.
-    std::string baseName;
-    switch(targetRarity)
-    {
-        case Rarity::rare: baseName = "Rare Relic"; break;
-        case Rarity::uncommon: baseName = "Uncommon Talisman"; break;
-        default: baseName = "Common Trinket"; break;
-    }
-    std::string itemName = generateItemName(baseName, targetRarity, mods);
-    
-    return std::make_unique<Item>(itemName, targetRarity, mods);
-}
 
-std::string Investigate::generateItemName(const std::string& baseName, Rarity rarity, const std::vector<StatModifier>& mods)
-{
-    std::stringstream ss;
-    ss << baseName;
-    ss << " {";
-    for (size_t i = 0; i < mods.size(); ++i)
+    int totalSum;
+    std::vector<StatModifier> mods;
+    int numMods = Random::get(profile->minMods, profile->maxMods);
+    mods.reserve(numMods);
+    do 
     {
-        // Here we simply output the stat (as an int), the bonus and the target.
-        ss << static_cast<int>(mods[i].stat) << ":" << mods[i].value;
-        if (i < mods.size()-1)
-            ss << ", ";
+        mods.clear();
+        for (int i{ 0 }; i < numMods; ++i) 
+        {
+            mods.emplace_back(generateModifier(*profile));
+        }
+        totalSum = std::accumulate(mods.begin(), mods.end(), 0, 
+            [](int sum, const StatModifier& mod) { return sum + mod.value; });
+    } while (!isSumValid(rarity, totalSum));
+
+    for (auto& mod : mods) 
+    {
+        if (mod.stat == Stat::agility || 
+            mod.stat == Stat::actionPoints || 
+            mod.stat == Stat::intelligence || 
+            mod.stat == Stat::strength) 
+        {
+            int sign = (mod.value < 0) ? -1 : 1;
+            int absValue = std::abs(mod.value);
+            mod.value = sign * ((absValue + 5) / 10); // Scale down
+        }
     }
-    ss << "}";
-    return ss.str();
+
+    std::string itemName;
+    if(mods.size() == 1)
+        itemName = getFriendlyNameForSingle(mods[0].stat, mods[0].value, mods[0].target);
+    else
+        itemName = generateMultiModifierName(rarity, mods);
+    
+    return std::make_unique<Item>(itemName, rarity, mods);
 }
 
 std::unique_ptr<Item> Investigate::createEpicItem()
@@ -165,7 +250,7 @@ std::unique_ptr<Item> Investigate::createEpicItem()
             return std::make_unique<Weapon>("Aegis Blade", 48, 95);
         case 2:
             return std::make_unique<Armor>("Dragon Scale Armor", 40, 120);
-        default:
+        default: 
             return std::make_unique<Armor>("Titan Shield", 38, 110);
     }
 }

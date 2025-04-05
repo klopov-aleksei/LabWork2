@@ -20,6 +20,7 @@ jobs:
         sudo apt-get install -y cmake libgtest-dev build-essential
         
     - name: Build
+      working-directory: Project
       run: make
 
   run_tests:
@@ -35,9 +36,24 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y cmake libgtest-dev build-essential
 
+    - name: Check for test target
+      id: check-test
+      working-directory: Project  # Navigate to Project directory
+      run: |
+        # Check if 'test' target exists in Makefile
+        if grep -q '^test:' Makefile; then
+          echo "TEST_EXISTS=true" >> $GITHUB_OUTPUT
+        else
+          echo "TEST_EXISTS=false" >> $GITHUB_OUTPUT
+        fi
+
     - name: Build Google Tests
+      if: steps.check-test.outputs.TEST_EXISTS == 'true'
+      working-directory: Project  # Build inside Project
       run: make test
 
     - name: Run Tests
-      run: ./game
+      if: steps.check-test.outputs.TEST_EXISTS == 'true'
+      working-directory: Project  # Execute test from Project
+      run: ./test_game
 

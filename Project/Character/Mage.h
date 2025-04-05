@@ -8,5 +8,5 @@
 class Mage : public PlayerCharacter {
 public:
     Mage(std::string_view name) 
-        : PlayerCharacter(name, 7, 50) { }
+        : PlayerCharacter(name, 7, 50) { } // enable spellcast
 };

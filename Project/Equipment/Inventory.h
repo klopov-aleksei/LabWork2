@@ -14,14 +14,17 @@ class Inventory
     int inventorySize{ 5 };
     
 public:
-    int size() const;
+    int getItemCount() const;
+    bool isFull() const;
     void newSize();
+    
     void addItem(std::unique_ptr<Item> item);
     void removeItem(int index);
     void removeBrokenItems();
 
     void useItem(int index, Character& user, Character* enemy = nullptr);
     void display() const;
+    bool isEmpty() const;
 };
 
 #endif
