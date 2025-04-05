@@ -59,6 +59,7 @@ Release/
 *.d
 *.mod
 *.smod
+*.txt
 
 # Ignore all files in the following directories
 *.DS_Store

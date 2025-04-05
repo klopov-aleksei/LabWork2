@@ -1,0 +1,138 @@
+#include "Character/Character.h"
+#include "Skills/Skill.h"
+#include "Equipment/Item.h"
+#include "Game/DamageCalculator.h"
+#include "Constants.h"
+#include "Random.h"
+
+#include <iostream>
+
+Character::Character(std::string_view name, int strength,
+                            int intelligence, int agility, int mana)
+    : m_name{ name }
+    , m_strength{ strength }
+    , m_intelligence{ intelligence }
+    , m_agility{ agility } 
+    , m_mana{ mana }
+    , m_maxMana{ mana }
+{
+}
+
+Character::Character(std::string_view name, int agility, int mana)
+    : m_name{ name }
+    , m_agility{ agility }
+    , m_mana{ mana }
+    , m_maxMana{ mana }
+{
+}
+
+void Character::setStats(int strength, int intelligence)
+{
+    m_strength = strength;
+    m_intelligence = intelligence;
+}
+
+void Character::setBlocking(bool state)
+{
+    m_isBlocking = state;
+}
+
+bool Character::isBlocking() const
+{
+    return m_isBlocking;
+}
+
+const std::string& Character::getName() const { return m_name; }
+int Character::getStrength() const { return m_strength; }
+int Character::getIntelligence() const { return m_intelligence; }
+int Character::getHealth() const { return m_health; }
+int Character::getAgility() const { return m_agility; }
+int Character::getActionPoints() const { return m_actionPoints; }
+int Character::getMana() const { return m_mana; }
+bool Character::isDead() const { return m_health <= 0; }
+
+
+
+void Character::repairArmor(int durability) // better to implement as non-member functions.
+{
+    if (equippedArmor)
+    {
+        equippedArmor->repair(durability);
+        std::cout << m_name << "'s armor has been repaired by " << durability << " durability.\n";
+    }
+    else 
+    {
+        std::cout << m_name << " has no armor to repair!\n";
+    }
+}
+
+void Character::repairWeapon(int durability)
+{
+    if (equippedWeapon) 
+    {
+        equippedWeapon->repair(durability);
+        std::cout << m_name << "'s weapon has been repaired by " << durability << " durability.\n";
+    }
+    else 
+    {
+        std::cout << m_name << " has no weapon to repair!\n";
+    }
+}
+
+void Character::equipWeapon(std::unique_ptr<Weapon> weapon) 
+{
+    equippedWeapon = std::move(weapon);
+}
+
+void Character::equipArmor(std::unique_ptr<Armor> armor) 
+{
+    equippedArmor = std::move(armor);
+}
+
+void Character::takeDamage(DamageCalculator& dmgCalc) 
+{
+    m_health -= dmgCalc.m_finalDamage;
+    m_health = std::max(0, m_health);
+
+    if (equippedArmor) 
+    {
+        equippedArmor->takeDamage(dmgCalc.m_armorDamage);
+        std::cout << m_name << "'s armor condition: " 
+                  << equippedArmor->getCondition() * 100 << "% ("
+                  << equippedArmor->getCurrentDurability() << "/" 
+                  << equippedArmor->getMaxDurability() << ")\n";
+    }
+
+    std::cout << m_name << " takes " << dmgCalc.m_finalDamage << " damage.\n";
+    dmgCalc.m_armorDamage = 0;
+    dmgCalc.m_finalDamage = 0;
+}
+
+void Character::takeDamage(int damage)
+{
+    // Block doesn't affect damage.
+
+    if (equippedArmor)
+    {
+        equippedArmor->takeDamage(damage);
+    }
+    else
+    {
+        m_health -= damage;
+        m_health = std::max(0, m_health);
+    }
+}
+
+void Character::takeActionPoints(int cost) 
+{
+    m_actionPoints -= cost;
+    if (m_actionPoints < 0) m_actionPoints = 0;
+}
+
+void Character::resetActionPoints() { m_actionPoints = 10; }
+void Character::setActionPoints(int ap) { m_actionPoints = ap; }
+void Character::useMana(int cost) 
+{
+    m_mana -= cost;
+    if (m_mana < 0) m_mana = 0;
+}
