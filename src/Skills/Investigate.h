@@ -45,7 +45,7 @@ private:
     static bool isSumValid(Rarity rarity, int totalSum);
 
 public:
-    Investigate() : UntargetedSkill(Skill::Type::Utility, 1) {}
+    Investigate() : UntargetedSkill(Skill::Type::Utility, Constants::invest_cost) {}
 
     void execute(Character& user) override;
 

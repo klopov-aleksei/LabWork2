@@ -6,7 +6,7 @@
 class Heal : public UntargetedSkill 
 {
 public:
-    Heal() : UntargetedSkill(Skill::Type::Heal, 2) { }
+    Heal() : UntargetedSkill(Skill::Type::Heal, Constants::heal_cost) { }
     void execute(Character& user) override 
     {
         user.increaseHealth(Constants::healAmount);

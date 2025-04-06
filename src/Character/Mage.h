@@ -5,8 +5,10 @@
 #include "Skills/MeleeAttack.h"
 #include "Skills/Block.h"
 
-class Mage : public PlayerCharacter {
+class Mage : public PlayerCharacter 
+{
 public:
     Mage(std::string_view name) 
-        : PlayerCharacter(name, 7, 50) { } // enable spellcast
+        : PlayerCharacter(name, 7, 50) 
+    { enableSpellCast(); }
 };

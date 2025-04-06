@@ -25,6 +25,7 @@ protected:
     int m_maxHealth{ 100 };
     int m_agility{ 5 };
     int m_actionPoints{ Constants::initial_ap };
+    int m_maxActionPoints{ Constants::initial_ap };
     int m_mana{ 50 };
     int m_maxMana{ 50 };
     bool m_isBlocking{ false };
@@ -66,7 +67,7 @@ public:
     void increaseStrength(int amount) { modifyStat(&Character::m_strength, amount, "strength"); }
     void increaseIntelligence(int amount) { modifyStat(&Character::m_intelligence, amount, "intelligence"); }
     void increaseAgility(int amount) { modifyStat(&Character::m_agility, amount, "agility"); }
-    void increaseActionPoints(int amount) { modifyStat(&Character::m_actionPoints, amount, "action points"); }
+    void increaseActionPoints(int amount) { modifyStat(&Character::m_maxActionPoints, amount, "action capacity"); }
 
     void repairArmor(int durability);
     void repairWeapon(int durability);

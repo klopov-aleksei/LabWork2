@@ -31,4 +31,10 @@ void MeleeAttack::execute(Character& user, Character& target)
     
     target.takeDamage(dmgCalc);
     user.takeActionPoints(getCost());
+
+    if (user.getWeapon()->isBroken()) 
+    {
+        std::cout << "Your " << user.getWeapon()->getName() << " broke!\n";
+        user.equipWeapon(nullptr);
+    }
 }

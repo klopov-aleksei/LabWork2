@@ -15,7 +15,7 @@ void CombatSystem::startCombat(CombatInterface& interface)
     while (!isCombatOver()) 
     {
         handleTurn(interface);
-        m_playerTurn = !m_playerTurn;
+        m_playerTurn = (m_player.getAgility() >= m_enemy->getAgility());
     }
     
     std::cout << "\nCombat Over!\n";

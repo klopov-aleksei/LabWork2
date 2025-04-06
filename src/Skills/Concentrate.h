@@ -6,14 +6,8 @@
 class Concentrate : public UntargetedSkill 
 {
 public:
-    Concentrate() : UntargetedSkill(Skill::Type::Utility, 3) { }
-    void execute(Character& user) override 
-    {
-        user.increaseMana(Constants::concentrationManaRestore);
-        user.increaseActionPoints(1);
-        user.takeActionPoints(getCost());
-        std::cout << user.getName() << " concentrates, restoring mana and boosting next turn's AP.\n";
-    }
+    Concentrate() : UntargetedSkill(Skill::Type::Utility, Constants::conc_cost) { }
+    void execute(Character& user) override;
 
     std::string_view getName() const override { return "Concentrate"; } 
 };

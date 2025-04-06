@@ -31,6 +31,9 @@ namespace Constants
 	inline constexpr int block_cost{ 5 };
 	inline constexpr int melee_cost{ 5 };
 	inline constexpr int cast_cost{ 3 };
+	inline constexpr int invest_cost{ 2 };
+	inline constexpr int conc_cost{ 5 };
+	inline constexpr int heal_cost{ 2 };
 }
 
 #endif

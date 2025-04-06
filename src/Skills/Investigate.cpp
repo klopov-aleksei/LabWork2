@@ -275,6 +275,7 @@ void Investigate::execute(Character& user)
     std::string_view foundRarity{ item->getRarityName() };
 
     player.getInventory().addItem(std::move(item));
+    player.takeActionPoints(getCost());
 
     std::cout << "Investigated and found: " << foundName << " (" << foundRarity << ")\n";
 }

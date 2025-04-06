@@ -101,6 +101,11 @@ void Character::takeDamage(DamageCalculator& dmgCalc)
                   << equippedArmor->getCondition() * 100 << "% ("
                   << equippedArmor->getCurrentDurability() << "/" 
                   << equippedArmor->getMaxDurability() << ")\n";
+        if (equippedArmor->getCurrentDurability() <= 0) 
+        {
+            std::cout << m_name << "'s armor has broken and is unequipped!\n";
+            equippedArmor.reset();
+        }
     }
 
     std::cout << m_name << " takes " << dmgCalc.m_finalDamage << " damage.\n";
@@ -115,6 +120,15 @@ void Character::takeDamage(int damage)
     if (equippedArmor)
     {
         equippedArmor->takeDamage(damage);
+        std::cout << m_name << "'s armor condition: " 
+                  << equippedArmor->getCondition() * 100 << "% ("
+                  << equippedArmor->getCurrentDurability() << "/" 
+                  << equippedArmor->getMaxDurability() << ")\n";
+        if (equippedArmor->getCurrentDurability() <= 0) 
+        {
+            std::cout << m_name << "'s armor has broken and is unequipped!\n";
+            equippedArmor.reset();
+        }
     }
     else
     {
@@ -129,7 +143,7 @@ void Character::takeActionPoints(int cost)
     if (m_actionPoints < 0) m_actionPoints = 0;
 }
 
-void Character::resetActionPoints() { m_actionPoints = 10; }
+void Character::resetActionPoints() { m_actionPoints = m_maxActionPoints; }
 void Character::setActionPoints(int ap) { m_actionPoints = ap; }
 void Character::useMana(int cost) 
 {
