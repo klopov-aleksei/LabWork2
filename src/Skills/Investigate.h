@@ -42,6 +42,7 @@ private:
     static std::string getFriendlyNameForSingle(Stat stat, int bonus, Target target);
     static std::string generateMultiModifierName(Rarity overallRarity, const std::vector<StatModifier>& mods);
 
+    static std::vector<StatModifier> combineModifiers(const std::vector<StatModifier>& mods);
     static bool isSumValid(Rarity rarity, int totalSum);
 
 public:

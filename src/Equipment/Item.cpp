@@ -38,6 +38,17 @@ void Item::use(Character& user, Character* enemy)
         return;
     }
 
+    for (const auto& mod : m_modifiers)
+    {
+        if ((mod.stat == Stat::health && mod.value < 0 && user.getHealth() + mod.value < 0) ||
+            (mod.stat == Stat::mana && mod.value < 0 && user.getMana() + mod.value < 0))
+        {
+            std::cout << "Cannot use " << m_name << " because it would reduce your "
+                      << ((mod.stat == Stat::health) ? "health" : "mana") << " below zero.\n";
+            return;
+        }
+    }
+
     std::cout << "Using " << m_name << " (" << getRarityName() << ")\n";
        
     for (const auto& mod : m_modifiers)

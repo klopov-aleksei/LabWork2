@@ -14,6 +14,12 @@ SpellCast::SpellCast(int manaCost, int damage)
 
 void SpellCast::execute(Character& user, Character& target) 
 {
+    if (user.getActionPoints() < getCost())
+    {
+        std::cout << "Not enough action points to execute " << getName() << ".\n";
+        return;
+    }
+
     if (user.getMana() < m_manaCost) 
     {
         std::cout << user.getName() << " tries to cast a spell but doesn't have enough mana!\n";
@@ -29,7 +35,7 @@ void SpellCast::execute(Character& user, Character& target)
 
     std::cout << user.getName() << " casts a spell on " << target.getName() << '\n';
 
-    user.takeDamage(dmgCalc);
+    target.takeDamage(dmgCalc);
     user.takeActionPoints(getCost());
     user.useMana(m_manaCost);
 }

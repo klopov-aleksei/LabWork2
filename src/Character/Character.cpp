@@ -51,7 +51,19 @@ int Character::getActionPoints() const { return m_actionPoints; }
 int Character::getMana() const { return m_mana; }
 bool Character::isDead() const { return m_health <= 0; }
 
+void Character::increaseHealth(int amount)
+{
+    int newHealth = std::min(m_health + amount, m_maxHealth);
+    std::cout << m_name << "'s health changed from " << m_health << " to " << newHealth << ".\n";
+    m_health = newHealth;
+}
 
+void Character::increaseMana(int amount)
+{
+    int newMana = std::min(m_mana + amount, m_maxMana);
+    std::cout << m_name << "'s mana changed from " << m_mana << " to " << newMana << ".\n";
+    m_mana = newMana;
+}
 
 void Character::repairArmor(int durability) // better to implement as non-member functions.
 {
@@ -134,6 +146,7 @@ void Character::takeDamage(int damage)
     {
         m_health -= damage;
         m_health = std::max(0, m_health);
+        std::cout << m_name << " takes " << damage << " damage.\n";
     }
 }
 

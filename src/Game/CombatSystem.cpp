@@ -15,7 +15,6 @@ void CombatSystem::startCombat(CombatInterface& interface)
     while (!isCombatOver()) 
     {
         handleTurn(interface);
-        m_playerTurn = (m_player.getAgility() >= m_enemy->getAgility());
     }
     
     std::cout << "\nCombat Over!\n";
@@ -27,6 +26,8 @@ void CombatSystem::startCombat(CombatInterface& interface)
 
 void CombatSystem::handleTurn(CombatInterface& interface) 
 {
+    bool initialPlayerAdvantage = (m_player.getAgility() > m_enemy->getAgility());
+
     if (m_playerTurn) 
     {
         m_player.resetActionPoints();
@@ -36,6 +37,41 @@ void CombatSystem::handleTurn(CombatInterface& interface)
     {
         m_enemy->resetActionPoints();
         // Enemy AI logic
+    }
+
+    bool currentPlayerAdvantage = (m_player.getAgility() > m_enemy->getAgility());
+
+    if (m_playerTurn)
+    {
+        // false && true = true = ok
+        // true && false = false = ok
+        // true && true = false = ok
+        // false && false = false = ok
+        if (!(initialPlayerAdvantage) && currentPlayerAdvantage)
+        {
+            std::cout << m_player.getName() << " is granted a free turn due to agility!\n";
+            // free turn for the player).
+        }
+        else
+        {
+            m_playerTurn = false;
+        }
+    }
+    else
+    {
+        // false && true = false = ok
+        // true && false = true = ok
+        // true && true = false = ok
+        // false && false = false = ok
+        if (initialPlayerAdvantage && !(currentPlayerAdvantage))
+        {
+            std::cout << m_enemy->getName() << " is granted a free turn due to agility change!\n";
+            // m_playerTurn remains false (free turn for the enemy).
+        }
+        else
+        {
+            m_playerTurn = true;
+        }
     }
 }
 

@@ -107,20 +107,20 @@ std::string Investigate::getFriendlyNameForSingle(Stat stat, int bonus, Target t
             else if (bonus > 10) return "Mystic Tonic";
             else return "Mystic Herb";
         case Stat::strength:
-            if (bonus >= 30) return "Power Drink";
-            else if (bonus > 10) return "Protein Shake";
+            if (bonus >= 3) return "Power Drink";
+            else if (bonus > 1) return "Protein Shake";
             else return "Dumbbell";
         case Stat::intelligence:
-            if (bonus >= 30) return "Sage Elixir";
-            else if (bonus > 10) return "Mind Tonic";
+            if (bonus >= 3) return "Sage Elixir";
+            else if (bonus > 1) return "Mind Tonic";
             else return "Herb";
         case Stat::agility:
-            if (bonus >= 30) return "Windrunner Boots";
-            else if (bonus > 10) return "Swift Boots";
+            if (bonus >= 3) return "Windrunner Boots";
+            else if (bonus > 1) return "Swift Boots";
             else return "Light Boots";
         case Stat::actionPoints:
-            if (bonus >= 30) return "Legendary Amulet";
-            else if (bonus > 10) return "Strong Amulet";
+            if (bonus >= 3) return "Legendary Amulet";
+            else if (bonus > 1) return "Strong Amulet";
             else return "Amulet";
         case Stat::repair:
             // Here the effect is for equipment repair.
@@ -170,6 +170,28 @@ std::string Investigate::generateMultiModifierName(Rarity overallRarity, const s
     return ss.str();
 }
 
+std::vector<StatModifier> Investigate::combineModifiers(const std::vector<StatModifier>& mods)
+{
+    std::vector<StatModifier> combined;
+    for (const auto& mod : mods)
+    {
+        auto it = std::find_if(combined.begin(), combined.end(),
+            [&mod](const StatModifier& m)
+            {
+                return (m.stat == mod.stat && m.target == mod.target);
+            });
+        if (it != combined.end())
+        {
+            it->value += mod.value;
+        }
+        else
+        {
+            combined.push_back(mod);
+        }
+    }
+    return combined;
+}
+
 bool Investigate::isSumValid(Rarity rarity, int totalSum)
 {
     switch (rarity) 
@@ -216,6 +238,7 @@ std::unique_ptr<Item> Investigate::createGenericItem()
         totalSum = std::accumulate(mods.begin(), mods.end(), 0, 
             [](int sum, const StatModifier& mod) { return sum + mod.value; });
     } while (!isSumValid(rarity, totalSum));
+    mods = combineModifiers(mods);
 
     for (auto& mod : mods) 
     {

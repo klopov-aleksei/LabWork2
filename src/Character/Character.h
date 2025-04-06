@@ -53,15 +53,16 @@ public:
     int getMana() const;
     bool isDead() const;
 
+    void increaseHealth(int amount);
+    void increaseMana(int amount);
+
     template<typename T>
     void modifyStat(T Character::* statPtr, T delta, const std::string& statName)
     {
         this->*statPtr += delta;
         std::cout << m_name << "'s " << statName << " changed by " << delta << ".\n";
     }
-    
-    void increaseHealth(int amount) { modifyStat(&Character::m_health, amount, "health"); }
-    void increaseMana(int amount) { modifyStat(&Character::m_mana, amount, "mana"); }
+
     void increaseMaxHealth(int amount) { modifyStat(&Character::m_maxHealth, amount, "max health"); }
     void increaseMaxMana(int amount) { modifyStat(&Character::m_maxMana, amount, "max mana"); }
     void increaseStrength(int amount) { modifyStat(&Character::m_strength, amount, "strength"); }

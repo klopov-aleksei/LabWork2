@@ -16,6 +16,12 @@ MeleeAttack::MeleeAttack(int baseDamage)
 
 void MeleeAttack::execute(Character& user, Character& target) 
 {
+    if (user.getActionPoints() < getCost())
+    {
+        std::cout << "Not enough action points to execute " << getName() << ".\n";
+        return;
+    }
+
     if (!user.getWeapon())
     {
         std::cout << "\nYou have not got any weapon.\n";
