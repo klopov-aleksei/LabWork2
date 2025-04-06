@@ -11,6 +11,7 @@ SRC = main.cpp \
        Equipment/Weapon.cpp \
        Skills/Skill.cpp \
        Skills/Block.cpp \
+       Skills/Concentrate.cpp \
        Skills/Investigate.cpp \
        Skills/MeleeAttack.cpp \
        Skills/SpellCast.cpp \
