@@ -17,6 +17,7 @@ enum class Rarity
 };
 
 class Character;
+class Investigate;
 
 class Item 
 {
@@ -25,14 +26,13 @@ protected:
     Rarity m_rarity;
     std::vector<StatModifier> m_modifiers;
 
-    // Optional
-    std::function<void()> m_customEffect;
+    std::function<void(Character&)> m_customEffect;
+    bool m_effectApplied{ false };
     
 public:
     Item(std::string_view name, Rarity rarity, const std::vector<StatModifier>& modifiers,
-        std::function<void()> customEffect = nullptr);
-
-    Item(std::string_view name, Rarity rarity);
+        std::function<void(Character&)> customEffect = nullptr);
+    Item(std::string_view name, Rarity rarity, std::function<void(Character&)> customEffect = nullptr);
         
     virtual ~Item() = default;
     
@@ -41,6 +41,8 @@ public:
 
     std::string_view getRarityName() const;
 
+    void setCustomEffect(std::function<void(Character&)> effect) { m_customEffect = std::move(effect); } 
+    void runCustomEffect(Character& user);
     void use(Character& user, Character* enemy = nullptr);
 };
 

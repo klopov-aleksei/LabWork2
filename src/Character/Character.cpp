@@ -1,4 +1,5 @@
 #include "Character/Character.h"
+#include "Character/PlayerCharacter.h"
 #include "Skills/Skill.h"
 #include "Equipment/Item.h"
 #include "Game/DamageCalculator.h"
@@ -93,12 +94,24 @@ void Character::repairWeapon(int durability)
 
 void Character::equipWeapon(std::unique_ptr<Weapon> weapon) 
 {
+    if (weapon) 
+    {
+        weapon->runCustomEffect(*this);
+    }
     equippedWeapon = std::move(weapon);
 }
 
 void Character::equipArmor(std::unique_ptr<Armor> armor) 
-{
-    equippedArmor = std::move(armor);
+{   
+    if (armor) 
+    {
+        equippedArmor = std::move(armor);
+        if (auto* pc = dynamic_cast<PlayerCharacter*>(this)) 
+        {
+            pc->updateArmorBonuses();
+        }
+        equippedArmor->runCustomEffect(*this);
+    }
 }
 
 void Character::takeDamage(DamageCalculator& dmgCalc) 

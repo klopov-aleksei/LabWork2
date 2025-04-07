@@ -2,6 +2,7 @@
 #define CONSTANTS_H
 
 #include <array>
+#include <cstddef>
 
 namespace Constants
 {
@@ -24,7 +25,7 @@ namespace Constants
 	inline constexpr int points_to_distribute{ 10 };
 	inline constexpr int initial_ap{ 10 };
 
-	inline constexpr int concentrationManaRestore{ 15 };
+	inline constexpr int concentrationManaRestore{ 10 };
     inline constexpr int healAmount{ 20 };
     inline constexpr size_t maxInventorySize{ 5 };
 

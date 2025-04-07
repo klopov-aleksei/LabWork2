@@ -4,17 +4,17 @@
 
 Item::Item(std::string_view name, Rarity rarity, 
     const std::vector<StatModifier>& modifiers, 
-    std::function<void()> customEffect)
+    std::function<void(Character&)> customEffect)
     : m_name{ name }
     , m_rarity{ rarity }
     , m_modifiers{ modifiers }
     , m_customEffect{ std::move(customEffect) }
 {
 }
-
-Item::Item(std::string_view name, Rarity rarity)
+Item::Item(std::string_view name, Rarity rarity, std::function<void(Character&)> customEffect)
 	: m_name{ name }
 	, m_rarity{ rarity }
+    , m_customEffect{ std::move(customEffect) }
 {
 }
 
@@ -30,13 +30,19 @@ std::string_view Item::getRarityName() const
     }
 }
 
+void Item::runCustomEffect(Character& user) 
+{
+    if (m_customEffect) 
+    {
+        m_customEffect(user);
+        m_customEffect = nullptr;
+    }
+}
+
 void Item::use(Character& user, Character* enemy)
 {
-    if (m_customEffect)
-    {
-        m_customEffect();
-        return;
-    }
+    int cost{ 1 };
+    runCustomEffect(user);
 
     for (const auto& mod : m_modifiers)
     {
@@ -120,5 +126,5 @@ void Item::use(Character& user, Character* enemy)
             }
         }
     }
-    user.takeActionPoints(1);
+    user.takeActionPoints(cost);
 }

@@ -24,4 +24,7 @@ void Weapon::use(Character& user, std::unique_ptr<Item> self)
     user.equipWeapon(std::move(weapon));
     std::cout << "Equipped " << m_name << " (" << currentDurability << "/" 
               << maxDurability << " durability)\n";
+    user.takeActionPoints(1);
+
+    runCustomEffect(user);
 }

@@ -9,11 +9,15 @@ class PlayerCharacter : public Character
 {
 private:
     Inventory m_inventory;
+
     bool hasSpellCastSkill{ false };
     bool canHeal{ false };
     bool monkTraining{ false };
     bool easyBlock{ false };
 
+    int investigateCost{ Constants::invest_cost };
+    int strengthBonus{ 0 };
+    
 public:
     PlayerCharacter(): Character() { }
     PlayerCharacter(std::string_view name, int agility, int mana)
@@ -35,6 +39,11 @@ public:
     bool hasHealing() const { return canHeal; }
     bool hasMonkTraining() const { return monkTraining; }
     bool hasEasyBlock() const { return easyBlock; }
+
+    void updateArmorBonuses();
+
+    int getInvestigateCost() const { return investigateCost; }
+    int getStrengthBonus() const { return strengthBonus; }
 };
 
 #endif

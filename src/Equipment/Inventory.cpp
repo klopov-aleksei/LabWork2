@@ -1,4 +1,6 @@
 #include "Inventory.h"
+#include "Item.h"
+#include "Character/Character.h"
 #include "Equipment/Weapon.h"
 #include "Equipment/Armor.h" 
 #include <iostream>
@@ -50,7 +52,23 @@ void Inventory::useItem(int index, Character& user, Character* enemy)
     
     auto item = std::move(m_items[index-1]);
     m_items.erase(m_items.begin() + (index-1));
-    item->use(user, enemy);
+
+    if (dynamic_cast<Weapon*>(item.get()))
+    {
+        user.equipWeapon(std::unique_ptr<Weapon>(static_cast<Weapon*>(item.release())));
+        std::cout << "Equipped " << user.getWeapon()->getName() << ".\n";
+        user.takeActionPoints(1);
+    }
+    else if (dynamic_cast<Armor*>(item.get()))
+    {
+        user.equipArmor(std::unique_ptr<Armor>(static_cast<Armor*>(item.release())));
+        std::cout << "Equipped " << user.getArmor()->getName() << ".\n";
+        user.takeActionPoints(1);
+    }
+    else
+    {
+        item->use(user, enemy);
+    }
 }
 
 void Inventory::display() const 

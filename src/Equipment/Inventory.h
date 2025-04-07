@@ -4,8 +4,7 @@
 #include <vector>
 #include <memory>
 
-#include "Item.h"
-
+class Item;
 class Character;
 
 class Inventory 

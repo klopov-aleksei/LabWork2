@@ -3,6 +3,8 @@
 #include "Equipment/Weapon.h"
 #include "Equipment/Inventory.h"
 #include "Character/PlayerCharacter.h"
+#include "Character/Mage.h"
+#include "Character/Warrior.h"
 #include "Random.h"
 
 #include <algorithm>
@@ -268,29 +270,60 @@ std::unique_ptr<Item> Investigate::createEpicItem()
     switch(roll)
     {
         case 0:
-            return std::make_unique<Weapon>("Excalibur", 50, 100);
+        {
+            auto excalibur = std::make_unique<Weapon>("Excalibur", 50, 50);
+            excalibur->setCustomEffect([](Character& user){
+                std::cout << "Excalibur effect activated!\n";
+            });
+            return excalibur;
+        }
         case 1:
-            return std::make_unique<Weapon>("Aegis Blade", 48, 95);
+        {
+            auto aegisBlade = std::make_unique<Weapon>("Aegis Blade", 25, 20);
+            aegisBlade->setCustomEffect([](Character& user){
+                std::cout << "Aegis Blade effect activated!\n";
+            });
+            return aegisBlade;
+        }
         case 2:
-            return std::make_unique<Armor>("Dragon Scale Armor", 40, 120);
-        default: 
-            return std::make_unique<Armor>("Titan Shield", 38, 110);
+            return std::make_unique<Armor>("Dragon Scale Armor", 50, 100);
+        default:
+        {
+            auto titanShield = std::make_unique<Armor>("Titan Shield", 40, 80);
+            titanShield->setCustomEffect([](Character& user){
+                auto* pc = dynamic_cast<PlayerCharacter*>(&user);
+                if (pc != nullptr)
+                {
+                    std::cout << "Titan Shield effect activated!\n";
+                }
+            });
+            return titanShield;
+        }
     }
 }
 
 void Investigate::execute(Character& user)
 {
-    auto& player = dynamic_cast<PlayerCharacter&>(user); // not sure about it
+    int cost{ getCost() };
+    if (auto* pc = dynamic_cast<PlayerCharacter*>(&user)) 
+    {
+        cost = pc->getInvestigateCost();
+    }
+    if (user.getActionPoints() < cost) 
+    {
+        std::cout << "Not enough action points to execute " << getName() << ".\n";
+        return;
+    }
+
+    auto& player = dynamic_cast<PlayerCharacter&>(user);
     int roll = Random::get(1, 100);
     std::unique_ptr<Item> item;
-    if (roll <= 2)
+    if (roll <= 100)
     {
-        // Epic item.
         item = createEpicItem();
     }
     else
     {
-        // Generic item.
         item = createGenericItem();
     }
 
@@ -298,7 +331,7 @@ void Investigate::execute(Character& user)
     std::string_view foundRarity{ item->getRarityName() };
 
     player.getInventory().addItem(std::move(item));
-    player.takeActionPoints(getCost());
+    player.takeActionPoints(cost);
 
     std::cout << "Investigated and found: " << foundName << " (" << foundRarity << ")\n";
 }

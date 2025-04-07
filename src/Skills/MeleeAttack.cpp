@@ -1,5 +1,7 @@
 #include "MeleeAttack.h"
 #include "Character/Character.h"
+#include "Character/PlayerCharacter.h"
+#include "Character/Warrior.h"
 #include "Equipment/Weapon.h"
 #include "Game/computeStatBonus.h"
 #include "Game/DamageCalculator.h"
@@ -16,15 +18,31 @@ MeleeAttack::MeleeAttack(int baseDamage)
 
 void MeleeAttack::execute(Character& user, Character& target) 
 {
-    if (user.getActionPoints() < getCost())
+    int cost{ getCost() };
+    if (auto* weapon = user.getWeapon())
+    {
+        std::string name = weapon->getName();
+        if (name == "Excalibur")
+        {
+            cost -= 1;
+        }
+        else if (name == "Aegis Blade")
+        {
+            if (dynamic_cast<Warrior*>(&user))
+                cost -= 2;
+        }
+    }
+    int finalCost = std::max(cost, 1);
+
+    if (user.getActionPoints() < finalCost)
     {
         std::cout << "Not enough action points to execute " << getName() << ".\n";
         return;
     }
-
     if (!user.getWeapon())
     {
         std::cout << "\nYou have not got any weapon.\n";
+        target.takeDamage(Random::get(Constants::min_attack_bonus, Constants::max_attack_bonus));
         return;
     }
 
@@ -36,7 +54,7 @@ void MeleeAttack::execute(Character& user, Character& target)
     calculateDamage(dmgCalc, target, baseDamage, statBonus);
     
     target.takeDamage(dmgCalc);
-    user.takeActionPoints(getCost());
+    user.takeActionPoints(finalCost);
 
     if (user.getWeapon()->isBroken()) 
     {

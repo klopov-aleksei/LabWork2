@@ -9,6 +9,7 @@
 #include <string>
 
 class Character;
+class Item;
 
 class Investigate : public UntargetedSkill 
 {

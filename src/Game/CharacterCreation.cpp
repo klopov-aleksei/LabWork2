@@ -86,8 +86,8 @@ void CharacterCreation::ChooseWeapon(PlayerCharacter& character)
     while (true)
     {
         std::cout << "\nChoose your weapon:\n";
-        std::cout << "1. Sword\n"; // (10 damage, 20 durability)
-        std::cout << "2. Staff\n"; // (3 damage, 30 durability)
+        std::cout << "1. Sword\n";
+        std::cout << "2. Staff\n";
         std::cout << "Enter choice: ";
         std::cin >> choice;
 
@@ -101,14 +101,20 @@ void CharacterCreation::ChooseWeapon(PlayerCharacter& character)
 
         if (choice == 1)
         {
-            character.equipWeapon(std::make_unique<Weapon>("Sword", 10, 20));
+            character.equipWeapon(std::make_unique<Weapon>("Sword", 20, 20));
             break;
         }
         else if (choice == 2)
         {
-            character.equipWeapon(std::make_unique<Weapon>("Staff", 3, 30));
+            auto staff = std::make_unique<Weapon>("Staff", 3, 5);
+            staff->setCustomEffect([](Character& user)
+            {
+                std::cout << "Staff effect activated!\n";
+            });
+            character.equipWeapon(std::move(staff));
             break;
         }
+
         else
         {
             std::cout << "Invalid choice. Try again.\n";
@@ -131,13 +137,27 @@ void CharacterCreation::ChooseArmor(PlayerCharacter& player)
     switch (choice) 
     {
         case 1:
-            chosenArmor = std::make_unique<Armor>("Light Armor", 10, 50);
+            chosenArmor = std::make_unique<Armor>("Light Armor", 10, 20);
+            {
+                PlayerCharacter* pc = dynamic_cast<PlayerCharacter*>(&player);
+                if (pc != nullptr)
+                {
+                    std::cout << "Light Armor effect activated!\n";
+                }
+            }
             break;
         case 2:
-            chosenArmor = std::make_unique<Armor>("Medium Armor", 3, 20);
+            chosenArmor = std::make_unique<Armor>("Medium Armor", 20, 40);
             break;
         case 3:
-            chosenArmor = std::make_unique<Armor>("Heavy Armor", 1, 30);
+            chosenArmor = std::make_unique<Armor>("Heavy Armor", 30, 60);
+            {
+                PlayerCharacter* pc = dynamic_cast<PlayerCharacter*>(&player);
+                if (pc != nullptr)
+                {
+                    std::cout << "Heavy Armor effect activated!\n";
+                }
+            }
             break;
         default:
             std::cout << "Invalid choice, defaulting to Medium Armor.\n";

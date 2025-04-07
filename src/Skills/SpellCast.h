@@ -10,7 +10,7 @@ private:
     int m_manaCost;
 
 public:
-    SpellCast(int manaCost=10, int damage=15);
+    SpellCast(int manaCost=15, int damage=15);
     
     void execute(Character& user, Character& target) override;
     

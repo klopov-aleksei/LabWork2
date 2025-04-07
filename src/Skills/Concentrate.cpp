@@ -1,9 +1,25 @@
 #include "Concentrate.h"
+#include "Character/PlayerCharacter.h"
 
 void Concentrate::execute(Character& user)
 {
-	std::cout << user.getName() << " concentrates, restoring mana and boosting next turn's AP.\n";
-    user.increaseMana(Constants::concentrationManaRestore);
+    int cost{ getCost() };
+    if (user.getActionPoints() < cost) 
+    {
+        std::cout << "Not enough action points to execute " << getName() << ".\n";
+        return;
+    }
+    int manaRestore{ Constants::concentrationManaRestore }; 
+    if (auto* pc = dynamic_cast<PlayerCharacter*>(&user)) 
+    { 
+        if (pc->hasMonkTraining())
+        { 
+            manaRestore *= 2;
+            cost -= 1;
+        }
+    } 
+    std::cout << user.getName() << " concentrates, restoring " << manaRestore << " mana and boosting next turn's AP.\n"; 
+    user.increaseMana(manaRestore);
     user.increaseActionPoints(1);
-    user.takeActionPoints(getCost());
+    user.takeActionPoints(cost);
 }

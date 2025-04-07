@@ -17,6 +17,9 @@ void Armor::use(Character& user, std::unique_ptr<Item> self)
     user.equipArmor(std::move(armor));
     std::cout << "Equipped " << m_name << " (" << currentDurability << "/" 
               << maxDurability << " durability)\n";
+    user.takeActionPoints(1);
+
+    runCustomEffect(user);
 }
 
 int Armor::getEffectiveDefense() const 
