@@ -11,8 +11,8 @@
 #include <iostream>
 
 
-MeleeAttack::MeleeAttack(int baseDamage) 
-	: TargetedSkill(Skill::Type::Damage, Constants::melee_cost, baseDamage)
+MeleeAttack::MeleeAttack(int baseDamage, int cost) 
+	: TargetedSkill(Skill::Type::Damage, cost, baseDamage)
 {
 }
 
@@ -39,26 +39,36 @@ void MeleeAttack::execute(Character& user, Character& target)
         std::cout << "Not enough action points to execute " << getName() << ".\n";
         return;
     }
+
+    user.incrementAttackCount();
+    int attackCount = user.getAttackCount();
+    DamageCalculator dmgCalc;
+
     if (!user.getWeapon())
     {
         std::cout << "\nYou have not got any weapon.\n";
-        target.takeDamage(Random::get(Constants::min_attack_bonus, Constants::max_attack_bonus));
+        int baseDamage{ Random::get(Constants::min_attack_bonus, Constants::max_attack_bonus) };
+        calculateDamage(dmgCalc, target, baseDamage, computeStatBonus(user, baseDamage, true), attackCount);
+        target.takeDamage(dmgCalc);
+        user.takeActionPoints(finalCost);
         return;
     }
 
-    int baseDamage{ user.getWeapon()->getBaseDamage() };
+    Weapon* weapon = user.getWeapon();
+    int baseDamage = weapon->getBaseDamage();
     int statBonus{ computeStatBonus(user, baseDamage, true) }; // true = for melee using strength
-
-    DamageCalculator dmgCalc; // change: resets every time
-    dmgCalc.incrementAttackCount();
-    calculateDamage(dmgCalc, target, baseDamage, statBonus);
-    
+    calculateDamage(dmgCalc, target, baseDamage, statBonus, attackCount);
     target.takeDamage(dmgCalc);
     user.takeActionPoints(finalCost);
 
-    if (user.getWeapon()->isBroken()) 
+    int durabilityLoss{ Random::get(Constants::min_weapon_decoy, Constants::max_weapon_decoy) };
+    weapon->repair(durabilityLoss);
+    std::cout << weapon->getName() << " durability: " 
+              << weapon->getCurrentDurability() << "/"
+              << weapon->getMaxDurability() << "\n";
+    if (weapon->isBroken()) 
     {
-        std::cout << "Your " << user.getWeapon()->getName() << " broke!\n";
+        std::cout << user.getName() << "'s " << user.getWeapon()->getName() << " broke!\n";
         user.equipWeapon(nullptr);
     }
 }

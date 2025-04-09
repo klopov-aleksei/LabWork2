@@ -88,8 +88,12 @@ void Item::use(Character& user, Character* enemy)
                 user.increaseActionPoints(mod.value);
                 break;
             case Stat::damage:
-                user.takeDamage(mod.value);
+            {
+                DamageCalculator dmgCalc;
+                calculateDamage(dmgCalc, *enemy, mod.value, 0, 0); // attackCount&statBonus is zero for items
+                enemy->takeDamage(dmgCalc);
                 break;
+            }
             default: 
                 break;
             }
@@ -106,14 +110,15 @@ void Item::use(Character& user, Character* enemy)
                 {
                 case Stat::damage:
                 {
-                    DamageCalculator dmgCalc;       // need to pass it to the function
-                    dmgCalc.incrementAttackCount(); // so not to create a new object
-                    enemy->takeDamage(mod.value);
+                    DamageCalculator dmgCalc;
+                    calculateDamage(dmgCalc, *enemy, mod.value, 0, 0); // attackCount&statBonus is zero for items
+                    enemy->takeDamage(dmgCalc);
                     break;
                 }
                 case Stat::health:
                 {
                     enemy->increaseHealth(mod.value);
+                    break;
                 }
                 default:
                     std::cout << "Modifier targeting enemy not supported for this stat\n";

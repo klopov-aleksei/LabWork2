@@ -1,5 +1,8 @@
 #include "MediumEnemy.h"
 #include "Skills/Investigate.h"
+#include "Skills/MeleeAttack.h"
+#include "Skills/SpellCast.h"
+#include "Skills/Heal.h"
 #include "Random.h"
 #include "Constants.h"
 
@@ -90,6 +93,8 @@ void MediumEnemy::performTurn(PlayerCharacter &player)
     // At end of turn, acquires one random item.
     m_inventory.addItem(Investigate::createGenericItem());
     std::cout << m_name << "'s turn ends.\n";
+
+    displayStatus();
 }
 
 bool MediumEnemy::shouldUseUltra(double playerHealthRatio, double enemyHealthRatio)
@@ -177,51 +182,33 @@ bool MediumEnemy::shouldSpellCast()
 
 void MediumEnemy::performMeleeAttack(PlayerCharacter& player)
 {
-    const int cost = 4;
-    if (m_actionPoints < cost)
-    {
-        return;
-    }
-    int baseDamage = (getWeapon()) ? getWeapon()->getBaseDamage() : 0;
-    
+    int damage = (getWeapon()) ? getWeapon()->getBaseDamage() : 0;
     if (m_hasBuff)
     {
-        baseDamage = static_cast<int>(baseDamage * 1.2);
+        damage = static_cast<int>(damage * 1.2);
         m_hasBuff = false;
     }
-    
-    std::cout << m_name << " performs a melee attack dealing " << baseDamage << " damage.\n";
-    player.takeDamage(baseDamage);
-    takeActionPoints(cost);
+
+    MeleeAttack meleeAttack{ damage, 4 };
+    meleeAttack.execute(*this, player);
 }
 
 void MediumEnemy::performSpellAttack(PlayerCharacter& player)
-{
-    const int cost = 4;
-    if (m_actionPoints < cost || m_mana < 20)
-    {
-        return;
-    }
-    
-    // Damage calculation: 20 constant damage plus 50% of current weapon damage.
+{   
     int weaponDamage = 0;
     if (getWeapon())
     {
         weaponDamage = getWeapon()->getBaseDamage();
     }
     int damage = 20 + static_cast<int>(0.5 * weaponDamage);
-    
-    // Apply buff if active.
     if (m_hasBuff)
     {
         damage = static_cast<int>(damage * 1.2);
         m_hasBuff = false;
     }
-    
-    std::cout << m_name << " casts a spell attack dealing " << damage << " damage (Cost: 20 mana).\n";
-    player.takeDamage(damage);
-    m_mana -= 20;
-    takeActionPoints(cost);
+
+    SpellCast spellCast{ 20, damage, 4 };
+    spellCast.execute(*this, player);
 }
 
 void MediumEnemy::performUltraAttack(PlayerCharacter& player)
@@ -244,15 +231,8 @@ void MediumEnemy::performUltraAttack(PlayerCharacter& player)
 
 void MediumEnemy::performHeal()
 {
-    const int cost = 3;
-    if (m_actionPoints < cost)
-    {
-        return;
-    }
-    
-    increaseHealth(Constants::healAmount);
-    std::cout << m_name << " heals for " << Constants::healAmount << " HP.\n";
-    takeActionPoints(cost);
+    Heal heal{ 3 };
+    heal.execute(*this);
 }
 
 void MediumEnemy::performBuff()
@@ -276,8 +256,8 @@ void MediumEnemy::performRestoreMana()
         return;
     }
     
+    std::cout << m_name << " restores mana.\n";
     increaseMana(15);
-    std::cout << m_name << " restores 15 mana.\n";
     takeActionPoints(cost);
 }
 

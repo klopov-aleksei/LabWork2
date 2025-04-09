@@ -45,9 +45,9 @@ void CombatInterface::processInput(int choice)
 {
     switch(choice) 
     {
-    case 0:     m_player.setActionPoints(0); break;
+    case 0:     m_player.resetActionPoints(); break;
     case 1:     performAttack(); break;
-    case 2:     Block().execute(m_player); m_player.setActionPoints(0); break;
+    case 2:     Block().execute(m_player); break;
     case 3:     openInventory(); break;
     case 4:     if (m_player.getInventory().isFull()) std::cout << "Inventory is full!"; else Investigate().execute(m_player); break;
     case 5:     Concentrate().execute(m_player); break;

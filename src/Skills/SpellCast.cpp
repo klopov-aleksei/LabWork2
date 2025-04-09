@@ -8,9 +8,9 @@
 
 #include <iostream>
 
-SpellCast::SpellCast(int manaCost, int damage)
-    : TargetedSkill(Skill::Type::Damage, Constants::cast_cost, damage)
-    , m_manaCost(manaCost)
+SpellCast::SpellCast(int manaCost, int damage, int cost)
+    : TargetedSkill(Skill::Type::Damage, cost, damage)
+    , m_manaCost{ manaCost }
 {
 }
 
@@ -47,16 +47,17 @@ void SpellCast::execute(Character& user, Character& target)
         std::cout << user.getName() << " tries to cast a spell but doesn't have enough mana!\n";
         return;
     }
-    
+
+    user.incrementAttackCount();
+    int attackCount = user.getAttackCount();
+
     int baseDamage{ getDamage() + bonusDamage };
     int statBonus{ computeStatBonus(user, baseDamage, false) };
 
     DamageCalculator dmgCalc;
-    dmgCalc.incrementAttackCount();
-    calculateDamage(dmgCalc, target, baseDamage, statBonus);
-
+    dmgCalc.markAsSpell();
+    calculateDamage(dmgCalc, target, baseDamage, statBonus, attackCount);
     std::cout << user.getName() << " casts a spell on " << target.getName() << '\n';
-
     target.takeDamage(dmgCalc);
     user.takeActionPoints(cost);
     user.useMana(manaCost);

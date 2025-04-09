@@ -6,18 +6,17 @@
 class DamageCalculator
 {
 private:
-    int m_attackCount{};
-    int m_finalDamage{};
-    int m_armorDamage{};
+    int m_finalDamage{ 0 };
+    int m_armorDamage{ 0 };
+    bool m_isSpell{ false };
 
 public:
     DamageCalculator() = default;
-    
-    void incrementAttackCount() { ++m_attackCount; }
-    void resetAttackCount() { m_attackCount = 0; }
+    void markAsSpell() { m_isSpell = true; }
+    bool isSpell() const { return m_isSpell; }
 
     friend void calculateDamage(DamageCalculator& dmgCalc, 
-        Character& target, int baseDamage, int statBonus);
+        Character& target, int baseDamage, int statBonus, int attackCount);
 
     friend void Character::takeDamage(DamageCalculator& dmgCalc);
 };

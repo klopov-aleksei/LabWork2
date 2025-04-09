@@ -8,7 +8,7 @@
 class Heal : public UntargetedSkill 
 {
 public:
-    Heal() : UntargetedSkill(Skill::Type::Heal, Constants::heal_cost) { }
+    Heal(int cost = Constants::heal_cost) : UntargetedSkill(Skill::Type::Heal, cost) { }
     void execute(Character& user) override;
 
     std::string_view getName() const override { return "Heal"; }

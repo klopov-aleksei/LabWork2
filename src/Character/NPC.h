@@ -3,7 +3,6 @@
 
 #include "Character/Character.h"
 #include <string_view>
-#include <iostream>
 
 class NPC : public Character 
 {
@@ -12,11 +11,7 @@ public:
         : Character(name, strength, intelligence, agility, mana) {}
 
     virtual ~NPC() = default;
-    void displayStatus() const override 
-    {
-        std::cout << "[Enemy] " << getName() 
-                  << " | Health: " << getHealth() << "\n";
-    }
+    void displayStatus() const override;
 };
 
 #endif

@@ -29,6 +29,7 @@ protected:
     int m_mana{ 50 };
     int m_maxMana{ 50 };
     bool m_isBlocking{ false };
+    int m_attackCount{ 0 };
 
     std::unique_ptr<Weapon> equippedWeapon;
     std::unique_ptr<Armor> equippedArmor;
@@ -43,6 +44,11 @@ public:
     void setStats(int strength, int intelligence);
     void setBlocking(bool state);
     bool isBlocking() const;
+
+    void incrementAttackCount();
+    void resetAttackCount();
+    void resetActionPoints();
+    int getAttackCount() const;
 
     const std::string& getName() const;
     int getStrength() const;
@@ -82,8 +88,6 @@ public:
     void takeDamage(DamageCalculator& dmgCalc);
     void takeDamage(int damage);
     void takeActionPoints(int cost);
-    void resetActionPoints();
-    void setActionPoints(int ap);
     void useMana(int cost);
 
     Weapon* getWeapon() const { return equippedWeapon.get(); }

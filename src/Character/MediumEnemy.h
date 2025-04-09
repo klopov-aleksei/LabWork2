@@ -20,7 +20,6 @@ private:
     bool m_hasBuff;
     Inventory m_inventory;
     
-    // Helper functions implementing various actions.
     void performMeleeAttack(PlayerCharacter& player);
     void performSpellAttack(PlayerCharacter& player);
     void performUltraAttack(PlayerCharacter& player);
@@ -42,7 +41,6 @@ public:
     MediumEnemy();
     virtual ~MediumEnemy() = default;
     
-    // Perform the enemy AI turn against the given player.
     void performTurn(PlayerCharacter& player);
 };
 

@@ -22,6 +22,9 @@ namespace Constants
 	inline constexpr int min_block_reduce{ 50 };
 	inline constexpr int max_block_reduce{ 100 };
 
+	inline constexpr int min_weapon_decoy{ -2 };
+	inline constexpr int max_weapon_decoy{ -5 };
+
 	inline constexpr int points_to_distribute{ 10 };
 	inline constexpr int initial_ap{ 10 };
 

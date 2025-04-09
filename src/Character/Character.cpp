@@ -43,6 +43,18 @@ bool Character::isBlocking() const
     return m_isBlocking;
 }
 
+void Character::incrementAttackCount() { ++m_attackCount; }
+void Character::resetAttackCount() { m_attackCount = 0; }
+void Character::resetActionPoints() 
+{ 
+    m_actionPoints = m_maxActionPoints; 
+    resetAttackCount();
+}
+int Character::getAttackCount() const
+{
+    return m_attackCount;
+}
+
 const std::string& Character::getName() const { return m_name; }
 int Character::getStrength() const { return m_strength; }
 int Character::getIntelligence() const { return m_intelligence; }
@@ -117,9 +129,6 @@ void Character::equipArmor(std::unique_ptr<Armor> armor)
 
 void Character::takeDamage(DamageCalculator& dmgCalc) 
 {
-    m_health -= dmgCalc.m_finalDamage;
-    m_health = std::max(0, m_health);
-
     if (equippedArmor) 
     {
         equippedArmor->takeDamage(dmgCalc.m_armorDamage);
@@ -127,12 +136,15 @@ void Character::takeDamage(DamageCalculator& dmgCalc)
                   << equippedArmor->getCondition() * 100 << "% ("
                   << equippedArmor->getCurrentDurability() << "/" 
                   << equippedArmor->getMaxDurability() << ")\n";
-        if (equippedArmor->getCurrentDurability() <= 0) 
+        if (equippedArmor->isBroken()) 
         {
             std::cout << m_name << "'s armor has broken and is unequipped!\n";
             equippedArmor.reset();
         }
     }
+
+    m_health -= dmgCalc.m_finalDamage;
+    m_health = std::max(0, m_health);
 
     std::cout << m_name << " takes " << dmgCalc.m_finalDamage << " damage.\n";
     dmgCalc.m_armorDamage = 0;
@@ -169,9 +181,6 @@ void Character::takeActionPoints(int cost)
     m_actionPoints -= cost;
     if (m_actionPoints < 0) m_actionPoints = 0;
 }
-
-void Character::resetActionPoints() { m_actionPoints = m_maxActionPoints; }
-void Character::setActionPoints(int ap) { m_actionPoints = ap; }
 void Character::useMana(int cost) 
 {
     m_mana -= cost;

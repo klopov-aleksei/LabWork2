@@ -10,7 +10,7 @@ private:
     int m_manaCost;
 
 public:
-    SpellCast(int manaCost=15, int damage=15);
+    SpellCast(int manaCost=15, int damage=15, int cost = Constants::cast_cost);
     
     void execute(Character& user, Character& target) override;
     
