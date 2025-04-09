@@ -48,6 +48,7 @@ public:
     int getStrength() const;
     int getIntelligence() const;
     int getHealth() const;
+    int getMaxHealth() const;
     int getAgility() const;
     int getActionPoints() const;
     int getMana() const;

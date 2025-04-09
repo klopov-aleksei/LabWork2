@@ -5,6 +5,7 @@ LDFLAGS =
 SRC = main.cpp \
        Character/Character.cpp \
        Character/PlayerCharacter.cpp \
+       Character/MediumEnemy.cpp \
        Equipment/Armor.cpp \
        Equipment/Inventory.cpp \
        Equipment/Item.cpp \

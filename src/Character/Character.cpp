@@ -47,6 +47,7 @@ const std::string& Character::getName() const { return m_name; }
 int Character::getStrength() const { return m_strength; }
 int Character::getIntelligence() const { return m_intelligence; }
 int Character::getHealth() const { return m_health; }
+int Character::getMaxHealth() const { return m_maxHealth; }
 int Character::getAgility() const { return m_agility; }
 int Character::getActionPoints() const { return m_actionPoints; }
 int Character::getMana() const { return m_mana; }
