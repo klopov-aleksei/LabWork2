@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++23 -Wall -I.
+CXXFLAGS = -std=c++23 -Wall -Werror -Wpedantic -O2 -I.
 LDFLAGS = 
 
 SRC = main.cpp \

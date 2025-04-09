@@ -27,6 +27,7 @@ public:
     int getBaseDamage() const { return baseDamage; }
     int getCurrentDurability() const { return currentDurability; }
     int getMaxDurability() const { return maxDurability; }
+    double getCondition() const { return static_cast<double>(currentDurability) / maxDurability; }
 };
 
 #endif

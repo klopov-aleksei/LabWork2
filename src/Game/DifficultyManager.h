@@ -15,11 +15,11 @@ public:
         switch(level) 
         {
             case Difficulty::Easy:
-                return std::make_unique<EasyGoblin>();
+                return std::make_unique<EasyEnemy>();
             case Difficulty::Medium:
-                return std::make_unique<MediumWarlock>();
+                return std::make_unique<MediumEnemy>();
             case Difficulty::Hard:
-                return std::make_unique<HardDragon>();
+                return std::make_unique<HardEnemy>();
         }
         return nullptr;
     }

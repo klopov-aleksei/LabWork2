@@ -1,5 +1,6 @@
 #include "CombatSystem.h"
 #include "CombatInterface.h"
+#include "Character/MediumEnemy.h"
 
 #include <iostream>
 
@@ -36,7 +37,7 @@ void CombatSystem::handleTurn(CombatInterface& interface)
     else 
     {
         m_enemy->resetActionPoints();
-        // Enemy AI logic
+        dynamic_cast<MediumEnemy*>(m_enemy)->performTurn(m_player);
     }
 
     bool currentPlayerAdvantage = (m_player.getAgility() > m_enemy->getAgility());

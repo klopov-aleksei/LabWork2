@@ -318,7 +318,7 @@ void Investigate::execute(Character& user)
     auto& player = dynamic_cast<PlayerCharacter&>(user);
     int roll = Random::get(1, 100);
     std::unique_ptr<Item> item;
-    if (roll <= 100)
+    if (roll <= 3)
     {
         item = createEpicItem();
     }

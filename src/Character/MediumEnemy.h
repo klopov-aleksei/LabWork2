@@ -6,7 +6,11 @@
 #include "Equipment/Armor.h"
 #include "Character/Character.h"
 #include "Character/PlayerCharacter.h"
+#include "Equipment/Inventory.h"
+#include "Equipment/Item.h"
+
 #include <memory>
+#include <utility>
 
 class MediumEnemy : public NPC
 {
@@ -23,9 +27,10 @@ private:
     void performHeal();
     void performBuff();
     void performRestoreMana();
-    void performUseItem();
+    void performUseItem(PlayerCharacter& player, int bestIndex);
     
-    int evaluateItem(const std::string& itemName);
+    std::pair<int, int> evaluateInventory() const;
+    int evaluateItem(const Item& item) const;
 
     bool shouldUseUltra(double playerHealthRatio, double enemyHealthRatio);
     bool shouldHeal(double playerHealthRatio, double enemyHealthRatio);

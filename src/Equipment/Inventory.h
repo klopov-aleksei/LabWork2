@@ -16,7 +16,9 @@ public:
     int getItemCount() const;
     bool isFull() const;
     void newSize();
-    
+
+    const Item* operator[] (int index) const;
+
     void addItem(std::unique_ptr<Item> item);
     void removeItem(int index);
     void removeBrokenItems();

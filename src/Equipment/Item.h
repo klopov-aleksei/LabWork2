@@ -38,6 +38,7 @@ public:
     
     const std::string& getName() const { return m_name; }
     Rarity getRarity() const { return m_rarity; }
+    const std::vector<StatModifier>& getModifiers() const { return m_modifiers; }
 
     std::string_view getRarityName() const;
 

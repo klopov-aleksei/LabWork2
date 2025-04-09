@@ -1,5 +1,5 @@
 #include "Game.h"
-#include "Character/NPC.h"
+#include "Character/MediumEnemy.h"
 
 #include <iostream>
 
@@ -16,8 +16,8 @@ void Game::start()
     player = characterCreation.createCharacter();
     player->displayStatus();
 
-    NPC enemy("Orc", 50, 20, 3, 10); // Example enemy
-    startCombat(enemy);
+    auto enemy{ std::make_unique<MediumEnemy>() };
+    startCombat(*enemy);
 }
 
 void Game::startCombat(NPC& enemy) 

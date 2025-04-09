@@ -16,7 +16,6 @@ class Investigate : public UntargetedSkill
 private:
     
     static std::unique_ptr<Item> createEpicItem();
-    static std::unique_ptr<Item> createGenericItem();
 
     struct ModifierProfile 
     {
@@ -50,6 +49,7 @@ public:
     Investigate() : UntargetedSkill(Skill::Type::Utility, Constants::invest_cost) {}
 
     void execute(Character& user) override;
+    static std::unique_ptr<Item> createGenericItem();
 
     std::string_view getName() const override { return "Investigate"; }
 };

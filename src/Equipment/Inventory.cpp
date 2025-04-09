@@ -10,6 +10,13 @@ int Inventory::getItemCount() const { return static_cast<int>(m_items.size()); }
 bool Inventory::isFull() const { return m_items.size() >= static_cast<size_t>(inventorySize); }
 void Inventory::newSize() { inventorySize=10; }
 
+const Item* Inventory::operator[] (int index) const
+{
+    if (index < 1 || index > static_cast<int>(m_items.size())) 
+        return nullptr;
+    return m_items[index-1].get();
+}
+
 void Inventory::addItem(std::unique_ptr<Item> item) 
 {
     m_items.emplace_back(std::move(item));

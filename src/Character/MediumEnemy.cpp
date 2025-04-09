@@ -1,6 +1,8 @@
 #include "MediumEnemy.h"
+#include "Skills/Investigate.h"
 #include "Random.h"
 #include "Constants.h"
+
 #include <iostream>
 #include <algorithm>
 
@@ -25,44 +27,51 @@ MediumEnemy::MediumEnemy()
 void MediumEnemy::performTurn(PlayerCharacter &player)
 {
     std::cout << "\n" << m_name << "'s turn begins.\n";
-
     m_turnsSinceUltra++;
+
     while (m_actionPoints >= 2)
     {
         double playerHealthRatio = static_cast<double>(player.getHealth()) / player.getMaxHealth();
         double enemyHealthRatio  = static_cast<double>(m_health) / m_maxHealth;
+
+        auto [bestItemPriority, bestIndex]{ evaluateInventory() };
+        enum PriorityTier { HIGH, MEDIUM, LOW };
+        PriorityTier tier{ (bestItemPriority > 40) ? HIGH : 
+                            (bestItemPriority > 25) ? MEDIUM : LOW };
+
+        bool canUseItem{ bestIndex != -1 && m_actionPoints >= 2 };
         
-        // Flags to decide which action to perform.
-        bool useUltra       = shouldUseUltra(playerHealthRatio, enemyHealthRatio);
-        bool useHeal        = shouldHeal(playerHealthRatio, enemyHealthRatio);
-        bool useRestoreMana = shouldRestoreMana();
-        bool useBuff        = shouldBuff();
-        bool useSpellAttack = shouldSpellCast();
-        
-        // Action priority: Ultra > Heal > Restore Mana > Item > Buff > Attack.
-        if (useUltra && (m_actionPoints == m_maxActionPoints))
+        if (shouldUseUltra(playerHealthRatio, enemyHealthRatio) && (m_actionPoints == m_maxActionPoints))
         {
             performUltraAttack(player);
         }
-        else if (useHeal && m_actionPoints >= 3)
+        else if (tier == HIGH && canUseItem) 
+        {
+            performUseItem(player, bestIndex);
+        }
+        else if (shouldHeal(playerHealthRatio, enemyHealthRatio) && m_actionPoints >= 3)
         {
             performHeal();
         }
-        else if (useRestoreMana && m_actionPoints >= 2)
+        else if (tier == MEDIUM && canUseItem) 
+        {
+            performUseItem(player, bestIndex);
+        }
+        else if (shouldRestoreMana() && m_actionPoints >= 2)
         {
             performRestoreMana();
         }
-        else if (!m_inventory.isEmpty() && m_actionPoints >= 2)
+        else if (tier == LOW && canUseItem) 
         {
-            performUseItem();
+            performUseItem(player, bestIndex);
         }
-        else if (useBuff && m_actionPoints >= 2)
+        else if (shouldBuff())
         {
             performBuff();
         }
         else if (m_actionPoints >= 4)
         {
-            if (useSpellAttack)
+            if (shouldSpellCast())
             {
                 performSpellAttack(player);
             }
@@ -79,7 +88,7 @@ void MediumEnemy::performTurn(PlayerCharacter &player)
     }
     
     // At end of turn, acquires one random item.
-    m_inventory.addItem(std::make_unique<Item>("Random Investigate Item", Rarity::common));
+    m_inventory.addItem(Investigate::createGenericItem());
     std::cout << m_name << "'s turn ends.\n";
 }
 
@@ -148,7 +157,7 @@ bool MediumEnemy::shouldRestoreMana()
 
 bool MediumEnemy::shouldBuff()
 {
-    if (!m_hasBuff && m_actionPoints >= 2)
+    if (!m_hasBuff && m_actionPoints >= 6)
     {
         if (Random::get(0, 100) < 40)
             return true;
@@ -272,47 +281,123 @@ void MediumEnemy::performRestoreMana()
     takeActionPoints(cost);
 }
 
-void MediumEnemy::performUseItem()
+void MediumEnemy::performUseItem(PlayerCharacter& player, int bestIndex) 
 {
-    // Evaluate each item in inventory (simulate by item name for now).
-    // For a real implementation, you would inspect each Item's modifiers.
-    // Here we use a simplified evaluation based on the item name.
-    int bestItemPriority = -1000;
-    int bestItemIndex = -1;
-    
-    // Iterate over items to determine usefulness.
-    for (int i = 0; i < m_inventory.getItemCount(); i++)
+    if (bestIndex != -1 && m_actionPoints >= 2 && Random::get(0,100) < 85 ) 
     {
-        int priority = evaluateItem("dummy"); // Replace "dummy" with actual item identifier.
-        if (priority > bestItemPriority)
-        {
-            bestItemPriority = priority;
-            bestItemIndex = i;
-        }
-    }
-    
-    if (bestItemIndex >= 0 && m_actionPoints >= 2)
-    {
-        // Use the chosen item. This costs 2 AP.
-        std::cout << m_name << " uses an item from inventory based on its effectiveness.\n";
-        m_inventory.useItem(bestItemIndex + 1, *this);
+        m_inventory.useItem(bestIndex, *this, &player);
+        std::cout << m_name << " uses an item.\n";
         takeActionPoints(2);
     }
-    else
+    else 
     {
-        // No item is effective to use this turn.
-        std::cout << m_name << " decides not to use any stored item this turn.\n";
+        std::cout << m_name << " decides not to use any item.\n";
     }
 }
 
-int MediumEnemy::evaluateItem(const std::string& itemName)
+std::pair<int, int> MediumEnemy::evaluateInventory() const 
 {
-    // A stub function for item evaluation.
-    // In a complete implementation, inspect the item's type and modifiers.
-    // Return a priority value: higher means more useful under current conditions.
-    // For example:
-    // - If enemy health is low, a healing item should get a high score.
-    // - If enemy mana is low, a mana-restoring item should get a high score.
-    // Here we return a dummy value.
-    return Random::get(0, 100);
+    int bestPriority = -1;
+    int bestIndex = -1;
+    
+    for (int i = 0; i < m_inventory.getItemCount(); ++i) 
+    {
+        if (const Item* item = m_inventory[i+1]) // 1-based index
+        {
+            int priority = evaluateItem(*item);
+            if (priority > bestPriority) 
+            {
+                bestPriority = priority;
+                bestIndex = i+1;
+            }
+        }
+    }
+    return {bestPriority, bestIndex};
+}
+
+int MediumEnemy::evaluateItem(const Item& item) const
+{
+    int priority = 0;
+
+    for (const auto& mod : item.getModifiers()) 
+    {
+        switch (mod.stat) 
+        {
+            case Stat::health:
+                if (mod.value > 0) 
+                {
+                    double healthRatio = static_cast<double>(m_health) / m_maxHealth;
+                    priority += (healthRatio < 0.5) ? mod.value * 10 : 0;
+                } 
+                else if (m_health > -mod.value + 10) 
+                {
+                    priority -= 30;
+                }
+                else priority -= 1000;
+                break;
+            case Stat::mana:
+                if (mod.value > 0) 
+                {
+                    double manaRatio = static_cast<double>(m_mana) / m_maxMana;
+                    priority += (manaRatio < 0.75) ? mod.value * 5 : 0;
+                }
+                else priority -= 1000;
+                break;
+            case Stat::maxHealth:
+                priority += 0;
+                break;
+            case Stat::maxMana:
+                if (mod.value > 0) 
+                {
+                    priority += mod.value * 7;
+                }
+                else priority -= 1000;
+                break;
+            case Stat::strength:
+                priority += mod.value * 30;
+                break;
+            case Stat::intelligence:
+                priority += mod.value * 30;
+                break;
+            case Stat::agility:
+                priority += mod.value * 20;
+                break;
+            case Stat::actionPoints:
+                priority += mod.value * 35;
+                break;
+            case Stat::repair:
+                if (mod.target == Target::armor && getArmor()) 
+                {
+                    double armorCond = getArmor()->getCondition();
+                    priority += (armorCond < 0.5) ? mod.value * 2 : 0;
+                    if (mod.value < 0 && (-mod.value) > getArmor()->getCurrentDurability()) 
+                        priority -= 1000;
+                } 
+                else if (mod.target == Target::weapon && getWeapon()) 
+                {
+                    double weaponCond = getWeapon()->getCondition();
+                    priority += (weaponCond < 0.5) ? mod.value * 2 : 0;
+                    if (mod.value < 0 && (-mod.value) > getWeapon()->getCurrentDurability()) 
+                        priority -= 1000;
+                }
+                break;
+            case Stat::damage:
+                if (mod.target == Target::enemy) 
+                {
+                    priority += 15 + mod.value * 3;
+                }
+                if (mod.target == Target::self)
+                {
+                    if (m_health > -mod.value + 10) 
+                    {
+                        priority -= 30;
+                    }
+                    else priority -= 1000;
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    return priority;
 }
