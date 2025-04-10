@@ -7,6 +7,7 @@
 #include "Random.h"
 
 #include <iostream>
+#include <iomanip>
 
 Character::Character(std::string_view name, int strength,
                             int intelligence, int agility, int mana)
@@ -132,7 +133,8 @@ void Character::takeDamage(DamageCalculator& dmgCalc)
     if (equippedArmor) 
     {
         equippedArmor->takeDamage(dmgCalc.m_armorDamage);
-        std::cout << m_name << "'s armor condition: " 
+        std::cout << m_name << "'s armor condition: "
+                  << std::fixed << std::setprecision(2)
                   << equippedArmor->getCondition() * 100 << "% ("
                   << equippedArmor->getCurrentDurability() << "/" 
                   << equippedArmor->getMaxDurability() << ")\n";

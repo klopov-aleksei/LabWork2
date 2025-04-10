@@ -19,6 +19,7 @@ private:
     int  m_turnsSinceUltra;
     bool m_hasBuff;
     Inventory m_inventory;
+    bool m_hasEquippedBackup{ false };
     
     void performMeleeAttack(PlayerCharacter& player);
     void performSpellAttack(PlayerCharacter& player);

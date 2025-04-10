@@ -10,7 +10,6 @@
 
 #include <iostream>
 
-
 MeleeAttack::MeleeAttack(int baseDamage, int cost) 
 	: TargetedSkill(Skill::Type::Damage, cost, baseDamage)
 {
@@ -63,8 +62,8 @@ void MeleeAttack::execute(Character& user, Character& target)
     user.takeActionPoints(finalCost);
     if (weapon)
     {
-        int durabilityLoss{ -Random::get(Constants::min_weapon_decoy, Constants::max_weapon_decoy) };
-        weapon->repair(durabilityLoss);
+        int durabilityLoss{ Random::get(Constants::min_weapon_decoy, Constants::max_weapon_decoy) };
+        weapon->takeDamage(durabilityLoss);
         if (weapon->isBroken()) 
         {
             std::cout << user.getName() << "'s " << weapon->getName() << " broke!\n";

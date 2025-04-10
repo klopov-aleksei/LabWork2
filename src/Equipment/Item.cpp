@@ -42,6 +42,7 @@ void Item::runCustomEffect(Character& user)
 void Item::use(Character& user, Character* enemy)
 {
     int cost{ 1 };
+    std::cout << "Using " << m_name << " (" << getRarityName() << ")\n";
     runCustomEffect(user);
 
     for (const auto& mod : m_modifiers)
@@ -54,8 +55,6 @@ void Item::use(Character& user, Character* enemy)
             return;
         }
     }
-
-    std::cout << "Using " << m_name << " (" << getRarityName() << ")\n";
        
     for (const auto& mod : m_modifiers)
     {

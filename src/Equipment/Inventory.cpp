@@ -9,6 +9,7 @@
 int Inventory::getItemCount() const { return static_cast<int>(m_items.size()); }
 bool Inventory::isFull() const { return m_items.size() >= static_cast<size_t>(inventorySize); }
 void Inventory::newSize() { inventorySize=10; }
+int Inventory::getSize() const { return inventorySize; }
 
 const Item* Inventory::operator[] (int index) const
 {
@@ -28,13 +29,9 @@ void Inventory::removeBrokenItems()
         std::remove_if(m_items.begin(), m_items.end(),
             [](const std::unique_ptr<Item>& item)
             {
-                if(auto armor = dynamic_cast<Armor*>(item.get())) 
+                if (auto* eq = dynamic_cast<Equipment*>(item.get())) 
                 {
-                    return armor->isBroken();
-                }
-                if(auto weapon = dynamic_cast<Weapon*>(item.get())) 
-                {
-                    return weapon->isBroken();
+                    return eq->isBroken();
                 }
                 return false;
             }),

@@ -16,6 +16,7 @@ public:
     int getItemCount() const;
     bool isFull() const;
     void newSize();
+    int getSize() const;
 
     const Item* operator[] (int index) const;
 

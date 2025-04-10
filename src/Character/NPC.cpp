@@ -1,5 +1,6 @@
 #include "NPC.h"
 #include <iostream>
+#include <iomanip>
 
 void NPC::displayStatus() const 
 {
@@ -17,6 +18,8 @@ void NPC::displayStatus() const
     if (auto armor = getArmor()) 
     {
         std::cout << "Armor: " << armor->getName()
+                  << ' ' << std::fixed << std::setprecision(2)
+                  << (armor->getCondition() * 100) << '%'
                   << " (" << armor->getCurrentDurability()
                   << "/" << armor->getMaxDurability() << ")\n";
     }

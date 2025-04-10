@@ -11,14 +11,15 @@
 
 MediumEnemy::MediumEnemy()
     : NPC("Sofiya", 6, 6, 7, 50)
+    , m_ultraAttacksUsed{ 0 }
+    , m_turnsSinceUltra{ 0 }
+    , m_hasBuff{ false }
+    , m_hasEquippedBackup { false }
 {
-    m_health            = 300;
-    m_maxHealth         = 300;
-    m_actionPoints      = 8;
-    m_maxActionPoints   = 8;
-    m_ultraAttacksUsed  = 0;
-    m_turnsSinceUltra   = 0;
-    m_hasBuff           = false;
+    m_health = 300;
+    m_maxHealth = 300;
+    m_actionPoints = 8;
+    m_maxActionPoints = 8;
     
     equipWeapon(std::make_unique<Weapon>("Frying Pan", 15, 20));
     equipArmor(std::make_unique<Armor>("Prison Armor", 20, 100));
@@ -28,6 +29,13 @@ void MediumEnemy::performTurn(PlayerCharacter &player)
 {
     std::cout << "\n" << m_name << "'s turn begins.\n";
     m_turnsSinceUltra++;
+
+    if (!m_hasEquippedBackup && (!getWeapon() || getWeapon()->isBroken())) 
+    {
+        equipWeapon(std::make_unique<Weapon>("Soul Reaper", 25, 50));
+        std::cout << m_name << " equips Soul Reaper!\n";
+        m_hasEquippedBackup = true;
+    }
 
     while (m_actionPoints >= 2)
     {

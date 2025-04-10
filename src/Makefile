@@ -8,6 +8,7 @@ SRC = main.cpp \
        Character/NPC.cpp \
        Character/MediumEnemy.cpp \
        Equipment/Armor.cpp \
+       Equipment/Equipment.cpp \
        Equipment/Inventory.cpp \
        Equipment/Item.cpp \
        Equipment/Weapon.cpp \

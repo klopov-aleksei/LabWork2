@@ -2,36 +2,18 @@
 #define ARMOR_H
 
 #include "Item.h"
+#include "Equipment.h"
 
 #include <memory>
-#include <algorithm>
-#include <iostream>
-#include <string_view>
 
-class Character;
-
-class Armor : public Item 
-{
-private:
+class Armor : public Equipment {
     int baseDefense;
-    int maxDurability;
-    int currentDurability;
-    
+
 public:
     Armor(std::string_view name, int defense, int durability);
-
-    void use(Character& user, std::unique_ptr<Item> self);
-
+    void use(Character& user, std::unique_ptr<Item> self) override;
     int getEffectiveDefense() const;
-
-    void takeDamage(int amount);
-
-    void repair(int amount);
-
-    bool isBroken() const { return currentDurability <= 0; }
-    int getCurrentDurability() const { return currentDurability; }
-    int getMaxDurability() const { return maxDurability; }
-    double getCondition() const { return static_cast<double>(currentDurability) / maxDurability; }
+    void takeDamage(int amount) override;
 };
 
 #endif

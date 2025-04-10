@@ -45,7 +45,7 @@ void CombatInterface::processInput(int choice)
 {
     switch(choice) 
     {
-    case 0:     m_player.resetActionPoints(); break;
+    case 0:     m_player.takeActionPoints(m_player.getActionPoints()); break;
     case 1:     performAttack(); break;
     case 2:     Block().execute(m_player); break;
     case 3:     openInventory(); break;
@@ -61,14 +61,39 @@ void CombatInterface::performAttack()
 {
     if (m_player.canUseSpell())
     {
-        std::cout << "Choose Attack Type:\n1) Melee  2) Spell\n";
-        int atkType;
-        std::cin >> atkType;
-        while (!(std::cin) || atkType < 1 || atkType > 2)
+        int atkType = -1;
+        bool validInput = false;
+
+        while (!validInput) 
         {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Invalid input! Choose a valid attack type: ";
+            std::cout << "Choose Attack Type:\n"
+                      << "1) Melee\n2) Spell\n0) Cancel\n";
+            
+            if (!(std::cin >> atkType)) 
+            {
+                // Handle non-integer input
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Invalid input! Please enter 0, 1, or 2.\n";
+                continue;
+            }
+            
+            if (atkType == 0) 
+            {
+                // Player chose to cancel
+                std::cout << "Attack cancelled.\n";
+                return;
+            }
+            
+            if (atkType == 1 || atkType == 2) 
+            {
+                validInput = true;
+            } 
+            else 
+            {
+                std::cout << "Invalid choice! Please enter 0, 1, or 2.\n";
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            }
         }
         if (atkType == 1) 
         {

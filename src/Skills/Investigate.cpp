@@ -266,10 +266,10 @@ std::unique_ptr<Item> Investigate::createGenericItem()
 
 std::unique_ptr<Item> Investigate::createEpicItem()
 {
-    int roll = Random::get(0, 3);
+    int roll = Random::get(1, 5);
     switch(roll)
     {
-        case 0:
+        case 1:
         {
             auto excalibur = std::make_unique<Weapon>("Excalibur", 40, 40);
             excalibur->setCustomEffect([](Character& user){
@@ -277,17 +277,21 @@ std::unique_ptr<Item> Investigate::createEpicItem()
             });
             return excalibur;
         }
-        case 1:
+        case 2:
         {
             auto aegisBlade = std::make_unique<Weapon>("Aegis Blade", 20, 25);
             aegisBlade->setCustomEffect([](Character& user){
-                std::cout << "Aegis Blade effect activated!\n";
+                auto* pc = dynamic_cast<PlayerCharacter*>(&user);
+                if (pc != nullptr)
+                {
+                    std::cout << "Aegis Blade effect activated!\n";
+                }
             });
             return aegisBlade;
         }
-        case 2:
+        case 3:
             return std::make_unique<Armor>("Dragon Scale Armor", 40, 100);
-        default:
+        case 4:
         {
             auto titanShield = std::make_unique<Armor>("Titan Shield", 35, 80);
             titanShield->setCustomEffect([](Character& user){
@@ -298,6 +302,79 @@ std::unique_ptr<Item> Investigate::createEpicItem()
                 }
             });
             return titanShield;
+        }
+        default:
+        {
+            auto mysticalOrb = std::make_unique<Item>("Mystical Orb", Rarity::epic, 
+                std::vector<StatModifier>{},
+                [](Character& user) 
+                {
+                    if (auto* pc = dynamic_cast<PlayerCharacter*>(&user)) 
+                    {
+                        bool spellAdded{ false };
+                        std::stringstream message;
+                        message << "Mystical Orb ";
+                        if (!pc->canUseSpell()) 
+                        {
+                            pc->enableSpellCast();
+                            spellAdded = true;
+                            message << "grants Spellcasting";
+                        }
+
+                        std::vector<std::pair<std::function<bool()>, std::function<void()>>> skills{
+                            { // Inventory expansion
+                                [pc]() { return pc->getInventory().getSize() < 10; },
+                                [pc]() { pc->getInventory().newSize(); }
+                            },
+                            { // Healing
+                                [pc]() { return !pc->hasHealing(); },
+                                [pc]() { pc->unlockHealing(); }
+                            },
+                            { // Monk training
+                                [pc]() { return !pc->hasMonkTraining(); },
+                                [pc]() { pc->boostConcentration(); }
+                            },
+                            { // Easy block
+                                [pc]() { return !pc->hasEasyBlock(); },
+                                [pc]() { pc->reduceBlockCost(); }
+                            }
+                        };
+
+                        std::vector<int> availableIndices;
+                        for (size_t i = 0; i < skills.size(); i++) 
+                        {
+                            if (skills[i].first()) 
+                                availableIndices.push_back(i);
+                        }
+
+                        if (!availableIndices.empty()) 
+                        {
+                            int chosen = Random::get(0, static_cast<int>(availableIndices.size()-1));
+                            skills[availableIndices[chosen]].second();
+                            
+                            if (spellAdded) message << " and ";
+                            message << "grants new skill: ";
+                            switch(availableIndices[chosen]) 
+                            {
+                            case 0:     message << "Inventory Expansion"; break;
+                            case 1:     message << "Healing"; break;
+                            case 2:     message << "Monk Training"; break;
+                            case 3:     message << "Easy Block"; break;
+                            }
+                        }
+                        else if (spellAdded) 
+                        {
+                            message << " (no new skills available)";
+                        } 
+                        else 
+                        {
+                            message << " has no new powers";
+                        }
+
+                        std::cout << message.str() << "!\n";
+                    }
+                });
+            return mysticalOrb;
         }
     }
 }
