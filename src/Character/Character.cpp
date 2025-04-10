@@ -147,8 +147,6 @@ void Character::takeDamage(DamageCalculator& dmgCalc)
     m_health = std::max(0, m_health);
 
     std::cout << m_name << " takes " << dmgCalc.m_finalDamage << " damage.\n";
-    dmgCalc.m_armorDamage = 0;
-    dmgCalc.m_finalDamage = 0;
 }
 
 void Character::takeDamage(int damage)

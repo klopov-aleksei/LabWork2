@@ -19,7 +19,8 @@ MeleeAttack::MeleeAttack(int baseDamage, int cost)
 void MeleeAttack::execute(Character& user, Character& target) 
 {
     int cost{ getCost() };
-    if (auto* weapon = user.getWeapon())
+    auto* weapon = user.getWeapon();
+    if (weapon)
     {
         std::string name = weapon->getName();
         if (name == "Excalibur")
@@ -44,31 +45,30 @@ void MeleeAttack::execute(Character& user, Character& target)
     int attackCount = user.getAttackCount();
     DamageCalculator dmgCalc;
 
-    if (!user.getWeapon())
+    std::cout << user.getName() << " attacks " << target.getName() << "!\n";
+    int baseDamage{ Random::get(Constants::min_attack_bonus, Constants::max_attack_bonus) };
+    if (!weapon)
     {
-        std::cout << "\nYou have not got any weapon.\n";
-        int baseDamage{ Random::get(Constants::min_attack_bonus, Constants::max_attack_bonus) };
+        std::cout << user.getName() << " has not got any weapon.\n";
         calculateDamage(dmgCalc, target, baseDamage, computeStatBonus(user, baseDamage, true), attackCount);
         target.takeDamage(dmgCalc);
         user.takeActionPoints(finalCost);
         return;
     }
 
-    Weapon* weapon = user.getWeapon();
-    int baseDamage = weapon->getBaseDamage();
+    baseDamage = weapon->getBaseDamage();
     int statBonus{ computeStatBonus(user, baseDamage, true) }; // true = for melee using strength
     calculateDamage(dmgCalc, target, baseDamage, statBonus, attackCount);
     target.takeDamage(dmgCalc);
     user.takeActionPoints(finalCost);
-
-    int durabilityLoss{ Random::get(Constants::min_weapon_decoy, Constants::max_weapon_decoy) };
-    weapon->repair(durabilityLoss);
-    std::cout << weapon->getName() << " durability: " 
-              << weapon->getCurrentDurability() << "/"
-              << weapon->getMaxDurability() << "\n";
-    if (weapon->isBroken()) 
+    if (weapon)
     {
-        std::cout << user.getName() << "'s " << user.getWeapon()->getName() << " broke!\n";
-        user.equipWeapon(nullptr);
+        int durabilityLoss{ -Random::get(Constants::min_weapon_decoy, Constants::max_weapon_decoy) };
+        weapon->repair(durabilityLoss);
+        if (weapon->isBroken()) 
+        {
+            std::cout << user.getName() << "'s " << weapon->getName() << " broke!\n";
+            user.equipWeapon(nullptr);
+        }
     }
 }

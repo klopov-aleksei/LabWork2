@@ -101,7 +101,7 @@ void CharacterCreation::ChooseWeapon(PlayerCharacter& character)
 
         if (choice == 1)
         {
-            character.equipWeapon(std::make_unique<Weapon>("Sword", 20, 20));
+            character.equipWeapon(std::make_unique<Weapon>("Sword", 18, 25));
             break;
         }
         else if (choice == 2)
@@ -137,7 +137,7 @@ void CharacterCreation::ChooseArmor(PlayerCharacter& player)
     switch (choice) 
     {
         case 1:
-            chosenArmor = std::make_unique<Armor>("Light Armor", 10, 20);
+            chosenArmor = std::make_unique<Armor>("Light Armor", 10, 30);
             {
                 PlayerCharacter* pc = dynamic_cast<PlayerCharacter*>(&player);
                 if (pc != nullptr)
@@ -147,10 +147,10 @@ void CharacterCreation::ChooseArmor(PlayerCharacter& player)
             }
             break;
         case 2:
-            chosenArmor = std::make_unique<Armor>("Medium Armor", 20, 40);
+            chosenArmor = std::make_unique<Armor>("Medium Armor", 20, 60);
             break;
         case 3:
-            chosenArmor = std::make_unique<Armor>("Heavy Armor", 30, 60);
+            chosenArmor = std::make_unique<Armor>("Heavy Armor", 30, 90);
             {
                 PlayerCharacter* pc = dynamic_cast<PlayerCharacter*>(&player);
                 if (pc != nullptr)
@@ -180,10 +180,11 @@ void CharacterCreation::ChooseSkills(PlayerCharacter& player)
     {
         std::cout << "5. Learn Spellcasting\n";
     }
+    std::cout << "0. Nothing\n";
 
     int maxOption { dynamic_cast<Warrior*>(&player) ? 5 : 4 };
     int skillChoice;
-    while (!(std::cin >> skillChoice) || skillChoice < 1 || skillChoice > maxOption)
+    while (!(std::cin >> skillChoice) || skillChoice < 0 || skillChoice > maxOption)
     {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -192,6 +193,9 @@ void CharacterCreation::ChooseSkills(PlayerCharacter& player)
 
     switch (skillChoice)
     {
+    case 0: 
+        std::cout << "No additional skill selected.\n";
+        break;
     case 1:
         player.unlockHealing();
         std::cout << "You have learned 'Heal'!\n";

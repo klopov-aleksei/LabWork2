@@ -20,11 +20,8 @@ MediumEnemy::MediumEnemy()
     m_turnsSinceUltra   = 0;
     m_hasBuff           = false;
     
-    // Equip the initial weapon and armor.
-    // Initial weapon: 15 damage, 20 durability.
-    equipWeapon(std::make_unique<Weapon>("Medium Enemy Weapon", 15, 20));
-    // Initial armor: 20 defense, 50 durability.
-    equipArmor(std::make_unique<Armor>("Medium Enemy Armor", 20, 50));
+    equipWeapon(std::make_unique<Weapon>("Frying Pan", 15, 20));
+    equipArmor(std::make_unique<Armor>("Prison Armor", 20, 100));
 }
 
 void MediumEnemy::performTurn(PlayerCharacter &player)
