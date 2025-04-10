@@ -10,13 +10,17 @@
 #include <iomanip>
 
 Character::Character(std::string_view name, int strength,
-                            int intelligence, int agility, int mana)
+                            int intelligence, int agility, int mana, int health, int actionPoints)
     : m_name{ name }
     , m_strength{ strength }
     , m_intelligence{ intelligence }
     , m_agility{ agility } 
     , m_mana{ mana }
     , m_maxMana{ mana }
+    , m_health{ health }
+    , m_maxHealth{ health }
+    , m_actionPoints{ actionPoints }
+    , m_maxActionPoints{ actionPoints }
 {
 }
 

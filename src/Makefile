@@ -6,7 +6,9 @@ SRC = main.cpp \
        Character/Character.cpp \
        Character/PlayerCharacter.cpp \
        Character/NPC.cpp \
+       Character/EasyEnemy.cpp \
        Character/MediumEnemy.cpp \
+       Character/HardEnemy.cpp \
        Equipment/Armor.cpp \
        Equipment/Equipment.cpp \
        Equipment/Inventory.cpp \

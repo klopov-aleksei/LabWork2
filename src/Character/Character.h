@@ -21,13 +21,13 @@ protected:
     std::string m_name;
     int m_strength{ 5 };
     int m_intelligence{ 5 };
-    int m_health{ 100 };
-    int m_maxHealth{ 100 };
     int m_agility{ 5 };
-    int m_actionPoints{ Constants::initial_ap };
-    int m_maxActionPoints{ Constants::initial_ap };
     int m_mana{ 50 };
     int m_maxMana{ 50 };
+    int m_health{ 100 };
+    int m_maxHealth{ 100 };
+    int m_actionPoints{ Constants::initial_ap };
+    int m_maxActionPoints{ Constants::initial_ap };
     bool m_isBlocking{ false };
     int m_attackCount{ 0 };
 
@@ -35,7 +35,8 @@ protected:
     std::unique_ptr<Armor> equippedArmor;
 
 public:
-    Character(std::string_view name, int strength, int intelligence, int agility, int mana);
+    Character(std::string_view name, int strength, int intelligence, 
+        int agility, int mana, int health = 100, int actionPoints = 10);
     Character(std::string_view name, int agility, int mana);
     Character() = default;
 

@@ -1,13 +1,15 @@
-#ifndef EASY_GOBLIN_H
-#define EASY_GOBLIN_H
+#ifndef EASY_ENEMY_H
+#define EASY_ENEMY_H
 
 #include "Character/NPC.h"
-#include "Skills/MeleeAttack.h"
 
-class EasyGoblin : public NPC 
+class EasyEnemy : public NPC 
 {
+private:
+    bool m_usedUltra{ false };
+
 public:
-    EasyGoblin();
+    EasyEnemy();
 };
 
 #endif
