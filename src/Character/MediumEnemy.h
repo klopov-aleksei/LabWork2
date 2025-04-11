@@ -10,8 +10,10 @@ protected:
     int  m_ultraAttacksUsed; // Maximum 2 allowed per fight.
     int  m_turnsSinceUltra;
     
+    void equipBackup() override;
+    bool shouldUseUltra(double playerHealthRatio, double enemyHealthRatio) override;
+
     void performUseItem(PlayerCharacter& player, int bestIndex);
-    
     std::pair<int, int> evaluateInventory() const;
     int evaluateItem(const Item& item) const;
 
@@ -21,9 +23,6 @@ public:
     virtual ~MediumEnemy() = default;
     
     void performTurn(PlayerCharacter& player) override;
-
-    bool shouldUseUltra(double playerHealthRatio, double enemyHealthRatio);
-    void performUltraAttack(PlayerCharacter& player) override;
 };
 
 #endif

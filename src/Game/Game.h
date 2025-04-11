@@ -11,6 +11,7 @@ class Game
 {
 private:
     std::unique_ptr<PlayerCharacter> player{};
+    std::unique_ptr<NPC> enemy{};
     CharacterCreation characterCreation;
     CombatSystem* combatSystem{};
     CombatInterface* combatInterface{};

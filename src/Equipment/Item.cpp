@@ -41,7 +41,7 @@ void Item::runCustomEffect(Character& user)
 
 void Item::use(Character& user, Character* enemy)
 {
-    int cost{ 1 };
+    const int cost{ 1 };
     std::cout << "Using " << m_name << " (" << getRarityName() << ")\n";
     runCustomEffect(user);
 

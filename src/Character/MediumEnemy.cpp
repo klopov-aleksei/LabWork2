@@ -19,17 +19,14 @@ MediumEnemy::MediumEnemy(std::string_view name, int strength, int intelligence,
     equipArmor(std::make_unique<Armor>("Prison Armor", 20, 100));
 }
 
-void MediumEnemy::performTurn(PlayerCharacter &player)
+void MediumEnemy::performTurn(PlayerCharacter& player)
 {
-    std::cout << "\n" << m_name << "'s turn begins.\n";
     m_turnsSinceUltra++;
+    std::cout << "\n" << m_name << "'s turn begins.\n";
+    m_hasBuff = false;
 
-    if (!m_hasEquippedBackup && (!getWeapon() || getWeapon()->isBroken())) 
-    {
-        equipWeapon(std::make_unique<Weapon>("Soul Reaper", 25, 50));
-        std::cout << m_name << " equips Soul Reaper!\n";
-        m_hasEquippedBackup = true;
-    }
+    if (!m_hasEquippedBackup)
+        equipBackup();
 
     while (m_actionPoints >= 2)
     {
@@ -46,6 +43,9 @@ void MediumEnemy::performTurn(PlayerCharacter &player)
         if (shouldUseUltra(playerHealthRatio, enemyHealthRatio) && (m_actionPoints == m_maxActionPoints))
         {
             performUltraAttack(player);
+            m_ultraAttacksUsed++;
+            m_turnsSinceUltra = 0;
+            break;
         }
         else if (tier == HIGH && canUseItem) 
         {
@@ -84,7 +84,6 @@ void MediumEnemy::performTurn(PlayerCharacter &player)
         }
         else
         {
-            // No further viable actions.
             break;
         }
     }
@@ -130,22 +129,14 @@ bool MediumEnemy::shouldUseUltra(double playerHealthRatio, double enemyHealthRat
         return secondCondition;
 }
 
-void MediumEnemy::performUltraAttack(PlayerCharacter& player)
-{   
-    int baseDamage = (getWeapon()) ? getWeapon()->getBaseDamage() : 0;
-    int damage = static_cast<int>(baseDamage * 2.5);
-
-    if (m_hasBuff)
+void MediumEnemy::equipBackup()
+{
+    if (!getWeapon() || getWeapon()->isBroken()) 
     {
-        damage = static_cast<int>(damage * 1.2);
-        m_hasBuff = false;
+        equipWeapon(std::make_unique<Weapon>("Soul Reaper", 25, 50));
+        std::cout << m_name << " equips Soul Reaper!\n";
+        m_hasEquippedBackup = true;
     }
-    
-    std::cout << m_name << " unleashes an ULTRA ATTACK dealing " << damage << " damage, consuming all AP.\n";
-    player.takeDamage(damage);
-    takeActionPoints(m_actionPoints);
-    m_ultraAttacksUsed++;
-    m_turnsSinceUltra = 0;
 }
 
 void MediumEnemy::performUseItem(PlayerCharacter& player, int bestIndex) 
@@ -154,7 +145,8 @@ void MediumEnemy::performUseItem(PlayerCharacter& player, int bestIndex)
     {
         m_inventory.useItem(bestIndex, *this, &player);
         std::cout << m_name << " uses an item.\n";
-        takeActionPoints(2);
+        const int additional_cost{ 1 };
+        takeActionPoints(additional_cost);
     }
     else 
     {

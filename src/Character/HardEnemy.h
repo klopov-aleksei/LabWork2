@@ -5,8 +5,16 @@
 
 class HardEnemy : public MediumEnemy 
 {
+private: 
+    void equipBackup() override;
+
+    bool shouldBlock(const PlayerCharacter& player, double enemyHealthRatio);
+    void performBlock();
+
 public:
     HardEnemy();
+
+    void performTurn(PlayerCharacter& player) override;
 };
 
 #endif

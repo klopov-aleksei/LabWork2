@@ -46,6 +46,11 @@ void NPC::displayStatus() const
     std::cout << "====================\n";
 }
 
+bool NPC::shouldUseUltra(double playerHealthRatio, double enemyHealthRatio)
+{
+    return playerHealthRatio < 0.4  && enemyHealthRatio < 0.5 && m_actionPoints == m_maxActionPoints;
+}
+
 bool NPC::shouldHeal(double playerHealthRatio, double enemyHealthRatio)
 {
     // Healing is an option if enemy health is below 50%.
@@ -98,12 +103,6 @@ void NPC::performUltraAttack(PlayerCharacter& player)
 {   
     int baseDamage = (getWeapon()) ? getWeapon()->getBaseDamage() : 0;
     int damage = static_cast<int>(baseDamage * 2.5);
-
-    if (m_hasBuff)
-    {
-        damage = static_cast<int>(damage * 1.2);
-        m_hasBuff = false;
-    }
     
     std::cout << m_name << " unleashes an ULTRA ATTACK dealing " << damage << " damage, consuming all AP.\n";
     player.takeDamage(damage);

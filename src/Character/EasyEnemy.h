@@ -8,8 +8,12 @@ class EasyEnemy : public NPC
 private:
     bool m_usedUltra{ false };
 
+    void equipBackup() override;
+
 public:
     EasyEnemy();
+
+    void performTurn(PlayerCharacter& player) override;
 };
 
 #endif

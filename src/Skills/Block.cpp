@@ -6,11 +6,14 @@
 void Block::execute(Character& user)
 {
     int cost{ getCost() };
-    if (auto* pc = dynamic_cast<PlayerCharacter*>(&user)) 
+    auto* pc = dynamic_cast<PlayerCharacter*>(&user);
+    if (pc != nullptr) 
     { 
-        if (pc->hasEasyBlock()) cost = (cost > 1) ? cost - 2 : cost;
+        if (pc->hasEasyBlock()) 
+            cost = (cost > 1) ? cost - 2 : cost;
     } 
     user.setBlocking(true);
     user.takeActionPoints(cost);
-    std::cout << user.getName() << " blocks!\n";
+    if (pc != nullptr)
+        std::cout << user.getName() << " blocks!\n";
 }
