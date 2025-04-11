@@ -49,6 +49,7 @@ void SpellCast::execute(Character& user, Character& target)
     }
 
     user.incrementAttackCount();
+    std::cout << user.getName() << " casts a spell on " << target.getName() << '\n';
     int attackCount = user.getAttackCount();
 
     int baseDamage{ getDamage() + bonusDamage };
@@ -57,7 +58,6 @@ void SpellCast::execute(Character& user, Character& target)
     DamageCalculator dmgCalc;
     dmgCalc.markAsSpell();
     calculateDamage(dmgCalc, target, baseDamage, statBonus, attackCount);
-    std::cout << user.getName() << " casts a spell on " << target.getName() << '\n';
     target.takeDamage(dmgCalc);
     user.takeActionPoints(cost);
     user.useMana(manaCost);

@@ -46,9 +46,9 @@ public:
     void setBlocking(bool state);
     bool isBlocking() const;
 
+    virtual void resetActionPoints();
     void incrementAttackCount();
     void resetAttackCount();
-    void resetActionPoints();
     int getAttackCount() const;
 
     const std::string& getName() const;

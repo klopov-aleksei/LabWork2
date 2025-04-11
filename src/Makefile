@@ -5,6 +5,8 @@ LDFLAGS =
 SRC = main.cpp \
        Character/Character.cpp \
        Character/PlayerCharacter.cpp \
+       Character/Mage.cpp \
+       Character/Warrior.cpp \
        Character/NPC.cpp \
        Character/EasyEnemy.cpp \
        Character/MediumEnemy.cpp \

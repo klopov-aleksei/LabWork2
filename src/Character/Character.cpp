@@ -48,13 +48,14 @@ bool Character::isBlocking() const
     return m_isBlocking;
 }
 
-void Character::incrementAttackCount() { ++m_attackCount; }
-void Character::resetAttackCount() { m_attackCount = 0; }
 void Character::resetActionPoints() 
 { 
     m_actionPoints = m_maxActionPoints; 
     resetAttackCount();
 }
+
+void Character::incrementAttackCount() { ++m_attackCount; }
+void Character::resetAttackCount() { m_attackCount = 0; }
 int Character::getAttackCount() const
 {
     return m_attackCount;

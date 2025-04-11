@@ -89,7 +89,7 @@ void Item::use(Character& user, Character* enemy)
             case Stat::damage:
             {
                 DamageCalculator dmgCalc;
-                calculateDamage(dmgCalc, *enemy, mod.value, 0, 0); // attackCount&statBonus is zero for items
+                calculateDamage(dmgCalc, user, -mod.value, 0, 0); // attackCount&statBonus is zero for items
                 enemy->takeDamage(dmgCalc);
                 break;
             }
@@ -116,7 +116,7 @@ void Item::use(Character& user, Character* enemy)
                 }
                 case Stat::health:
                 {
-                    enemy->increaseHealth(mod.value);
+                    enemy->increaseHealth(-mod.value);
                     break;
                 }
                 default:

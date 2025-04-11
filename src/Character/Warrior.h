@@ -2,13 +2,21 @@
 #define WARRIOR_H
 
 #include "PlayerCharacter.h"
-#include "Skills/MeleeAttack.h"
-#include "Skills/Block.h"
 
 class Warrior : public PlayerCharacter 
 {
+private:
+    bool m_blockSuccess{ false };
+    bool m_damageBuff{ false };
+
 public:
-    Warrior(std::string_view name)
-        : PlayerCharacter(name, 5, 10) { }
+    Warrior(std::string_view name);
+
+    void setBlockSuccess(bool success);
+    bool isDamageBuffActive() const;
+    void resetDamageBuff();
+
+    void resetActionPoints() override;
 };
+
 #endif

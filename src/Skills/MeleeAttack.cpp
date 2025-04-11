@@ -54,8 +54,16 @@ void MeleeAttack::execute(Character& user, Character& target)
         user.takeActionPoints(finalCost);
         return;
     }
-
     baseDamage = weapon->getBaseDamage();
+
+    Warrior* warrior = dynamic_cast<Warrior*>(&user);
+    if (warrior && warrior->isDamageBuffActive()) 
+    {
+        baseDamage = static_cast<int>(baseDamage * 1.2);
+        warrior->resetDamageBuff();
+        std::cout << user.getName() << " strikes with 20%" << " increased damage from a successful block!\n";
+    }
+
     int statBonus{ computeStatBonus(user, baseDamage, true) }; // true = for melee using strength
     calculateDamage(dmgCalc, target, baseDamage, statBonus, attackCount);
     target.takeDamage(dmgCalc);

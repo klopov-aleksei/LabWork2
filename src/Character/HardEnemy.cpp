@@ -1,6 +1,7 @@
 #include "HardEnemy.h"
 #include "Skills/Block.h"
 #include "Skills/Investigate.h"
+#include "Character/Warrior.h"
 #include "Constants.h"
 #include "Random.h"
 #include "Constants.h"
@@ -42,15 +43,21 @@ bool HardEnemy::shouldBlock(const PlayerCharacter& player, double enemyHealthRat
     if (enemyHealthRatio < 0.5) priority += 10;
     if (enemyHealthRatio < 0.25) priority += 15;
 
+    if (auto* warrior = dynamic_cast<const Warrior*>(&player))
+    {
+        if (warrior->isDamageBuffActive())
+            priority += 45;
+    }
+
     int playerAttacks{ player.getAttackCount() };
     if (playerAttacks > 2)
-        priority -= 50;
+        priority -= 45;
     else if (playerAttacks == 2)
         priority += 5;
     else if (playerAttacks <= 1)
         priority += 15;
 
-    return (Random::get(0, 100) <= priority);
+    return (Random::get(0, 100) <= priority) && m_actionPoints == Constants::block_cost;
 }
 
 void HardEnemy::performBlock()
@@ -86,7 +93,7 @@ void HardEnemy::performTurn(PlayerCharacter& player)
             m_turnsSinceUltra = 0;
             break;
         }
-        else if (shouldBlock(player, enemyHealthRatio) && m_actionPoints == Constants::block_cost)
+        else if (shouldBlock(player, enemyHealthRatio))
         {
             performBlock();
         }
@@ -116,13 +123,16 @@ void HardEnemy::performTurn(PlayerCharacter& player)
         }
         else if (m_actionPoints >= 4)
         {
-            if (shouldSpellCast())
+            if (!(shouldBlock(player, enemyHealthRatio)) || (Random::get(0,100) <= 15) || shouldBuff())
             {
-                performSpellAttack(player);
-            }
-            else
-            {
-                performMeleeAttack(player);
+                if (shouldSpellCast())
+                {
+                    performSpellAttack(player);
+                }
+                else
+                {
+                    performMeleeAttack(player);
+                }
             }
         }
         else

@@ -1,5 +1,6 @@
 #include "DamageCalculator.h"
 #include "Equipment/Armor.h"
+#include "Character/Warrior.h"
 #include "Random.h"
 #include "Constants.h"
 
@@ -19,6 +20,12 @@ void calculateDamage(DamageCalculator& dmgCalc, Character& target,
         blockFactor -= Random::get(Constants::min_block_reduce, Constants::max_block_reduce) / 100.0;
         target.setBlocking(false);
         std::cout << target.getName() << " blocks the attack, reducing the damage!\n";
+
+        Warrior* warrior = dynamic_cast<Warrior*>(&target);
+        if (warrior) 
+        {
+            warrior->setBlockSuccess(true);
+        }
     }
 
     dmgCalc.m_finalDamage = static_cast<int>(rawDamage * blockFactor);

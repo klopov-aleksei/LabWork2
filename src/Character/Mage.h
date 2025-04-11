@@ -1,14 +1,18 @@
-#pragma once
+#ifndef MAGE_H
+#define MAGE_H
 
 #include "PlayerCharacter.h"
-#include "Skills/SpellCast.h"
-#include "Skills/MeleeAttack.h"
-#include "Skills/Block.h"
 
 class Mage : public PlayerCharacter 
 {
+private:
+    int m_turnCounter{ 0 };
+
 public:
-    Mage(std::string_view name) 
-        : PlayerCharacter(name, 7, 50) 
-    { enableSpellCast(); }
+    Mage(std::string_view name);
+
+    void startNewTurn();
+    int getTurnCounter() const { return m_turnCounter; }
 };
+
+#endif

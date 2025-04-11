@@ -3,6 +3,7 @@
 #include "Character/EasyEnemy.h"
 #include "Character/HardEnemy.h"
 #include "Character/MediumEnemy.h"
+#include "Character/Mage.h"
 
 #include <iostream>
 
@@ -34,6 +35,8 @@ void CombatSystem::handleTurn(CombatInterface& interface)
     if (m_playerTurn) 
     {
         m_player.resetActionPoints();
+        if (auto* mage = dynamic_cast<Mage*>(&m_player)) 
+            mage->startNewTurn();
         interface.displayCombatOptions();
         m_enemy->setBlocking(false);
     } 

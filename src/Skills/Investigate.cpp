@@ -79,8 +79,8 @@ std::string Investigate::getFriendlyNameForSingle(Stat stat, int bonus, Target t
     {
         if(target == Target::enemy)
         {
-            if(bonus >= 30) return "Lightning Bolt";
-            else if(bonus > 10) return "Fireball";
+            if (bonus >= 30) return "Lightning Bolt";
+            else if (bonus > 10) return "Fireball";
             else return "Magic Scroll";
         }
         else
@@ -214,8 +214,8 @@ bool Investigate::isSumValid(Rarity rarity, int totalSum)
     {
         case Rarity::common:   return (totalSum >= 5  && totalSum <= 10);
         case Rarity::uncommon: return (totalSum >= 10 && totalSum <= 20);
-        case Rarity::rare:    return (totalSum >= 30 && totalSum <= 40);
-        default: return true;
+        case Rarity::rare:     return (totalSum >= 30 && totalSum <= 40);
+        default:               return false;
     }
 }
 
