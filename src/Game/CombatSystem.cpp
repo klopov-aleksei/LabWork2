@@ -35,6 +35,7 @@ void CombatSystem::handleTurn(CombatInterface& interface)
     {
         m_player.resetActionPoints();
         interface.displayCombatOptions();
+        m_enemy->setBlocking(false);
     } 
     else 
     {
@@ -45,6 +46,7 @@ void CombatSystem::handleTurn(CombatInterface& interface)
             enemy->performTurn(m_player);
         else if (auto* enemy = dynamic_cast<EasyEnemy*>(m_enemy))
             enemy->performTurn(m_player);
+        m_player.setBlocking(false);
     }
 
     bool currentPlayerAdvantage = (m_player.getAgility() > m_enemy->getAgility());

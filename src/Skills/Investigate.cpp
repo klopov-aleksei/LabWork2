@@ -125,10 +125,18 @@ std::string Investigate::getFriendlyNameForSingle(Stat stat, int bonus, Target t
             else if (bonus > 1) return "Strong Amulet";
             else return "Amulet";
         case Stat::repair:
-            // Here the effect is for equipment repair.
-            if (bonus >= 30) return "Master Repair Kit";
-            else if (bonus > 10) return "Toolbox";
-            else return "Repair Kit";
+            if (target == Target::armor) 
+            {
+                if (bonus >= 30) return "Master Armor Repair Kit";
+                else if (bonus > 10) return "Armor Toolbox";
+                else return "Armor Repair Kit";
+            } 
+            else 
+            {
+                if (bonus >= 30) return "Master Weapon Repair Kit";
+                else if (bonus > 10) return "Weapon Toolbox";
+                else return "Weapon Repair Kit";
+            }
         default:
             return "Mysterious Item";
     }
@@ -160,7 +168,12 @@ std::string Investigate::generateMultiModifierName(Rarity overallRarity, const s
             case Stat::intelligence: statLabel = "Intell"; break;
             case Stat::agility: statLabel = "Agility"; break;
             case Stat::actionPoints: statLabel = "AP"; break;
-            case Stat::repair: statLabel = "Repair"; break;
+            case Stat::repair: 
+                if (mods[i].target == Target::armor) 
+                    statLabel = "Armor Repair";
+                else 
+                    statLabel = "Weapon Repair"; 
+                break;
             case Stat::damage: statLabel = "Damage"; break;
             default: statLabel = "Mystery"; break;
         }
@@ -185,10 +198,11 @@ std::vector<StatModifier> Investigate::combineModifiers(const std::vector<StatMo
         if (it != combined.end())
         {
             it->value += mod.value;
+            if (it->value == 0) combined.erase(it);
         }
         else
         {
-            combined.push_back(mod);
+            if (mod.value != 0) combined.push_back(mod);
         }
     }
     return combined;

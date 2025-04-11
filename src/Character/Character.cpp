@@ -84,12 +84,15 @@ void Character::increaseMana(int amount)
     m_mana = newMana;
 }
 
-void Character::repairArmor(int durability) // better to implement as non-member functions.
+void Character::repairArmor(int durability)
 {
     if (equippedArmor)
-    {
+    {   
+        int pastdur{ equippedArmor->getCurrentDurability() };
         equippedArmor->repair(durability);
-        std::cout << m_name << "'s armor has been repaired by " << durability << " durability.\n";
+        std::cout << m_name << "'s armor durability changed from " << pastdur 
+                  << " to " << equippedArmor->getCurrentDurability()
+                  << " (repaired by "<< durability << ").\n";
     }
     else 
     {
@@ -101,8 +104,11 @@ void Character::repairWeapon(int durability)
 {
     if (equippedWeapon) 
     {
+        int pastdur{ equippedWeapon->getCurrentDurability() };
         equippedWeapon->repair(durability);
-        std::cout << m_name << "'s weapon has been repaired by " << durability << " durability.\n";
+        std::cout << m_name << "'s armor durability changed from " << pastdur 
+                  << " to " << equippedWeapon->getCurrentDurability()
+                  << " (repaired by "<< durability << ").\n";
     }
     else 
     {
