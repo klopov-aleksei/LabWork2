@@ -52,4 +52,3 @@ jobs:
     - name: Run Tests
       if: steps.check-test.outputs.TEST_EXISTS == 'true'
       run: ./test_game
-

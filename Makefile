@@ -32,7 +32,12 @@ SRC = src/main.cpp \
 
 TEST_SRC = tests/CharacterTest.cpp \
           tests/PlayerCharacterTest.cpp \
-          tests/MageTest.cpp
+          tests/MageTest.cpp \
+          tests/WarriorTest.cpp \
+          tests/NPCTest.cpp \
+          tests/EasyEnemyTest.cpp \
+          tests/MediumEnemyTest.cpp \
+          tests/HardEnemyTest.cpp
 
 OBJ = $(SRC:.cpp=.o)
 TEST_OBJ = $(TEST_SRC:.cpp=.o)
