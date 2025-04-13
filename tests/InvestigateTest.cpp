@@ -22,7 +22,7 @@ int findValidSeed()
     {
         std::mt19937 rng(seed);
         Random::mt = rng;
-        if(Random::get(1,100) <= 3) 
+        if (Random::get(1,100) <= 3) 
             return seed;
     }
     return seed;
@@ -50,9 +50,11 @@ TEST(InvestigateTest, EpicItemGeneration) {
     }
     
     EXPECT_TRUE(found_epic) << "No epic items found in inventory. Items:";
-    for(int i = 1; i <= pc.getInventory().getItemCount(); ++i) {
+    for (int i = 1; i <= pc.getInventory().getItemCount(); ++i) 
+    {
         const Item* item = pc.getInventory()[i];
-        if(item) {
+        if(item) 
+        {
             std::cout << " - " << item->getName() 
                      << " (Rarity: " << static_cast<int>(item->getRarity())
                      << ")\n";
