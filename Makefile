@@ -37,7 +37,12 @@ TEST_SRC = tests/CharacterTest.cpp \
           tests/NPCTest.cpp \
           tests/EasyEnemyTest.cpp \
           tests/MediumEnemyTest.cpp \
-          tests/HardEnemyTest.cpp
+          tests/HardEnemyTest.cpp \
+          tests/ItemTest.cpp \
+          tests/EquipmentTest.cpp \
+          tests/ArmorTest.cpp \
+          tests/WeaponTest.cpp \
+          tests/InventoryTest.cpp
 
 OBJ = $(SRC:.cpp=.o)
 TEST_OBJ = $(TEST_SRC:.cpp=.o)
