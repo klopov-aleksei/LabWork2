@@ -1,6 +1,6 @@
 CXX = g++
-CXXFLAGS = -std=c++23 -Wall -Werror -Wpedantic -O2 -Isrc -Igoogletest/include
-LDFLAGS = -Lgoogletest/lib -lgtest -lgtest_main -lpthread
+CXXFLAGS = -std=c++23 -Wall -Werror -Wpedantic -O2 -Isrc
+LDFLAGS = -lgtest -lgtest_main -lpthread
 
 SRC = src/main.cpp \
       src/Character/Character.cpp \
@@ -42,7 +42,13 @@ TEST_SRC = tests/CharacterTest.cpp \
           tests/EquipmentTest.cpp \
           tests/ArmorTest.cpp \
           tests/WeaponTest.cpp \
-          tests/InventoryTest.cpp
+          tests/InventoryTest.cpp \
+          tests/HealTest.cpp \
+          tests/ConcentrateTest.cpp \
+          tests/InvestigateTest.cpp \
+          tests/BlockTest.cpp \
+          tests/MeleeAttackTest.cpp \
+          tests/SpellCastTest.cpp
 
 OBJ = $(SRC:.cpp=.o)
 TEST_OBJ = $(TEST_SRC:.cpp=.o)
