@@ -20,7 +20,7 @@ class CharacterCreation
 public:
     std::unique_ptr<PlayerCharacter> createCharacter();
 
-private:
+protected:
     static std::string ChooseName();
     static std::unique_ptr<PlayerCharacter> ChooseClass(std::string_view name);
     static void CustomizeStats(PlayerCharacter& character);

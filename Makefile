@@ -52,7 +52,8 @@ TEST_SRC = tests/CharacterTest.cpp \
           tests/CombatInterfaceTest.cpp \
           tests/CombatSystemTest.cpp \
           tests/DamageCalculatorTest.cpp \
-          tests/computeStatBonusTest.cpp
+          tests/computeStatBonusTest.cpp \
+          tests/CharacterCreationTest.cpp
 
 OBJ = $(SRC:.cpp=.o)
 TEST_OBJ = $(TEST_SRC:.cpp=.o)

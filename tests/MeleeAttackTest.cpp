@@ -17,7 +17,7 @@ TEST(MeleeAttackTest, WeaponDamage) {
     warrior.equipWeapon(std::move(weapon));
     
     MeleeAttack attack;
-    attack.execute(warrior, target);  // Now valid
+    attack.execute(warrior, target);
     EXPECT_LT(target.getHealth(), 100);
     EXPECT_LT(warrior.getWeapon()->getCurrentDurability(), 50);
 }

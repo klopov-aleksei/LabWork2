@@ -16,9 +16,8 @@ TEST(NPCTest, HealsWhenHealthLow) {
     TestNPC npc;
     PlayerCharacter player("TestPlayer", 5, 50);
 
-    // Set NPC health to 40/100 (below 50%)
     npc.increaseHealth(-60);
-    npc.resetActionPoints(); // Ensure AP is full
+    npc.resetActionPoints(); 
 
     npc.testPerformHeal();
     EXPECT_GT(npc.getHealth(), 40); // Health should increase
@@ -29,6 +28,6 @@ TEST(NPCTest, SpellCastUsesMana) {
     PlayerCharacter player("TestPlayer", 5, 50);
 
     npc.resetActionPoints();
-    npc.testPerformSpellAttack(player); // Requires 20 mana
+    npc.testPerformSpellAttack(player);
     EXPECT_LE(npc.getMana(), 30); // 50 base mana - 20 used
 }
