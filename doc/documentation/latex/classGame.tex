@@ -1,0 +1,109 @@
+\hypertarget{classGame}{}\doxysection{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+
+
+Collaboration diagram for Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGame_a4735989677c1cab18866f3ae4ee0aa1c}{Game}} ()=default
+\item 
+\mbox{\hyperlink{classGame_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game}} ()
+\item 
+void \mbox{\hyperlink{classGame_a3d9b98f7c4a96ecf578f75b96c9f0e90}{start}} ()
+\item 
+void \mbox{\hyperlink{classGame_a1d6c41a2541e71a6718630e48cac1d83}{start\+Combat}} (\mbox{\hyperlink{classNPC}{NPC}} \&\mbox{\hyperlink{classGame_abe936cefe23dbb9b3f72dcda26187ff5}{enemy}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} $>$ \mbox{\hyperlink{classGame_a40f8910e22c228709cdc92fe2b40e871}{player}} \{\}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classNPC}{NPC}} $>$ \mbox{\hyperlink{classGame_abe936cefe23dbb9b3f72dcda26187ff5}{enemy}} \{\}
+\item 
+\mbox{\hyperlink{classCharacterCreation}{Character\+Creation}} \mbox{\hyperlink{classGame_a8bbfb82b4e522fe1b89dded656a37a2e}{character\+Creation}}
+\item 
+\mbox{\hyperlink{classCombatSystem}{Combat\+System}} $\ast$ \mbox{\hyperlink{classGame_a44a8c9a820c1445fef812bdbdae7f1e5}{combat\+System}} \{\}
+\item 
+\mbox{\hyperlink{classCombatInterface}{Combat\+Interface}} $\ast$ \mbox{\hyperlink{classGame_a3812244fc5dcade06782d6f1e667cabf}{combat\+Interface}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGame_a4735989677c1cab18866f3ae4ee0aa1c}\label{classGame_a4735989677c1cab18866f3ae4ee0aa1c}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classGame_ae3d112ca6e0e55150d2fdbc704474530}\label{classGame_ae3d112ca6e0e55150d2fdbc704474530}} 
+\index{Game@{Game}!````~Game@{$\sim$Game}}
+\index{````~Game@{$\sim$Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{$\sim$Game()}{~Game()}}
+{\footnotesize\ttfamily Game\+::$\sim$\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGame_a3d9b98f7c4a96ecf578f75b96c9f0e90}\label{classGame_a3d9b98f7c4a96ecf578f75b96c9f0e90}} 
+\index{Game@{Game}!start@{start}}
+\index{start@{start}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Game\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGame_a1d6c41a2541e71a6718630e48cac1d83}\label{classGame_a1d6c41a2541e71a6718630e48cac1d83}} 
+\index{Game@{Game}!startCombat@{startCombat}}
+\index{startCombat@{startCombat}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{startCombat()}{startCombat()}}
+{\footnotesize\ttfamily void Game\+::start\+Combat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNPC}{NPC}} \&}]{enemy }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGame_a8bbfb82b4e522fe1b89dded656a37a2e}\label{classGame_a8bbfb82b4e522fe1b89dded656a37a2e}} 
+\index{Game@{Game}!characterCreation@{characterCreation}}
+\index{characterCreation@{characterCreation}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{characterCreation}{characterCreation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCharacterCreation}{Character\+Creation}} Game\+::character\+Creation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGame_a3812244fc5dcade06782d6f1e667cabf}\label{classGame_a3812244fc5dcade06782d6f1e667cabf}} 
+\index{Game@{Game}!combatInterface@{combatInterface}}
+\index{combatInterface@{combatInterface}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{combatInterface}{combatInterface}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCombatInterface}{Combat\+Interface}}$\ast$ Game\+::combat\+Interface \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGame_a44a8c9a820c1445fef812bdbdae7f1e5}\label{classGame_a44a8c9a820c1445fef812bdbdae7f1e5}} 
+\index{Game@{Game}!combatSystem@{combatSystem}}
+\index{combatSystem@{combatSystem}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{combatSystem}{combatSystem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCombatSystem}{Combat\+System}}$\ast$ Game\+::combat\+System \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGame_abe936cefe23dbb9b3f72dcda26187ff5}\label{classGame_abe936cefe23dbb9b3f72dcda26187ff5}} 
+\index{Game@{Game}!enemy@{enemy}}
+\index{enemy@{enemy}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{enemy}{enemy}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classNPC}{NPC}}$>$ Game\+::enemy \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGame_a40f8910e22c228709cdc92fe2b40e871}\label{classGame_a40f8910e22c228709cdc92fe2b40e871}} 
+\index{Game@{Game}!player@{player}}
+\index{player@{player}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}}$>$ Game\+::player \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/\mbox{\hyperlink{Game_8h}{Game.\+h}}\item 
+src/\+Game/\mbox{\hyperlink{Game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}

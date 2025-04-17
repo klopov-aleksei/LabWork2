@@ -1,0 +1,119 @@
+\hypertarget{StatModifier_8h}{}\doxysection{src/\+Equipment/\+Stat\+Modifier.h File Reference}
+\label{StatModifier_8h}\index{src/Equipment/StatModifier.h@{src/Equipment/StatModifier.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{StatModifier_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35d}{Target}} \{ \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35da590f53e8699817c6fa498cc11a4cbe63}{self}}
+, \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35dacde2fde1fa1551a704d775ce2315915d}{enemy}}
+, \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35da3ee45b1ff632881c66b6b92f45a47fd7}{armor}}
+, \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35da282aa351a2bd30655fbc060bd4f33766}{weapon}}
+ \}
+\item 
+enum class \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305}{Stat}} \{ \newline
+\mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a334c4a4c42fdb79d7ebc3e73b517e6f8}{none}}
+, \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a555bf8344ca0caf09b42f55e185526d8}{health}}
+, \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a582fc884d6299814fbd4f12c1f9ae70f}{mana}}
+, \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305abce74488e5d2db9ead96892af4448c99}{max\+Health}}
+, \newline
+\mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a2ed72d2f52ee694adf425a16e1ecec8e}{max\+Mana}}
+, \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a5177790ad6df0ea98db41b37b602367c}{strength}}
+, \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a90b884933d23c4d57ca01dbe2898d405}{intelligence}}
+, \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a841d806fd1f9758dbbed5b4dbfcccfe3}{agility}}
+, \newline
+\mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305af7ebcb0deb96ef2df7a7a1c9eeb598ab}{action\+Points}}
+, \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a9ab776b93b3c6bbb67f4545371814423}{repair}}
+, \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305ada14a7168b547f35ea0c6fa9f50de63e}{damage}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305}} 
+\index{StatModifier.h@{StatModifier.h}!Stat@{Stat}}
+\index{Stat@{Stat}!StatModifier.h@{StatModifier.h}}
+\doxysubsubsection{\texorpdfstring{Stat}{Stat}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305}{Stat}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{none@{none}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!none@{none}}}\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a334c4a4c42fdb79d7ebc3e73b517e6f8}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a334c4a4c42fdb79d7ebc3e73b517e6f8}} 
+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{health@{health}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!health@{health}}}\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a555bf8344ca0caf09b42f55e185526d8}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a555bf8344ca0caf09b42f55e185526d8}} 
+health&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{mana@{mana}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!mana@{mana}}}\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a582fc884d6299814fbd4f12c1f9ae70f}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a582fc884d6299814fbd4f12c1f9ae70f}} 
+mana&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{maxHealth@{maxHealth}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!maxHealth@{maxHealth}}}\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305abce74488e5d2db9ead96892af4448c99}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305abce74488e5d2db9ead96892af4448c99}} 
+max\+Health&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{maxMana@{maxMana}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!maxMana@{maxMana}}}\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a2ed72d2f52ee694adf425a16e1ecec8e}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a2ed72d2f52ee694adf425a16e1ecec8e}} 
+max\+Mana&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{strength@{strength}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!strength@{strength}}}\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a5177790ad6df0ea98db41b37b602367c}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a5177790ad6df0ea98db41b37b602367c}} 
+strength&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{intelligence@{intelligence}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!intelligence@{intelligence}}}\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a90b884933d23c4d57ca01dbe2898d405}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a90b884933d23c4d57ca01dbe2898d405}} 
+intelligence&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{agility@{agility}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!agility@{agility}}}\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a841d806fd1f9758dbbed5b4dbfcccfe3}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a841d806fd1f9758dbbed5b4dbfcccfe3}} 
+agility&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{actionPoints@{actionPoints}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!actionPoints@{actionPoints}}}\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305af7ebcb0deb96ef2df7a7a1c9eeb598ab}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305af7ebcb0deb96ef2df7a7a1c9eeb598ab}} 
+action\+Points&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{repair@{repair}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!repair@{repair}}}\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a9ab776b93b3c6bbb67f4545371814423}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a9ab776b93b3c6bbb67f4545371814423}} 
+repair&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{damage@{damage}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!damage@{damage}}}\mbox{\Hypertarget{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305ada14a7168b547f35ea0c6fa9f50de63e}\label{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305ada14a7168b547f35ea0c6fa9f50de63e}} 
+damage&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{StatModifier_8h_a31488d29805a596498c0234ae392d35d}\label{StatModifier_8h_a31488d29805a596498c0234ae392d35d}} 
+\index{StatModifier.h@{StatModifier.h}!Target@{Target}}
+\index{Target@{Target}!StatModifier.h@{StatModifier.h}}
+\doxysubsubsection{\texorpdfstring{Target}{Target}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35d}{Target}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{self@{self}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!self@{self}}}\mbox{\Hypertarget{StatModifier_8h_a31488d29805a596498c0234ae392d35da590f53e8699817c6fa498cc11a4cbe63}\label{StatModifier_8h_a31488d29805a596498c0234ae392d35da590f53e8699817c6fa498cc11a4cbe63}} 
+self&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{enemy@{enemy}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!enemy@{enemy}}}\mbox{\Hypertarget{StatModifier_8h_a31488d29805a596498c0234ae392d35dacde2fde1fa1551a704d775ce2315915d}\label{StatModifier_8h_a31488d29805a596498c0234ae392d35dacde2fde1fa1551a704d775ce2315915d}} 
+enemy&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{armor@{armor}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!armor@{armor}}}\mbox{\Hypertarget{StatModifier_8h_a31488d29805a596498c0234ae392d35da3ee45b1ff632881c66b6b92f45a47fd7}\label{StatModifier_8h_a31488d29805a596498c0234ae392d35da3ee45b1ff632881c66b6b92f45a47fd7}} 
+armor&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{weapon@{weapon}!StatModifier.h@{StatModifier.h}}\index{StatModifier.h@{StatModifier.h}!weapon@{weapon}}}\mbox{\Hypertarget{StatModifier_8h_a31488d29805a596498c0234ae392d35da282aa351a2bd30655fbc060bd4f33766}\label{StatModifier_8h_a31488d29805a596498c0234ae392d35da282aa351a2bd30655fbc060bd4f33766}} 
+weapon&\\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,84 @@
+\hypertarget{classWeapon}{}\doxysection{Weapon Class Reference}
+\label{classWeapon}\index{Weapon@{Weapon}}
+
+
+{\ttfamily \#include $<$Weapon.\+h$>$}
+
+
+
+Inheritance diagram for Weapon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classWeapon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Weapon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classWeapon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWeapon_a7405911baf5dc87d8755b8e0da3562c1}{Weapon}} (std\+::string\+\_\+view name, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305ada14a7168b547f35ea0c6fa9f50de63e}{damage}}, int durability)
+\item 
+void \mbox{\hyperlink{classWeapon_a648721dd97ef9d87ec737f255bdc4c77}{use}} (\mbox{\hyperlink{classCharacter}{Character}} \&user, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35da590f53e8699817c6fa498cc11a4cbe63}{self}}) override
+\item 
+int \mbox{\hyperlink{classWeapon_a701f4ee1e463bc016d9d64615d642fa9}{get\+Base\+Damage}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classWeapon_a507937307f9f92fc29b4b6827d85585a}{base\+Damage}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWeapon_a7405911baf5dc87d8755b8e0da3562c1}\label{classWeapon_a7405911baf5dc87d8755b8e0da3562c1}} 
+\index{Weapon@{Weapon}!Weapon@{Weapon}}
+\index{Weapon@{Weapon}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{Weapon()}{Weapon()}}
+{\footnotesize\ttfamily Weapon\+::\+Weapon (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{int}]{damage,  }\item[{int}]{durability }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWeapon_a701f4ee1e463bc016d9d64615d642fa9}\label{classWeapon_a701f4ee1e463bc016d9d64615d642fa9}} 
+\index{Weapon@{Weapon}!getBaseDamage@{getBaseDamage}}
+\index{getBaseDamage@{getBaseDamage}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{getBaseDamage()}{getBaseDamage()}}
+{\footnotesize\ttfamily int Weapon\+::get\+Base\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classWeapon_a648721dd97ef9d87ec737f255bdc4c77}\label{classWeapon_a648721dd97ef9d87ec737f255bdc4c77}} 
+\index{Weapon@{Weapon}!use@{use}}
+\index{use@{use}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Weapon\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCharacter}{Character}} \&}]{user,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classEquipment_ab3bd3f9081bb49375a7b535a0c807809}{Equipment}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWeapon_a507937307f9f92fc29b4b6827d85585a}\label{classWeapon_a507937307f9f92fc29b4b6827d85585a}} 
+\index{Weapon@{Weapon}!baseDamage@{baseDamage}}
+\index{baseDamage@{baseDamage}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{baseDamage}{baseDamage}}
+{\footnotesize\ttfamily int Weapon\+::base\+Damage\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Equipment/\mbox{\hyperlink{Weapon_8h}{Weapon.\+h}}\item 
+src/\+Equipment/\mbox{\hyperlink{Weapon_8cpp}{Weapon.\+cpp}}\end{DoxyCompactItemize}

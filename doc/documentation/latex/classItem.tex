@@ -1,0 +1,157 @@
+\hypertarget{classItem}{}\doxysection{Item Class Reference}
+\label{classItem}\index{Item@{Item}}
+
+
+{\ttfamily \#include $<$Item.\+h$>$}
+
+
+
+Inheritance diagram for Item\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classItem__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classItem_a21456b1992a71e14e002f35a95e729ce}{Item}} (std\+::string\+\_\+view name, \mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}} rarity, const std\+::vector$<$ \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} $>$ \&modifiers, std\+::function$<$ void(\mbox{\hyperlink{classCharacter}{Character}} \&)$>$ custom\+Effect=nullptr)
+\item 
+\mbox{\hyperlink{classItem_a4a01d47e2da8ff38b7cede998fde7c65}{Item}} (std\+::string\+\_\+view name, \mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}} rarity, std\+::function$<$ void(\mbox{\hyperlink{classCharacter}{Character}} \&)$>$ custom\+Effect=nullptr)
+\item 
+virtual \mbox{\hyperlink{classItem_af11f5c0709f76d8683d95d8476be85a4}{$\sim$\+Item}} ()=default
+\item 
+const std\+::string \& \mbox{\hyperlink{classItem_a0834a956927ff73c32475d4746dff5ac}{get\+Name}} () const
+\item 
+\mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}} \mbox{\hyperlink{classItem_a86c0baeba496140e429cc924ef82acf8}{get\+Rarity}} () const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} $>$ \& \mbox{\hyperlink{classItem_aaaa68e4154ab56e95384058b09236036}{get\+Modifiers}} () const
+\item 
+std\+::string\+\_\+view \mbox{\hyperlink{classItem_ad955fa2681a6972e9ea69eda62b4603c}{get\+Rarity\+Name}} () const
+\item 
+void \mbox{\hyperlink{classItem_aff454cb36f1bf04f9796b435f8b68891}{set\+Custom\+Effect}} (std\+::function$<$ void(\mbox{\hyperlink{classCharacter}{Character}} \&)$>$ effect)
+\item 
+void \mbox{\hyperlink{classItem_ac70ea82c286ab3b2abce5ac85f2383d3}{run\+Custom\+Effect}} (\mbox{\hyperlink{classCharacter}{Character}} \&user)
+\item 
+void \mbox{\hyperlink{classItem_a857ae757d70699ee3027a60a1aa2e481}{use}} (\mbox{\hyperlink{classCharacter}{Character}} \&user, \mbox{\hyperlink{classCharacter}{Character}} $\ast$\mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35dacde2fde1fa1551a704d775ce2315915d}{enemy}}=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classItem_a9f437f59055ce14b5345ccec641d244c}{m\+\_\+name}}
+\item 
+\mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}} \mbox{\hyperlink{classItem_aaf218abcdeab11b373682e34bd28db30}{m\+\_\+rarity}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} $>$ \mbox{\hyperlink{classItem_ad7aba5cc768f9c86aa85ce37234133e5}{m\+\_\+modifiers}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{classCharacter}{Character}} \&)$>$ \mbox{\hyperlink{classItem_a395be0dbeba07ccfa1614cba932ede34}{m\+\_\+custom\+Effect}}
+\item 
+bool \mbox{\hyperlink{classItem_a5910a187bacbdc87672d7e043de7d74b}{m\+\_\+effect\+Applied}} \{ false \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classItem_a21456b1992a71e14e002f35a95e729ce}\label{classItem_a21456b1992a71e14e002f35a95e729ce}} 
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{Item()}{Item()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{\mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}}}]{rarity,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} $>$ \&}]{modifiers,  }\item[{std\+::function$<$ void(\mbox{\hyperlink{classCharacter}{Character}} \&)$>$}]{custom\+Effect = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classItem_a4a01d47e2da8ff38b7cede998fde7c65}\label{classItem_a4a01d47e2da8ff38b7cede998fde7c65}} 
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{Item()}{Item()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{\mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}}}]{rarity,  }\item[{std\+::function$<$ void(\mbox{\hyperlink{classCharacter}{Character}} \&)$>$}]{custom\+Effect = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classItem_af11f5c0709f76d8683d95d8476be85a4}\label{classItem_af11f5c0709f76d8683d95d8476be85a4}} 
+\index{Item@{Item}!````~Item@{$\sim$Item}}
+\index{````~Item@{$\sim$Item}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{$\sim$Item()}{~Item()}}
+{\footnotesize\ttfamily virtual Item\+::$\sim$\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem_aaaa68e4154ab56e95384058b09236036}\label{classItem_aaaa68e4154ab56e95384058b09236036}} 
+\index{Item@{Item}!getModifiers@{getModifiers}}
+\index{getModifiers@{getModifiers}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{getModifiers()}{getModifiers()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{structStatModifier}{Stat\+Modifier}}$>$\& Item\+::get\+Modifiers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classItem_a0834a956927ff73c32475d4746dff5ac}\label{classItem_a0834a956927ff73c32475d4746dff5ac}} 
+\index{Item@{Item}!getName@{getName}}
+\index{getName@{getName}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string\& Item\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classItem_a86c0baeba496140e429cc924ef82acf8}\label{classItem_a86c0baeba496140e429cc924ef82acf8}} 
+\index{Item@{Item}!getRarity@{getRarity}}
+\index{getRarity@{getRarity}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{getRarity()}{getRarity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}} Item\+::get\+Rarity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classItem_ad955fa2681a6972e9ea69eda62b4603c}\label{classItem_ad955fa2681a6972e9ea69eda62b4603c}} 
+\index{Item@{Item}!getRarityName@{getRarityName}}
+\index{getRarityName@{getRarityName}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{getRarityName()}{getRarityName()}}
+{\footnotesize\ttfamily std\+::string\+\_\+view Item\+::get\+Rarity\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classItem_ac70ea82c286ab3b2abce5ac85f2383d3}\label{classItem_ac70ea82c286ab3b2abce5ac85f2383d3}} 
+\index{Item@{Item}!runCustomEffect@{runCustomEffect}}
+\index{runCustomEffect@{runCustomEffect}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{runCustomEffect()}{runCustomEffect()}}
+{\footnotesize\ttfamily void Item\+::run\+Custom\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCharacter}{Character}} \&}]{user }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classItem_aff454cb36f1bf04f9796b435f8b68891}\label{classItem_aff454cb36f1bf04f9796b435f8b68891}} 
+\index{Item@{Item}!setCustomEffect@{setCustomEffect}}
+\index{setCustomEffect@{setCustomEffect}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{setCustomEffect()}{setCustomEffect()}}
+{\footnotesize\ttfamily void Item\+::set\+Custom\+Effect (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{classCharacter}{Character}} \&)$>$}]{effect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classItem_a857ae757d70699ee3027a60a1aa2e481}\label{classItem_a857ae757d70699ee3027a60a1aa2e481}} 
+\index{Item@{Item}!use@{use}}
+\index{use@{use}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Item\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCharacter}{Character}} \&}]{user,  }\item[{\mbox{\hyperlink{classCharacter}{Character}} $\ast$}]{enemy = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classItem_a395be0dbeba07ccfa1614cba932ede34}\label{classItem_a395be0dbeba07ccfa1614cba932ede34}} 
+\index{Item@{Item}!m\_customEffect@{m\_customEffect}}
+\index{m\_customEffect@{m\_customEffect}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{m\_customEffect}{m\_customEffect}}
+{\footnotesize\ttfamily std\+::function$<$void(\mbox{\hyperlink{classCharacter}{Character}}\&)$>$ Item\+::m\+\_\+custom\+Effect\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classItem_a5910a187bacbdc87672d7e043de7d74b}\label{classItem_a5910a187bacbdc87672d7e043de7d74b}} 
+\index{Item@{Item}!m\_effectApplied@{m\_effectApplied}}
+\index{m\_effectApplied@{m\_effectApplied}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{m\_effectApplied}{m\_effectApplied}}
+{\footnotesize\ttfamily bool Item\+::m\+\_\+effect\+Applied \{ false \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classItem_ad7aba5cc768f9c86aa85ce37234133e5}\label{classItem_ad7aba5cc768f9c86aa85ce37234133e5}} 
+\index{Item@{Item}!m\_modifiers@{m\_modifiers}}
+\index{m\_modifiers@{m\_modifiers}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{m\_modifiers}{m\_modifiers}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structStatModifier}{Stat\+Modifier}}$>$ Item\+::m\+\_\+modifiers\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classItem_a9f437f59055ce14b5345ccec641d244c}\label{classItem_a9f437f59055ce14b5345ccec641d244c}} 
+\index{Item@{Item}!m\_name@{m\_name}}
+\index{m\_name@{m\_name}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{m\_name}{m\_name}}
+{\footnotesize\ttfamily std\+::string Item\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classItem_aaf218abcdeab11b373682e34bd28db30}\label{classItem_aaf218abcdeab11b373682e34bd28db30}} 
+\index{Item@{Item}!m\_rarity@{m\_rarity}}
+\index{m\_rarity@{m\_rarity}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{m\_rarity}{m\_rarity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}} Item\+::m\+\_\+rarity\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Equipment/\mbox{\hyperlink{Item_8h}{Item.\+h}}\item 
+src/\+Equipment/\mbox{\hyperlink{Item_8cpp}{Item.\+cpp}}\end{DoxyCompactItemize}

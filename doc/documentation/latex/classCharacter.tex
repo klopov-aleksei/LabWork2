@@ -1,0 +1,478 @@
+\hypertarget{classCharacter}{}\doxysection{Character Class Reference}
+\label{classCharacter}\index{Character@{Character}}
+
+
+{\ttfamily \#include $<$Character.\+h$>$}
+
+
+
+Inheritance diagram for Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCharacter__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacter_a425d66e00bf68593da1701f1f653dd63}{Character}} (std\+::string\+\_\+view name, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a5177790ad6df0ea98db41b37b602367c}{strength}}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a90b884933d23c4d57ca01dbe2898d405}{intelligence}}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a841d806fd1f9758dbbed5b4dbfcccfe3}{agility}}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a582fc884d6299814fbd4f12c1f9ae70f}{mana}}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a555bf8344ca0caf09b42f55e185526d8}{health}}=100, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305af7ebcb0deb96ef2df7a7a1c9eeb598ab}{action\+Points}}=10)
+\item 
+\mbox{\hyperlink{classCharacter_ac8609fded4a1a5d46fa43330c7fcfacc}{Character}} (std\+::string\+\_\+view name, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a841d806fd1f9758dbbed5b4dbfcccfe3}{agility}}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a582fc884d6299814fbd4f12c1f9ae70f}{mana}})
+\item 
+\mbox{\hyperlink{classCharacter_afe2cc1186f50316e1df11e5ea17b72f4}{Character}} ()=default
+\item 
+virtual \mbox{\hyperlink{classCharacter_a3333a88ae593c36b229c90371e935d42}{$\sim$\+Character}} ()=default
+\item 
+void \mbox{\hyperlink{classCharacter_a0f4deb7b5f30770ebd9587d308726d73}{set\+Stats}} (int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a5177790ad6df0ea98db41b37b602367c}{strength}}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a90b884933d23c4d57ca01dbe2898d405}{intelligence}})
+\item 
+void \mbox{\hyperlink{classCharacter_af502603461de5b604287a1b3cf774005}{set\+Blocking}} (bool state)
+\item 
+bool \mbox{\hyperlink{classCharacter_ab7019b83a3149f197f4d783b8022da76}{is\+Blocking}} () const
+\item 
+virtual void \mbox{\hyperlink{classCharacter_a6a0d4d3533041955c2589d95eb53e210}{reset\+Action\+Points}} ()
+\item 
+void \mbox{\hyperlink{classCharacter_ae99106e95a2981449b9ddfde7f8ad27b}{increment\+Attack\+Count}} ()
+\item 
+void \mbox{\hyperlink{classCharacter_a5751d0d4cee4a5024aa9de063d1f5f68}{reset\+Attack\+Count}} ()
+\item 
+int \mbox{\hyperlink{classCharacter_a0a380a775662540fd44a42cb77e50aca}{get\+Attack\+Count}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{classCharacter_a631dd8d1785ff701f0fc51615bb017b2}{get\+Name}} () const
+\item 
+int \mbox{\hyperlink{classCharacter_aeeab2ce512bf79e2f8b8f13dd4e417b8}{get\+Strength}} () const
+\item 
+int \mbox{\hyperlink{classCharacter_a6e998fe4d0228e7fb0a20a4b063fda8a}{get\+Intelligence}} () const
+\item 
+int \mbox{\hyperlink{classCharacter_a39eeebcbdbc13cd4d1d274da5d051f85}{get\+Health}} () const
+\item 
+int \mbox{\hyperlink{classCharacter_ae12ef6c4c8cd51cc84b03b487c98b4d5}{get\+Max\+Health}} () const
+\item 
+int \mbox{\hyperlink{classCharacter_a0f3eee4632c3b9f6f61c683860ec0cdc}{get\+Agility}} () const
+\item 
+int \mbox{\hyperlink{classCharacter_a94e5fbc0782cd29e8e1528940206c268}{get\+Action\+Points}} () const
+\item 
+int \mbox{\hyperlink{classCharacter_a6e9291fb7c294600858ab77115195d54}{get\+Mana}} () const
+\item 
+bool \mbox{\hyperlink{classCharacter_a6581a9a16111768ae65603d060fca9d7}{is\+Dead}} () const
+\item 
+void \mbox{\hyperlink{classCharacter_a64fd5a2b59913c1b01dfaa43e3729987}{increase\+Health}} (int amount)
+\item 
+void \mbox{\hyperlink{classCharacter_a3ea88d549f00bc7700be7d3d39787a1e}{increase\+Mana}} (int amount)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classCharacter_a03efb26099757da24de65c4910404072}{modify\+Stat}} (T Character\+::$\ast$stat\+Ptr, T delta, const std\+::string \&stat\+Name)
+\item 
+void \mbox{\hyperlink{classCharacter_a46d4287fa95ec28db689cfa7ab26d804}{increase\+Max\+Health}} (int amount)
+\item 
+void \mbox{\hyperlink{classCharacter_ae62dca48a3949b1fcd44641b34ff23a5}{increase\+Max\+Mana}} (int amount)
+\item 
+void \mbox{\hyperlink{classCharacter_a0b4377dec2eac987c13b1f890b8b4f89}{increase\+Strength}} (int amount)
+\item 
+void \mbox{\hyperlink{classCharacter_a00885c77290a817bf755981fa82a97e0}{increase\+Intelligence}} (int amount)
+\item 
+void \mbox{\hyperlink{classCharacter_a898f60e453fca90a477e1f3642206c1f}{increase\+Agility}} (int amount)
+\item 
+void \mbox{\hyperlink{classCharacter_afc402f6db38bfa38018b4f03f44cc93b}{increase\+Action\+Points}} (int amount)
+\item 
+void \mbox{\hyperlink{classCharacter_a64d1679c56cf96e25e1b43f5fc7b3707}{repair\+Armor}} (int durability)
+\item 
+void \mbox{\hyperlink{classCharacter_a65878197707681690ceff4a25dbc5265}{repair\+Weapon}} (int durability)
+\item 
+virtual void \mbox{\hyperlink{classCharacter_afd5dbad8f7c52d620e92c2399b3b7632}{display\+Status}} () const =0
+\item 
+void \mbox{\hyperlink{classCharacter_a60432ad97f8154d979de2cd600c67db5}{equip\+Weapon}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWeapon}{Weapon}} $>$ \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35da282aa351a2bd30655fbc060bd4f33766}{weapon}})
+\item 
+void \mbox{\hyperlink{classCharacter_affea800e38a54058b0eed349c17b36a4}{equip\+Armor}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classArmor}{Armor}} $>$ \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35da3ee45b1ff632881c66b6b92f45a47fd7}{armor}})
+\item 
+void \mbox{\hyperlink{classCharacter_ab60a748e977169bd6a2d48fca341c7ab}{take\+Damage}} (\mbox{\hyperlink{classDamageCalculator}{Damage\+Calculator}} \&dmg\+Calc)
+\item 
+void \mbox{\hyperlink{classCharacter_a5b06cc242690c9af1610c33e895348e2}{take\+Damage}} (int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305ada14a7168b547f35ea0c6fa9f50de63e}{damage}})
+\item 
+void \mbox{\hyperlink{classCharacter_a0842229e562bdb15b636684d96a08054}{take\+Action\+Points}} (int cost)
+\item 
+void \mbox{\hyperlink{classCharacter_ac2fcd62b75e1a236fc9a116f9a6c4a30}{use\+Mana}} (int cost)
+\item 
+\mbox{\hyperlink{classWeapon}{Weapon}} $\ast$ \mbox{\hyperlink{classCharacter_ab9a6e75c89b52a13aa3d6d493217c045}{get\+Weapon}} () const
+\item 
+\mbox{\hyperlink{classArmor}{Armor}} $\ast$ \mbox{\hyperlink{classCharacter_aa397930a5768bb4c05e0b8710f05a4d4}{get\+Armor}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classCharacter_ab4daf763291bcf1aaa9cd7caaab9c6fe}{m\+\_\+name}}
+\item 
+int \mbox{\hyperlink{classCharacter_a00e769dc9f5699598a18eea77916227e}{m\+\_\+strength}} \{ 5 \}
+\item 
+int \mbox{\hyperlink{classCharacter_a028e6b2f25e36716c548b41e96c33497}{m\+\_\+intelligence}} \{ 5 \}
+\item 
+int \mbox{\hyperlink{classCharacter_a6f93eadd2af6179f703af95b8945c392}{m\+\_\+agility}} \{ 5 \}
+\item 
+int \mbox{\hyperlink{classCharacter_ae1d81fe73faedd8c414df3c0edfa290e}{m\+\_\+mana}} \{ 50 \}
+\item 
+int \mbox{\hyperlink{classCharacter_a684bd8f5adf0afc7c5c7130194e78007}{m\+\_\+max\+Mana}} \{ 50 \}
+\item 
+int \mbox{\hyperlink{classCharacter_ae6d98cd146e07d0eec8a60df9b78a623}{m\+\_\+health}} \{ 100 \}
+\item 
+int \mbox{\hyperlink{classCharacter_a36d276569b5bdcbb01e24bd99542c509}{m\+\_\+max\+Health}} \{ 100 \}
+\item 
+int \mbox{\hyperlink{classCharacter_a598a9e9597616a1437b7faec9564538e}{m\+\_\+action\+Points}} \{ \mbox{\hyperlink{namespaceConstants_a402333ce9f84832e293e385be49df386}{Constants\+::initial\+\_\+ap}} \}
+\item 
+int \mbox{\hyperlink{classCharacter_a9b6d610b0ec2e430025ea00ee03cf3a8}{m\+\_\+max\+Action\+Points}} \{ \mbox{\hyperlink{namespaceConstants_a402333ce9f84832e293e385be49df386}{Constants\+::initial\+\_\+ap}} \}
+\item 
+bool \mbox{\hyperlink{classCharacter_ae84a082b604030a9ccef3bf448f36ab6}{m\+\_\+is\+Blocking}} \{ false \}
+\item 
+int \mbox{\hyperlink{classCharacter_addf1fbed946c7e94bcb001e1f6e59e8a}{m\+\_\+attack\+Count}} \{ 0 \}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWeapon}{Weapon}} $>$ \mbox{\hyperlink{classCharacter_af4b8df948264cae2f5652f3035d21516}{equipped\+Weapon}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classArmor}{Armor}} $>$ \mbox{\hyperlink{classCharacter_a055e44ab892ecb7362196a936a0dc371}{equipped\+Armor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCharacter_a425d66e00bf68593da1701f1f653dd63}\label{classCharacter_a425d66e00bf68593da1701f1f653dd63}} 
+\index{Character@{Character}!Character@{Character}}
+\index{Character@{Character}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Character()}{Character()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Character\+::\+Character (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{int}]{strength,  }\item[{int}]{intelligence,  }\item[{int}]{agility,  }\item[{int}]{mana,  }\item[{int}]{health = {\ttfamily 100},  }\item[{int}]{action\+Points = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_ac8609fded4a1a5d46fa43330c7fcfacc}\label{classCharacter_ac8609fded4a1a5d46fa43330c7fcfacc}} 
+\index{Character@{Character}!Character@{Character}}
+\index{Character@{Character}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Character()}{Character()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Character\+::\+Character (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{int}]{agility,  }\item[{int}]{mana }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_afe2cc1186f50316e1df11e5ea17b72f4}\label{classCharacter_afe2cc1186f50316e1df11e5ea17b72f4}} 
+\index{Character@{Character}!Character@{Character}}
+\index{Character@{Character}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Character()}{Character()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Character\+::\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classCharacter_a3333a88ae593c36b229c90371e935d42}\label{classCharacter_a3333a88ae593c36b229c90371e935d42}} 
+\index{Character@{Character}!````~Character@{$\sim$Character}}
+\index{````~Character@{$\sim$Character}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{$\sim$Character()}{~Character()}}
+{\footnotesize\ttfamily virtual Character\+::$\sim$\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCharacter_afd5dbad8f7c52d620e92c2399b3b7632}\label{classCharacter_afd5dbad8f7c52d620e92c2399b3b7632}} 
+\index{Character@{Character}!displayStatus@{displayStatus}}
+\index{displayStatus@{displayStatus}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{displayStatus()}{displayStatus()}}
+{\footnotesize\ttfamily virtual void Character\+::display\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classPlayerCharacter_a018f8628267f9bc79d746e3a0c781ae3}{Player\+Character}}, and \mbox{\hyperlink{classNPC_ad6376ab8e689533e7041e4933ccb0119}{NPC}}.
+
+\mbox{\Hypertarget{classCharacter_affea800e38a54058b0eed349c17b36a4}\label{classCharacter_affea800e38a54058b0eed349c17b36a4}} 
+\index{Character@{Character}!equipArmor@{equipArmor}}
+\index{equipArmor@{equipArmor}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{equipArmor()}{equipArmor()}}
+{\footnotesize\ttfamily void Character\+::equip\+Armor (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classArmor}{Armor}} $>$}]{armor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_a60432ad97f8154d979de2cd600c67db5}\label{classCharacter_a60432ad97f8154d979de2cd600c67db5}} 
+\index{Character@{Character}!equipWeapon@{equipWeapon}}
+\index{equipWeapon@{equipWeapon}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{equipWeapon()}{equipWeapon()}}
+{\footnotesize\ttfamily void Character\+::equip\+Weapon (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWeapon}{Weapon}} $>$}]{weapon }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_a94e5fbc0782cd29e8e1528940206c268}\label{classCharacter_a94e5fbc0782cd29e8e1528940206c268}} 
+\index{Character@{Character}!getActionPoints@{getActionPoints}}
+\index{getActionPoints@{getActionPoints}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getActionPoints()}{getActionPoints()}}
+{\footnotesize\ttfamily int Character\+::get\+Action\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCharacter_a0f3eee4632c3b9f6f61c683860ec0cdc}\label{classCharacter_a0f3eee4632c3b9f6f61c683860ec0cdc}} 
+\index{Character@{Character}!getAgility@{getAgility}}
+\index{getAgility@{getAgility}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getAgility()}{getAgility()}}
+{\footnotesize\ttfamily int Character\+::get\+Agility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCharacter_aa397930a5768bb4c05e0b8710f05a4d4}\label{classCharacter_aa397930a5768bb4c05e0b8710f05a4d4}} 
+\index{Character@{Character}!getArmor@{getArmor}}
+\index{getArmor@{getArmor}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getArmor()}{getArmor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classArmor}{Armor}}$\ast$ Character\+::get\+Armor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classCharacter_a0a380a775662540fd44a42cb77e50aca}\label{classCharacter_a0a380a775662540fd44a42cb77e50aca}} 
+\index{Character@{Character}!getAttackCount@{getAttackCount}}
+\index{getAttackCount@{getAttackCount}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getAttackCount()}{getAttackCount()}}
+{\footnotesize\ttfamily int Character\+::get\+Attack\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCharacter_a39eeebcbdbc13cd4d1d274da5d051f85}\label{classCharacter_a39eeebcbdbc13cd4d1d274da5d051f85}} 
+\index{Character@{Character}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily int Character\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCharacter_a6e998fe4d0228e7fb0a20a4b063fda8a}\label{classCharacter_a6e998fe4d0228e7fb0a20a4b063fda8a}} 
+\index{Character@{Character}!getIntelligence@{getIntelligence}}
+\index{getIntelligence@{getIntelligence}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getIntelligence()}{getIntelligence()}}
+{\footnotesize\ttfamily int Character\+::get\+Intelligence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCharacter_a6e9291fb7c294600858ab77115195d54}\label{classCharacter_a6e9291fb7c294600858ab77115195d54}} 
+\index{Character@{Character}!getMana@{getMana}}
+\index{getMana@{getMana}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getMana()}{getMana()}}
+{\footnotesize\ttfamily int Character\+::get\+Mana (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCharacter_ae12ef6c4c8cd51cc84b03b487c98b4d5}\label{classCharacter_ae12ef6c4c8cd51cc84b03b487c98b4d5}} 
+\index{Character@{Character}!getMaxHealth@{getMaxHealth}}
+\index{getMaxHealth@{getMaxHealth}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getMaxHealth()}{getMaxHealth()}}
+{\footnotesize\ttfamily int Character\+::get\+Max\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCharacter_a631dd8d1785ff701f0fc51615bb017b2}\label{classCharacter_a631dd8d1785ff701f0fc51615bb017b2}} 
+\index{Character@{Character}!getName@{getName}}
+\index{getName@{getName}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& Character\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCharacter_aeeab2ce512bf79e2f8b8f13dd4e417b8}\label{classCharacter_aeeab2ce512bf79e2f8b8f13dd4e417b8}} 
+\index{Character@{Character}!getStrength@{getStrength}}
+\index{getStrength@{getStrength}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getStrength()}{getStrength()}}
+{\footnotesize\ttfamily int Character\+::get\+Strength (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCharacter_ab9a6e75c89b52a13aa3d6d493217c045}\label{classCharacter_ab9a6e75c89b52a13aa3d6d493217c045}} 
+\index{Character@{Character}!getWeapon@{getWeapon}}
+\index{getWeapon@{getWeapon}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getWeapon()}{getWeapon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWeapon}{Weapon}}$\ast$ Character\+::get\+Weapon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classCharacter_afc402f6db38bfa38018b4f03f44cc93b}\label{classCharacter_afc402f6db38bfa38018b4f03f44cc93b}} 
+\index{Character@{Character}!increaseActionPoints@{increaseActionPoints}}
+\index{increaseActionPoints@{increaseActionPoints}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{increaseActionPoints()}{increaseActionPoints()}}
+{\footnotesize\ttfamily void Character\+::increase\+Action\+Points (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classCharacter_a898f60e453fca90a477e1f3642206c1f}\label{classCharacter_a898f60e453fca90a477e1f3642206c1f}} 
+\index{Character@{Character}!increaseAgility@{increaseAgility}}
+\index{increaseAgility@{increaseAgility}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{increaseAgility()}{increaseAgility()}}
+{\footnotesize\ttfamily void Character\+::increase\+Agility (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classCharacter_a64fd5a2b59913c1b01dfaa43e3729987}\label{classCharacter_a64fd5a2b59913c1b01dfaa43e3729987}} 
+\index{Character@{Character}!increaseHealth@{increaseHealth}}
+\index{increaseHealth@{increaseHealth}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{increaseHealth()}{increaseHealth()}}
+{\footnotesize\ttfamily void Character\+::increase\+Health (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_a00885c77290a817bf755981fa82a97e0}\label{classCharacter_a00885c77290a817bf755981fa82a97e0}} 
+\index{Character@{Character}!increaseIntelligence@{increaseIntelligence}}
+\index{increaseIntelligence@{increaseIntelligence}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{increaseIntelligence()}{increaseIntelligence()}}
+{\footnotesize\ttfamily void Character\+::increase\+Intelligence (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classCharacter_a3ea88d549f00bc7700be7d3d39787a1e}\label{classCharacter_a3ea88d549f00bc7700be7d3d39787a1e}} 
+\index{Character@{Character}!increaseMana@{increaseMana}}
+\index{increaseMana@{increaseMana}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{increaseMana()}{increaseMana()}}
+{\footnotesize\ttfamily void Character\+::increase\+Mana (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_a46d4287fa95ec28db689cfa7ab26d804}\label{classCharacter_a46d4287fa95ec28db689cfa7ab26d804}} 
+\index{Character@{Character}!increaseMaxHealth@{increaseMaxHealth}}
+\index{increaseMaxHealth@{increaseMaxHealth}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{increaseMaxHealth()}{increaseMaxHealth()}}
+{\footnotesize\ttfamily void Character\+::increase\+Max\+Health (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classCharacter_ae62dca48a3949b1fcd44641b34ff23a5}\label{classCharacter_ae62dca48a3949b1fcd44641b34ff23a5}} 
+\index{Character@{Character}!increaseMaxMana@{increaseMaxMana}}
+\index{increaseMaxMana@{increaseMaxMana}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{increaseMaxMana()}{increaseMaxMana()}}
+{\footnotesize\ttfamily void Character\+::increase\+Max\+Mana (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classCharacter_a0b4377dec2eac987c13b1f890b8b4f89}\label{classCharacter_a0b4377dec2eac987c13b1f890b8b4f89}} 
+\index{Character@{Character}!increaseStrength@{increaseStrength}}
+\index{increaseStrength@{increaseStrength}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{increaseStrength()}{increaseStrength()}}
+{\footnotesize\ttfamily void Character\+::increase\+Strength (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classCharacter_ae99106e95a2981449b9ddfde7f8ad27b}\label{classCharacter_ae99106e95a2981449b9ddfde7f8ad27b}} 
+\index{Character@{Character}!incrementAttackCount@{incrementAttackCount}}
+\index{incrementAttackCount@{incrementAttackCount}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{incrementAttackCount()}{incrementAttackCount()}}
+{\footnotesize\ttfamily void Character\+::increment\+Attack\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_ab7019b83a3149f197f4d783b8022da76}\label{classCharacter_ab7019b83a3149f197f4d783b8022da76}} 
+\index{Character@{Character}!isBlocking@{isBlocking}}
+\index{isBlocking@{isBlocking}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{isBlocking()}{isBlocking()}}
+{\footnotesize\ttfamily bool Character\+::is\+Blocking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCharacter_a6581a9a16111768ae65603d060fca9d7}\label{classCharacter_a6581a9a16111768ae65603d060fca9d7}} 
+\index{Character@{Character}!isDead@{isDead}}
+\index{isDead@{isDead}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{isDead()}{isDead()}}
+{\footnotesize\ttfamily bool Character\+::is\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCharacter_a03efb26099757da24de65c4910404072}\label{classCharacter_a03efb26099757da24de65c4910404072}} 
+\index{Character@{Character}!modifyStat@{modifyStat}}
+\index{modifyStat@{modifyStat}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{modifyStat()}{modifyStat()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Character\+::modify\+Stat (\begin{DoxyParamCaption}\item[{T Character\+::$\ast$}]{stat\+Ptr,  }\item[{T}]{delta,  }\item[{const std\+::string \&}]{stat\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classCharacter_a64d1679c56cf96e25e1b43f5fc7b3707}\label{classCharacter_a64d1679c56cf96e25e1b43f5fc7b3707}} 
+\index{Character@{Character}!repairArmor@{repairArmor}}
+\index{repairArmor@{repairArmor}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{repairArmor()}{repairArmor()}}
+{\footnotesize\ttfamily void Character\+::repair\+Armor (\begin{DoxyParamCaption}\item[{int}]{durability }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_a65878197707681690ceff4a25dbc5265}\label{classCharacter_a65878197707681690ceff4a25dbc5265}} 
+\index{Character@{Character}!repairWeapon@{repairWeapon}}
+\index{repairWeapon@{repairWeapon}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{repairWeapon()}{repairWeapon()}}
+{\footnotesize\ttfamily void Character\+::repair\+Weapon (\begin{DoxyParamCaption}\item[{int}]{durability }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_a6a0d4d3533041955c2589d95eb53e210}\label{classCharacter_a6a0d4d3533041955c2589d95eb53e210}} 
+\index{Character@{Character}!resetActionPoints@{resetActionPoints}}
+\index{resetActionPoints@{resetActionPoints}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{resetActionPoints()}{resetActionPoints()}}
+{\footnotesize\ttfamily void Character\+::reset\+Action\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classWarrior_a237ead17c9f216fcca9e44c85fd4445f}{Warrior}}.
+
+\mbox{\Hypertarget{classCharacter_a5751d0d4cee4a5024aa9de063d1f5f68}\label{classCharacter_a5751d0d4cee4a5024aa9de063d1f5f68}} 
+\index{Character@{Character}!resetAttackCount@{resetAttackCount}}
+\index{resetAttackCount@{resetAttackCount}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{resetAttackCount()}{resetAttackCount()}}
+{\footnotesize\ttfamily void Character\+::reset\+Attack\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_af502603461de5b604287a1b3cf774005}\label{classCharacter_af502603461de5b604287a1b3cf774005}} 
+\index{Character@{Character}!setBlocking@{setBlocking}}
+\index{setBlocking@{setBlocking}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{setBlocking()}{setBlocking()}}
+{\footnotesize\ttfamily void Character\+::set\+Blocking (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_a0f4deb7b5f30770ebd9587d308726d73}\label{classCharacter_a0f4deb7b5f30770ebd9587d308726d73}} 
+\index{Character@{Character}!setStats@{setStats}}
+\index{setStats@{setStats}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{setStats()}{setStats()}}
+{\footnotesize\ttfamily void Character\+::set\+Stats (\begin{DoxyParamCaption}\item[{int}]{strength,  }\item[{int}]{intelligence }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_a0842229e562bdb15b636684d96a08054}\label{classCharacter_a0842229e562bdb15b636684d96a08054}} 
+\index{Character@{Character}!takeActionPoints@{takeActionPoints}}
+\index{takeActionPoints@{takeActionPoints}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{takeActionPoints()}{takeActionPoints()}}
+{\footnotesize\ttfamily void Character\+::take\+Action\+Points (\begin{DoxyParamCaption}\item[{int}]{cost }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_ab60a748e977169bd6a2d48fca341c7ab}\label{classCharacter_ab60a748e977169bd6a2d48fca341c7ab}} 
+\index{Character@{Character}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Character\+::take\+Damage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDamageCalculator}{Damage\+Calculator}} \&}]{dmg\+Calc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_a5b06cc242690c9af1610c33e895348e2}\label{classCharacter_a5b06cc242690c9af1610c33e895348e2}} 
+\index{Character@{Character}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Character\+::take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacter_ac2fcd62b75e1a236fc9a116f9a6c4a30}\label{classCharacter_ac2fcd62b75e1a236fc9a116f9a6c4a30}} 
+\index{Character@{Character}!useMana@{useMana}}
+\index{useMana@{useMana}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{useMana()}{useMana()}}
+{\footnotesize\ttfamily void Character\+::use\+Mana (\begin{DoxyParamCaption}\item[{int}]{cost }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCharacter_a055e44ab892ecb7362196a936a0dc371}\label{classCharacter_a055e44ab892ecb7362196a936a0dc371}} 
+\index{Character@{Character}!equippedArmor@{equippedArmor}}
+\index{equippedArmor@{equippedArmor}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{equippedArmor}{equippedArmor}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classArmor}{Armor}}$>$ Character\+::equipped\+Armor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_af4b8df948264cae2f5652f3035d21516}\label{classCharacter_af4b8df948264cae2f5652f3035d21516}} 
+\index{Character@{Character}!equippedWeapon@{equippedWeapon}}
+\index{equippedWeapon@{equippedWeapon}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{equippedWeapon}{equippedWeapon}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWeapon}{Weapon}}$>$ Character\+::equipped\+Weapon\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_a598a9e9597616a1437b7faec9564538e}\label{classCharacter_a598a9e9597616a1437b7faec9564538e}} 
+\index{Character@{Character}!m\_actionPoints@{m\_actionPoints}}
+\index{m\_actionPoints@{m\_actionPoints}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_actionPoints}{m\_actionPoints}}
+{\footnotesize\ttfamily int Character\+::m\+\_\+action\+Points \{ \mbox{\hyperlink{namespaceConstants_a402333ce9f84832e293e385be49df386}{Constants\+::initial\+\_\+ap}} \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_a6f93eadd2af6179f703af95b8945c392}\label{classCharacter_a6f93eadd2af6179f703af95b8945c392}} 
+\index{Character@{Character}!m\_agility@{m\_agility}}
+\index{m\_agility@{m\_agility}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_agility}{m\_agility}}
+{\footnotesize\ttfamily int Character\+::m\+\_\+agility \{ 5 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_addf1fbed946c7e94bcb001e1f6e59e8a}\label{classCharacter_addf1fbed946c7e94bcb001e1f6e59e8a}} 
+\index{Character@{Character}!m\_attackCount@{m\_attackCount}}
+\index{m\_attackCount@{m\_attackCount}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_attackCount}{m\_attackCount}}
+{\footnotesize\ttfamily int Character\+::m\+\_\+attack\+Count \{ 0 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_ae6d98cd146e07d0eec8a60df9b78a623}\label{classCharacter_ae6d98cd146e07d0eec8a60df9b78a623}} 
+\index{Character@{Character}!m\_health@{m\_health}}
+\index{m\_health@{m\_health}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_health}{m\_health}}
+{\footnotesize\ttfamily int Character\+::m\+\_\+health \{ 100 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_a028e6b2f25e36716c548b41e96c33497}\label{classCharacter_a028e6b2f25e36716c548b41e96c33497}} 
+\index{Character@{Character}!m\_intelligence@{m\_intelligence}}
+\index{m\_intelligence@{m\_intelligence}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_intelligence}{m\_intelligence}}
+{\footnotesize\ttfamily int Character\+::m\+\_\+intelligence \{ 5 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_ae84a082b604030a9ccef3bf448f36ab6}\label{classCharacter_ae84a082b604030a9ccef3bf448f36ab6}} 
+\index{Character@{Character}!m\_isBlocking@{m\_isBlocking}}
+\index{m\_isBlocking@{m\_isBlocking}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_isBlocking}{m\_isBlocking}}
+{\footnotesize\ttfamily bool Character\+::m\+\_\+is\+Blocking \{ false \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_ae1d81fe73faedd8c414df3c0edfa290e}\label{classCharacter_ae1d81fe73faedd8c414df3c0edfa290e}} 
+\index{Character@{Character}!m\_mana@{m\_mana}}
+\index{m\_mana@{m\_mana}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_mana}{m\_mana}}
+{\footnotesize\ttfamily int Character\+::m\+\_\+mana \{ 50 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_a9b6d610b0ec2e430025ea00ee03cf3a8}\label{classCharacter_a9b6d610b0ec2e430025ea00ee03cf3a8}} 
+\index{Character@{Character}!m\_maxActionPoints@{m\_maxActionPoints}}
+\index{m\_maxActionPoints@{m\_maxActionPoints}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_maxActionPoints}{m\_maxActionPoints}}
+{\footnotesize\ttfamily int Character\+::m\+\_\+max\+Action\+Points \{ \mbox{\hyperlink{namespaceConstants_a402333ce9f84832e293e385be49df386}{Constants\+::initial\+\_\+ap}} \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_a36d276569b5bdcbb01e24bd99542c509}\label{classCharacter_a36d276569b5bdcbb01e24bd99542c509}} 
+\index{Character@{Character}!m\_maxHealth@{m\_maxHealth}}
+\index{m\_maxHealth@{m\_maxHealth}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_maxHealth}{m\_maxHealth}}
+{\footnotesize\ttfamily int Character\+::m\+\_\+max\+Health \{ 100 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_a684bd8f5adf0afc7c5c7130194e78007}\label{classCharacter_a684bd8f5adf0afc7c5c7130194e78007}} 
+\index{Character@{Character}!m\_maxMana@{m\_maxMana}}
+\index{m\_maxMana@{m\_maxMana}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_maxMana}{m\_maxMana}}
+{\footnotesize\ttfamily int Character\+::m\+\_\+max\+Mana \{ 50 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_ab4daf763291bcf1aaa9cd7caaab9c6fe}\label{classCharacter_ab4daf763291bcf1aaa9cd7caaab9c6fe}} 
+\index{Character@{Character}!m\_name@{m\_name}}
+\index{m\_name@{m\_name}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_name}{m\_name}}
+{\footnotesize\ttfamily std\+::string Character\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacter_a00e769dc9f5699598a18eea77916227e}\label{classCharacter_a00e769dc9f5699598a18eea77916227e}} 
+\index{Character@{Character}!m\_strength@{m\_strength}}
+\index{m\_strength@{m\_strength}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_strength}{m\_strength}}
+{\footnotesize\ttfamily int Character\+::m\+\_\+strength \{ 5 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Character/\mbox{\hyperlink{Character_8h}{Character.\+h}}\item 
+src/\+Character/\mbox{\hyperlink{Character_8cpp}{Character.\+cpp}}\end{DoxyCompactItemize}
