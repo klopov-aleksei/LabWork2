@@ -1,0 +1,251 @@
+@startuml
+!theme reddress-lightred
+
+class Character {
+    - m_name: std::string
+    - m_strength: int
+    - m_intelligence: int
+    - m_agility: int
+    - m_mana: int
+    - m_maxMana: int
+    - m_health: int
+    - m_maxHealth: int
+    - m_actionPoints: int
+    - m_maxActionPoints: int
+    - m_isBlocking: bool
+    - m_attackCount: int
+    - equippedWeapon: std::unique_ptr<Weapon> 
+    - equippedArmor: std::unique_ptr<Armor>
+
+    + Character(name: std::string_view, strength: int, intelligence: int, 
+      agility: int, mana: int, health: int, actionPoints: int);
+    + Character(name: std::string_view, agility: int, mana: int);
+    + Character()
+    + {virtual} ~Character()
+    + setStats(strength: int, intelligence: int): void
+    + setBlocking(state: bool): void
+    + isBlocking(): bool
+    + {virtual} resetActionPoints(): void
+    + incrementAttackCount(): void
+    + resetAttackCount(): void
+    + getAttackCount(): int
+    + getName(): const std::string&
+    + getStrength(): int
+    + getIntelligence(): int
+    + getHealth(): int
+    + getMaxHealth(): int
+    + getAgility(): int
+    + getActionPoints(): int
+    + getMana(): int
+    + isDead(): bool
+    + increaseHealth(amount: int): void
+    + increaseMana(amount: int): void
+    + increaseMaxHealth(amount: int)
+    + increaseMaxMana(amount: int): void
+    + increaseStrength(amount: int): void
+    + increaseIntelligence(amount: int): void
+    + increaseAgility(amount: int): void
+    + increaseActionPoints(amount: int): void
+    + repairArmor(durability: int): void
+    + repairWeapon(durability: int): void
+    + {virtual} displayStatus(): void
+    + equipWeapon(weapon: std::unique_ptr<Weapon>): void
+    + equipArmor(armor: std::unique_ptr<Armor>): void
+    + takeDamage(dmgCalc: DamageCalculator ): void
+    + takeDamage(damage: int): void
+    + takeActionPoints(cost: int): void
+    + useMana(cost: int); void
+    + getWeapon(): Weapon*
+    + getArmor(): Armor*
+}
+
+class PlayerCharacter {
+  - m_inventory: Inventory
+  - hasSpellCastSkill: bool
+  - canHeal: bool
+  - monkTraining: bool
+  - easyBlock: bool
+  - investigateCost: int
+  - strengthBonus: int
+  
+  + PlayerCharacter()
+  + PlayerCharacter(name: std::string_view, agility: int, mana: int)
+  + displayStatus(): void override
+  + getInventory(): Inventory&
+  + getInventory() const: const Inventory&
+  + enableSpellCast()
+  + unlockHealing()
+  + boostConcentration()
+  + reduceBlockCost()
+  + canUseSpell(): bool
+  + hasHealing(): bool
+  + hasMonkTraining(): bool
+  + hasEasyBlock(): bool
+  + updateArmorBonuses(): void
+  + getInvestigateCost(): int
+  + getStrengthBonus(): int
+}
+
+class NPC {
+  # m_hasBuff: bool
+  # m_hasEquippedBackup: bool = false
+  
+  # {virtual} equipBackup(): void
+  # {virtual} shouldUseUltra(playerHealthRatio: double, enemyHealthRatio: double): bool
+  # shouldHeal(playerHealthRatio: double, enemyHealthRatio: double): bool
+  # shouldRestoreMana(): bool
+  # shouldBuff(): bool
+  # shouldSpellCast(): bool
+  # performUltraAttack(player: PlayerCharacter&): void
+  # performMeleeAttack(player: PlayerCharacter&): void
+  # performSpellAttack(player: PlayerCharacter&): void
+  # performHeal(): void
+  # performBuff(): void
+  # performRestoreMana(): void
+
+  + NPC(name: std::string_view, strength: int, intelligence: int, agility: int, mana: int, health: int, AP: int)
+  + {virtual} ~NPC()
+  + {virtual} performTurn(player: PlayerCharacter&): void
+  + displayStatus(): void override
+}
+
+class Mage {
+  - m_turnCounter: int
+  
+  + Mage(name: std::string_view)
+  + startNewTurn(): void
+  + getTurnCounter(): int const
+}
+
+class Warrior {
+  - m_blockSuccess: bool
+  - m_damageBuff: bool
+  
+  + Warrior(name: std::string_view)
+  + setBlockSuccess(success: bool): void
+  + isDamageBuffActive(): bool const
+  + resetDamageBuff(): void
+  + resetActionPoints(): void override
+}
+
+class EasyEnemy {
+  # m_usedUltra: bool
+  # equipBackup(): void override
+  
+  + EasyEnemy()
+  + performTurn(player: PlayerCharacter&): void override
+}
+
+class MediumEnemy {
+  - m_inventory: Inventory
+  # m_ultraAttacksUsed: int
+  # m_turnsSinceUltra: int
+  # equipBackup(): void override
+  # shouldUseUltra(playerHealthRatio: double, enemyHealthRatio: double): bool override
+  # performUseItem(player: PlayerCharacter&, bestIndex: int): void
+  # evaluateInventory(): std::pair<int, int>
+  # evaluateItem(item: const Item&): int
+  
+  + MediumEnemy(name: std::string_view, strength: int, intelligence: int, agility: int, mana: int, health: int, AP: int)
+  + virtual ~MediumEnemy() = default
+  + performTurn(player: PlayerCharacter&): void override
+}
+
+class HardEnemy {
+  # equipBackup(): void override
+  # shouldBlock(player: const PlayerCharacter&, enemyHealthRatio: double): bool
+  # performBlock(): void
+
+  + HardEnemy()
+  + performTurn(player: PlayerCharacter&): void override
+}
+
+class Game {
+  - player: std::unique_ptr<PlayerCharacter>
+  - enemy: std::unique_ptr<NPC>
+  - characterCreation: CharacterCreation
+  - combatSystem: CombatSystem*
+  - combatInterface: CombatInterface*
+  
+  + Game()
+  + ~Game()
+  + start(): void
+  + startCombat(enemy: NPC&): void
+}
+
+class CombatSystem {
+  - m_player: PlayerCharacter&
+  - m_enemy: NPC*
+  - m_playerTurn: bool = false
+  
+  + CombatSystem(player: PlayerCharacter&, enemy: NPC&)
+  + startCombat(interface: CombatInterface&): void
+  + handleTurn(interface: CombatInterface&): void
+  + getEnemy(): Character&
+  + isCombatOver(): bool
+  + playerLost(): bool
+}
+
+class CombatInterface {
+  - m_player: PlayerCharacter&
+  - m_combatSystem: CombatSystem&
+  
+  + CombatInterface(player: PlayerCharacter&, combatSystem: CombatSystem&)
+  + displayCombatOptions(): void
+  + processInput(choice: int): void
+  + performAttack(): void
+  + openInventory(): void
+}
+
+class DamageCalculator {
+  - m_finalDamage: int = 0
+  - m_armorDamage: int = 0
+  - m_isSpell: bool = false
+  
+  + DamageCalculator()
+  + markAsSpell(): void
+  + isSpell(): bool
+  
+  .. Friends ..
+  + calculateDamage(dmgCalc: DamageCalculator&, target: Character&, baseDamage: int, statBonus: int, attackCount: int)
+  + Character::takeDamage(dmgCalc: DamageCalculator&)
+}
+
+class CharacterCreation {
+  + createCharacter(): std::unique_ptr<PlayerCharacter>
+  # {static} ChooseName(): std::string
+  # {static} ChooseClass(name: std::string_view): std::unique_ptr<PlayerCharacter>
+  # {static} CustomizeStats(character: PlayerCharacter&): void
+  # {static} ChooseWeapon(character: PlayerCharacter&): void
+  # {static} ChooseArmor(character: PlayerCharacter&): void
+  # {static} ChooseSkills(character: PlayerCharacter&): void
+  # {static} ChooseInventory(character: PlayerCharacter&): void
+}
+
+Character <|-- PlayerCharacter
+Character <|-- NPC
+PlayerCharacter <|-- Warrior
+PlayerCharacter <|-- Mage
+NPC <|-- EasyEnemy
+NPC <|-- MediumEnemy
+MediumEnemy <|-- HardEnemy
+
+CharacterCreation ..> PlayerCharacter : creates
+CombatSystem --> PlayerCharacter : manages
+CombatInterface --> PlayerCharacter : interacts with
+Game *-- "1" PlayerCharacter : composition
+
+DamageCalculator ..> Character : uses in\nfriends
+Character ..> DamageCalculator : uses in\ntakeDamage()
+
+Game *-- "1" NPC : composition
+Game o-- "1" CombatSystem : aggregation
+Game o-- "1" CombatInterface : aggregation
+Game *-- "1" CharacterCreation : composition
+
+CombatSystem "1" -- "1" CombatInterface : uses
+CombatSystem --> NPC : manages
+
+CombatInterface --> CombatSystem : interacts with
+
+@enduml
