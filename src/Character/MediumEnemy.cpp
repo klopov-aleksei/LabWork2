@@ -148,10 +148,6 @@ void MediumEnemy::performUseItem(PlayerCharacter& player, int bestIndex)
         const int additional_cost{ 1 };
         takeActionPoints(additional_cost);
     }
-    else 
-    {
-        std::cout << m_name << " decides not to use any item.\n";
-    }
 }
 
 std::pair<int, int> MediumEnemy::evaluateInventory() const 

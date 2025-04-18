@@ -4,11 +4,6 @@
 void Concentrate::execute(Character& user)
 {
     int cost{ getCost() };
-    if (user.getActionPoints() < cost) 
-    {
-        std::cout << "Not enough action points to execute " << getName() << ".\n";
-        return;
-    }
     int manaRestore{ Constants::concentrationManaRestore }; 
     if (auto* pc = dynamic_cast<PlayerCharacter*>(&user)) 
     { 
@@ -18,6 +13,12 @@ void Concentrate::execute(Character& user)
             cost -= 1;
         }
     } 
+
+    if (user.getActionPoints() < cost) 
+    {
+        std::cout << "Not enough action points to execute " << getName() << ".\n";
+        return;
+    }
     std::cout << user.getName() << " concentrates, restoring " << manaRestore << " mana and boosting next turn's AP.\n"; 
     user.increaseMana(manaRestore);
     user.increaseActionPoints(1);

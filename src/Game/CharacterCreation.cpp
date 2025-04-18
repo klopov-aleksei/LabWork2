@@ -147,10 +147,10 @@ void CharacterCreation::ChooseArmor(PlayerCharacter& player)
             }
             break;
         case 2:
-            chosenArmor = std::make_unique<Armor>("Medium Armor", 20, 60);
+            chosenArmor = std::make_unique<Armor>("Medium Armor", 15, 50);
             break;
         case 3:
-            chosenArmor = std::make_unique<Armor>("Heavy Armor", 30, 90);
+            chosenArmor = std::make_unique<Armor>("Heavy Armor", 20, 70);
             {
                 PlayerCharacter* pc = dynamic_cast<PlayerCharacter*>(&player);
                 if (pc != nullptr)
@@ -161,7 +161,7 @@ void CharacterCreation::ChooseArmor(PlayerCharacter& player)
             break;
         default:
             std::cout << "Invalid choice, defaulting to Medium Armor.\n";
-            chosenArmor = std::make_unique<Armor>("Medium Armor", 3, 20);
+            chosenArmor = std::make_unique<Armor>("Medium Armor", 15, 50);
             break;
     }
 

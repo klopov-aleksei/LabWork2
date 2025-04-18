@@ -285,7 +285,7 @@ std::unique_ptr<Item> Investigate::createEpicItem()
     {
         case 1:
         {
-            auto excalibur = std::make_unique<Weapon>("Excalibur", 40, 40);
+            auto excalibur = std::make_unique<Weapon>("Excalibur", 32, 40);
             excalibur->setCustomEffect([](Character& user){
                 std::cout << "Excalibur effect activated!\n";
             });
@@ -304,10 +304,10 @@ std::unique_ptr<Item> Investigate::createEpicItem()
             return aegisBlade;
         }
         case 3:
-            return std::make_unique<Armor>("Dragon Scale Armor", 40, 100);
+            return std::make_unique<Armor>("Dragon Scale Armor", 30, 80);
         case 4:
         {
-            auto titanShield = std::make_unique<Armor>("Titan Shield", 35, 80);
+            auto titanShield = std::make_unique<Armor>("Titan Shield", 25, 65);
             titanShield->setCustomEffect([](Character& user){
                 auto* pc = dynamic_cast<PlayerCharacter*>(&user);
                 if (pc != nullptr)
@@ -409,7 +409,7 @@ void Investigate::execute(Character& user)
     auto& player = dynamic_cast<PlayerCharacter&>(user);
     int roll = Random::get(1, 100);
     std::unique_ptr<Item> item;
-    if (roll <= 3)
+    if (roll <= 2)
     {
         item = createEpicItem();
     }
