@@ -6,7 +6,7 @@
 class MeleeAttack : public TargetedSkill 
 {
 public:
-    MeleeAttack(int baseDamage=10, int cost = Constants::melee_cost);
+    MeleeAttack(int baseDamage = 0, int cost = Constants::melee_cost);
     
     void execute(Character& user, Character& target) override; 
 

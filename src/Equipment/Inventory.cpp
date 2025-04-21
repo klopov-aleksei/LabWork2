@@ -53,6 +53,13 @@ void Inventory::useItem(int index, Character& user, Character* enemy)
         std::cout << "Invalid item index!\n";
         return;
     }
+
+    Item* itemPtr = m_items[index-1].get();
+    if (!itemPtr->canUse(user)) 
+    {
+        std::cout << "Cannot use " << itemPtr->getName() << " as it would reduce your stat below zero.\n";
+        return;
+    }
     
     auto item = std::move(m_items[index-1]);
     m_items.erase(m_items.begin() + (index-1));

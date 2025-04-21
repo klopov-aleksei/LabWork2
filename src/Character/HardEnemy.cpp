@@ -74,7 +74,7 @@ void HardEnemy::performTurn(PlayerCharacter& player)
     if (!m_hasEquippedBackup)
         equipBackup();
 
-    while (m_actionPoints >= 2)
+    while (m_actionPoints >= 1)
     {
         double playerHealthRatio = static_cast<double>(player.getHealth()) / player.getMaxHealth();
         double enemyHealthRatio  = static_cast<double>(m_health) / m_maxHealth;
@@ -123,7 +123,7 @@ void HardEnemy::performTurn(PlayerCharacter& player)
         }
         else if (m_actionPoints >= 4)
         {
-            if (!(shouldBlock(player, enemyHealthRatio)) || (Random::get(0,100) <= 15) || shouldBuff())
+            if (!(shouldBlock(player, enemyHealthRatio)) || (Random::get(0,100) <= 20) || m_hasBuff)
             {
                 if (shouldSpellCast())
                 {

@@ -45,7 +45,7 @@ void MeleeAttack::execute(Character& user, Character& target)
     DamageCalculator dmgCalc;
 
     std::cout << user.getName() << " attacks " << target.getName() << "!\n";
-    int baseDamage{ Random::get(Constants::min_attack_bonus, Constants::max_attack_bonus) };
+    int baseDamage{ Random::get(Constants::min_attack_bonus, Constants::max_attack_bonus) + getDamage() };
     if (!weapon)
     {
         std::cout << user.getName() << " has not got any weapon.\n";
@@ -54,7 +54,7 @@ void MeleeAttack::execute(Character& user, Character& target)
         user.takeActionPoints(finalCost);
         return;
     }
-    baseDamage = weapon->getBaseDamage();
+    baseDamage = weapon->getBaseDamage() + getDamage();
 
     Warrior* warrior = dynamic_cast<Warrior*>(&user);
     if (warrior && warrior->isDamageBuffActive()) 

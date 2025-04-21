@@ -39,8 +39,9 @@ public:
     const std::string& getName() const { return m_name; }
     Rarity getRarity() const { return m_rarity; }
     const std::vector<StatModifier>& getModifiers() const { return m_modifiers; }
-
     std::string_view getRarityName() const;
+
+    bool canUse(const Character& user) const;
 
     void setCustomEffect(std::function<void(Character&)> effect) { m_customEffect = std::move(effect); } 
     void runCustomEffect(Character& user);

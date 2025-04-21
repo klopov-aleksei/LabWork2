@@ -30,6 +30,31 @@ std::string_view Item::getRarityName() const
     }
 }
 
+bool Item::canUse(const Character& user) const 
+{
+    for (const auto& mod : m_modifiers) 
+    {
+        if (mod.target == Target::self) 
+        {
+            if (mod.stat == Stat::health && mod.value < 0) 
+            {
+                if (user.getHealth() + mod.value < 0) 
+                {
+                    return false;
+                }
+            } 
+            else if (mod.stat == Stat::mana && mod.value < 0) 
+            {
+                if (user.getMana() + mod.value < 0) 
+                {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
 void Item::runCustomEffect(Character& user) 
 {
     if (m_customEffect) 
@@ -44,17 +69,6 @@ void Item::use(Character& user, Character* enemy)
     const int cost{ 1 };
     std::cout << "Using " << m_name << " (" << getRarityName() << ")\n";
     runCustomEffect(user);
-
-    for (const auto& mod : m_modifiers)
-    {
-        if ((mod.stat == Stat::health && mod.value < 0 && user.getHealth() + mod.value < 0) ||
-            (mod.stat == Stat::mana && mod.value < 0 && user.getMana() + mod.value < 0))
-        {
-            std::cout << "Cannot use " << m_name << " because it would reduce your "
-                      << ((mod.stat == Stat::health) ? "health" : "mana") << " below zero.\n";
-            return;
-        }
-    }
        
     for (const auto& mod : m_modifiers)
     {

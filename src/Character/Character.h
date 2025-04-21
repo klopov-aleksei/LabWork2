@@ -69,6 +69,15 @@ public:
     {
         this->*statPtr += delta;
         std::cout << m_name << "'s " << statName << " changed by " << delta << ".\n";
+
+        if (statPtr == &Character::m_maxHealth) 
+        {
+            m_health = std::min(m_health, m_maxHealth);
+        } 
+        else if (statPtr == &Character::m_maxMana) 
+        {
+            m_mana = std::min(m_mana, m_maxMana);
+        }
     }
 
     void increaseMaxHealth(int amount) { modifyStat(&Character::m_maxHealth, amount, "max health"); }

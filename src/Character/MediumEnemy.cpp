@@ -28,7 +28,7 @@ void MediumEnemy::performTurn(PlayerCharacter& player)
     if (!m_hasEquippedBackup)
         equipBackup();
 
-    while (m_actionPoints >= 2)
+    while (m_actionPoints >= 1)
     {
         double playerHealthRatio = static_cast<double>(player.getHealth()) / player.getMaxHealth();
         double enemyHealthRatio  = static_cast<double>(m_health) / m_maxHealth;
@@ -143,8 +143,8 @@ void MediumEnemy::performUseItem(PlayerCharacter& player, int bestIndex)
 {
     if (bestIndex != -1 && m_actionPoints >= 2 && Random::get(0,100) < 85 ) 
     {
-        m_inventory.useItem(bestIndex, *this, &player);
         std::cout << m_name << " uses an item.\n";
+        m_inventory.useItem(bestIndex, *this, &player);
         const int additional_cost{ 1 };
         takeActionPoints(additional_cost);
     }

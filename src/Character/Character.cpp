@@ -178,13 +178,14 @@ void Character::takeDamage(int damage)
             std::cout << m_name << "'s armor has broken and is unequipped!\n";
             equippedArmor.reset();
         }
+        m_health -= static_cast<int>(damage / 2);
     }
     else
     {
         m_health -= damage;
-        m_health = std::max(0, m_health);
-        std::cout << m_name << " takes " << damage << " damage.\n";
     }
+    m_health = std::max(0, m_health);
+    std::cout << m_name << " takes " << damage << " damage.\n";
 }
 
 void Character::takeActionPoints(int cost) 

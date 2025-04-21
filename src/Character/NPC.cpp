@@ -91,10 +91,27 @@ bool NPC::shouldBuff()
 
 bool NPC::shouldSpellCast()
 {
-    if (m_mana >= 20 && m_actionPoints >= 4)
+    if (m_mana >= 30 && m_actionPoints >= 4 )
     {
-        if (Random::get(0, 100) < 50)
-            return true;
+        if (const Weapon* weapon = getWeapon())
+        {
+            int chance{ Random::get(0, 100) };
+            if (m_hasEquippedBackup)
+            {
+                if (weapon->getCondition() < 0.5) 
+                {
+                    chance += 25;
+                }
+            }
+            else
+            {
+                chance -= 5;
+            }
+
+            if (chance > 50)
+                return false;
+        }
+        return true;
     }
     return false;
 }
@@ -102,7 +119,7 @@ bool NPC::shouldSpellCast()
 void NPC::performUltraAttack(PlayerCharacter& player)
 {   
     int baseDamage = (getWeapon()) ? getWeapon()->getBaseDamage() : 0;
-    int damage = static_cast<int>(baseDamage * 2.5);
+    int damage = static_cast<int>(baseDamage * 2.8);
     
     std::cout << m_name << " unleashes an ULTRA ATTACK dealing " << damage << " damage, consuming all AP.\n";
     player.takeDamage(damage);
@@ -124,19 +141,19 @@ void NPC::performMeleeAttack(PlayerCharacter& player)
 
 void NPC::performSpellAttack(PlayerCharacter& player)
 {   
-    int weaponDamage = 0;
+    int weaponDamage{ 0 };
     if (getWeapon())
     {
         weaponDamage = getWeapon()->getBaseDamage();
     }
-    int damage = 20 + static_cast<int>(0.5 * weaponDamage);
+    int damage = 16 + static_cast<int>(0.5 * weaponDamage);
     if (m_hasBuff)
     {
         damage = static_cast<int>(damage * 1.2);
         m_hasBuff = false;
     }
 
-    SpellCast spellCast{ 20, damage, 4 };
+    SpellCast spellCast{ 30, damage, 4 };
     spellCast.execute(*this, player);
 }
 
