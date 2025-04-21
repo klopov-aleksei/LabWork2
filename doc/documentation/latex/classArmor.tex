@@ -1,0 +1,96 @@
+\hypertarget{classArmor}{}\doxysection{Armor Class Reference}
+\label{classArmor}\index{Armor@{Armor}}
+
+
+{\ttfamily \#include $<$Armor.\+h$>$}
+
+
+
+Inheritance diagram for Armor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classArmor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Armor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classArmor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArmor_a95e3960b361d1d3fa199aae2097ca461}{Armor}} (std\+::string\+\_\+view name, int defense, int durability)
+\item 
+void \mbox{\hyperlink{classArmor_af4edec8d1f28f2dd12e3df1a0f734449}{use}} (\mbox{\hyperlink{classCharacter}{Character}} \&user, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35da590f53e8699817c6fa498cc11a4cbe63}{self}}) override
+\item 
+int \mbox{\hyperlink{classArmor_af83c40ea1764197296b3ebd328be56d2}{get\+Effective\+Defense}} () const
+\item 
+void \mbox{\hyperlink{classArmor_ae3325b9dc479128788fad7bd7058f130}{take\+Damage}} (int amount) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classArmor_ac15240fffb7f43095e7bf8b10a729258}{base\+Defense}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classArmor_a95e3960b361d1d3fa199aae2097ca461}\label{classArmor_a95e3960b361d1d3fa199aae2097ca461}} 
+\index{Armor@{Armor}!Armor@{Armor}}
+\index{Armor@{Armor}!Armor@{Armor}}
+\doxysubsubsection{\texorpdfstring{Armor()}{Armor()}}
+{\footnotesize\ttfamily Armor\+::\+Armor (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{int}]{defense,  }\item[{int}]{durability }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArmor_af83c40ea1764197296b3ebd328be56d2}\label{classArmor_af83c40ea1764197296b3ebd328be56d2}} 
+\index{Armor@{Armor}!getEffectiveDefense@{getEffectiveDefense}}
+\index{getEffectiveDefense@{getEffectiveDefense}!Armor@{Armor}}
+\doxysubsubsection{\texorpdfstring{getEffectiveDefense()}{getEffectiveDefense()}}
+{\footnotesize\ttfamily int Armor\+::get\+Effective\+Defense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classArmor_ae3325b9dc479128788fad7bd7058f130}\label{classArmor_ae3325b9dc479128788fad7bd7058f130}} 
+\index{Armor@{Armor}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Armor@{Armor}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily void Armor\+::take\+Damage (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEquipment_a7d5c8c82cfa473d99112ab8f5768f2a8}{Equipment}}.
+
+\mbox{\Hypertarget{classArmor_af4edec8d1f28f2dd12e3df1a0f734449}\label{classArmor_af4edec8d1f28f2dd12e3df1a0f734449}} 
+\index{Armor@{Armor}!use@{use}}
+\index{use@{use}!Armor@{Armor}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Armor\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCharacter}{Character}} \&}]{user,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classEquipment_ab3bd3f9081bb49375a7b535a0c807809}{Equipment}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classArmor_ac15240fffb7f43095e7bf8b10a729258}\label{classArmor_ac15240fffb7f43095e7bf8b10a729258}} 
+\index{Armor@{Armor}!baseDefense@{baseDefense}}
+\index{baseDefense@{baseDefense}!Armor@{Armor}}
+\doxysubsubsection{\texorpdfstring{baseDefense}{baseDefense}}
+{\footnotesize\ttfamily int Armor\+::base\+Defense\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Equipment/\mbox{\hyperlink{Armor_8h}{Armor.\+h}}\item 
+src/\+Equipment/\mbox{\hyperlink{Armor_8cpp}{Armor.\+cpp}}\end{DoxyCompactItemize}

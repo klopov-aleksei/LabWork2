@@ -1,0 +1,135 @@
+\hypertarget{classEquipment}{}\doxysection{Equipment Class Reference}
+\label{classEquipment}\index{Equipment@{Equipment}}
+
+
+{\ttfamily \#include $<$Equipment.\+h$>$}
+
+
+
+Inheritance diagram for Equipment\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classEquipment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Equipment\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classEquipment__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEquipment_ac147eb9db7168ab50edf3a063b869a56}{Equipment}} (std\+::string\+\_\+view name, \mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}} rarity, int max\+Durability)
+\item 
+virtual void \mbox{\hyperlink{classEquipment_ab3bd3f9081bb49375a7b535a0c807809}{use}} (\mbox{\hyperlink{classCharacter}{Character}} \&user, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35da590f53e8699817c6fa498cc11a4cbe63}{self}})=0
+\item 
+virtual void \mbox{\hyperlink{classEquipment_a7d5c8c82cfa473d99112ab8f5768f2a8}{take\+Damage}} (int amount)
+\item 
+void \mbox{\hyperlink{classEquipment_a9cc80ef8c024103442a66ad708e95fec}{repair}} (int amount)
+\item 
+bool \mbox{\hyperlink{classEquipment_a6bb01210f97951231ec56566f474a560}{is\+Broken}} () const
+\item 
+int \mbox{\hyperlink{classEquipment_a8de28afdb4fc2c9255e9bfe2d3af859c}{get\+Current\+Durability}} () const
+\item 
+int \mbox{\hyperlink{classEquipment_a464c42e2585b380d76bc05122871baf3}{get\+Max\+Durability}} () const
+\item 
+double \mbox{\hyperlink{classEquipment_a9962adbb7e6e7403d655d1126c87a4e4}{get\+Condition}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classEquipment_ab07324b33cc7bbed4196adc8c3a279d2}{m\+\_\+max\+Durability}}
+\item 
+int \mbox{\hyperlink{classEquipment_a904f6e422e0794f11dd47dece2484ef7}{m\+\_\+current\+Durability}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEquipment_ac147eb9db7168ab50edf3a063b869a56}\label{classEquipment_ac147eb9db7168ab50edf3a063b869a56}} 
+\index{Equipment@{Equipment}!Equipment@{Equipment}}
+\index{Equipment@{Equipment}!Equipment@{Equipment}}
+\doxysubsubsection{\texorpdfstring{Equipment()}{Equipment()}}
+{\footnotesize\ttfamily Equipment\+::\+Equipment (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{\mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}}}]{rarity,  }\item[{int}]{max\+Durability }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEquipment_a9962adbb7e6e7403d655d1126c87a4e4}\label{classEquipment_a9962adbb7e6e7403d655d1126c87a4e4}} 
+\index{Equipment@{Equipment}!getCondition@{getCondition}}
+\index{getCondition@{getCondition}!Equipment@{Equipment}}
+\doxysubsubsection{\texorpdfstring{getCondition()}{getCondition()}}
+{\footnotesize\ttfamily double Equipment\+::get\+Condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classEquipment_a8de28afdb4fc2c9255e9bfe2d3af859c}\label{classEquipment_a8de28afdb4fc2c9255e9bfe2d3af859c}} 
+\index{Equipment@{Equipment}!getCurrentDurability@{getCurrentDurability}}
+\index{getCurrentDurability@{getCurrentDurability}!Equipment@{Equipment}}
+\doxysubsubsection{\texorpdfstring{getCurrentDurability()}{getCurrentDurability()}}
+{\footnotesize\ttfamily int Equipment\+::get\+Current\+Durability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classEquipment_a464c42e2585b380d76bc05122871baf3}\label{classEquipment_a464c42e2585b380d76bc05122871baf3}} 
+\index{Equipment@{Equipment}!getMaxDurability@{getMaxDurability}}
+\index{getMaxDurability@{getMaxDurability}!Equipment@{Equipment}}
+\doxysubsubsection{\texorpdfstring{getMaxDurability()}{getMaxDurability()}}
+{\footnotesize\ttfamily int Equipment\+::get\+Max\+Durability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classEquipment_a6bb01210f97951231ec56566f474a560}\label{classEquipment_a6bb01210f97951231ec56566f474a560}} 
+\index{Equipment@{Equipment}!isBroken@{isBroken}}
+\index{isBroken@{isBroken}!Equipment@{Equipment}}
+\doxysubsubsection{\texorpdfstring{isBroken()}{isBroken()}}
+{\footnotesize\ttfamily bool Equipment\+::is\+Broken (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classEquipment_a9cc80ef8c024103442a66ad708e95fec}\label{classEquipment_a9cc80ef8c024103442a66ad708e95fec}} 
+\index{Equipment@{Equipment}!repair@{repair}}
+\index{repair@{repair}!Equipment@{Equipment}}
+\doxysubsubsection{\texorpdfstring{repair()}{repair()}}
+{\footnotesize\ttfamily void Equipment\+::repair (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classEquipment_a7d5c8c82cfa473d99112ab8f5768f2a8}\label{classEquipment_a7d5c8c82cfa473d99112ab8f5768f2a8}} 
+\index{Equipment@{Equipment}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Equipment@{Equipment}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily void Equipment\+::take\+Damage (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classArmor_ae3325b9dc479128788fad7bd7058f130}{Armor}}.
+
+\mbox{\Hypertarget{classEquipment_ab3bd3f9081bb49375a7b535a0c807809}\label{classEquipment_ab3bd3f9081bb49375a7b535a0c807809}} 
+\index{Equipment@{Equipment}!use@{use}}
+\index{use@{use}!Equipment@{Equipment}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily virtual void Equipment\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCharacter}{Character}} \&}]{user,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWeapon_a648721dd97ef9d87ec737f255bdc4c77}{Weapon}}, and \mbox{\hyperlink{classArmor_af4edec8d1f28f2dd12e3df1a0f734449}{Armor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classEquipment_a904f6e422e0794f11dd47dece2484ef7}\label{classEquipment_a904f6e422e0794f11dd47dece2484ef7}} 
+\index{Equipment@{Equipment}!m\_currentDurability@{m\_currentDurability}}
+\index{m\_currentDurability@{m\_currentDurability}!Equipment@{Equipment}}
+\doxysubsubsection{\texorpdfstring{m\_currentDurability}{m\_currentDurability}}
+{\footnotesize\ttfamily int Equipment\+::m\+\_\+current\+Durability\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classEquipment_ab07324b33cc7bbed4196adc8c3a279d2}\label{classEquipment_ab07324b33cc7bbed4196adc8c3a279d2}} 
+\index{Equipment@{Equipment}!m\_maxDurability@{m\_maxDurability}}
+\index{m\_maxDurability@{m\_maxDurability}!Equipment@{Equipment}}
+\doxysubsubsection{\texorpdfstring{m\_maxDurability}{m\_maxDurability}}
+{\footnotesize\ttfamily int Equipment\+::m\+\_\+max\+Durability\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Equipment/\mbox{\hyperlink{Equipment_8h}{Equipment.\+h}}\item 
+src/\+Equipment/\mbox{\hyperlink{Equipment_8cpp}{Equipment.\+cpp}}\end{DoxyCompactItemize}

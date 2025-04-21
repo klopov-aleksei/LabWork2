@@ -1,0 +1,498 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Constants Namespace Reference}{9}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Variable Documentation}{9}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}block\_cost}{10}{subsubsection.5.1.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}cast\_cost}{10}{subsubsection.5.1.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.1.3}conc\_cost}{10}{subsubsection.5.1.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.1.4}concentrationManaRestore}{10}{subsubsection.5.1.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.1.5}critThreshold}{10}{subsubsection.5.1.1.5}%
+\contentsline {subsubsection}{\numberline {5.1.1.6}heal\_cost}{10}{subsubsection.5.1.1.6}%
+\contentsline {subsubsection}{\numberline {5.1.1.7}healAmount}{10}{subsubsection.5.1.1.7}%
+\contentsline {subsubsection}{\numberline {5.1.1.8}high\_bonus}{10}{subsubsection.5.1.1.8}%
+\contentsline {subsubsection}{\numberline {5.1.1.9}initial\_ap}{11}{subsubsection.5.1.1.9}%
+\contentsline {subsubsection}{\numberline {5.1.1.10}invest\_cost}{11}{subsubsection.5.1.1.10}%
+\contentsline {subsubsection}{\numberline {5.1.1.11}low\_bonus}{11}{subsubsection.5.1.1.11}%
+\contentsline {subsubsection}{\numberline {5.1.1.12}max\_armor\_reduce}{11}{subsubsection.5.1.1.12}%
+\contentsline {subsubsection}{\numberline {5.1.1.13}max\_attack\_bonus}{11}{subsubsection.5.1.1.13}%
+\contentsline {subsubsection}{\numberline {5.1.1.14}max\_block\_reduce}{11}{subsubsection.5.1.1.14}%
+\contentsline {subsubsection}{\numberline {5.1.1.15}max\_crit\_multiplier}{11}{subsubsection.5.1.1.15}%
+\contentsline {subsubsection}{\numberline {5.1.1.16}max\_weapon\_decoy}{11}{subsubsection.5.1.1.16}%
+\contentsline {subsubsection}{\numberline {5.1.1.17}maxInventorySize}{12}{subsubsection.5.1.1.17}%
+\contentsline {subsubsection}{\numberline {5.1.1.18}melee\_cost}{12}{subsubsection.5.1.1.18}%
+\contentsline {subsubsection}{\numberline {5.1.1.19}min\_armor\_reduce}{12}{subsubsection.5.1.1.19}%
+\contentsline {subsubsection}{\numberline {5.1.1.20}min\_attack\_bonus}{12}{subsubsection.5.1.1.20}%
+\contentsline {subsubsection}{\numberline {5.1.1.21}min\_block\_reduce}{12}{subsubsection.5.1.1.21}%
+\contentsline {subsubsection}{\numberline {5.1.1.22}min\_crit\_multiplier}{12}{subsubsection.5.1.1.22}%
+\contentsline {subsubsection}{\numberline {5.1.1.23}min\_weapon\_decoy}{12}{subsubsection.5.1.1.23}%
+\contentsline {subsubsection}{\numberline {5.1.1.24}points\_to\_distribute}{12}{subsubsection.5.1.1.24}%
+\contentsline {subsubsection}{\numberline {5.1.1.25}statThreshold}{13}{subsubsection.5.1.1.25}%
+\contentsline {section}{\numberline {5.2}Random Namespace Reference}{13}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Function Documentation}{13}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}generate()}{13}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}get()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{13}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.2.1.3}get()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{13}{subsubsection.5.2.1.3}%
+\contentsline {subsubsection}{\numberline {5.2.1.4}get()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{14}{subsubsection.5.2.1.4}%
+\contentsline {subsection}{\numberline {5.2.2}Variable Documentation}{14}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}mt}{14}{subsubsection.5.2.2.1}%
+\contentsline {chapter}{\numberline {6}Class Documentation}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Armor Class Reference}{15}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Constructor \& Destructor Documentation}{16}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}Armor()}{16}{subsubsection.6.1.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Member Function Documentation}{16}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}getEffectiveDefense()}{17}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}takeDamage()}{17}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}use()}{17}{subsubsection.6.1.2.3}%
+\contentsline {subsection}{\numberline {6.1.3}Member Data Documentation}{17}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}baseDefense}{17}{subsubsection.6.1.3.1}%
+\contentsline {section}{\numberline {6.2}Block Class Reference}{18}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Constructor \& Destructor Documentation}{19}{subsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.1.1}Block()}{19}{subsubsection.6.2.1.1}%
+\contentsline {subsection}{\numberline {6.2.2}Member Function Documentation}{19}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}execute()}{19}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}getName()}{19}{subsubsection.6.2.2.2}%
+\contentsline {section}{\numberline {6.3}Character Class Reference}{20}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Constructor \& Destructor Documentation}{21}{subsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.1.1}Character()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{21}{subsubsection.6.3.1.1}%
+\contentsline {subsubsection}{\numberline {6.3.1.2}Character()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{22}{subsubsection.6.3.1.2}%
+\contentsline {subsubsection}{\numberline {6.3.1.3}Character()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{22}{subsubsection.6.3.1.3}%
+\contentsline {subsubsection}{\numberline {6.3.1.4}$\sim $Character()}{22}{subsubsection.6.3.1.4}%
+\contentsline {subsection}{\numberline {6.3.2}Member Function Documentation}{22}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}displayStatus()}{22}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}equipArmor()}{22}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}equipWeapon()}{22}{subsubsection.6.3.2.3}%
+\contentsline {subsubsection}{\numberline {6.3.2.4}getActionPoints()}{23}{subsubsection.6.3.2.4}%
+\contentsline {subsubsection}{\numberline {6.3.2.5}getAgility()}{23}{subsubsection.6.3.2.5}%
+\contentsline {subsubsection}{\numberline {6.3.2.6}getArmor()}{23}{subsubsection.6.3.2.6}%
+\contentsline {subsubsection}{\numberline {6.3.2.7}getAttackCount()}{23}{subsubsection.6.3.2.7}%
+\contentsline {subsubsection}{\numberline {6.3.2.8}getHealth()}{23}{subsubsection.6.3.2.8}%
+\contentsline {subsubsection}{\numberline {6.3.2.9}getIntelligence()}{23}{subsubsection.6.3.2.9}%
+\contentsline {subsubsection}{\numberline {6.3.2.10}getMana()}{23}{subsubsection.6.3.2.10}%
+\contentsline {subsubsection}{\numberline {6.3.2.11}getMaxHealth()}{23}{subsubsection.6.3.2.11}%
+\contentsline {subsubsection}{\numberline {6.3.2.12}getName()}{24}{subsubsection.6.3.2.12}%
+\contentsline {subsubsection}{\numberline {6.3.2.13}getStrength()}{24}{subsubsection.6.3.2.13}%
+\contentsline {subsubsection}{\numberline {6.3.2.14}getWeapon()}{24}{subsubsection.6.3.2.14}%
+\contentsline {subsubsection}{\numberline {6.3.2.15}increaseActionPoints()}{24}{subsubsection.6.3.2.15}%
+\contentsline {subsubsection}{\numberline {6.3.2.16}increaseAgility()}{24}{subsubsection.6.3.2.16}%
+\contentsline {subsubsection}{\numberline {6.3.2.17}increaseHealth()}{24}{subsubsection.6.3.2.17}%
+\contentsline {subsubsection}{\numberline {6.3.2.18}increaseIntelligence()}{24}{subsubsection.6.3.2.18}%
+\contentsline {subsubsection}{\numberline {6.3.2.19}increaseMana()}{25}{subsubsection.6.3.2.19}%
+\contentsline {subsubsection}{\numberline {6.3.2.20}increaseMaxHealth()}{25}{subsubsection.6.3.2.20}%
+\contentsline {subsubsection}{\numberline {6.3.2.21}increaseMaxMana()}{25}{subsubsection.6.3.2.21}%
+\contentsline {subsubsection}{\numberline {6.3.2.22}increaseStrength()}{25}{subsubsection.6.3.2.22}%
+\contentsline {subsubsection}{\numberline {6.3.2.23}incrementAttackCount()}{25}{subsubsection.6.3.2.23}%
+\contentsline {subsubsection}{\numberline {6.3.2.24}isBlocking()}{25}{subsubsection.6.3.2.24}%
+\contentsline {subsubsection}{\numberline {6.3.2.25}isDead()}{25}{subsubsection.6.3.2.25}%
+\contentsline {subsubsection}{\numberline {6.3.2.26}modifyStat()}{26}{subsubsection.6.3.2.26}%
+\contentsline {subsubsection}{\numberline {6.3.2.27}repairArmor()}{26}{subsubsection.6.3.2.27}%
+\contentsline {subsubsection}{\numberline {6.3.2.28}repairWeapon()}{26}{subsubsection.6.3.2.28}%
+\contentsline {subsubsection}{\numberline {6.3.2.29}resetActionPoints()}{26}{subsubsection.6.3.2.29}%
+\contentsline {subsubsection}{\numberline {6.3.2.30}resetAttackCount()}{26}{subsubsection.6.3.2.30}%
+\contentsline {subsubsection}{\numberline {6.3.2.31}setBlocking()}{26}{subsubsection.6.3.2.31}%
+\contentsline {subsubsection}{\numberline {6.3.2.32}setStats()}{27}{subsubsection.6.3.2.32}%
+\contentsline {subsubsection}{\numberline {6.3.2.33}takeActionPoints()}{27}{subsubsection.6.3.2.33}%
+\contentsline {subsubsection}{\numberline {6.3.2.34}takeDamage()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{27}{subsubsection.6.3.2.34}%
+\contentsline {subsubsection}{\numberline {6.3.2.35}takeDamage()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{27}{subsubsection.6.3.2.35}%
+\contentsline {subsubsection}{\numberline {6.3.2.36}useMana()}{27}{subsubsection.6.3.2.36}%
+\contentsline {subsection}{\numberline {6.3.3}Member Data Documentation}{27}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}equippedArmor}{27}{subsubsection.6.3.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.3.2}equippedWeapon}{28}{subsubsection.6.3.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3.3}m\_actionPoints}{28}{subsubsection.6.3.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.4}m\_agility}{28}{subsubsection.6.3.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.3.5}m\_attackCount}{28}{subsubsection.6.3.3.5}%
+\contentsline {subsubsection}{\numberline {6.3.3.6}m\_health}{28}{subsubsection.6.3.3.6}%
+\contentsline {subsubsection}{\numberline {6.3.3.7}m\_intelligence}{28}{subsubsection.6.3.3.7}%
+\contentsline {subsubsection}{\numberline {6.3.3.8}m\_isBlocking}{28}{subsubsection.6.3.3.8}%
+\contentsline {subsubsection}{\numberline {6.3.3.9}m\_mana}{28}{subsubsection.6.3.3.9}%
+\contentsline {subsubsection}{\numberline {6.3.3.10}m\_maxActionPoints}{29}{subsubsection.6.3.3.10}%
+\contentsline {subsubsection}{\numberline {6.3.3.11}m\_maxHealth}{29}{subsubsection.6.3.3.11}%
+\contentsline {subsubsection}{\numberline {6.3.3.12}m\_maxMana}{29}{subsubsection.6.3.3.12}%
+\contentsline {subsubsection}{\numberline {6.3.3.13}m\_name}{29}{subsubsection.6.3.3.13}%
+\contentsline {subsubsection}{\numberline {6.3.3.14}m\_strength}{29}{subsubsection.6.3.3.14}%
+\contentsline {section}{\numberline {6.4}Character\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creation Class Reference}{29}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Member Function Documentation}{30}{subsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.1.1}ChooseArmor()}{30}{subsubsection.6.4.1.1}%
+\contentsline {subsubsection}{\numberline {6.4.1.2}ChooseClass()}{30}{subsubsection.6.4.1.2}%
+\contentsline {subsubsection}{\numberline {6.4.1.3}ChooseInventory()}{30}{subsubsection.6.4.1.3}%
+\contentsline {subsubsection}{\numberline {6.4.1.4}ChooseName()}{30}{subsubsection.6.4.1.4}%
+\contentsline {subsubsection}{\numberline {6.4.1.5}ChooseSkills()}{30}{subsubsection.6.4.1.5}%
+\contentsline {subsubsection}{\numberline {6.4.1.6}ChooseWeapon()}{31}{subsubsection.6.4.1.6}%
+\contentsline {subsubsection}{\numberline {6.4.1.7}createCharacter()}{31}{subsubsection.6.4.1.7}%
+\contentsline {subsubsection}{\numberline {6.4.1.8}CustomizeStats()}{31}{subsubsection.6.4.1.8}%
+\contentsline {section}{\numberline {6.5}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface Class Reference}{31}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Constructor \& Destructor Documentation}{32}{subsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.1}CombatInterface()}{32}{subsubsection.6.5.1.1}%
+\contentsline {subsection}{\numberline {6.5.2}Member Function Documentation}{32}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}displayCombatOptions()}{32}{subsubsection.6.5.2.1}%
+\contentsline {subsubsection}{\numberline {6.5.2.2}openInventory()}{32}{subsubsection.6.5.2.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.3}performAttack()}{32}{subsubsection.6.5.2.3}%
+\contentsline {subsubsection}{\numberline {6.5.2.4}processInput()}{33}{subsubsection.6.5.2.4}%
+\contentsline {subsection}{\numberline {6.5.3}Member Data Documentation}{33}{subsection.6.5.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.1}m\_combatSystem}{33}{subsubsection.6.5.3.1}%
+\contentsline {subsubsection}{\numberline {6.5.3.2}m\_player}{33}{subsubsection.6.5.3.2}%
+\contentsline {section}{\numberline {6.6}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System Class Reference}{33}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Constructor \& Destructor Documentation}{34}{subsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.1.1}CombatSystem()}{34}{subsubsection.6.6.1.1}%
+\contentsline {subsection}{\numberline {6.6.2}Member Function Documentation}{34}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}getEnemy()}{34}{subsubsection.6.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.6.2.2}handleTurn()}{34}{subsubsection.6.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.3}isCombatOver()}{34}{subsubsection.6.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.6.2.4}playerLost()}{35}{subsubsection.6.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.6.2.5}startCombat()}{35}{subsubsection.6.6.2.5}%
+\contentsline {subsection}{\numberline {6.6.3}Member Data Documentation}{35}{subsection.6.6.3}%
+\contentsline {subsubsection}{\numberline {6.6.3.1}m\_enemy}{35}{subsubsection.6.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.6.3.2}m\_player}{35}{subsubsection.6.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.6.3.3}m\_playerTurn}{35}{subsubsection.6.6.3.3}%
+\contentsline {section}{\numberline {6.7}Concentrate Class Reference}{36}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Constructor \& Destructor Documentation}{37}{subsection.6.7.1}%
+\contentsline {subsubsection}{\numberline {6.7.1.1}Concentrate()}{37}{subsubsection.6.7.1.1}%
+\contentsline {subsection}{\numberline {6.7.2}Member Function Documentation}{37}{subsection.6.7.2}%
+\contentsline {subsubsection}{\numberline {6.7.2.1}execute()}{37}{subsubsection.6.7.2.1}%
+\contentsline {subsubsection}{\numberline {6.7.2.2}getName()}{37}{subsubsection.6.7.2.2}%
+\contentsline {section}{\numberline {6.8}Damage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Calculator Class Reference}{37}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Constructor \& Destructor Documentation}{38}{subsection.6.8.1}%
+\contentsline {subsubsection}{\numberline {6.8.1.1}DamageCalculator()}{38}{subsubsection.6.8.1.1}%
+\contentsline {subsection}{\numberline {6.8.2}Member Function Documentation}{38}{subsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}isSpell()}{38}{subsubsection.6.8.2.1}%
+\contentsline {subsubsection}{\numberline {6.8.2.2}markAsSpell()}{38}{subsubsection.6.8.2.2}%
+\contentsline {subsection}{\numberline {6.8.3}Friends And Related Function Documentation}{38}{subsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.3.1}calculateDamage}{38}{subsubsection.6.8.3.1}%
+\contentsline {subsubsection}{\numberline {6.8.3.2}Character::takeDamage}{39}{subsubsection.6.8.3.2}%
+\contentsline {subsection}{\numberline {6.8.4}Member Data Documentation}{39}{subsection.6.8.4}%
+\contentsline {subsubsection}{\numberline {6.8.4.1}m\_armorDamage}{39}{subsubsection.6.8.4.1}%
+\contentsline {subsubsection}{\numberline {6.8.4.2}m\_finalDamage}{39}{subsubsection.6.8.4.2}%
+\contentsline {subsubsection}{\numberline {6.8.4.3}m\_isSpell}{39}{subsubsection.6.8.4.3}%
+\contentsline {section}{\numberline {6.9}Easy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy Class Reference}{39}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Constructor \& Destructor Documentation}{40}{subsection.6.9.1}%
+\contentsline {subsubsection}{\numberline {6.9.1.1}EasyEnemy()}{40}{subsubsection.6.9.1.1}%
+\contentsline {subsection}{\numberline {6.9.2}Member Function Documentation}{40}{subsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.1}equipBackup()}{41}{subsubsection.6.9.2.1}%
+\contentsline {subsubsection}{\numberline {6.9.2.2}performTurn()}{41}{subsubsection.6.9.2.2}%
+\contentsline {subsection}{\numberline {6.9.3}Member Data Documentation}{41}{subsection.6.9.3}%
+\contentsline {subsubsection}{\numberline {6.9.3.1}m\_usedUltra}{41}{subsubsection.6.9.3.1}%
+\contentsline {section}{\numberline {6.10}Equipment Class Reference}{41}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Constructor \& Destructor Documentation}{42}{subsection.6.10.1}%
+\contentsline {subsubsection}{\numberline {6.10.1.1}Equipment()}{42}{subsubsection.6.10.1.1}%
+\contentsline {subsection}{\numberline {6.10.2}Member Function Documentation}{42}{subsection.6.10.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.1}getCondition()}{43}{subsubsection.6.10.2.1}%
+\contentsline {subsubsection}{\numberline {6.10.2.2}getCurrentDurability()}{43}{subsubsection.6.10.2.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.3}getMaxDurability()}{43}{subsubsection.6.10.2.3}%
+\contentsline {subsubsection}{\numberline {6.10.2.4}isBroken()}{43}{subsubsection.6.10.2.4}%
+\contentsline {subsubsection}{\numberline {6.10.2.5}repair()}{43}{subsubsection.6.10.2.5}%
+\contentsline {subsubsection}{\numberline {6.10.2.6}takeDamage()}{43}{subsubsection.6.10.2.6}%
+\contentsline {subsubsection}{\numberline {6.10.2.7}use()}{43}{subsubsection.6.10.2.7}%
+\contentsline {subsection}{\numberline {6.10.3}Member Data Documentation}{44}{subsection.6.10.3}%
+\contentsline {subsubsection}{\numberline {6.10.3.1}m\_currentDurability}{44}{subsubsection.6.10.3.1}%
+\contentsline {subsubsection}{\numberline {6.10.3.2}m\_maxDurability}{44}{subsubsection.6.10.3.2}%
+\contentsline {section}{\numberline {6.11}Game Class Reference}{44}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Constructor \& Destructor Documentation}{45}{subsection.6.11.1}%
+\contentsline {subsubsection}{\numberline {6.11.1.1}Game()}{45}{subsubsection.6.11.1.1}%
+\contentsline {subsubsection}{\numberline {6.11.1.2}$\sim $Game()}{45}{subsubsection.6.11.1.2}%
+\contentsline {subsection}{\numberline {6.11.2}Member Function Documentation}{45}{subsection.6.11.2}%
+\contentsline {subsubsection}{\numberline {6.11.2.1}start()}{45}{subsubsection.6.11.2.1}%
+\contentsline {subsubsection}{\numberline {6.11.2.2}startCombat()}{45}{subsubsection.6.11.2.2}%
+\contentsline {subsection}{\numberline {6.11.3}Member Data Documentation}{46}{subsection.6.11.3}%
+\contentsline {subsubsection}{\numberline {6.11.3.1}characterCreation}{46}{subsubsection.6.11.3.1}%
+\contentsline {subsubsection}{\numberline {6.11.3.2}combatInterface}{46}{subsubsection.6.11.3.2}%
+\contentsline {subsubsection}{\numberline {6.11.3.3}combatSystem}{46}{subsubsection.6.11.3.3}%
+\contentsline {subsubsection}{\numberline {6.11.3.4}enemy}{46}{subsubsection.6.11.3.4}%
+\contentsline {subsubsection}{\numberline {6.11.3.5}player}{46}{subsubsection.6.11.3.5}%
+\contentsline {section}{\numberline {6.12}Hard\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy Class Reference}{47}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Constructor \& Destructor Documentation}{48}{subsection.6.12.1}%
+\contentsline {subsubsection}{\numberline {6.12.1.1}HardEnemy()}{48}{subsubsection.6.12.1.1}%
+\contentsline {subsection}{\numberline {6.12.2}Member Function Documentation}{48}{subsection.6.12.2}%
+\contentsline {subsubsection}{\numberline {6.12.2.1}equipBackup()}{48}{subsubsection.6.12.2.1}%
+\contentsline {subsubsection}{\numberline {6.12.2.2}performBlock()}{48}{subsubsection.6.12.2.2}%
+\contentsline {subsubsection}{\numberline {6.12.2.3}performTurn()}{48}{subsubsection.6.12.2.3}%
+\contentsline {subsubsection}{\numberline {6.12.2.4}shouldBlock()}{49}{subsubsection.6.12.2.4}%
+\contentsline {section}{\numberline {6.13}Heal Class Reference}{49}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Constructor \& Destructor Documentation}{50}{subsection.6.13.1}%
+\contentsline {subsubsection}{\numberline {6.13.1.1}Heal()}{50}{subsubsection.6.13.1.1}%
+\contentsline {subsection}{\numberline {6.13.2}Member Function Documentation}{50}{subsection.6.13.2}%
+\contentsline {subsubsection}{\numberline {6.13.2.1}execute()}{50}{subsubsection.6.13.2.1}%
+\contentsline {subsubsection}{\numberline {6.13.2.2}getHealAmount()}{50}{subsubsection.6.13.2.2}%
+\contentsline {subsubsection}{\numberline {6.13.2.3}getName()}{50}{subsubsection.6.13.2.3}%
+\contentsline {subsection}{\numberline {6.13.3}Member Data Documentation}{51}{subsection.6.13.3}%
+\contentsline {subsubsection}{\numberline {6.13.3.1}m\_healAmount}{51}{subsubsection.6.13.3.1}%
+\contentsline {section}{\numberline {6.14}Inventory Class Reference}{51}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Member Function Documentation}{51}{subsection.6.14.1}%
+\contentsline {subsubsection}{\numberline {6.14.1.1}addItem()}{51}{subsubsection.6.14.1.1}%
+\contentsline {subsubsection}{\numberline {6.14.1.2}display()}{52}{subsubsection.6.14.1.2}%
+\contentsline {subsubsection}{\numberline {6.14.1.3}getItemCount()}{52}{subsubsection.6.14.1.3}%
+\contentsline {subsubsection}{\numberline {6.14.1.4}getSize()}{52}{subsubsection.6.14.1.4}%
+\contentsline {subsubsection}{\numberline {6.14.1.5}isEmpty()}{52}{subsubsection.6.14.1.5}%
+\contentsline {subsubsection}{\numberline {6.14.1.6}isFull()}{52}{subsubsection.6.14.1.6}%
+\contentsline {subsubsection}{\numberline {6.14.1.7}newSize()}{52}{subsubsection.6.14.1.7}%
+\contentsline {subsubsection}{\numberline {6.14.1.8}operator[]()}{52}{subsubsection.6.14.1.8}%
+\contentsline {subsubsection}{\numberline {6.14.1.9}removeBrokenItems()}{53}{subsubsection.6.14.1.9}%
+\contentsline {subsubsection}{\numberline {6.14.1.10}removeItem()}{53}{subsubsection.6.14.1.10}%
+\contentsline {subsubsection}{\numberline {6.14.1.11}useItem()}{53}{subsubsection.6.14.1.11}%
+\contentsline {subsection}{\numberline {6.14.2}Member Data Documentation}{53}{subsection.6.14.2}%
+\contentsline {subsubsection}{\numberline {6.14.2.1}inventorySize}{53}{subsubsection.6.14.2.1}%
+\contentsline {subsubsection}{\numberline {6.14.2.2}m\_items}{53}{subsubsection.6.14.2.2}%
+\contentsline {section}{\numberline {6.15}Investigate Class Reference}{54}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Constructor \& Destructor Documentation}{55}{subsection.6.15.1}%
+\contentsline {subsubsection}{\numberline {6.15.1.1}Investigate()}{55}{subsubsection.6.15.1.1}%
+\contentsline {subsection}{\numberline {6.15.2}Member Function Documentation}{55}{subsection.6.15.2}%
+\contentsline {subsubsection}{\numberline {6.15.2.1}combineModifiers()}{55}{subsubsection.6.15.2.1}%
+\contentsline {subsubsection}{\numberline {6.15.2.2}createEpicItem()}{56}{subsubsection.6.15.2.2}%
+\contentsline {subsubsection}{\numberline {6.15.2.3}createGenericItem()}{56}{subsubsection.6.15.2.3}%
+\contentsline {subsubsection}{\numberline {6.15.2.4}execute()}{56}{subsubsection.6.15.2.4}%
+\contentsline {subsubsection}{\numberline {6.15.2.5}generateModifier()}{56}{subsubsection.6.15.2.5}%
+\contentsline {subsubsection}{\numberline {6.15.2.6}generateMultiModifierName()}{56}{subsubsection.6.15.2.6}%
+\contentsline {subsubsection}{\numberline {6.15.2.7}getFriendlyNameForSingle()}{56}{subsubsection.6.15.2.7}%
+\contentsline {subsubsection}{\numberline {6.15.2.8}getName()}{57}{subsubsection.6.15.2.8}%
+\contentsline {subsubsection}{\numberline {6.15.2.9}isSumValid()}{57}{subsubsection.6.15.2.9}%
+\contentsline {subsection}{\numberline {6.15.3}Member Data Documentation}{57}{subsection.6.15.3}%
+\contentsline {subsubsection}{\numberline {6.15.3.1}commonProfile}{57}{subsubsection.6.15.3.1}%
+\contentsline {subsubsection}{\numberline {6.15.3.2}rareProfile}{57}{subsubsection.6.15.3.2}%
+\contentsline {subsubsection}{\numberline {6.15.3.3}uncommonProfile}{57}{subsubsection.6.15.3.3}%
+\contentsline {section}{\numberline {6.16}Item Class Reference}{58}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Constructor \& Destructor Documentation}{58}{subsection.6.16.1}%
+\contentsline {subsubsection}{\numberline {6.16.1.1}Item()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{59}{subsubsection.6.16.1.1}%
+\contentsline {subsubsection}{\numberline {6.16.1.2}Item()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{59}{subsubsection.6.16.1.2}%
+\contentsline {subsubsection}{\numberline {6.16.1.3}$\sim $Item()}{59}{subsubsection.6.16.1.3}%
+\contentsline {subsection}{\numberline {6.16.2}Member Function Documentation}{59}{subsection.6.16.2}%
+\contentsline {subsubsection}{\numberline {6.16.2.1}getModifiers()}{59}{subsubsection.6.16.2.1}%
+\contentsline {subsubsection}{\numberline {6.16.2.2}getName()}{59}{subsubsection.6.16.2.2}%
+\contentsline {subsubsection}{\numberline {6.16.2.3}getRarity()}{59}{subsubsection.6.16.2.3}%
+\contentsline {subsubsection}{\numberline {6.16.2.4}getRarityName()}{60}{subsubsection.6.16.2.4}%
+\contentsline {subsubsection}{\numberline {6.16.2.5}runCustomEffect()}{60}{subsubsection.6.16.2.5}%
+\contentsline {subsubsection}{\numberline {6.16.2.6}setCustomEffect()}{60}{subsubsection.6.16.2.6}%
+\contentsline {subsubsection}{\numberline {6.16.2.7}use()}{60}{subsubsection.6.16.2.7}%
+\contentsline {subsection}{\numberline {6.16.3}Member Data Documentation}{60}{subsection.6.16.3}%
+\contentsline {subsubsection}{\numberline {6.16.3.1}m\_customEffect}{60}{subsubsection.6.16.3.1}%
+\contentsline {subsubsection}{\numberline {6.16.3.2}m\_effectApplied}{60}{subsubsection.6.16.3.2}%
+\contentsline {subsubsection}{\numberline {6.16.3.3}m\_modifiers}{60}{subsubsection.6.16.3.3}%
+\contentsline {subsubsection}{\numberline {6.16.3.4}m\_name}{61}{subsubsection.6.16.3.4}%
+\contentsline {subsubsection}{\numberline {6.16.3.5}m\_rarity}{61}{subsubsection.6.16.3.5}%
+\contentsline {section}{\numberline {6.17}Mage Class Reference}{61}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Constructor \& Destructor Documentation}{62}{subsection.6.17.1}%
+\contentsline {subsubsection}{\numberline {6.17.1.1}Mage()}{62}{subsubsection.6.17.1.1}%
+\contentsline {subsection}{\numberline {6.17.2}Member Function Documentation}{62}{subsection.6.17.2}%
+\contentsline {subsubsection}{\numberline {6.17.2.1}getTurnCounter()}{63}{subsubsection.6.17.2.1}%
+\contentsline {subsubsection}{\numberline {6.17.2.2}startNewTurn()}{63}{subsubsection.6.17.2.2}%
+\contentsline {subsection}{\numberline {6.17.3}Member Data Documentation}{63}{subsection.6.17.3}%
+\contentsline {subsubsection}{\numberline {6.17.3.1}m\_turnCounter}{63}{subsubsection.6.17.3.1}%
+\contentsline {section}{\numberline {6.18}Medium\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy Class Reference}{63}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Constructor \& Destructor Documentation}{64}{subsection.6.18.1}%
+\contentsline {subsubsection}{\numberline {6.18.1.1}MediumEnemy()}{65}{subsubsection.6.18.1.1}%
+\contentsline {subsubsection}{\numberline {6.18.1.2}$\sim $MediumEnemy()}{65}{subsubsection.6.18.1.2}%
+\contentsline {subsection}{\numberline {6.18.2}Member Function Documentation}{65}{subsection.6.18.2}%
+\contentsline {subsubsection}{\numberline {6.18.2.1}equipBackup()}{65}{subsubsection.6.18.2.1}%
+\contentsline {subsubsection}{\numberline {6.18.2.2}evaluateInventory()}{65}{subsubsection.6.18.2.2}%
+\contentsline {subsubsection}{\numberline {6.18.2.3}evaluateItem()}{65}{subsubsection.6.18.2.3}%
+\contentsline {subsubsection}{\numberline {6.18.2.4}performTurn()}{65}{subsubsection.6.18.2.4}%
+\contentsline {subsubsection}{\numberline {6.18.2.5}performUseItem()}{66}{subsubsection.6.18.2.5}%
+\contentsline {subsubsection}{\numberline {6.18.2.6}shouldUseUltra()}{66}{subsubsection.6.18.2.6}%
+\contentsline {subsection}{\numberline {6.18.3}Member Data Documentation}{66}{subsection.6.18.3}%
+\contentsline {subsubsection}{\numberline {6.18.3.1}m\_inventory}{66}{subsubsection.6.18.3.1}%
+\contentsline {subsubsection}{\numberline {6.18.3.2}m\_turnsSinceUltra}{66}{subsubsection.6.18.3.2}%
+\contentsline {subsubsection}{\numberline {6.18.3.3}m\_ultraAttacksUsed}{66}{subsubsection.6.18.3.3}%
+\contentsline {section}{\numberline {6.19}Melee\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack Class Reference}{67}{section.6.19}%
+\contentsline {subsection}{\numberline {6.19.1}Constructor \& Destructor Documentation}{68}{subsection.6.19.1}%
+\contentsline {subsubsection}{\numberline {6.19.1.1}MeleeAttack()}{68}{subsubsection.6.19.1.1}%
+\contentsline {subsection}{\numberline {6.19.2}Member Function Documentation}{68}{subsection.6.19.2}%
+\contentsline {subsubsection}{\numberline {6.19.2.1}execute()}{68}{subsubsection.6.19.2.1}%
+\contentsline {subsubsection}{\numberline {6.19.2.2}getName()}{68}{subsubsection.6.19.2.2}%
+\contentsline {section}{\numberline {6.20}Investigate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Modifier\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Profile Struct Reference}{68}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Member Data Documentation}{69}{subsection.6.20.1}%
+\contentsline {subsubsection}{\numberline {6.20.1.1}maxMods}{69}{subsubsection.6.20.1.1}%
+\contentsline {subsubsection}{\numberline {6.20.1.2}mediocreChance}{69}{subsubsection.6.20.1.2}%
+\contentsline {subsubsection}{\numberline {6.20.1.3}mediocreMax}{69}{subsubsection.6.20.1.3}%
+\contentsline {subsubsection}{\numberline {6.20.1.4}mediocreMin}{69}{subsubsection.6.20.1.4}%
+\contentsline {subsubsection}{\numberline {6.20.1.5}minMods}{69}{subsubsection.6.20.1.5}%
+\contentsline {subsubsection}{\numberline {6.20.1.6}negativeChance}{69}{subsubsection.6.20.1.6}%
+\contentsline {subsubsection}{\numberline {6.20.1.7}strongChance}{69}{subsubsection.6.20.1.7}%
+\contentsline {subsubsection}{\numberline {6.20.1.8}strongMax}{70}{subsubsection.6.20.1.8}%
+\contentsline {subsubsection}{\numberline {6.20.1.9}strongMin}{70}{subsubsection.6.20.1.9}%
+\contentsline {subsubsection}{\numberline {6.20.1.10}weakChance}{70}{subsubsection.6.20.1.10}%
+\contentsline {subsubsection}{\numberline {6.20.1.11}weakMax}{70}{subsubsection.6.20.1.11}%
+\contentsline {subsubsection}{\numberline {6.20.1.12}weakMin}{70}{subsubsection.6.20.1.12}%
+\contentsline {section}{\numberline {6.21}NPC Class Reference}{71}{section.6.21}%
+\contentsline {subsection}{\numberline {6.21.1}Constructor \& Destructor Documentation}{72}{subsection.6.21.1}%
+\contentsline {subsubsection}{\numberline {6.21.1.1}NPC()}{72}{subsubsection.6.21.1.1}%
+\contentsline {subsubsection}{\numberline {6.21.1.2}$\sim $NPC()}{72}{subsubsection.6.21.1.2}%
+\contentsline {subsection}{\numberline {6.21.2}Member Function Documentation}{72}{subsection.6.21.2}%
+\contentsline {subsubsection}{\numberline {6.21.2.1}displayStatus()}{73}{subsubsection.6.21.2.1}%
+\contentsline {subsubsection}{\numberline {6.21.2.2}equipBackup()}{73}{subsubsection.6.21.2.2}%
+\contentsline {subsubsection}{\numberline {6.21.2.3}performBuff()}{73}{subsubsection.6.21.2.3}%
+\contentsline {subsubsection}{\numberline {6.21.2.4}performHeal()}{73}{subsubsection.6.21.2.4}%
+\contentsline {subsubsection}{\numberline {6.21.2.5}performMeleeAttack()}{73}{subsubsection.6.21.2.5}%
+\contentsline {subsubsection}{\numberline {6.21.2.6}performRestoreMana()}{73}{subsubsection.6.21.2.6}%
+\contentsline {subsubsection}{\numberline {6.21.2.7}performSpellAttack()}{73}{subsubsection.6.21.2.7}%
+\contentsline {subsubsection}{\numberline {6.21.2.8}performTurn()}{74}{subsubsection.6.21.2.8}%
+\contentsline {subsubsection}{\numberline {6.21.2.9}performUltraAttack()}{74}{subsubsection.6.21.2.9}%
+\contentsline {subsubsection}{\numberline {6.21.2.10}shouldBuff()}{74}{subsubsection.6.21.2.10}%
+\contentsline {subsubsection}{\numberline {6.21.2.11}shouldHeal()}{74}{subsubsection.6.21.2.11}%
+\contentsline {subsubsection}{\numberline {6.21.2.12}shouldRestoreMana()}{74}{subsubsection.6.21.2.12}%
+\contentsline {subsubsection}{\numberline {6.21.2.13}shouldSpellCast()}{74}{subsubsection.6.21.2.13}%
+\contentsline {subsubsection}{\numberline {6.21.2.14}shouldUseUltra()}{74}{subsubsection.6.21.2.14}%
+\contentsline {subsection}{\numberline {6.21.3}Member Data Documentation}{75}{subsection.6.21.3}%
+\contentsline {subsubsection}{\numberline {6.21.3.1}m\_hasBuff}{75}{subsubsection.6.21.3.1}%
+\contentsline {subsubsection}{\numberline {6.21.3.2}m\_hasEquippedBackup}{75}{subsubsection.6.21.3.2}%
+\contentsline {section}{\numberline {6.22}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character Class Reference}{75}{section.6.22}%
+\contentsline {subsection}{\numberline {6.22.1}Constructor \& Destructor Documentation}{76}{subsection.6.22.1}%
+\contentsline {subsubsection}{\numberline {6.22.1.1}PlayerCharacter()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{77}{subsubsection.6.22.1.1}%
+\contentsline {subsubsection}{\numberline {6.22.1.2}PlayerCharacter()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{77}{subsubsection.6.22.1.2}%
+\contentsline {subsection}{\numberline {6.22.2}Member Function Documentation}{77}{subsection.6.22.2}%
+\contentsline {subsubsection}{\numberline {6.22.2.1}boostConcentration()}{77}{subsubsection.6.22.2.1}%
+\contentsline {subsubsection}{\numberline {6.22.2.2}canUseSpell()}{77}{subsubsection.6.22.2.2}%
+\contentsline {subsubsection}{\numberline {6.22.2.3}displayStatus()}{77}{subsubsection.6.22.2.3}%
+\contentsline {subsubsection}{\numberline {6.22.2.4}enableSpellCast()}{77}{subsubsection.6.22.2.4}%
+\contentsline {subsubsection}{\numberline {6.22.2.5}getInventory()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{78}{subsubsection.6.22.2.5}%
+\contentsline {subsubsection}{\numberline {6.22.2.6}getInventory()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{78}{subsubsection.6.22.2.6}%
+\contentsline {subsubsection}{\numberline {6.22.2.7}getInvestigateCost()}{78}{subsubsection.6.22.2.7}%
+\contentsline {subsubsection}{\numberline {6.22.2.8}getStrengthBonus()}{78}{subsubsection.6.22.2.8}%
+\contentsline {subsubsection}{\numberline {6.22.2.9}hasEasyBlock()}{78}{subsubsection.6.22.2.9}%
+\contentsline {subsubsection}{\numberline {6.22.2.10}hasHealing()}{78}{subsubsection.6.22.2.10}%
+\contentsline {subsubsection}{\numberline {6.22.2.11}hasMonkTraining()}{78}{subsubsection.6.22.2.11}%
+\contentsline {subsubsection}{\numberline {6.22.2.12}reduceBlockCost()}{78}{subsubsection.6.22.2.12}%
+\contentsline {subsubsection}{\numberline {6.22.2.13}unlockHealing()}{79}{subsubsection.6.22.2.13}%
+\contentsline {subsubsection}{\numberline {6.22.2.14}updateArmorBonuses()}{79}{subsubsection.6.22.2.14}%
+\contentsline {subsection}{\numberline {6.22.3}Member Data Documentation}{79}{subsection.6.22.3}%
+\contentsline {subsubsection}{\numberline {6.22.3.1}canHeal}{79}{subsubsection.6.22.3.1}%
+\contentsline {subsubsection}{\numberline {6.22.3.2}easyBlock}{79}{subsubsection.6.22.3.2}%
+\contentsline {subsubsection}{\numberline {6.22.3.3}hasSpellCastSkill}{79}{subsubsection.6.22.3.3}%
+\contentsline {subsubsection}{\numberline {6.22.3.4}investigateCost}{79}{subsubsection.6.22.3.4}%
+\contentsline {subsubsection}{\numberline {6.22.3.5}m\_inventory}{79}{subsubsection.6.22.3.5}%
+\contentsline {subsubsection}{\numberline {6.22.3.6}monkTraining}{80}{subsubsection.6.22.3.6}%
+\contentsline {subsubsection}{\numberline {6.22.3.7}strengthBonus}{80}{subsubsection.6.22.3.7}%
+\contentsline {section}{\numberline {6.23}Skill Class Reference}{80}{section.6.23}%
+\contentsline {subsection}{\numberline {6.23.1}Member Enumeration Documentation}{81}{subsection.6.23.1}%
+\contentsline {subsubsection}{\numberline {6.23.1.1}Type}{81}{subsubsection.6.23.1.1}%
+\contentsline {subsection}{\numberline {6.23.2}Constructor \& Destructor Documentation}{82}{subsection.6.23.2}%
+\contentsline {subsubsection}{\numberline {6.23.2.1}Skill()}{82}{subsubsection.6.23.2.1}%
+\contentsline {subsubsection}{\numberline {6.23.2.2}$\sim $Skill()}{82}{subsubsection.6.23.2.2}%
+\contentsline {subsection}{\numberline {6.23.3}Member Function Documentation}{82}{subsection.6.23.3}%
+\contentsline {subsubsection}{\numberline {6.23.3.1}getCost()}{82}{subsubsection.6.23.3.1}%
+\contentsline {subsubsection}{\numberline {6.23.3.2}getName()}{82}{subsubsection.6.23.3.2}%
+\contentsline {subsection}{\numberline {6.23.4}Member Data Documentation}{82}{subsection.6.23.4}%
+\contentsline {subsubsection}{\numberline {6.23.4.1}m\_cost}{83}{subsubsection.6.23.4.1}%
+\contentsline {subsubsection}{\numberline {6.23.4.2}m\_type}{83}{subsubsection.6.23.4.2}%
+\contentsline {section}{\numberline {6.24}Spell\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cast Class Reference}{83}{section.6.24}%
+\contentsline {subsection}{\numberline {6.24.1}Constructor \& Destructor Documentation}{84}{subsection.6.24.1}%
+\contentsline {subsubsection}{\numberline {6.24.1.1}SpellCast()}{84}{subsubsection.6.24.1.1}%
+\contentsline {subsection}{\numberline {6.24.2}Member Function Documentation}{84}{subsection.6.24.2}%
+\contentsline {subsubsection}{\numberline {6.24.2.1}execute()}{85}{subsubsection.6.24.2.1}%
+\contentsline {subsubsection}{\numberline {6.24.2.2}getName()}{85}{subsubsection.6.24.2.2}%
+\contentsline {subsection}{\numberline {6.24.3}Member Data Documentation}{85}{subsection.6.24.3}%
+\contentsline {subsubsection}{\numberline {6.24.3.1}m\_manaCost}{85}{subsubsection.6.24.3.1}%
+\contentsline {section}{\numberline {6.25}Stat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modifier Struct Reference}{85}{section.6.25}%
+\contentsline {subsection}{\numberline {6.25.1}Member Data Documentation}{85}{subsection.6.25.1}%
+\contentsline {subsubsection}{\numberline {6.25.1.1}stat}{86}{subsubsection.6.25.1.1}%
+\contentsline {subsubsection}{\numberline {6.25.1.2}target}{86}{subsubsection.6.25.1.2}%
+\contentsline {subsubsection}{\numberline {6.25.1.3}value}{86}{subsubsection.6.25.1.3}%
+\contentsline {section}{\numberline {6.26}Targeted\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skill Class Reference}{86}{section.6.26}%
+\contentsline {subsection}{\numberline {6.26.1}Constructor \& Destructor Documentation}{87}{subsection.6.26.1}%
+\contentsline {subsubsection}{\numberline {6.26.1.1}TargetedSkill()}{87}{subsubsection.6.26.1.1}%
+\contentsline {subsection}{\numberline {6.26.2}Member Function Documentation}{87}{subsection.6.26.2}%
+\contentsline {subsubsection}{\numberline {6.26.2.1}execute()}{88}{subsubsection.6.26.2.1}%
+\contentsline {subsubsection}{\numberline {6.26.2.2}getDamage()}{88}{subsubsection.6.26.2.2}%
+\contentsline {subsection}{\numberline {6.26.3}Member Data Documentation}{88}{subsection.6.26.3}%
+\contentsline {subsubsection}{\numberline {6.26.3.1}m\_damage}{88}{subsubsection.6.26.3.1}%
+\contentsline {section}{\numberline {6.27}Untargeted\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skill Class Reference}{88}{section.6.27}%
+\contentsline {subsection}{\numberline {6.27.1}Constructor \& Destructor Documentation}{89}{subsection.6.27.1}%
+\contentsline {subsubsection}{\numberline {6.27.1.1}UntargetedSkill()}{89}{subsubsection.6.27.1.1}%
+\contentsline {subsection}{\numberline {6.27.2}Member Function Documentation}{89}{subsection.6.27.2}%
+\contentsline {subsubsection}{\numberline {6.27.2.1}execute()}{89}{subsubsection.6.27.2.1}%
+\contentsline {section}{\numberline {6.28}Warrior Class Reference}{90}{section.6.28}%
+\contentsline {subsection}{\numberline {6.28.1}Constructor \& Destructor Documentation}{91}{subsection.6.28.1}%
+\contentsline {subsubsection}{\numberline {6.28.1.1}Warrior()}{91}{subsubsection.6.28.1.1}%
+\contentsline {subsection}{\numberline {6.28.2}Member Function Documentation}{91}{subsection.6.28.2}%
+\contentsline {subsubsection}{\numberline {6.28.2.1}isDamageBuffActive()}{91}{subsubsection.6.28.2.1}%
+\contentsline {subsubsection}{\numberline {6.28.2.2}resetActionPoints()}{91}{subsubsection.6.28.2.2}%
+\contentsline {subsubsection}{\numberline {6.28.2.3}resetDamageBuff()}{91}{subsubsection.6.28.2.3}%
+\contentsline {subsubsection}{\numberline {6.28.2.4}setBlockSuccess()}{91}{subsubsection.6.28.2.4}%
+\contentsline {subsection}{\numberline {6.28.3}Member Data Documentation}{92}{subsection.6.28.3}%
+\contentsline {subsubsection}{\numberline {6.28.3.1}m\_blockSuccess}{92}{subsubsection.6.28.3.1}%
+\contentsline {subsubsection}{\numberline {6.28.3.2}m\_damageBuff}{92}{subsubsection.6.28.3.2}%
+\contentsline {section}{\numberline {6.29}Weapon Class Reference}{92}{section.6.29}%
+\contentsline {subsection}{\numberline {6.29.1}Constructor \& Destructor Documentation}{93}{subsection.6.29.1}%
+\contentsline {subsubsection}{\numberline {6.29.1.1}Weapon()}{93}{subsubsection.6.29.1.1}%
+\contentsline {subsection}{\numberline {6.29.2}Member Function Documentation}{93}{subsection.6.29.2}%
+\contentsline {subsubsection}{\numberline {6.29.2.1}getBaseDamage()}{94}{subsubsection.6.29.2.1}%
+\contentsline {subsubsection}{\numberline {6.29.2.2}use()}{94}{subsubsection.6.29.2.2}%
+\contentsline {subsection}{\numberline {6.29.3}Member Data Documentation}{94}{subsection.6.29.3}%
+\contentsline {subsubsection}{\numberline {6.29.3.1}baseDamage}{94}{subsubsection.6.29.3.1}%
+\contentsline {chapter}{\numberline {7}File Documentation}{95}{chapter.7}%
+\contentsline {section}{\numberline {7.1}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character.cpp File Reference}{95}{section.7.1}%
+\contentsline {section}{\numberline {7.2}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character.h File Reference}{95}{section.7.2}%
+\contentsline {section}{\numberline {7.3}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Easy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy.cpp File Reference}{96}{section.7.3}%
+\contentsline {section}{\numberline {7.4}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Easy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy.h File Reference}{97}{section.7.4}%
+\contentsline {section}{\numberline {7.5}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hard\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy.cpp File Reference}{98}{section.7.5}%
+\contentsline {section}{\numberline {7.6}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hard\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy.h File Reference}{98}{section.7.6}%
+\contentsline {section}{\numberline {7.7}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mage.cpp File Reference}{99}{section.7.7}%
+\contentsline {section}{\numberline {7.8}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mage.h File Reference}{100}{section.7.8}%
+\contentsline {section}{\numberline {7.9}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Medium\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy.cpp File Reference}{101}{section.7.9}%
+\contentsline {section}{\numberline {7.10}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Medium\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy.h File Reference}{101}{section.7.10}%
+\contentsline {section}{\numberline {7.11}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}NPC.cpp File Reference}{102}{section.7.11}%
+\contentsline {section}{\numberline {7.12}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}NPC.h File Reference}{103}{section.7.12}%
+\contentsline {section}{\numberline {7.13}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character.cpp File Reference}{104}{section.7.13}%
+\contentsline {section}{\numberline {7.14}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character.h File Reference}{104}{section.7.14}%
+\contentsline {section}{\numberline {7.15}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Warrior.cpp File Reference}{105}{section.7.15}%
+\contentsline {section}{\numberline {7.16}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Warrior.h File Reference}{106}{section.7.16}%
+\contentsline {section}{\numberline {7.17}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Constants.h File Reference}{107}{section.7.17}%
+\contentsline {section}{\numberline {7.18}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Armor.cpp File Reference}{108}{section.7.18}%
+\contentsline {section}{\numberline {7.19}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Armor.h File Reference}{109}{section.7.19}%
+\contentsline {section}{\numberline {7.20}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment.cpp File Reference}{109}{section.7.20}%
+\contentsline {section}{\numberline {7.21}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment.h File Reference}{110}{section.7.21}%
+\contentsline {section}{\numberline {7.22}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inventory.cpp File Reference}{111}{section.7.22}%
+\contentsline {section}{\numberline {7.23}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inventory.h File Reference}{111}{section.7.23}%
+\contentsline {section}{\numberline {7.24}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Item.cpp File Reference}{112}{section.7.24}%
+\contentsline {section}{\numberline {7.25}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Item.h File Reference}{112}{section.7.25}%
+\contentsline {subsection}{\numberline {7.25.1}Enumeration Type Documentation}{113}{subsection.7.25.1}%
+\contentsline {subsubsection}{\numberline {7.25.1.1}Rarity}{113}{subsubsection.7.25.1.1}%
+\contentsline {section}{\numberline {7.26}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modifier.h File Reference}{113}{section.7.26}%
+\contentsline {subsection}{\numberline {7.26.1}Enumeration Type Documentation}{114}{subsection.7.26.1}%
+\contentsline {subsubsection}{\numberline {7.26.1.1}Stat}{114}{subsubsection.7.26.1.1}%
+\contentsline {subsubsection}{\numberline {7.26.1.2}Target}{114}{subsubsection.7.26.1.2}%
+\contentsline {section}{\numberline {7.27}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Weapon.cpp File Reference}{115}{section.7.27}%
+\contentsline {section}{\numberline {7.28}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Equipment/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Weapon.h File Reference}{115}{section.7.28}%
+\contentsline {section}{\numberline {7.29}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/calculate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Damage.cpp File Reference}{116}{section.7.29}%
+\contentsline {subsection}{\numberline {7.29.1}Function Documentation}{117}{subsection.7.29.1}%
+\contentsline {subsubsection}{\numberline {7.29.1.1}calculateDamage()}{117}{subsubsection.7.29.1.1}%
+\contentsline {section}{\numberline {7.30}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creation.cpp File Reference}{117}{section.7.30}%
+\contentsline {section}{\numberline {7.31}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creation.h File Reference}{117}{section.7.31}%
+\contentsline {section}{\numberline {7.32}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface.cpp File Reference}{118}{section.7.32}%
+\contentsline {section}{\numberline {7.33}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface.h File Reference}{119}{section.7.33}%
+\contentsline {section}{\numberline {7.34}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System.cpp File Reference}{120}{section.7.34}%
+\contentsline {section}{\numberline {7.35}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System.h File Reference}{121}{section.7.35}%
+\contentsline {section}{\numberline {7.36}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/compute\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bonus.cpp File Reference}{121}{section.7.36}%
+\contentsline {subsection}{\numberline {7.36.1}Function Documentation}{122}{subsection.7.36.1}%
+\contentsline {subsubsection}{\numberline {7.36.1.1}computeStatBonus()}{122}{subsubsection.7.36.1.1}%
+\contentsline {section}{\numberline {7.37}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/compute\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bonus.h File Reference}{123}{section.7.37}%
+\contentsline {subsection}{\numberline {7.37.1}Function Documentation}{123}{subsection.7.37.1}%
+\contentsline {subsubsection}{\numberline {7.37.1.1}computeStatBonus()}{123}{subsubsection.7.37.1.1}%
+\contentsline {section}{\numberline {7.38}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Damage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Calculator.h File Reference}{124}{section.7.38}%
+\contentsline {section}{\numberline {7.39}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game.cpp File Reference}{124}{section.7.39}%
+\contentsline {section}{\numberline {7.40}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game.h File Reference}{125}{section.7.40}%
+\contentsline {section}{\numberline {7.41}src/main.cpp File Reference}{126}{section.7.41}%
+\contentsline {subsection}{\numberline {7.41.1}Function Documentation}{126}{subsection.7.41.1}%
+\contentsline {subsubsection}{\numberline {7.41.1.1}main()}{127}{subsubsection.7.41.1.1}%
+\contentsline {section}{\numberline {7.42}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Random.h File Reference}{127}{section.7.42}%
+\contentsline {section}{\numberline {7.43}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Block.cpp File Reference}{128}{section.7.43}%
+\contentsline {section}{\numberline {7.44}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Block.h File Reference}{128}{section.7.44}%
+\contentsline {section}{\numberline {7.45}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Concentrate.cpp File Reference}{129}{section.7.45}%
+\contentsline {section}{\numberline {7.46}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Concentrate.h File Reference}{130}{section.7.46}%
+\contentsline {section}{\numberline {7.47}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Heal.cpp File Reference}{131}{section.7.47}%
+\contentsline {section}{\numberline {7.48}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Heal.h File Reference}{131}{section.7.48}%
+\contentsline {section}{\numberline {7.49}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Investigate.cpp File Reference}{132}{section.7.49}%
+\contentsline {section}{\numberline {7.50}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Investigate.h File Reference}{133}{section.7.50}%
+\contentsline {section}{\numberline {7.51}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Melee\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack.cpp File Reference}{134}{section.7.51}%
+\contentsline {section}{\numberline {7.52}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Melee\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack.h File Reference}{134}{section.7.52}%
+\contentsline {section}{\numberline {7.53}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skill.cpp File Reference}{135}{section.7.53}%
+\contentsline {section}{\numberline {7.54}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skill.h File Reference}{136}{section.7.54}%
+\contentsline {section}{\numberline {7.55}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Spell\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cast.cpp File Reference}{137}{section.7.55}%
+\contentsline {section}{\numberline {7.56}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Spell\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cast.h File Reference}{137}{section.7.56}%
+\contentsline {section}{\numberline {7.57}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Targeted\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skill.h File Reference}{138}{section.7.57}%
+\contentsline {section}{\numberline {7.58}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skills/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Untargeted\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skill.h File Reference}{139}{section.7.58}%
+\contentsline {chapter}{Index}{141}{section*.247}%

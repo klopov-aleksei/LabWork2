@@ -1,0 +1,236 @@
+\hypertarget{classPlayerCharacter}{}\doxysection{Player\+Character Class Reference}
+\label{classPlayerCharacter}\index{PlayerCharacter@{PlayerCharacter}}
+
+
+{\ttfamily \#include $<$Player\+Character.\+h$>$}
+
+
+
+Inheritance diagram for Player\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classPlayerCharacter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classPlayerCharacter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayerCharacter_af3ac12a41f58d860fb716138578bd95f}{Player\+Character}} ()
+\item 
+\mbox{\hyperlink{classPlayerCharacter_a114993a4c477e5b423bcdab767c2eed9}{Player\+Character}} (std\+::string\+\_\+view name, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a841d806fd1f9758dbbed5b4dbfcccfe3}{agility}}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a582fc884d6299814fbd4f12c1f9ae70f}{mana}})
+\item 
+void \mbox{\hyperlink{classPlayerCharacter_a018f8628267f9bc79d746e3a0c781ae3}{display\+Status}} () const override
+\item 
+\mbox{\hyperlink{classInventory}{Inventory}} \& \mbox{\hyperlink{classPlayerCharacter_aa42954f54d0d7b4a2f216be09e1cec6c}{get\+Inventory}} ()
+\item 
+const \mbox{\hyperlink{classInventory}{Inventory}} \& \mbox{\hyperlink{classPlayerCharacter_ab1327fc8905e54fa87c242fbf1c70beb}{get\+Inventory}} () const
+\item 
+void \mbox{\hyperlink{classPlayerCharacter_a465b9e904a3d0dbd143ed67e16409440}{enable\+Spell\+Cast}} ()
+\item 
+void \mbox{\hyperlink{classPlayerCharacter_af0d9c3f570deb2aa2868cf9f0eae2509}{unlock\+Healing}} ()
+\item 
+void \mbox{\hyperlink{classPlayerCharacter_ae8a29d3e36e4d875c5703b51b49d76e2}{boost\+Concentration}} ()
+\item 
+void \mbox{\hyperlink{classPlayerCharacter_a8bd0650adb764b60ba4f2f285a46241a}{reduce\+Block\+Cost}} ()
+\item 
+bool \mbox{\hyperlink{classPlayerCharacter_aab973ce7a92c6443d96dc6a0d8ee9f31}{can\+Use\+Spell}} () const
+\item 
+bool \mbox{\hyperlink{classPlayerCharacter_a0491c25ab17d548c2f34c4a0e92fb238}{has\+Healing}} () const
+\item 
+bool \mbox{\hyperlink{classPlayerCharacter_a30f20783bbe2683467b7081cf0884660}{has\+Monk\+Training}} () const
+\item 
+bool \mbox{\hyperlink{classPlayerCharacter_aef313f98e188080654585f7b613bcc7c}{has\+Easy\+Block}} () const
+\item 
+void \mbox{\hyperlink{classPlayerCharacter_a29e57354b1450bcaa74e4d9e7a4be95b}{update\+Armor\+Bonuses}} ()
+\item 
+int \mbox{\hyperlink{classPlayerCharacter_a1fa6c0ab842cc10905cbcea27605d2a7}{get\+Investigate\+Cost}} () const
+\item 
+int \mbox{\hyperlink{classPlayerCharacter_a692e760868a28fbf7dccff5ba6458d46}{get\+Strength\+Bonus}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInventory}{Inventory}} \mbox{\hyperlink{classPlayerCharacter_a0334d66cbd5f1a489cfb644bbf801a25}{m\+\_\+inventory}}
+\item 
+bool \mbox{\hyperlink{classPlayerCharacter_ab0890dbca122b00af319d1139f43b592}{has\+Spell\+Cast\+Skill}} \{ false \}
+\item 
+bool \mbox{\hyperlink{classPlayerCharacter_a8378be17d7a4a1cd9be7eda574ea7a1f}{can\+Heal}} \{ false \}
+\item 
+bool \mbox{\hyperlink{classPlayerCharacter_ac0a5bcec9d7ef75110c55ddcbe54d1b1}{monk\+Training}} \{ false \}
+\item 
+bool \mbox{\hyperlink{classPlayerCharacter_ac243b76ee25f4ca56d5531f875a6f415}{easy\+Block}} \{ false \}
+\item 
+int \mbox{\hyperlink{classPlayerCharacter_a8cbfd180e64b0b8e53b5c74c520a4117}{investigate\+Cost}} \{ \mbox{\hyperlink{namespaceConstants_aceb1105410d62306d98448e7a4f31e54}{Constants\+::invest\+\_\+cost}} \}
+\item 
+int \mbox{\hyperlink{classPlayerCharacter_aadc8ec424e703080bc447a1f4df6933b}{strength\+Bonus}} \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPlayerCharacter_af3ac12a41f58d860fb716138578bd95f}\label{classPlayerCharacter_af3ac12a41f58d860fb716138578bd95f}} 
+\index{PlayerCharacter@{PlayerCharacter}!PlayerCharacter@{PlayerCharacter}}
+\index{PlayerCharacter@{PlayerCharacter}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{PlayerCharacter()}{PlayerCharacter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Player\+Character\+::\+Player\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_a114993a4c477e5b423bcdab767c2eed9}\label{classPlayerCharacter_a114993a4c477e5b423bcdab767c2eed9}} 
+\index{PlayerCharacter@{PlayerCharacter}!PlayerCharacter@{PlayerCharacter}}
+\index{PlayerCharacter@{PlayerCharacter}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{PlayerCharacter()}{PlayerCharacter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Player\+Character\+::\+Player\+Character (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{int}]{agility,  }\item[{int}]{mana }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlayerCharacter_ae8a29d3e36e4d875c5703b51b49d76e2}\label{classPlayerCharacter_ae8a29d3e36e4d875c5703b51b49d76e2}} 
+\index{PlayerCharacter@{PlayerCharacter}!boostConcentration@{boostConcentration}}
+\index{boostConcentration@{boostConcentration}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{boostConcentration()}{boostConcentration()}}
+{\footnotesize\ttfamily void Player\+Character\+::boost\+Concentration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_aab973ce7a92c6443d96dc6a0d8ee9f31}\label{classPlayerCharacter_aab973ce7a92c6443d96dc6a0d8ee9f31}} 
+\index{PlayerCharacter@{PlayerCharacter}!canUseSpell@{canUseSpell}}
+\index{canUseSpell@{canUseSpell}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{canUseSpell()}{canUseSpell()}}
+{\footnotesize\ttfamily bool Player\+Character\+::can\+Use\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_a018f8628267f9bc79d746e3a0c781ae3}\label{classPlayerCharacter_a018f8628267f9bc79d746e3a0c781ae3}} 
+\index{PlayerCharacter@{PlayerCharacter}!displayStatus@{displayStatus}}
+\index{displayStatus@{displayStatus}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{displayStatus()}{displayStatus()}}
+{\footnotesize\ttfamily void Player\+Character\+::display\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classCharacter_afd5dbad8f7c52d620e92c2399b3b7632}{Character}}.
+
+\mbox{\Hypertarget{classPlayerCharacter_a465b9e904a3d0dbd143ed67e16409440}\label{classPlayerCharacter_a465b9e904a3d0dbd143ed67e16409440}} 
+\index{PlayerCharacter@{PlayerCharacter}!enableSpellCast@{enableSpellCast}}
+\index{enableSpellCast@{enableSpellCast}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{enableSpellCast()}{enableSpellCast()}}
+{\footnotesize\ttfamily void Player\+Character\+::enable\+Spell\+Cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_aa42954f54d0d7b4a2f216be09e1cec6c}\label{classPlayerCharacter_aa42954f54d0d7b4a2f216be09e1cec6c}} 
+\index{PlayerCharacter@{PlayerCharacter}!getInventory@{getInventory}}
+\index{getInventory@{getInventory}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{getInventory()}{getInventory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInventory}{Inventory}}\& Player\+Character\+::get\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_ab1327fc8905e54fa87c242fbf1c70beb}\label{classPlayerCharacter_ab1327fc8905e54fa87c242fbf1c70beb}} 
+\index{PlayerCharacter@{PlayerCharacter}!getInventory@{getInventory}}
+\index{getInventory@{getInventory}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{getInventory()}{getInventory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classInventory}{Inventory}}\& Player\+Character\+::get\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_a1fa6c0ab842cc10905cbcea27605d2a7}\label{classPlayerCharacter_a1fa6c0ab842cc10905cbcea27605d2a7}} 
+\index{PlayerCharacter@{PlayerCharacter}!getInvestigateCost@{getInvestigateCost}}
+\index{getInvestigateCost@{getInvestigateCost}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{getInvestigateCost()}{getInvestigateCost()}}
+{\footnotesize\ttfamily int Player\+Character\+::get\+Investigate\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_a692e760868a28fbf7dccff5ba6458d46}\label{classPlayerCharacter_a692e760868a28fbf7dccff5ba6458d46}} 
+\index{PlayerCharacter@{PlayerCharacter}!getStrengthBonus@{getStrengthBonus}}
+\index{getStrengthBonus@{getStrengthBonus}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{getStrengthBonus()}{getStrengthBonus()}}
+{\footnotesize\ttfamily int Player\+Character\+::get\+Strength\+Bonus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_aef313f98e188080654585f7b613bcc7c}\label{classPlayerCharacter_aef313f98e188080654585f7b613bcc7c}} 
+\index{PlayerCharacter@{PlayerCharacter}!hasEasyBlock@{hasEasyBlock}}
+\index{hasEasyBlock@{hasEasyBlock}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{hasEasyBlock()}{hasEasyBlock()}}
+{\footnotesize\ttfamily bool Player\+Character\+::has\+Easy\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_a0491c25ab17d548c2f34c4a0e92fb238}\label{classPlayerCharacter_a0491c25ab17d548c2f34c4a0e92fb238}} 
+\index{PlayerCharacter@{PlayerCharacter}!hasHealing@{hasHealing}}
+\index{hasHealing@{hasHealing}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{hasHealing()}{hasHealing()}}
+{\footnotesize\ttfamily bool Player\+Character\+::has\+Healing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_a30f20783bbe2683467b7081cf0884660}\label{classPlayerCharacter_a30f20783bbe2683467b7081cf0884660}} 
+\index{PlayerCharacter@{PlayerCharacter}!hasMonkTraining@{hasMonkTraining}}
+\index{hasMonkTraining@{hasMonkTraining}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{hasMonkTraining()}{hasMonkTraining()}}
+{\footnotesize\ttfamily bool Player\+Character\+::has\+Monk\+Training (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_a8bd0650adb764b60ba4f2f285a46241a}\label{classPlayerCharacter_a8bd0650adb764b60ba4f2f285a46241a}} 
+\index{PlayerCharacter@{PlayerCharacter}!reduceBlockCost@{reduceBlockCost}}
+\index{reduceBlockCost@{reduceBlockCost}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{reduceBlockCost()}{reduceBlockCost()}}
+{\footnotesize\ttfamily void Player\+Character\+::reduce\+Block\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_af0d9c3f570deb2aa2868cf9f0eae2509}\label{classPlayerCharacter_af0d9c3f570deb2aa2868cf9f0eae2509}} 
+\index{PlayerCharacter@{PlayerCharacter}!unlockHealing@{unlockHealing}}
+\index{unlockHealing@{unlockHealing}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{unlockHealing()}{unlockHealing()}}
+{\footnotesize\ttfamily void Player\+Character\+::unlock\+Healing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_a29e57354b1450bcaa74e4d9e7a4be95b}\label{classPlayerCharacter_a29e57354b1450bcaa74e4d9e7a4be95b}} 
+\index{PlayerCharacter@{PlayerCharacter}!updateArmorBonuses@{updateArmorBonuses}}
+\index{updateArmorBonuses@{updateArmorBonuses}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{updateArmorBonuses()}{updateArmorBonuses()}}
+{\footnotesize\ttfamily void Player\+Character\+::update\+Armor\+Bonuses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classPlayerCharacter_a8378be17d7a4a1cd9be7eda574ea7a1f}\label{classPlayerCharacter_a8378be17d7a4a1cd9be7eda574ea7a1f}} 
+\index{PlayerCharacter@{PlayerCharacter}!canHeal@{canHeal}}
+\index{canHeal@{canHeal}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{canHeal}{canHeal}}
+{\footnotesize\ttfamily bool Player\+Character\+::can\+Heal \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_ac243b76ee25f4ca56d5531f875a6f415}\label{classPlayerCharacter_ac243b76ee25f4ca56d5531f875a6f415}} 
+\index{PlayerCharacter@{PlayerCharacter}!easyBlock@{easyBlock}}
+\index{easyBlock@{easyBlock}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{easyBlock}{easyBlock}}
+{\footnotesize\ttfamily bool Player\+Character\+::easy\+Block \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_ab0890dbca122b00af319d1139f43b592}\label{classPlayerCharacter_ab0890dbca122b00af319d1139f43b592}} 
+\index{PlayerCharacter@{PlayerCharacter}!hasSpellCastSkill@{hasSpellCastSkill}}
+\index{hasSpellCastSkill@{hasSpellCastSkill}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{hasSpellCastSkill}{hasSpellCastSkill}}
+{\footnotesize\ttfamily bool Player\+Character\+::has\+Spell\+Cast\+Skill \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_a8cbfd180e64b0b8e53b5c74c520a4117}\label{classPlayerCharacter_a8cbfd180e64b0b8e53b5c74c520a4117}} 
+\index{PlayerCharacter@{PlayerCharacter}!investigateCost@{investigateCost}}
+\index{investigateCost@{investigateCost}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{investigateCost}{investigateCost}}
+{\footnotesize\ttfamily int Player\+Character\+::investigate\+Cost \{ \mbox{\hyperlink{namespaceConstants_aceb1105410d62306d98448e7a4f31e54}{Constants\+::invest\+\_\+cost}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_a0334d66cbd5f1a489cfb644bbf801a25}\label{classPlayerCharacter_a0334d66cbd5f1a489cfb644bbf801a25}} 
+\index{PlayerCharacter@{PlayerCharacter}!m\_inventory@{m\_inventory}}
+\index{m\_inventory@{m\_inventory}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{m\_inventory}{m\_inventory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInventory}{Inventory}} Player\+Character\+::m\+\_\+inventory\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_ac0a5bcec9d7ef75110c55ddcbe54d1b1}\label{classPlayerCharacter_ac0a5bcec9d7ef75110c55ddcbe54d1b1}} 
+\index{PlayerCharacter@{PlayerCharacter}!monkTraining@{monkTraining}}
+\index{monkTraining@{monkTraining}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{monkTraining}{monkTraining}}
+{\footnotesize\ttfamily bool Player\+Character\+::monk\+Training \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlayerCharacter_aadc8ec424e703080bc447a1f4df6933b}\label{classPlayerCharacter_aadc8ec424e703080bc447a1f4df6933b}} 
+\index{PlayerCharacter@{PlayerCharacter}!strengthBonus@{strengthBonus}}
+\index{strengthBonus@{strengthBonus}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{strengthBonus}{strengthBonus}}
+{\footnotesize\ttfamily int Player\+Character\+::strength\+Bonus \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Character/\mbox{\hyperlink{PlayerCharacter_8h}{Player\+Character.\+h}}\item 
+src/\+Character/\mbox{\hyperlink{PlayerCharacter_8cpp}{Player\+Character.\+cpp}}\end{DoxyCompactItemize}

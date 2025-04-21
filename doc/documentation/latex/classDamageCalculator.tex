@@ -1,0 +1,96 @@
+\hypertarget{classDamageCalculator}{}\doxysection{Damage\+Calculator Class Reference}
+\label{classDamageCalculator}\index{DamageCalculator@{DamageCalculator}}
+
+
+{\ttfamily \#include $<$Damage\+Calculator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDamageCalculator_a91c2f28fa69d5ca01c37a783fedd0022}{Damage\+Calculator}} ()=default
+\item 
+void \mbox{\hyperlink{classDamageCalculator_adcf2be679d52222e1810661c069af5f7}{mark\+As\+Spell}} ()
+\item 
+bool \mbox{\hyperlink{classDamageCalculator_a401f1ece1faa75a34adef88a5a086ae1}{is\+Spell}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classDamageCalculator_ac944309ec752b8c4b5e4413bb69e4fd7}{m\+\_\+final\+Damage}} \{ 0 \}
+\item 
+int \mbox{\hyperlink{classDamageCalculator_a7cba4389b51bedfe75ad74ad98f8af9e}{m\+\_\+armor\+Damage}} \{ 0 \}
+\item 
+bool \mbox{\hyperlink{classDamageCalculator_a32fb7d6cde046ddf1ad062f2a2319ba7}{m\+\_\+is\+Spell}} \{ false \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDamageCalculator_a82cfbaddb5ec825116433782dd26391d}{calculate\+Damage}} (\mbox{\hyperlink{classDamageCalculator}{Damage\+Calculator}} \&dmg\+Calc, \mbox{\hyperlink{classCharacter}{Character}} \&target, int base\+Damage, int stat\+Bonus, int attack\+Count)
+\item 
+void \mbox{\hyperlink{classDamageCalculator_a23bea981ccd21114e6c2803d9c60ca69}{Character\+::take\+Damage}} (\mbox{\hyperlink{classDamageCalculator}{Damage\+Calculator}} \&dmg\+Calc)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDamageCalculator_a91c2f28fa69d5ca01c37a783fedd0022}\label{classDamageCalculator_a91c2f28fa69d5ca01c37a783fedd0022}} 
+\index{DamageCalculator@{DamageCalculator}!DamageCalculator@{DamageCalculator}}
+\index{DamageCalculator@{DamageCalculator}!DamageCalculator@{DamageCalculator}}
+\doxysubsubsection{\texorpdfstring{DamageCalculator()}{DamageCalculator()}}
+{\footnotesize\ttfamily Damage\+Calculator\+::\+Damage\+Calculator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDamageCalculator_a401f1ece1faa75a34adef88a5a086ae1}\label{classDamageCalculator_a401f1ece1faa75a34adef88a5a086ae1}} 
+\index{DamageCalculator@{DamageCalculator}!isSpell@{isSpell}}
+\index{isSpell@{isSpell}!DamageCalculator@{DamageCalculator}}
+\doxysubsubsection{\texorpdfstring{isSpell()}{isSpell()}}
+{\footnotesize\ttfamily bool Damage\+Calculator\+::is\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDamageCalculator_adcf2be679d52222e1810661c069af5f7}\label{classDamageCalculator_adcf2be679d52222e1810661c069af5f7}} 
+\index{DamageCalculator@{DamageCalculator}!markAsSpell@{markAsSpell}}
+\index{markAsSpell@{markAsSpell}!DamageCalculator@{DamageCalculator}}
+\doxysubsubsection{\texorpdfstring{markAsSpell()}{markAsSpell()}}
+{\footnotesize\ttfamily void Damage\+Calculator\+::mark\+As\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classDamageCalculator_a82cfbaddb5ec825116433782dd26391d}\label{classDamageCalculator_a82cfbaddb5ec825116433782dd26391d}} 
+\index{DamageCalculator@{DamageCalculator}!calculateDamage@{calculateDamage}}
+\index{calculateDamage@{calculateDamage}!DamageCalculator@{DamageCalculator}}
+\doxysubsubsection{\texorpdfstring{calculateDamage}{calculateDamage}}
+{\footnotesize\ttfamily void calculate\+Damage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDamageCalculator}{Damage\+Calculator}} \&}]{dmg\+Calc,  }\item[{\mbox{\hyperlink{classCharacter}{Character}} \&}]{target,  }\item[{int}]{base\+Damage,  }\item[{int}]{stat\+Bonus,  }\item[{int}]{attack\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classDamageCalculator_a23bea981ccd21114e6c2803d9c60ca69}\label{classDamageCalculator_a23bea981ccd21114e6c2803d9c60ca69}} 
+\index{DamageCalculator@{DamageCalculator}!Character::takeDamage@{Character::takeDamage}}
+\index{Character::takeDamage@{Character::takeDamage}!DamageCalculator@{DamageCalculator}}
+\doxysubsubsection{\texorpdfstring{Character::takeDamage}{Character::takeDamage}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classCharacter_ab60a748e977169bd6a2d48fca341c7ab}{Character\+::take\+Damage}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDamageCalculator}{Damage\+Calculator}} \&}]{dmg\+Calc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDamageCalculator_a7cba4389b51bedfe75ad74ad98f8af9e}\label{classDamageCalculator_a7cba4389b51bedfe75ad74ad98f8af9e}} 
+\index{DamageCalculator@{DamageCalculator}!m\_armorDamage@{m\_armorDamage}}
+\index{m\_armorDamage@{m\_armorDamage}!DamageCalculator@{DamageCalculator}}
+\doxysubsubsection{\texorpdfstring{m\_armorDamage}{m\_armorDamage}}
+{\footnotesize\ttfamily int Damage\+Calculator\+::m\+\_\+armor\+Damage \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDamageCalculator_ac944309ec752b8c4b5e4413bb69e4fd7}\label{classDamageCalculator_ac944309ec752b8c4b5e4413bb69e4fd7}} 
+\index{DamageCalculator@{DamageCalculator}!m\_finalDamage@{m\_finalDamage}}
+\index{m\_finalDamage@{m\_finalDamage}!DamageCalculator@{DamageCalculator}}
+\doxysubsubsection{\texorpdfstring{m\_finalDamage}{m\_finalDamage}}
+{\footnotesize\ttfamily int Damage\+Calculator\+::m\+\_\+final\+Damage \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDamageCalculator_a32fb7d6cde046ddf1ad062f2a2319ba7}\label{classDamageCalculator_a32fb7d6cde046ddf1ad062f2a2319ba7}} 
+\index{DamageCalculator@{DamageCalculator}!m\_isSpell@{m\_isSpell}}
+\index{m\_isSpell@{m\_isSpell}!DamageCalculator@{DamageCalculator}}
+\doxysubsubsection{\texorpdfstring{m\_isSpell}{m\_isSpell}}
+{\footnotesize\ttfamily bool Damage\+Calculator\+::m\+\_\+is\+Spell \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/\mbox{\hyperlink{DamageCalculator_8h}{Damage\+Calculator.\+h}}\end{DoxyCompactItemize}
