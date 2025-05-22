@@ -1,0 +1,109 @@
+\hypertarget{classCombatSystem}{}\doxysection{Combat\+System Class Reference}
+\label{classCombatSystem}\index{CombatSystem@{CombatSystem}}
+
+
+{\ttfamily \#include $<$Combat\+System.\+h$>$}
+
+
+
+Collaboration diagram for Combat\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classCombatSystem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCombatSystem_a787bb7cbd60d16b3241a067c9d608bd9}{Combat\+System}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&player, \mbox{\hyperlink{classNPC}{NPC}} \&\mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35dacde2fde1fa1551a704d775ce2315915d}{enemy}})
+\item 
+void \mbox{\hyperlink{classCombatSystem_ac7e7a3e7a9fa744ce7682c0d637e870c}{start\+Combat}} (\mbox{\hyperlink{classCombatInterface}{Combat\+Interface}} \&interface)
+\item 
+void \mbox{\hyperlink{classCombatSystem_a91a1155d053b9ac69e21be773457ea75}{handle\+Turn}} (\mbox{\hyperlink{classCombatInterface}{Combat\+Interface}} \&interface)
+\item 
+\mbox{\hyperlink{classCharacter}{Character}} \& \mbox{\hyperlink{classCombatSystem_a806b666f788e3ed428f2017be0020950}{get\+Enemy}} ()
+\item 
+bool \mbox{\hyperlink{classCombatSystem_ac8bf56ff575af3db283cb1e9f8a2bc4a}{is\+Combat\+Over}} () const
+\item 
+bool \mbox{\hyperlink{classCombatSystem_aad21274cfb5387f63f42f4579c6b02d9}{player\+Lost}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \& \mbox{\hyperlink{classCombatSystem_a3416d6187e42feb4eff7ed5ce7eaeaeb}{m\+\_\+player}}
+\item 
+\mbox{\hyperlink{classNPC}{NPC}} $\ast$ \mbox{\hyperlink{classCombatSystem_a4fdc0d1bcc1e54d5c83f6cce57c07884}{m\+\_\+enemy}}
+\item 
+bool \mbox{\hyperlink{classCombatSystem_a8c9644e8f00a364c83ae8d309e7fa39c}{m\+\_\+player\+Turn}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCombatSystem_a787bb7cbd60d16b3241a067c9d608bd9}\label{classCombatSystem_a787bb7cbd60d16b3241a067c9d608bd9}} 
+\index{CombatSystem@{CombatSystem}!CombatSystem@{CombatSystem}}
+\index{CombatSystem@{CombatSystem}!CombatSystem@{CombatSystem}}
+\doxysubsubsection{\texorpdfstring{CombatSystem()}{CombatSystem()}}
+{\footnotesize\ttfamily Combat\+System\+::\+Combat\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{player,  }\item[{\mbox{\hyperlink{classNPC}{NPC}} \&}]{enemy }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCombatSystem_a806b666f788e3ed428f2017be0020950}\label{classCombatSystem_a806b666f788e3ed428f2017be0020950}} 
+\index{CombatSystem@{CombatSystem}!getEnemy@{getEnemy}}
+\index{getEnemy@{getEnemy}!CombatSystem@{CombatSystem}}
+\doxysubsubsection{\texorpdfstring{getEnemy()}{getEnemy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCharacter}{Character}}\& Combat\+System\+::get\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classCombatSystem_a91a1155d053b9ac69e21be773457ea75}\label{classCombatSystem_a91a1155d053b9ac69e21be773457ea75}} 
+\index{CombatSystem@{CombatSystem}!handleTurn@{handleTurn}}
+\index{handleTurn@{handleTurn}!CombatSystem@{CombatSystem}}
+\doxysubsubsection{\texorpdfstring{handleTurn()}{handleTurn()}}
+{\footnotesize\ttfamily void Combat\+System\+::handle\+Turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCombatInterface}{Combat\+Interface}} \&}]{interface }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCombatSystem_ac8bf56ff575af3db283cb1e9f8a2bc4a}\label{classCombatSystem_ac8bf56ff575af3db283cb1e9f8a2bc4a}} 
+\index{CombatSystem@{CombatSystem}!isCombatOver@{isCombatOver}}
+\index{isCombatOver@{isCombatOver}!CombatSystem@{CombatSystem}}
+\doxysubsubsection{\texorpdfstring{isCombatOver()}{isCombatOver()}}
+{\footnotesize\ttfamily bool Combat\+System\+::is\+Combat\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCombatSystem_aad21274cfb5387f63f42f4579c6b02d9}\label{classCombatSystem_aad21274cfb5387f63f42f4579c6b02d9}} 
+\index{CombatSystem@{CombatSystem}!playerLost@{playerLost}}
+\index{playerLost@{playerLost}!CombatSystem@{CombatSystem}}
+\doxysubsubsection{\texorpdfstring{playerLost()}{playerLost()}}
+{\footnotesize\ttfamily bool Combat\+System\+::player\+Lost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCombatSystem_ac7e7a3e7a9fa744ce7682c0d637e870c}\label{classCombatSystem_ac7e7a3e7a9fa744ce7682c0d637e870c}} 
+\index{CombatSystem@{CombatSystem}!startCombat@{startCombat}}
+\index{startCombat@{startCombat}!CombatSystem@{CombatSystem}}
+\doxysubsubsection{\texorpdfstring{startCombat()}{startCombat()}}
+{\footnotesize\ttfamily void Combat\+System\+::start\+Combat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCombatInterface}{Combat\+Interface}} \&}]{interface }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCombatSystem_a4fdc0d1bcc1e54d5c83f6cce57c07884}\label{classCombatSystem_a4fdc0d1bcc1e54d5c83f6cce57c07884}} 
+\index{CombatSystem@{CombatSystem}!m\_enemy@{m\_enemy}}
+\index{m\_enemy@{m\_enemy}!CombatSystem@{CombatSystem}}
+\doxysubsubsection{\texorpdfstring{m\_enemy}{m\_enemy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNPC}{NPC}}$\ast$ Combat\+System\+::m\+\_\+enemy\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCombatSystem_a3416d6187e42feb4eff7ed5ce7eaeaeb}\label{classCombatSystem_a3416d6187e42feb4eff7ed5ce7eaeaeb}} 
+\index{CombatSystem@{CombatSystem}!m\_player@{m\_player}}
+\index{m\_player@{m\_player}!CombatSystem@{CombatSystem}}
+\doxysubsubsection{\texorpdfstring{m\_player}{m\_player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayerCharacter}{Player\+Character}}\& Combat\+System\+::m\+\_\+player\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCombatSystem_a8c9644e8f00a364c83ae8d309e7fa39c}\label{classCombatSystem_a8c9644e8f00a364c83ae8d309e7fa39c}} 
+\index{CombatSystem@{CombatSystem}!m\_playerTurn@{m\_playerTurn}}
+\index{m\_playerTurn@{m\_playerTurn}!CombatSystem@{CombatSystem}}
+\doxysubsubsection{\texorpdfstring{m\_playerTurn}{m\_playerTurn}}
+{\footnotesize\ttfamily bool Combat\+System\+::m\+\_\+player\+Turn \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/\mbox{\hyperlink{CombatSystem_8h}{Combat\+System.\+h}}\item 
+src/\+Game/\mbox{\hyperlink{CombatSystem_8cpp}{Combat\+System.\+cpp}}\end{DoxyCompactItemize}

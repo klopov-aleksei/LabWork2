@@ -1,0 +1,85 @@
+\hypertarget{classCharacterCreation}{}\doxysection{Character\+Creation Class Reference}
+\label{classCharacterCreation}\index{CharacterCreation@{CharacterCreation}}
+
+
+{\ttfamily \#include $<$Character\+Creation.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} $>$ \mbox{\hyperlink{classCharacterCreation_a2058e4d79b655d47a337de27da89cfaa}{create\+Character}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classCharacterCreation_ab26fd67bb1a238ea3f61516e52c83d3c}{Choose\+Name}} ()
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} $>$ \mbox{\hyperlink{classCharacterCreation_a3a2343692da560430ee83a741afca79a}{Choose\+Class}} (std\+::string\+\_\+view name)
+\item 
+static void \mbox{\hyperlink{classCharacterCreation_a432129af28f14662c88b208321236a3e}{Customize\+Stats}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&character)
+\item 
+static void \mbox{\hyperlink{classCharacterCreation_a491c435b5c80b689bb83ae772522a0fd}{Choose\+Weapon}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&character)
+\item 
+static void \mbox{\hyperlink{classCharacterCreation_a292a53da9ce51902e1543c6b8a364a76}{Choose\+Armor}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&character)
+\item 
+static void \mbox{\hyperlink{classCharacterCreation_a04c5d17973c8f1921fc453a1bdd5aeea}{Choose\+Skills}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&character)
+\item 
+static void \mbox{\hyperlink{classCharacterCreation_a199710576ba6d6b00ecf5ea71e3b7ba9}{Choose\+Inventory}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&character)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCharacterCreation_a292a53da9ce51902e1543c6b8a364a76}\label{classCharacterCreation_a292a53da9ce51902e1543c6b8a364a76}} 
+\index{CharacterCreation@{CharacterCreation}!ChooseArmor@{ChooseArmor}}
+\index{ChooseArmor@{ChooseArmor}!CharacterCreation@{CharacterCreation}}
+\doxysubsubsection{\texorpdfstring{ChooseArmor()}{ChooseArmor()}}
+{\footnotesize\ttfamily void Character\+Creation\+::\+Choose\+Armor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacterCreation_a3a2343692da560430ee83a741afca79a}\label{classCharacterCreation_a3a2343692da560430ee83a741afca79a}} 
+\index{CharacterCreation@{CharacterCreation}!ChooseClass@{ChooseClass}}
+\index{ChooseClass@{ChooseClass}!CharacterCreation@{CharacterCreation}}
+\doxysubsubsection{\texorpdfstring{ChooseClass()}{ChooseClass()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} $>$ Character\+Creation\+::\+Choose\+Class (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacterCreation_a199710576ba6d6b00ecf5ea71e3b7ba9}\label{classCharacterCreation_a199710576ba6d6b00ecf5ea71e3b7ba9}} 
+\index{CharacterCreation@{CharacterCreation}!ChooseInventory@{ChooseInventory}}
+\index{ChooseInventory@{ChooseInventory}!CharacterCreation@{CharacterCreation}}
+\doxysubsubsection{\texorpdfstring{ChooseInventory()}{ChooseInventory()}}
+{\footnotesize\ttfamily void Character\+Creation\+::\+Choose\+Inventory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacterCreation_ab26fd67bb1a238ea3f61516e52c83d3c}\label{classCharacterCreation_ab26fd67bb1a238ea3f61516e52c83d3c}} 
+\index{CharacterCreation@{CharacterCreation}!ChooseName@{ChooseName}}
+\index{ChooseName@{ChooseName}!CharacterCreation@{CharacterCreation}}
+\doxysubsubsection{\texorpdfstring{ChooseName()}{ChooseName()}}
+{\footnotesize\ttfamily std\+::string Character\+Creation\+::\+Choose\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacterCreation_a04c5d17973c8f1921fc453a1bdd5aeea}\label{classCharacterCreation_a04c5d17973c8f1921fc453a1bdd5aeea}} 
+\index{CharacterCreation@{CharacterCreation}!ChooseSkills@{ChooseSkills}}
+\index{ChooseSkills@{ChooseSkills}!CharacterCreation@{CharacterCreation}}
+\doxysubsubsection{\texorpdfstring{ChooseSkills()}{ChooseSkills()}}
+{\footnotesize\ttfamily void Character\+Creation\+::\+Choose\+Skills (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacterCreation_a491c435b5c80b689bb83ae772522a0fd}\label{classCharacterCreation_a491c435b5c80b689bb83ae772522a0fd}} 
+\index{CharacterCreation@{CharacterCreation}!ChooseWeapon@{ChooseWeapon}}
+\index{ChooseWeapon@{ChooseWeapon}!CharacterCreation@{CharacterCreation}}
+\doxysubsubsection{\texorpdfstring{ChooseWeapon()}{ChooseWeapon()}}
+{\footnotesize\ttfamily void Character\+Creation\+::\+Choose\+Weapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classCharacterCreation_a2058e4d79b655d47a337de27da89cfaa}\label{classCharacterCreation_a2058e4d79b655d47a337de27da89cfaa}} 
+\index{CharacterCreation@{CharacterCreation}!createCharacter@{createCharacter}}
+\index{createCharacter@{createCharacter}!CharacterCreation@{CharacterCreation}}
+\doxysubsubsection{\texorpdfstring{createCharacter()}{createCharacter()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} $>$ Character\+Creation\+::create\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCharacterCreation_a432129af28f14662c88b208321236a3e}\label{classCharacterCreation_a432129af28f14662c88b208321236a3e}} 
+\index{CharacterCreation@{CharacterCreation}!CustomizeStats@{CustomizeStats}}
+\index{CustomizeStats@{CustomizeStats}!CharacterCreation@{CharacterCreation}}
+\doxysubsubsection{\texorpdfstring{CustomizeStats()}{CustomizeStats()}}
+{\footnotesize\ttfamily void Character\+Creation\+::\+Customize\+Stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/\mbox{\hyperlink{CharacterCreation_8h}{Character\+Creation.\+h}}\item 
+src/\+Game/\mbox{\hyperlink{CharacterCreation_8cpp}{Character\+Creation.\+cpp}}\end{DoxyCompactItemize}

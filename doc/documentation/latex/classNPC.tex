@@ -1,0 +1,210 @@
+\hypertarget{classNPC}{}\doxysection{NPC Class Reference}
+\label{classNPC}\index{NPC@{NPC}}
+
+
+{\ttfamily \#include $<$NPC.\+h$>$}
+
+
+
+Inheritance diagram for NPC\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classNPC__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for NPC\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classNPC__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNPC_a33f067cb3c413dde2143aa3ab15a49fb}{NPC}} (std\+::string\+\_\+view name, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a5177790ad6df0ea98db41b37b602367c}{strength}}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a90b884933d23c4d57ca01dbe2898d405}{intelligence}}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a841d806fd1f9758dbbed5b4dbfcccfe3}{agility}}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a582fc884d6299814fbd4f12c1f9ae70f}{mana}}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a555bf8344ca0caf09b42f55e185526d8}{health}}, int AP)
+\item 
+virtual \mbox{\hyperlink{classNPC_a29f99d778a729ff9efcde5dfa6604cae}{$\sim$\+NPC}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classNPC_a3ac4722654cd7e956dc07e2424167684}{perform\+Turn}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&player)=0
+\item 
+void \mbox{\hyperlink{classNPC_ad6376ab8e689533e7041e4933ccb0119}{display\+Status}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classNPC_a420948d2ba0ad9fca41599b47091255e}{equip\+Backup}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classNPC_abf1982fc4cbd1eb01995de3de4b1e4f4}{should\+Use\+Ultra}} (double player\+Health\+Ratio, double enemy\+Health\+Ratio)
+\item 
+bool \mbox{\hyperlink{classNPC_a425b2de254a1ed6ff4840cb39b0b6771}{should\+Heal}} (double player\+Health\+Ratio, double enemy\+Health\+Ratio)
+\item 
+bool \mbox{\hyperlink{classNPC_a18cdd56fc96cd1fe0462ed90e180df64}{should\+Restore\+Mana}} ()
+\item 
+bool \mbox{\hyperlink{classNPC_a40731f54c3ed78647b5c7e3dad9668ba}{should\+Buff}} ()
+\item 
+bool \mbox{\hyperlink{classNPC_a1ed9e963043a79dda5c4946b32c51964}{should\+Spell\+Cast}} ()
+\item 
+void \mbox{\hyperlink{classNPC_a1172d12cf5065969d186f630b3281975}{perform\+Ultra\+Attack}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&player)
+\item 
+void \mbox{\hyperlink{classNPC_a9126d6de546538b64156ca52352dd166}{perform\+Melee\+Attack}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&player)
+\item 
+void \mbox{\hyperlink{classNPC_a42da828629d7f8df9adf517e90631884}{perform\+Spell\+Attack}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&player)
+\item 
+void \mbox{\hyperlink{classNPC_a75160a0cb0739e4f0616f79c2467e165}{perform\+Heal}} ()
+\item 
+void \mbox{\hyperlink{classNPC_aec9c7155e064740865d03fc8092d24e7}{perform\+Buff}} ()
+\item 
+void \mbox{\hyperlink{classNPC_acd19f4ffa810ac606ccc69497703b251}{perform\+Restore\+Mana}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classNPC_a4b995acdf68ef0a4be84cc2c42495396}{m\+\_\+has\+Buff}}
+\item 
+bool \mbox{\hyperlink{classNPC_a30e8259bf0720c2ec556d4892364215e}{m\+\_\+has\+Equipped\+Backup}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNPC_a33f067cb3c413dde2143aa3ab15a49fb}\label{classNPC_a33f067cb3c413dde2143aa3ab15a49fb}} 
+\index{NPC@{NPC}!NPC@{NPC}}
+\index{NPC@{NPC}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{NPC()}{NPC()}}
+{\footnotesize\ttfamily NPC\+::\+NPC (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{int}]{strength,  }\item[{int}]{intelligence,  }\item[{int}]{agility,  }\item[{int}]{mana,  }\item[{int}]{health,  }\item[{int}]{AP }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classNPC_a29f99d778a729ff9efcde5dfa6604cae}\label{classNPC_a29f99d778a729ff9efcde5dfa6604cae}} 
+\index{NPC@{NPC}!````~NPC@{$\sim$NPC}}
+\index{````~NPC@{$\sim$NPC}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{$\sim$NPC()}{~NPC()}}
+{\footnotesize\ttfamily virtual NPC\+::$\sim$\+NPC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNPC_ad6376ab8e689533e7041e4933ccb0119}\label{classNPC_ad6376ab8e689533e7041e4933ccb0119}} 
+\index{NPC@{NPC}!displayStatus@{displayStatus}}
+\index{displayStatus@{displayStatus}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{displayStatus()}{displayStatus()}}
+{\footnotesize\ttfamily void NPC\+::display\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classCharacter_afd5dbad8f7c52d620e92c2399b3b7632}{Character}}.
+
+\mbox{\Hypertarget{classNPC_a420948d2ba0ad9fca41599b47091255e}\label{classNPC_a420948d2ba0ad9fca41599b47091255e}} 
+\index{NPC@{NPC}!equipBackup@{equipBackup}}
+\index{equipBackup@{equipBackup}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{equipBackup()}{equipBackup()}}
+{\footnotesize\ttfamily virtual void NPC\+::equip\+Backup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classMediumEnemy_ae39af8f39b1929d7dc03ffef4f1438a3}{Medium\+Enemy}}, \mbox{\hyperlink{classHardEnemy_a37fae5e9b31de9c8cd01f58e64eb13ff}{Hard\+Enemy}}, and \mbox{\hyperlink{classEasyEnemy_a584ec396fc6af4ae94923a549ff6f130}{Easy\+Enemy}}.
+
+\mbox{\Hypertarget{classNPC_aec9c7155e064740865d03fc8092d24e7}\label{classNPC_aec9c7155e064740865d03fc8092d24e7}} 
+\index{NPC@{NPC}!performBuff@{performBuff}}
+\index{performBuff@{performBuff}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{performBuff()}{performBuff()}}
+{\footnotesize\ttfamily void NPC\+::perform\+Buff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNPC_a75160a0cb0739e4f0616f79c2467e165}\label{classNPC_a75160a0cb0739e4f0616f79c2467e165}} 
+\index{NPC@{NPC}!performHeal@{performHeal}}
+\index{performHeal@{performHeal}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{performHeal()}{performHeal()}}
+{\footnotesize\ttfamily void NPC\+::perform\+Heal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNPC_a9126d6de546538b64156ca52352dd166}\label{classNPC_a9126d6de546538b64156ca52352dd166}} 
+\index{NPC@{NPC}!performMeleeAttack@{performMeleeAttack}}
+\index{performMeleeAttack@{performMeleeAttack}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{performMeleeAttack()}{performMeleeAttack()}}
+{\footnotesize\ttfamily void NPC\+::perform\+Melee\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNPC_acd19f4ffa810ac606ccc69497703b251}\label{classNPC_acd19f4ffa810ac606ccc69497703b251}} 
+\index{NPC@{NPC}!performRestoreMana@{performRestoreMana}}
+\index{performRestoreMana@{performRestoreMana}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{performRestoreMana()}{performRestoreMana()}}
+{\footnotesize\ttfamily void NPC\+::perform\+Restore\+Mana (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNPC_a42da828629d7f8df9adf517e90631884}\label{classNPC_a42da828629d7f8df9adf517e90631884}} 
+\index{NPC@{NPC}!performSpellAttack@{performSpellAttack}}
+\index{performSpellAttack@{performSpellAttack}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{performSpellAttack()}{performSpellAttack()}}
+{\footnotesize\ttfamily void NPC\+::perform\+Spell\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNPC_a3ac4722654cd7e956dc07e2424167684}\label{classNPC_a3ac4722654cd7e956dc07e2424167684}} 
+\index{NPC@{NPC}!performTurn@{performTurn}}
+\index{performTurn@{performTurn}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{performTurn()}{performTurn()}}
+{\footnotesize\ttfamily virtual void NPC\+::perform\+Turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classMediumEnemy_ab7dba60d58bccbc4153c31804efa1315}{Medium\+Enemy}}, \mbox{\hyperlink{classHardEnemy_a15907f8fa8ca40b7d3c92e2e02000865}{Hard\+Enemy}}, and \mbox{\hyperlink{classEasyEnemy_ade753cd2df79ee0759ae7aa7cb976608}{Easy\+Enemy}}.
+
+\mbox{\Hypertarget{classNPC_a1172d12cf5065969d186f630b3281975}\label{classNPC_a1172d12cf5065969d186f630b3281975}} 
+\index{NPC@{NPC}!performUltraAttack@{performUltraAttack}}
+\index{performUltraAttack@{performUltraAttack}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{performUltraAttack()}{performUltraAttack()}}
+{\footnotesize\ttfamily void NPC\+::perform\+Ultra\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNPC_a40731f54c3ed78647b5c7e3dad9668ba}\label{classNPC_a40731f54c3ed78647b5c7e3dad9668ba}} 
+\index{NPC@{NPC}!shouldBuff@{shouldBuff}}
+\index{shouldBuff@{shouldBuff}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{shouldBuff()}{shouldBuff()}}
+{\footnotesize\ttfamily bool NPC\+::should\+Buff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNPC_a425b2de254a1ed6ff4840cb39b0b6771}\label{classNPC_a425b2de254a1ed6ff4840cb39b0b6771}} 
+\index{NPC@{NPC}!shouldHeal@{shouldHeal}}
+\index{shouldHeal@{shouldHeal}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{shouldHeal()}{shouldHeal()}}
+{\footnotesize\ttfamily bool NPC\+::should\+Heal (\begin{DoxyParamCaption}\item[{double}]{player\+Health\+Ratio,  }\item[{double}]{enemy\+Health\+Ratio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNPC_a18cdd56fc96cd1fe0462ed90e180df64}\label{classNPC_a18cdd56fc96cd1fe0462ed90e180df64}} 
+\index{NPC@{NPC}!shouldRestoreMana@{shouldRestoreMana}}
+\index{shouldRestoreMana@{shouldRestoreMana}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{shouldRestoreMana()}{shouldRestoreMana()}}
+{\footnotesize\ttfamily bool NPC\+::should\+Restore\+Mana (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNPC_a1ed9e963043a79dda5c4946b32c51964}\label{classNPC_a1ed9e963043a79dda5c4946b32c51964}} 
+\index{NPC@{NPC}!shouldSpellCast@{shouldSpellCast}}
+\index{shouldSpellCast@{shouldSpellCast}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{shouldSpellCast()}{shouldSpellCast()}}
+{\footnotesize\ttfamily bool NPC\+::should\+Spell\+Cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNPC_abf1982fc4cbd1eb01995de3de4b1e4f4}\label{classNPC_abf1982fc4cbd1eb01995de3de4b1e4f4}} 
+\index{NPC@{NPC}!shouldUseUltra@{shouldUseUltra}}
+\index{shouldUseUltra@{shouldUseUltra}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{shouldUseUltra()}{shouldUseUltra()}}
+{\footnotesize\ttfamily bool NPC\+::should\+Use\+Ultra (\begin{DoxyParamCaption}\item[{double}]{player\+Health\+Ratio,  }\item[{double}]{enemy\+Health\+Ratio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classMediumEnemy_af332e2b3baa09734eb62f5de8de49832}{Medium\+Enemy}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classNPC_a4b995acdf68ef0a4be84cc2c42495396}\label{classNPC_a4b995acdf68ef0a4be84cc2c42495396}} 
+\index{NPC@{NPC}!m\_hasBuff@{m\_hasBuff}}
+\index{m\_hasBuff@{m\_hasBuff}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{m\_hasBuff}{m\_hasBuff}}
+{\footnotesize\ttfamily bool NPC\+::m\+\_\+has\+Buff\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNPC_a30e8259bf0720c2ec556d4892364215e}\label{classNPC_a30e8259bf0720c2ec556d4892364215e}} 
+\index{NPC@{NPC}!m\_hasEquippedBackup@{m\_hasEquippedBackup}}
+\index{m\_hasEquippedBackup@{m\_hasEquippedBackup}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{m\_hasEquippedBackup}{m\_hasEquippedBackup}}
+{\footnotesize\ttfamily bool NPC\+::m\+\_\+has\+Equipped\+Backup \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Character/\mbox{\hyperlink{NPC_8h}{NPC.\+h}}\item 
+src/\+Character/\mbox{\hyperlink{NPC_8cpp}{NPC.\+cpp}}\end{DoxyCompactItemize}

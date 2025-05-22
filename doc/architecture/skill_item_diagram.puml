@@ -1,0 +1,235 @@
+@startuml
+!theme reddress-lightred
+
+enum Target {
+  self
+  enemy
+  armor
+  weapon
+}
+
+enum Stat {
+  none
+  health
+  mana
+  maxHealth
+  maxMana
+  strength
+  intelligence
+  agility
+  actionPoints
+  repair
+  damage
+}
+
+enum Rarity {
+  common
+  uncommon
+  rare
+  epic
+}
+
+struct StatModifier {
+  stat: Stat
+  value: int
+  target: Target
+}
+
+enum SkillType {
+  Damage
+  Heal
+  Defense
+  Utility
+}
+
+class Item {
+  - m_name: std::string
+  - m_rarity: Rarity
+  - m_modifiers: std::vector<StatModifier>
+  - m_customEffect: std::function<void(Character&)>
+  - m_effectApplied: bool
+  
+  + Item(name: std::string_view, rarity: Rarity, 
+  modifiers: const std::vector<StatModifier>&, 
+  customEffect: std::function<void(Character&)>)
+  + Item(name: std::string_view, rarity: Rarity, 
+  customEffect: std::function<void(Character&)>)
+  + {virtual} ~Item()
+  + getName(): const std::string&
+  + getRarity(): Rarity
+  + getModifiers(): const std::vector<StatModifier>&
+  + getRarityName(): std::string_view
+  + setCustomEffect(effect: std::function<void(Character&)>): void
+  + runCustomEffect(user: Character&): void
+  + use(user: Character&, enemy: Character* = nullptr): void
+}
+
+class Equipment {
+  - m_maxDurability: int
+  - m_currentDurability: int
+  
+  + Equipment(name: std::string_view, rarity: Rarity, maxDurability: int)
+  + {virtual} use(user: Character&, self: std::unique_ptr<Item>): void
+  + {virtual} takeDamage(amount: int): void
+  + repair(amount: int): void
+  + isBroken(): bool
+  + getCurrentDurability(): int
+  + getMaxDurability(): int
+  + getCondition(): double
+}
+
+class Armor {
+  - baseDefense: int
+  
+  + Armor(name: std::string_view, defense: int, durability: int)
+  + use(user: Character&, self: std::unique_ptr<Item>): void override
+  + getEffectiveDefense(): int const
+  + takeDamage(amount: int): void override
+}
+
+class Weapon {
+  - baseDamage: int
+  
+  + Weapon(name: std::string_view, damage: int, durability: int)
+  + use(user: Character&, self: std::unique_ptr<Item>): void override
+  + getBaseDamage(): int const
+}
+
+class Inventory {
+  - m_items: std::vector<std::unique_ptr<Item>>
+  - inventorySize: int
+  
+  + getItemCount(): int
+  + isFull(): bool
+  + newSize(): void
+  + getSize(): int
+  + operator[](index: int): const Item*
+  + addItem(item: std::unique_ptr<Item>): void
+  + removeItem(index: int): void
+  + removeBrokenItems(): void
+  + useItem(index: int, user: Character&, enemy: Character*): void
+  + display(): void
+  + isEmpty(): bool
+}
+
+class Skill {
+  # m_type: SkillType
+  # m_cost: int
+  
+  + Skill(type: SkillType, cost: int)
+  + {virtual} ~Skill()
+  + getCost(): int
+  + {virtual} getName(): std::string_view
+}
+
+class TargetedSkill {
+  - m_damage: int
+  
+  + TargetedSkill(type: SkillType, cost: int, damage: int)
+  + getDamage(): int
+  + {virtual} execute(user: Character&, target: Character&): void
+}
+
+class UntargetedSkill {
+  + UntargetedSkill(type: SkillType, cost: int)
+  + {virtual} execute(user: Character&): void
+}
+
+class MeleeAttack {
+  + MeleeAttack(baseDamage: int, cost: int)
+  + execute(user: Character&, target: Character&): void override
+  + getName(): std::string_view override
+}
+
+class SpellCast {
+  - m_manaCost: int
+  
+  + SpellCast(manaCost: int, damage: int, cost: int)
+  + execute(user: Character&, target: Character&): void override
+  + getName(): std::string_view override
+}
+
+struct ModifierProfile {
+  minMods: int
+  maxMods: int
+  negativeChance: int
+  weakChance: int
+  weakMin: int
+  weakMax: int
+  mediocreChance: int
+  mediocreMin: int
+  mediocreMax: int
+  strongChance: int
+  strongMin: int
+  strongMax: int
+}
+
+class Investigate {
+  - commonProfile: const ModifierProfile {static}
+  - uncommonProfile: const ModifierProfile {static}
+  - rareProfile: const ModifierProfile {static}
+  
+  # {static} createEpicItem(): std::unique_ptr<Item>
+  # {static} generateModifier(profile: const ModifierProfile&): StatModifier
+  # {static} getFriendlyNameForSingle(stat: Stat, 
+  bonus: int, target: Target): std::string
+  # {static} generateMultiModifierName(overallRarity: Rarity, 
+  mods: const std::vector<StatModifier>&): std::string
+  # {static} combineModifiers(
+  mods: const std::vector<StatModifier>&): std::vector<StatModifier>
+  # {static} isSumValid(rarity: Rarity, totalSum: int): bool
+
+  + Investigate()
+  + {static} createGenericItem(): std::unique_ptr<Item>
+  + execute(user: Character&): void override
+  + getName(): std::string_view override
+}
+
+class Block {
+  + Block()
+  + execute(user: Character&): void override
+  + getName(): std::string_view override
+}
+
+class Concentrate {
+  + Concentrate()
+  + execute(user: Character&): void override
+  + getName(): std::string_view override
+}
+
+class Heal {
+  - m_healAmount: int
+  
+  + Heal(cost: int, healAmount: int)
+  + execute(user: Character&): void override
+  + getHealAmount(): int
+  + getName(): std::string_view override
+}
+
+Item <|-- Equipment
+Equipment <|-- Weapon
+Equipment <|-- Armor
+Item *-- "many" StatModifier : contains
+StatModifier --> Stat : uses
+StatModifier --> Target : uses
+Item --> Rarity : uses
+
+Investigate *-- ModifierProfile : uses profiles
+Investigate ..> StatModifier : uses
+Investigate ..> Rarity : uses
+Investigate ..> Item : «creates»
+
+ModifierProfile ..> Stat : via Investigate
+ModifierProfile ..> Target : via Investigate
+
+Skill <|-- TargetedSkill
+Skill <|-- UntargetedSkill
+Skill *-- SkillType : contains
+TargetedSkill <|-- MeleeAttack
+TargetedSkill <|-- SpellCast
+UntargetedSkill <|-- Investigate
+UntargetedSkill <|-- Block
+UntargetedSkill <|-- Concentrate
+UntargetedSkill <|-- Heal
+
+@enduml

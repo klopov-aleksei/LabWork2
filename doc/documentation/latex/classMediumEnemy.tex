@@ -1,0 +1,150 @@
+\hypertarget{classMediumEnemy}{}\doxysection{Medium\+Enemy Class Reference}
+\label{classMediumEnemy}\index{MediumEnemy@{MediumEnemy}}
+
+
+{\ttfamily \#include $<$Medium\+Enemy.\+h$>$}
+
+
+
+Inheritance diagram for Medium\+Enemy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classMediumEnemy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Medium\+Enemy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classMediumEnemy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMediumEnemy_a39df099100cb8ab349635a1196fa4dde}{Medium\+Enemy}} (std\+::string\+\_\+view name=\char`\"{}Sofiya\char`\"{}, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a5177790ad6df0ea98db41b37b602367c}{strength}}=6, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a90b884933d23c4d57ca01dbe2898d405}{intelligence}}=6, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a841d806fd1f9758dbbed5b4dbfcccfe3}{agility}}=7, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a582fc884d6299814fbd4f12c1f9ae70f}{mana}}=50, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305a555bf8344ca0caf09b42f55e185526d8}{health}}=300, int AP=8)
+\item 
+virtual \mbox{\hyperlink{classMediumEnemy_a165e03c07912e9b56f4ed27ef6953919}{$\sim$\+Medium\+Enemy}} ()=default
+\item 
+void \mbox{\hyperlink{classMediumEnemy_ab7dba60d58bccbc4153c31804efa1315}{perform\+Turn}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&player) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMediumEnemy_ae39af8f39b1929d7dc03ffef4f1438a3}{equip\+Backup}} () override
+\item 
+bool \mbox{\hyperlink{classMediumEnemy_af332e2b3baa09734eb62f5de8de49832}{should\+Use\+Ultra}} (double player\+Health\+Ratio, double enemy\+Health\+Ratio) override
+\item 
+void \mbox{\hyperlink{classMediumEnemy_af40584e3697b6dbf8d7d9a78e77e4689}{perform\+Use\+Item}} (\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&player, int best\+Index)
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classMediumEnemy_a786ec839e394248e75f90a2b447b12c6}{evaluate\+Inventory}} () const
+\item 
+int \mbox{\hyperlink{classMediumEnemy_a2bf03f1a9549a4d13790ebcd9515de5f}{evaluate\+Item}} (const \mbox{\hyperlink{classItem}{Item}} \&item) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInventory}{Inventory}} \mbox{\hyperlink{classMediumEnemy_a24faf633544e450608d358001577fcc7}{m\+\_\+inventory}}
+\item 
+int \mbox{\hyperlink{classMediumEnemy_ad827c1e2c369309087c73619533be617}{m\+\_\+ultra\+Attacks\+Used}}
+\item 
+int \mbox{\hyperlink{classMediumEnemy_a8da8ea1ceeb81ef184f1aa5f3e2cf164}{m\+\_\+turns\+Since\+Ultra}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMediumEnemy_a39df099100cb8ab349635a1196fa4dde}\label{classMediumEnemy_a39df099100cb8ab349635a1196fa4dde}} 
+\index{MediumEnemy@{MediumEnemy}!MediumEnemy@{MediumEnemy}}
+\index{MediumEnemy@{MediumEnemy}!MediumEnemy@{MediumEnemy}}
+\doxysubsubsection{\texorpdfstring{MediumEnemy()}{MediumEnemy()}}
+{\footnotesize\ttfamily Medium\+Enemy\+::\+Medium\+Enemy (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name = {\ttfamily \char`\"{}Sofiya\char`\"{}},  }\item[{int}]{strength = {\ttfamily 6},  }\item[{int}]{intelligence = {\ttfamily 6},  }\item[{int}]{agility = {\ttfamily 7},  }\item[{int}]{mana = {\ttfamily 50},  }\item[{int}]{health = {\ttfamily 300},  }\item[{int}]{AP = {\ttfamily 8} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classMediumEnemy_a165e03c07912e9b56f4ed27ef6953919}\label{classMediumEnemy_a165e03c07912e9b56f4ed27ef6953919}} 
+\index{MediumEnemy@{MediumEnemy}!````~MediumEnemy@{$\sim$MediumEnemy}}
+\index{````~MediumEnemy@{$\sim$MediumEnemy}!MediumEnemy@{MediumEnemy}}
+\doxysubsubsection{\texorpdfstring{$\sim$MediumEnemy()}{~MediumEnemy()}}
+{\footnotesize\ttfamily virtual Medium\+Enemy\+::$\sim$\+Medium\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMediumEnemy_ae39af8f39b1929d7dc03ffef4f1438a3}\label{classMediumEnemy_ae39af8f39b1929d7dc03ffef4f1438a3}} 
+\index{MediumEnemy@{MediumEnemy}!equipBackup@{equipBackup}}
+\index{equipBackup@{equipBackup}!MediumEnemy@{MediumEnemy}}
+\doxysubsubsection{\texorpdfstring{equipBackup()}{equipBackup()}}
+{\footnotesize\ttfamily void Medium\+Enemy\+::equip\+Backup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classNPC_a420948d2ba0ad9fca41599b47091255e}{NPC}}.
+
+\mbox{\Hypertarget{classMediumEnemy_a786ec839e394248e75f90a2b447b12c6}\label{classMediumEnemy_a786ec839e394248e75f90a2b447b12c6}} 
+\index{MediumEnemy@{MediumEnemy}!evaluateInventory@{evaluateInventory}}
+\index{evaluateInventory@{evaluateInventory}!MediumEnemy@{MediumEnemy}}
+\doxysubsubsection{\texorpdfstring{evaluateInventory()}{evaluateInventory()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Medium\+Enemy\+::evaluate\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classMediumEnemy_a2bf03f1a9549a4d13790ebcd9515de5f}\label{classMediumEnemy_a2bf03f1a9549a4d13790ebcd9515de5f}} 
+\index{MediumEnemy@{MediumEnemy}!evaluateItem@{evaluateItem}}
+\index{evaluateItem@{evaluateItem}!MediumEnemy@{MediumEnemy}}
+\doxysubsubsection{\texorpdfstring{evaluateItem()}{evaluateItem()}}
+{\footnotesize\ttfamily int Medium\+Enemy\+::evaluate\+Item (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classItem}{Item}} \&}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classMediumEnemy_ab7dba60d58bccbc4153c31804efa1315}\label{classMediumEnemy_ab7dba60d58bccbc4153c31804efa1315}} 
+\index{MediumEnemy@{MediumEnemy}!performTurn@{performTurn}}
+\index{performTurn@{performTurn}!MediumEnemy@{MediumEnemy}}
+\doxysubsubsection{\texorpdfstring{performTurn()}{performTurn()}}
+{\footnotesize\ttfamily void Medium\+Enemy\+::perform\+Turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classNPC_a3ac4722654cd7e956dc07e2424167684}{NPC}}.
+
+\mbox{\Hypertarget{classMediumEnemy_af40584e3697b6dbf8d7d9a78e77e4689}\label{classMediumEnemy_af40584e3697b6dbf8d7d9a78e77e4689}} 
+\index{MediumEnemy@{MediumEnemy}!performUseItem@{performUseItem}}
+\index{performUseItem@{performUseItem}!MediumEnemy@{MediumEnemy}}
+\doxysubsubsection{\texorpdfstring{performUseItem()}{performUseItem()}}
+{\footnotesize\ttfamily void Medium\+Enemy\+::perform\+Use\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayerCharacter}{Player\+Character}} \&}]{player,  }\item[{int}]{best\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classMediumEnemy_af332e2b3baa09734eb62f5de8de49832}\label{classMediumEnemy_af332e2b3baa09734eb62f5de8de49832}} 
+\index{MediumEnemy@{MediumEnemy}!shouldUseUltra@{shouldUseUltra}}
+\index{shouldUseUltra@{shouldUseUltra}!MediumEnemy@{MediumEnemy}}
+\doxysubsubsection{\texorpdfstring{shouldUseUltra()}{shouldUseUltra()}}
+{\footnotesize\ttfamily bool Medium\+Enemy\+::should\+Use\+Ultra (\begin{DoxyParamCaption}\item[{double}]{player\+Health\+Ratio,  }\item[{double}]{enemy\+Health\+Ratio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classNPC_abf1982fc4cbd1eb01995de3de4b1e4f4}{NPC}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMediumEnemy_a24faf633544e450608d358001577fcc7}\label{classMediumEnemy_a24faf633544e450608d358001577fcc7}} 
+\index{MediumEnemy@{MediumEnemy}!m\_inventory@{m\_inventory}}
+\index{m\_inventory@{m\_inventory}!MediumEnemy@{MediumEnemy}}
+\doxysubsubsection{\texorpdfstring{m\_inventory}{m\_inventory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInventory}{Inventory}} Medium\+Enemy\+::m\+\_\+inventory\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classMediumEnemy_a8da8ea1ceeb81ef184f1aa5f3e2cf164}\label{classMediumEnemy_a8da8ea1ceeb81ef184f1aa5f3e2cf164}} 
+\index{MediumEnemy@{MediumEnemy}!m\_turnsSinceUltra@{m\_turnsSinceUltra}}
+\index{m\_turnsSinceUltra@{m\_turnsSinceUltra}!MediumEnemy@{MediumEnemy}}
+\doxysubsubsection{\texorpdfstring{m\_turnsSinceUltra}{m\_turnsSinceUltra}}
+{\footnotesize\ttfamily int Medium\+Enemy\+::m\+\_\+turns\+Since\+Ultra\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classMediumEnemy_ad827c1e2c369309087c73619533be617}\label{classMediumEnemy_ad827c1e2c369309087c73619533be617}} 
+\index{MediumEnemy@{MediumEnemy}!m\_ultraAttacksUsed@{m\_ultraAttacksUsed}}
+\index{m\_ultraAttacksUsed@{m\_ultraAttacksUsed}!MediumEnemy@{MediumEnemy}}
+\doxysubsubsection{\texorpdfstring{m\_ultraAttacksUsed}{m\_ultraAttacksUsed}}
+{\footnotesize\ttfamily int Medium\+Enemy\+::m\+\_\+ultra\+Attacks\+Used\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Character/\mbox{\hyperlink{MediumEnemy_8h}{Medium\+Enemy.\+h}}\item 
+src/\+Character/\mbox{\hyperlink{MediumEnemy_8cpp}{Medium\+Enemy.\+cpp}}\end{DoxyCompactItemize}

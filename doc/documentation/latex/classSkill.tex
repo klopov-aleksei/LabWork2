@@ -1,0 +1,125 @@
+\hypertarget{classSkill}{}\doxysection{Skill Class Reference}
+\label{classSkill}\index{Skill@{Skill}}
+
+
+{\ttfamily \#include $<$Skill.\+h$>$}
+
+
+
+Inheritance diagram for Skill\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSkill__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8}{Type}} \{ \mbox{\hyperlink{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8a26d419126c7f6254d78033cc49ffdc69}{Damage}}
+, \mbox{\hyperlink{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8ac3a6238379bf4a28bf8dc688ee99c030}{Heal}}
+, \mbox{\hyperlink{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8a425a6739a7b1c2f7dc60c6d028225801}{Defense}}
+, \mbox{\hyperlink{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8a6526cd36ee1865aec3889b3cc1210aef}{Utility}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSkill_a3d8062c3f79015fbdd6467f8452db392}{Skill}} (\mbox{\hyperlink{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8}{Type}} type, int cost=0)
+\item 
+virtual \mbox{\hyperlink{classSkill_acd8b38c862c22e1b639d27810c2f12df}{$\sim$\+Skill}} ()=default
+\item 
+int \mbox{\hyperlink{classSkill_ae12a59cade886bb13960481f93f67e1e}{get\+Cost}} () const
+\item 
+virtual std\+::string\+\_\+view \mbox{\hyperlink{classSkill_a0dc492e9dafb9d93bf2435454a618fd8}{get\+Name}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8}{Type}} \mbox{\hyperlink{classSkill_a80f2b68076bf0dae5f42f043c57be3d2}{m\+\_\+type}}
+\item 
+int \mbox{\hyperlink{classSkill_a4fa116f378947e2690879eccec3d2770}{m\+\_\+cost}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8}\label{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8}} 
+\index{Skill@{Skill}!Type@{Type}}
+\index{Type@{Type}!Skill@{Skill}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8}{Skill\+::\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Damage@{Damage}!Skill@{Skill}}\index{Skill@{Skill}!Damage@{Damage}}}\mbox{\Hypertarget{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8a26d419126c7f6254d78033cc49ffdc69}\label{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8a26d419126c7f6254d78033cc49ffdc69}} 
+Damage&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Heal@{Heal}!Skill@{Skill}}\index{Skill@{Skill}!Heal@{Heal}}}\mbox{\Hypertarget{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8ac3a6238379bf4a28bf8dc688ee99c030}\label{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8ac3a6238379bf4a28bf8dc688ee99c030}} 
+Heal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Defense@{Defense}!Skill@{Skill}}\index{Skill@{Skill}!Defense@{Defense}}}\mbox{\Hypertarget{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8a425a6739a7b1c2f7dc60c6d028225801}\label{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8a425a6739a7b1c2f7dc60c6d028225801}} 
+Defense&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Utility@{Utility}!Skill@{Skill}}\index{Skill@{Skill}!Utility@{Utility}}}\mbox{\Hypertarget{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8a6526cd36ee1865aec3889b3cc1210aef}\label{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8a6526cd36ee1865aec3889b3cc1210aef}} 
+Utility&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSkill_a3d8062c3f79015fbdd6467f8452db392}\label{classSkill_a3d8062c3f79015fbdd6467f8452db392}} 
+\index{Skill@{Skill}!Skill@{Skill}}
+\index{Skill@{Skill}!Skill@{Skill}}
+\doxysubsubsection{\texorpdfstring{Skill()}{Skill()}}
+{\footnotesize\ttfamily Skill\+::\+Skill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8}{Type}}}]{type,  }\item[{int}]{cost = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSkill_acd8b38c862c22e1b639d27810c2f12df}\label{classSkill_acd8b38c862c22e1b639d27810c2f12df}} 
+\index{Skill@{Skill}!````~Skill@{$\sim$Skill}}
+\index{````~Skill@{$\sim$Skill}!Skill@{Skill}}
+\doxysubsubsection{\texorpdfstring{$\sim$Skill()}{~Skill()}}
+{\footnotesize\ttfamily virtual Skill\+::$\sim$\+Skill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSkill_ae12a59cade886bb13960481f93f67e1e}\label{classSkill_ae12a59cade886bb13960481f93f67e1e}} 
+\index{Skill@{Skill}!getCost@{getCost}}
+\index{getCost@{getCost}!Skill@{Skill}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Skill\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classSkill_a0dc492e9dafb9d93bf2435454a618fd8}\label{classSkill_a0dc492e9dafb9d93bf2435454a618fd8}} 
+\index{Skill@{Skill}!getName@{getName}}
+\index{getName@{getName}!Skill@{Skill}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string\+\_\+view Skill\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classSpellCast_a92326692aa4c3c700547d7226d872927}{Spell\+Cast}}, \mbox{\hyperlink{classMeleeAttack_ab69d1854adf5f066ea6e10c946fa8820}{Melee\+Attack}}, \mbox{\hyperlink{classInvestigate_a88fe0287817cfd91c24228ddd93ba920}{Investigate}}, \mbox{\hyperlink{classHeal_a2db14efa8468e696216b04e10e39954f}{Heal}}, \mbox{\hyperlink{classConcentrate_a9686126c4af8505f4dc063a4e393ce08}{Concentrate}}, and \mbox{\hyperlink{classBlock_a9ab2c5f3bc46c3ba43729ba6b068f65e}{Block}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSkill_a4fa116f378947e2690879eccec3d2770}\label{classSkill_a4fa116f378947e2690879eccec3d2770}} 
+\index{Skill@{Skill}!m\_cost@{m\_cost}}
+\index{m\_cost@{m\_cost}!Skill@{Skill}}
+\doxysubsubsection{\texorpdfstring{m\_cost}{m\_cost}}
+{\footnotesize\ttfamily int Skill\+::m\+\_\+cost\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classSkill_a80f2b68076bf0dae5f42f043c57be3d2}\label{classSkill_a80f2b68076bf0dae5f42f043c57be3d2}} 
+\index{Skill@{Skill}!m\_type@{m\_type}}
+\index{m\_type@{m\_type}!Skill@{Skill}}
+\doxysubsubsection{\texorpdfstring{m\_type}{m\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSkill_ab9cb68b1ca0f4f4b3807f5809dfae9d8}{Type}} Skill\+::m\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Skills/\mbox{\hyperlink{Skill_8h}{Skill.\+h}}\item 
+src/\+Skills/\mbox{\hyperlink{Skill_8cpp}{Skill.\+cpp}}\end{DoxyCompactItemize}

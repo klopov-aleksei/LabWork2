@@ -1,0 +1,201 @@
+\hypertarget{classInvestigate}{}\doxysection{Investigate Class Reference}
+\label{classInvestigate}\index{Investigate@{Investigate}}
+
+
+{\ttfamily \#include $<$Investigate.\+h$>$}
+
+
+
+Inheritance diagram for Investigate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classInvestigate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Investigate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classInvestigate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structInvestigate_1_1ModifierProfile}{Modifier\+Profile}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInvestigate_a535b82b28400b4d0ac3770e9dbb06bf1}{Investigate}} ()
+\item 
+void \mbox{\hyperlink{classInvestigate_a683d40aede0c47621ac8b990b29b8b23}{execute}} (\mbox{\hyperlink{classCharacter}{Character}} \&user) override
+\item 
+std\+::string\+\_\+view \mbox{\hyperlink{classInvestigate_a88fe0287817cfd91c24228ddd93ba920}{get\+Name}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \mbox{\hyperlink{classInvestigate_ab6dc915b3c04331f2a3a3b1b2d0d0e68}{create\+Generic\+Item}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \mbox{\hyperlink{classInvestigate_a9b46627f30a66e4f1486e6329e327d44}{create\+Epic\+Item}} ()
+\item 
+static \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} \mbox{\hyperlink{classInvestigate_ace62a174f30fd12a99bacb42215126e3}{generate\+Modifier}} (const \mbox{\hyperlink{structInvestigate_1_1ModifierProfile}{Modifier\+Profile}} \&profile)
+\item 
+static std\+::string \mbox{\hyperlink{classInvestigate_ab0809c6af6d1a735d7084a273bd6f760}{get\+Friendly\+Name\+For\+Single}} (\mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305}{Stat}} stat, int bonus, \mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35d}{Target}} target)
+\item 
+static std\+::string \mbox{\hyperlink{classInvestigate_a60bb00e81888884fa97788d8ed734955}{generate\+Multi\+Modifier\+Name}} (\mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}} overall\+Rarity, const std\+::vector$<$ \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} $>$ \&mods)
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} $>$ \mbox{\hyperlink{classInvestigate_ae0671236846ac72047d2aef78b1291c9}{combine\+Modifiers}} (const std\+::vector$<$ \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} $>$ \&mods)
+\item 
+static bool \mbox{\hyperlink{classInvestigate_a58255021a9d1f867a3ece625a3ab1847}{is\+Sum\+Valid}} (\mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}} rarity, int total\+Sum)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{structInvestigate_1_1ModifierProfile}{Modifier\+Profile}} \mbox{\hyperlink{classInvestigate_afe2302d5e5c457e9501b7999b0ca851f}{common\+Profile}}
+\item 
+static const \mbox{\hyperlink{structInvestigate_1_1ModifierProfile}{Modifier\+Profile}} \mbox{\hyperlink{classInvestigate_aa19123f4a714ccc8927060545b622bab}{uncommon\+Profile}}
+\item 
+static const \mbox{\hyperlink{structInvestigate_1_1ModifierProfile}{Modifier\+Profile}} \mbox{\hyperlink{classInvestigate_a11bdcc18dfe4b3fda748a014e7239b11}{rare\+Profile}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInvestigate_a535b82b28400b4d0ac3770e9dbb06bf1}\label{classInvestigate_a535b82b28400b4d0ac3770e9dbb06bf1}} 
+\index{Investigate@{Investigate}!Investigate@{Investigate}}
+\index{Investigate@{Investigate}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{Investigate()}{Investigate()}}
+{\footnotesize\ttfamily Investigate\+::\+Investigate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInvestigate_ae0671236846ac72047d2aef78b1291c9}\label{classInvestigate_ae0671236846ac72047d2aef78b1291c9}} 
+\index{Investigate@{Investigate}!combineModifiers@{combineModifiers}}
+\index{combineModifiers@{combineModifiers}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{combineModifiers()}{combineModifiers()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} $>$ Investigate\+::combine\+Modifiers (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} $>$ \&}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInvestigate_a9b46627f30a66e4f1486e6329e327d44}\label{classInvestigate_a9b46627f30a66e4f1486e6329e327d44}} 
+\index{Investigate@{Investigate}!createEpicItem@{createEpicItem}}
+\index{createEpicItem@{createEpicItem}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{createEpicItem()}{createEpicItem()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$ Investigate\+::create\+Epic\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInvestigate_ab6dc915b3c04331f2a3a3b1b2d0d0e68}\label{classInvestigate_ab6dc915b3c04331f2a3a3b1b2d0d0e68}} 
+\index{Investigate@{Investigate}!createGenericItem@{createGenericItem}}
+\index{createGenericItem@{createGenericItem}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{createGenericItem()}{createGenericItem()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$ Investigate\+::create\+Generic\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classInvestigate_a683d40aede0c47621ac8b990b29b8b23}\label{classInvestigate_a683d40aede0c47621ac8b990b29b8b23}} 
+\index{Investigate@{Investigate}!execute@{execute}}
+\index{execute@{execute}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Investigate\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCharacter}{Character}} \&}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classUntargetedSkill_a75ce51db47821377397a2ba2738ef064}{Untargeted\+Skill}}.
+
+\mbox{\Hypertarget{classInvestigate_ace62a174f30fd12a99bacb42215126e3}\label{classInvestigate_ace62a174f30fd12a99bacb42215126e3}} 
+\index{Investigate@{Investigate}!generateModifier@{generateModifier}}
+\index{generateModifier@{generateModifier}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{generateModifier()}{generateModifier()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} Investigate\+::generate\+Modifier (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structInvestigate_1_1ModifierProfile}{Modifier\+Profile}} \&}]{profile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInvestigate_a60bb00e81888884fa97788d8ed734955}\label{classInvestigate_a60bb00e81888884fa97788d8ed734955}} 
+\index{Investigate@{Investigate}!generateMultiModifierName@{generateMultiModifierName}}
+\index{generateMultiModifierName@{generateMultiModifierName}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{generateMultiModifierName()}{generateMultiModifierName()}}
+{\footnotesize\ttfamily std\+::string Investigate\+::generate\+Multi\+Modifier\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}}}]{overall\+Rarity,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structStatModifier}{Stat\+Modifier}} $>$ \&}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInvestigate_ab0809c6af6d1a735d7084a273bd6f760}\label{classInvestigate_ab0809c6af6d1a735d7084a273bd6f760}} 
+\index{Investigate@{Investigate}!getFriendlyNameForSingle@{getFriendlyNameForSingle}}
+\index{getFriendlyNameForSingle@{getFriendlyNameForSingle}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{getFriendlyNameForSingle()}{getFriendlyNameForSingle()}}
+{\footnotesize\ttfamily std\+::string Investigate\+::get\+Friendly\+Name\+For\+Single (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305}{Stat}}}]{stat,  }\item[{int}]{bonus,  }\item[{\mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35d}{Target}}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInvestigate_a88fe0287817cfd91c24228ddd93ba920}\label{classInvestigate_a88fe0287817cfd91c24228ddd93ba920}} 
+\index{Investigate@{Investigate}!getName@{getName}}
+\index{getName@{getName}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string\+\_\+view Investigate\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSkill_a0dc492e9dafb9d93bf2435454a618fd8}{Skill}}.
+
+\mbox{\Hypertarget{classInvestigate_a58255021a9d1f867a3ece625a3ab1847}\label{classInvestigate_a58255021a9d1f867a3ece625a3ab1847}} 
+\index{Investigate@{Investigate}!isSumValid@{isSumValid}}
+\index{isSumValid@{isSumValid}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{isSumValid()}{isSumValid()}}
+{\footnotesize\ttfamily bool Investigate\+::is\+Sum\+Valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Item_8h_a6c4fc244cdc975f7fd572fa614617600}{Rarity}}}]{rarity,  }\item[{int}]{total\+Sum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classInvestigate_afe2302d5e5c457e9501b7999b0ca851f}\label{classInvestigate_afe2302d5e5c457e9501b7999b0ca851f}} 
+\index{Investigate@{Investigate}!commonProfile@{commonProfile}}
+\index{commonProfile@{commonProfile}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{commonProfile}{commonProfile}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structInvestigate_1_1ModifierProfile}{Investigate\+::\+Modifier\+Profile}} Investigate\+::common\+Profile\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ }
+\DoxyCodeLine{    1, 2, 5,}
+\DoxyCodeLine{    100, 5, 10,}
+\DoxyCodeLine{    0, 10, 20,}
+\DoxyCodeLine{    0, 30, 40}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInvestigate_a11bdcc18dfe4b3fda748a014e7239b11}\label{classInvestigate_a11bdcc18dfe4b3fda748a014e7239b11}} 
+\index{Investigate@{Investigate}!rareProfile@{rareProfile}}
+\index{rareProfile@{rareProfile}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{rareProfile}{rareProfile}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structInvestigate_1_1ModifierProfile}{Investigate\+::\+Modifier\+Profile}} Investigate\+::rare\+Profile\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ }
+\DoxyCodeLine{    1, 2, 0,}
+\DoxyCodeLine{    20, 5, 10,}
+\DoxyCodeLine{    60, 10, 20,}
+\DoxyCodeLine{    40, 30, 40}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInvestigate_aa19123f4a714ccc8927060545b622bab}\label{classInvestigate_aa19123f4a714ccc8927060545b622bab}} 
+\index{Investigate@{Investigate}!uncommonProfile@{uncommonProfile}}
+\index{uncommonProfile@{uncommonProfile}!Investigate@{Investigate}}
+\doxysubsubsection{\texorpdfstring{uncommonProfile}{uncommonProfile}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structInvestigate_1_1ModifierProfile}{Investigate\+::\+Modifier\+Profile}} Investigate\+::uncommon\+Profile\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ }
+\DoxyCodeLine{    1, 3, 10,}
+\DoxyCodeLine{    70, 5, 10,}
+\DoxyCodeLine{    30, 10, 20,}
+\DoxyCodeLine{    0, 30, 40}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Skills/\mbox{\hyperlink{Investigate_8h}{Investigate.\+h}}\item 
+src/\+Skills/\mbox{\hyperlink{Investigate_8cpp}{Investigate.\+cpp}}\end{DoxyCompactItemize}

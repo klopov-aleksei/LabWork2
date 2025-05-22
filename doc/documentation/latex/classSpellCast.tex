@@ -1,0 +1,88 @@
+\hypertarget{classSpellCast}{}\doxysection{Spell\+Cast Class Reference}
+\label{classSpellCast}\index{SpellCast@{SpellCast}}
+
+
+{\ttfamily \#include $<$Spell\+Cast.\+h$>$}
+
+
+
+Inheritance diagram for Spell\+Cast\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classSpellCast__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Spell\+Cast\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classSpellCast__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSpellCast_abdf4488c291a0d17c4f22c854fb7fc11}{Spell\+Cast}} (int mana\+Cost=15, int \mbox{\hyperlink{StatModifier_8h_a8538fbca586b33d353cbe769bfa8e305ada14a7168b547f35ea0c6fa9f50de63e}{damage}}=15, int cost=\mbox{\hyperlink{namespaceConstants_a69170abf3ee82b9999adc6a9a0e17791}{Constants\+::cast\+\_\+cost}})
+\item 
+void \mbox{\hyperlink{classSpellCast_af15cfbe6f2fc267309c92c453c029d19}{execute}} (\mbox{\hyperlink{classCharacter}{Character}} \&user, \mbox{\hyperlink{classCharacter}{Character}} \&target) override
+\item 
+std\+::string\+\_\+view \mbox{\hyperlink{classSpellCast_a92326692aa4c3c700547d7226d872927}{get\+Name}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classSpellCast_a1e3659d0652ddb5e8d6971ebc2a164dc}{m\+\_\+mana\+Cost}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSpellCast_abdf4488c291a0d17c4f22c854fb7fc11}\label{classSpellCast_abdf4488c291a0d17c4f22c854fb7fc11}} 
+\index{SpellCast@{SpellCast}!SpellCast@{SpellCast}}
+\index{SpellCast@{SpellCast}!SpellCast@{SpellCast}}
+\doxysubsubsection{\texorpdfstring{SpellCast()}{SpellCast()}}
+{\footnotesize\ttfamily Spell\+Cast\+::\+Spell\+Cast (\begin{DoxyParamCaption}\item[{int}]{mana\+Cost = {\ttfamily 15},  }\item[{int}]{damage = {\ttfamily 15},  }\item[{int}]{cost = {\ttfamily \mbox{\hyperlink{namespaceConstants_a69170abf3ee82b9999adc6a9a0e17791}{Constants\+::cast\+\_\+cost}}} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSpellCast_af15cfbe6f2fc267309c92c453c029d19}\label{classSpellCast_af15cfbe6f2fc267309c92c453c029d19}} 
+\index{SpellCast@{SpellCast}!execute@{execute}}
+\index{execute@{execute}!SpellCast@{SpellCast}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Spell\+Cast\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCharacter}{Character}} \&}]{user,  }\item[{\mbox{\hyperlink{classCharacter}{Character}} \&}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classTargetedSkill_acb753985a1578c07d637af15224fa12b}{Targeted\+Skill}}.
+
+\mbox{\Hypertarget{classSpellCast_a92326692aa4c3c700547d7226d872927}\label{classSpellCast_a92326692aa4c3c700547d7226d872927}} 
+\index{SpellCast@{SpellCast}!getName@{getName}}
+\index{getName@{getName}!SpellCast@{SpellCast}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string\+\_\+view Spell\+Cast\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classSkill_a0dc492e9dafb9d93bf2435454a618fd8}{Skill}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSpellCast_a1e3659d0652ddb5e8d6971ebc2a164dc}\label{classSpellCast_a1e3659d0652ddb5e8d6971ebc2a164dc}} 
+\index{SpellCast@{SpellCast}!m\_manaCost@{m\_manaCost}}
+\index{m\_manaCost@{m\_manaCost}!SpellCast@{SpellCast}}
+\doxysubsubsection{\texorpdfstring{m\_manaCost}{m\_manaCost}}
+{\footnotesize\ttfamily int Spell\+Cast\+::m\+\_\+mana\+Cost\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Skills/\mbox{\hyperlink{SpellCast_8h}{Spell\+Cast.\+h}}\item 
+src/\+Skills/\mbox{\hyperlink{SpellCast_8cpp}{Spell\+Cast.\+cpp}}\end{DoxyCompactItemize}

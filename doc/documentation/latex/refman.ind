@@ -1,0 +1,1042 @@
+\begin{theindex}
+
+  \item {$\sim$Character}
+    \subitem {Character}, \hyperpage{22}
+  \item {$\sim$Game}
+    \subitem {Game}, \hyperpage{45}
+  \item {$\sim$Item}
+    \subitem {Item}, \hyperpage{59}
+  \item {$\sim$MediumEnemy}
+    \subitem {MediumEnemy}, \hyperpage{65}
+  \item {$\sim$NPC}
+    \subitem {NPC}, \hyperpage{72}
+  \item {$\sim$Skill}
+    \subitem {Skill}, \hyperpage{82}
+
+  \indexspace
+
+  \item {actionPoints}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {addItem}
+    \subitem {Inventory}, \hyperpage{51}
+  \item {agility}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {Armor}, \hyperpage{15}
+    \subitem {Armor}, \hyperpage{16}
+    \subitem {baseDefense}, \hyperpage{17}
+    \subitem {getEffectiveDefense}, \hyperpage{16}
+    \subitem {takeDamage}, \hyperpage{17}
+    \subitem {use}, \hyperpage{17}
+  \item {armor}
+    \subitem {StatModifier.h}, \hyperpage{114}
+
+  \indexspace
+
+  \item {baseDamage}
+    \subitem {Weapon}, \hyperpage{94}
+  \item {baseDefense}
+    \subitem {Armor}, \hyperpage{17}
+  \item {Block}, \hyperpage{18}
+    \subitem {Block}, \hyperpage{19}
+    \subitem {execute}, \hyperpage{19}
+    \subitem {getName}, \hyperpage{19}
+  \item {block\_cost}
+    \subitem {Constants}, \hyperpage{9}
+  \item {boostConcentration}
+    \subitem {PlayerCharacter}, \hyperpage{77}
+
+  \indexspace
+
+  \item {calculateDamage}
+    \subitem {calculateDamage.cpp}, \hyperpage{117}
+    \subitem {DamageCalculator}, \hyperpage{38}
+  \item {calculateDamage.cpp}
+    \subitem {calculateDamage}, \hyperpage{117}
+  \item {canHeal}
+    \subitem {PlayerCharacter}, \hyperpage{79}
+  \item {canUseSpell}
+    \subitem {PlayerCharacter}, \hyperpage{77}
+  \item {cast\_cost}
+    \subitem {Constants}, \hyperpage{10}
+  \item {Character}, \hyperpage{20}
+    \subitem {$\sim$Character}, \hyperpage{22}
+    \subitem {Character}, \hyperpage{21, 22}
+    \subitem {displayStatus}, \hyperpage{22}
+    \subitem {equipArmor}, \hyperpage{22}
+    \subitem {equippedArmor}, \hyperpage{27}
+    \subitem {equippedWeapon}, \hyperpage{27}
+    \subitem {equipWeapon}, \hyperpage{22}
+    \subitem {getActionPoints}, \hyperpage{22}
+    \subitem {getAgility}, \hyperpage{23}
+    \subitem {getArmor}, \hyperpage{23}
+    \subitem {getAttackCount}, \hyperpage{23}
+    \subitem {getHealth}, \hyperpage{23}
+    \subitem {getIntelligence}, \hyperpage{23}
+    \subitem {getMana}, \hyperpage{23}
+    \subitem {getMaxHealth}, \hyperpage{23}
+    \subitem {getName}, \hyperpage{23}
+    \subitem {getStrength}, \hyperpage{24}
+    \subitem {getWeapon}, \hyperpage{24}
+    \subitem {increaseActionPoints}, \hyperpage{24}
+    \subitem {increaseAgility}, \hyperpage{24}
+    \subitem {increaseHealth}, \hyperpage{24}
+    \subitem {increaseIntelligence}, \hyperpage{24}
+    \subitem {increaseMana}, \hyperpage{24}
+    \subitem {increaseMaxHealth}, \hyperpage{25}
+    \subitem {increaseMaxMana}, \hyperpage{25}
+    \subitem {increaseStrength}, \hyperpage{25}
+    \subitem {incrementAttackCount}, \hyperpage{25}
+    \subitem {isBlocking}, \hyperpage{25}
+    \subitem {isDead}, \hyperpage{25}
+    \subitem {m\_actionPoints}, \hyperpage{28}
+    \subitem {m\_agility}, \hyperpage{28}
+    \subitem {m\_attackCount}, \hyperpage{28}
+    \subitem {m\_health}, \hyperpage{28}
+    \subitem {m\_intelligence}, \hyperpage{28}
+    \subitem {m\_isBlocking}, \hyperpage{28}
+    \subitem {m\_mana}, \hyperpage{28}
+    \subitem {m\_maxActionPoints}, \hyperpage{28}
+    \subitem {m\_maxHealth}, \hyperpage{29}
+    \subitem {m\_maxMana}, \hyperpage{29}
+    \subitem {m\_name}, \hyperpage{29}
+    \subitem {m\_strength}, \hyperpage{29}
+    \subitem {modifyStat}, \hyperpage{25}
+    \subitem {repairArmor}, \hyperpage{26}
+    \subitem {repairWeapon}, \hyperpage{26}
+    \subitem {resetActionPoints}, \hyperpage{26}
+    \subitem {resetAttackCount}, \hyperpage{26}
+    \subitem {setBlocking}, \hyperpage{26}
+    \subitem {setStats}, \hyperpage{26}
+    \subitem {takeActionPoints}, \hyperpage{27}
+    \subitem {takeDamage}, \hyperpage{27}
+    \subitem {useMana}, \hyperpage{27}
+  \item {Character::takeDamage}
+    \subitem {DamageCalculator}, \hyperpage{38}
+  \item {CharacterCreation}, \hyperpage{29}
+    \subitem {ChooseArmor}, \hyperpage{30}
+    \subitem {ChooseClass}, \hyperpage{30}
+    \subitem {ChooseInventory}, \hyperpage{30}
+    \subitem {ChooseName}, \hyperpage{30}
+    \subitem {ChooseSkills}, \hyperpage{30}
+    \subitem {ChooseWeapon}, \hyperpage{30}
+    \subitem {createCharacter}, \hyperpage{31}
+    \subitem {CustomizeStats}, \hyperpage{31}
+  \item {characterCreation}
+    \subitem {Game}, \hyperpage{46}
+  \item {ChooseArmor}
+    \subitem {CharacterCreation}, \hyperpage{30}
+  \item {ChooseClass}
+    \subitem {CharacterCreation}, \hyperpage{30}
+  \item {ChooseInventory}
+    \subitem {CharacterCreation}, \hyperpage{30}
+  \item {ChooseName}
+    \subitem {CharacterCreation}, \hyperpage{30}
+  \item {ChooseSkills}
+    \subitem {CharacterCreation}, \hyperpage{30}
+  \item {ChooseWeapon}
+    \subitem {CharacterCreation}, \hyperpage{30}
+  \item {CombatInterface}, \hyperpage{31}
+    \subitem {CombatInterface}, \hyperpage{32}
+    \subitem {displayCombatOptions}, \hyperpage{32}
+    \subitem {m\_combatSystem}, \hyperpage{33}
+    \subitem {m\_player}, \hyperpage{33}
+    \subitem {openInventory}, \hyperpage{32}
+    \subitem {performAttack}, \hyperpage{32}
+    \subitem {processInput}, \hyperpage{32}
+  \item {combatInterface}
+    \subitem {Game}, \hyperpage{46}
+  \item {CombatSystem}, \hyperpage{33}
+    \subitem {CombatSystem}, \hyperpage{34}
+    \subitem {getEnemy}, \hyperpage{34}
+    \subitem {handleTurn}, \hyperpage{34}
+    \subitem {isCombatOver}, \hyperpage{34}
+    \subitem {m\_enemy}, \hyperpage{35}
+    \subitem {m\_player}, \hyperpage{35}
+    \subitem {m\_playerTurn}, \hyperpage{35}
+    \subitem {playerLost}, \hyperpage{34}
+    \subitem {startCombat}, \hyperpage{35}
+  \item {combatSystem}
+    \subitem {Game}, \hyperpage{46}
+  \item {combineModifiers}
+    \subitem {Investigate}, \hyperpage{55}
+  \item {common}
+    \subitem {Item.h}, \hyperpage{113}
+  \item {commonProfile}
+    \subitem {Investigate}, \hyperpage{57}
+  \item {computeStatBonus}
+    \subitem {computeStatBonus.cpp}, \hyperpage{122}
+    \subitem {computeStatBonus.h}, \hyperpage{123}
+  \item {computeStatBonus.cpp}
+    \subitem {computeStatBonus}, \hyperpage{122}
+  \item {computeStatBonus.h}
+    \subitem {computeStatBonus}, \hyperpage{123}
+  \item {conc\_cost}
+    \subitem {Constants}, \hyperpage{10}
+  \item {Concentrate}, \hyperpage{36}
+    \subitem {Concentrate}, \hyperpage{37}
+    \subitem {execute}, \hyperpage{37}
+    \subitem {getName}, \hyperpage{37}
+  \item {concentrationManaRestore}
+    \subitem {Constants}, \hyperpage{10}
+  \item {Constants}, \hyperpage{9}
+    \subitem {block\_cost}, \hyperpage{9}
+    \subitem {cast\_cost}, \hyperpage{10}
+    \subitem {conc\_cost}, \hyperpage{10}
+    \subitem {concentrationManaRestore}, \hyperpage{10}
+    \subitem {critThreshold}, \hyperpage{10}
+    \subitem {heal\_cost}, \hyperpage{10}
+    \subitem {healAmount}, \hyperpage{10}
+    \subitem {high\_bonus}, \hyperpage{10}
+    \subitem {initial\_ap}, \hyperpage{10}
+    \subitem {invest\_cost}, \hyperpage{11}
+    \subitem {low\_bonus}, \hyperpage{11}
+    \subitem {max\_armor\_reduce}, \hyperpage{11}
+    \subitem {max\_attack\_bonus}, \hyperpage{11}
+    \subitem {max\_block\_reduce}, \hyperpage{11}
+    \subitem {max\_crit\_multiplier}, \hyperpage{11}
+    \subitem {max\_weapon\_decoy}, \hyperpage{11}
+    \subitem {maxInventorySize}, \hyperpage{11}
+    \subitem {melee\_cost}, \hyperpage{12}
+    \subitem {min\_armor\_reduce}, \hyperpage{12}
+    \subitem {min\_attack\_bonus}, \hyperpage{12}
+    \subitem {min\_block\_reduce}, \hyperpage{12}
+    \subitem {min\_crit\_multiplier}, \hyperpage{12}
+    \subitem {min\_weapon\_decoy}, \hyperpage{12}
+    \subitem {points\_to\_distribute}, \hyperpage{12}
+    \subitem {statThreshold}, \hyperpage{12}
+  \item {createCharacter}
+    \subitem {CharacterCreation}, \hyperpage{31}
+  \item {createEpicItem}
+    \subitem {Investigate}, \hyperpage{55}
+  \item {createGenericItem}
+    \subitem {Investigate}, \hyperpage{56}
+  \item {critThreshold}
+    \subitem {Constants}, \hyperpage{10}
+  \item {CustomizeStats}
+    \subitem {CharacterCreation}, \hyperpage{31}
+
+  \indexspace
+
+  \item {Damage}
+    \subitem {Skill}, \hyperpage{82}
+  \item {damage}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {DamageCalculator}, \hyperpage{37}
+    \subitem {calculateDamage}, \hyperpage{38}
+    \subitem {Character::takeDamage}, \hyperpage{38}
+    \subitem {DamageCalculator}, \hyperpage{38}
+    \subitem {isSpell}, \hyperpage{38}
+    \subitem {m\_armorDamage}, \hyperpage{39}
+    \subitem {m\_finalDamage}, \hyperpage{39}
+    \subitem {m\_isSpell}, \hyperpage{39}
+    \subitem {markAsSpell}, \hyperpage{38}
+  \item {Defense}
+    \subitem {Skill}, \hyperpage{82}
+  \item {display}
+    \subitem {Inventory}, \hyperpage{51}
+  \item {displayCombatOptions}
+    \subitem {CombatInterface}, \hyperpage{32}
+  \item {displayStatus}
+    \subitem {Character}, \hyperpage{22}
+    \subitem {NPC}, \hyperpage{72}
+    \subitem {PlayerCharacter}, \hyperpage{77}
+
+  \indexspace
+
+  \item {easyBlock}
+    \subitem {PlayerCharacter}, \hyperpage{79}
+  \item {EasyEnemy}, \hyperpage{39}
+    \subitem {EasyEnemy}, \hyperpage{40}
+    \subitem {equipBackup}, \hyperpage{40}
+    \subitem {m\_usedUltra}, \hyperpage{41}
+    \subitem {performTurn}, \hyperpage{41}
+  \item {enableSpellCast}
+    \subitem {PlayerCharacter}, \hyperpage{77}
+  \item {enemy}
+    \subitem {Game}, \hyperpage{46}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {epic}
+    \subitem {Item.h}, \hyperpage{113}
+  \item {equipArmor}
+    \subitem {Character}, \hyperpage{22}
+  \item {equipBackup}
+    \subitem {EasyEnemy}, \hyperpage{40}
+    \subitem {HardEnemy}, \hyperpage{48}
+    \subitem {MediumEnemy}, \hyperpage{65}
+    \subitem {NPC}, \hyperpage{73}
+  \item {Equipment}, \hyperpage{41}
+    \subitem {Equipment}, \hyperpage{42}
+    \subitem {getCondition}, \hyperpage{42}
+    \subitem {getCurrentDurability}, \hyperpage{43}
+    \subitem {getMaxDurability}, \hyperpage{43}
+    \subitem {isBroken}, \hyperpage{43}
+    \subitem {m\_currentDurability}, \hyperpage{44}
+    \subitem {m\_maxDurability}, \hyperpage{44}
+    \subitem {repair}, \hyperpage{43}
+    \subitem {takeDamage}, \hyperpage{43}
+    \subitem {use}, \hyperpage{43}
+  \item {equippedArmor}
+    \subitem {Character}, \hyperpage{27}
+  \item {equippedWeapon}
+    \subitem {Character}, \hyperpage{27}
+  \item {equipWeapon}
+    \subitem {Character}, \hyperpage{22}
+  \item {evaluateInventory}
+    \subitem {MediumEnemy}, \hyperpage{65}
+  \item {evaluateItem}
+    \subitem {MediumEnemy}, \hyperpage{65}
+  \item {execute}
+    \subitem {Block}, \hyperpage{19}
+    \subitem {Concentrate}, \hyperpage{37}
+    \subitem {Heal}, \hyperpage{50}
+    \subitem {Investigate}, \hyperpage{56}
+    \subitem {MeleeAttack}, \hyperpage{68}
+    \subitem {SpellCast}, \hyperpage{84}
+    \subitem {TargetedSkill}, \hyperpage{87}
+    \subitem {UntargetedSkill}, \hyperpage{89}
+
+  \indexspace
+
+  \item {Game}, \hyperpage{44}
+    \subitem {$\sim$Game}, \hyperpage{45}
+    \subitem {characterCreation}, \hyperpage{46}
+    \subitem {combatInterface}, \hyperpage{46}
+    \subitem {combatSystem}, \hyperpage{46}
+    \subitem {enemy}, \hyperpage{46}
+    \subitem {Game}, \hyperpage{45}
+    \subitem {player}, \hyperpage{46}
+    \subitem {start}, \hyperpage{45}
+    \subitem {startCombat}, \hyperpage{45}
+  \item {generate}
+    \subitem {Random}, \hyperpage{13}
+  \item {generateModifier}
+    \subitem {Investigate}, \hyperpage{56}
+  \item {generateMultiModifierName}
+    \subitem {Investigate}, \hyperpage{56}
+  \item {get}
+    \subitem {Random}, \hyperpage{13}
+  \item {getActionPoints}
+    \subitem {Character}, \hyperpage{22}
+  \item {getAgility}
+    \subitem {Character}, \hyperpage{23}
+  \item {getArmor}
+    \subitem {Character}, \hyperpage{23}
+  \item {getAttackCount}
+    \subitem {Character}, \hyperpage{23}
+  \item {getBaseDamage}
+    \subitem {Weapon}, \hyperpage{93}
+  \item {getCondition}
+    \subitem {Equipment}, \hyperpage{42}
+  \item {getCost}
+    \subitem {Skill}, \hyperpage{82}
+  \item {getCurrentDurability}
+    \subitem {Equipment}, \hyperpage{43}
+  \item {getDamage}
+    \subitem {TargetedSkill}, \hyperpage{88}
+  \item {getEffectiveDefense}
+    \subitem {Armor}, \hyperpage{16}
+  \item {getEnemy}
+    \subitem {CombatSystem}, \hyperpage{34}
+  \item {getFriendlyNameForSingle}
+    \subitem {Investigate}, \hyperpage{56}
+  \item {getHealAmount}
+    \subitem {Heal}, \hyperpage{50}
+  \item {getHealth}
+    \subitem {Character}, \hyperpage{23}
+  \item {getIntelligence}
+    \subitem {Character}, \hyperpage{23}
+  \item {getInventory}
+    \subitem {PlayerCharacter}, \hyperpage{77, 78}
+  \item {getInvestigateCost}
+    \subitem {PlayerCharacter}, \hyperpage{78}
+  \item {getItemCount}
+    \subitem {Inventory}, \hyperpage{52}
+  \item {getMana}
+    \subitem {Character}, \hyperpage{23}
+  \item {getMaxDurability}
+    \subitem {Equipment}, \hyperpage{43}
+  \item {getMaxHealth}
+    \subitem {Character}, \hyperpage{23}
+  \item {getModifiers}
+    \subitem {Item}, \hyperpage{59}
+  \item {getName}
+    \subitem {Block}, \hyperpage{19}
+    \subitem {Character}, \hyperpage{23}
+    \subitem {Concentrate}, \hyperpage{37}
+    \subitem {Heal}, \hyperpage{50}
+    \subitem {Investigate}, \hyperpage{56}
+    \subitem {Item}, \hyperpage{59}
+    \subitem {MeleeAttack}, \hyperpage{68}
+    \subitem {Skill}, \hyperpage{82}
+    \subitem {SpellCast}, \hyperpage{85}
+  \item {getRarity}
+    \subitem {Item}, \hyperpage{59}
+  \item {getRarityName}
+    \subitem {Item}, \hyperpage{59}
+  \item {getSize}
+    \subitem {Inventory}, \hyperpage{52}
+  \item {getStrength}
+    \subitem {Character}, \hyperpage{24}
+  \item {getStrengthBonus}
+    \subitem {PlayerCharacter}, \hyperpage{78}
+  \item {getTurnCounter}
+    \subitem {Mage}, \hyperpage{62}
+  \item {getWeapon}
+    \subitem {Character}, \hyperpage{24}
+
+  \indexspace
+
+  \item {handleTurn}
+    \subitem {CombatSystem}, \hyperpage{34}
+  \item {HardEnemy}, \hyperpage{47}
+    \subitem {equipBackup}, \hyperpage{48}
+    \subitem {HardEnemy}, \hyperpage{48}
+    \subitem {performBlock}, \hyperpage{48}
+    \subitem {performTurn}, \hyperpage{48}
+    \subitem {shouldBlock}, \hyperpage{48}
+  \item {hasEasyBlock}
+    \subitem {PlayerCharacter}, \hyperpage{78}
+  \item {hasHealing}
+    \subitem {PlayerCharacter}, \hyperpage{78}
+  \item {hasMonkTraining}
+    \subitem {PlayerCharacter}, \hyperpage{78}
+  \item {hasSpellCastSkill}
+    \subitem {PlayerCharacter}, \hyperpage{79}
+  \item {Heal}, \hyperpage{49}
+    \subitem {execute}, \hyperpage{50}
+    \subitem {getHealAmount}, \hyperpage{50}
+    \subitem {getName}, \hyperpage{50}
+    \subitem {Heal}, \hyperpage{50}
+    \subitem {m\_healAmount}, \hyperpage{51}
+    \subitem {Skill}, \hyperpage{82}
+  \item {heal\_cost}
+    \subitem {Constants}, \hyperpage{10}
+  \item {healAmount}
+    \subitem {Constants}, \hyperpage{10}
+  \item {health}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {high\_bonus}
+    \subitem {Constants}, \hyperpage{10}
+
+  \indexspace
+
+  \item {increaseActionPoints}
+    \subitem {Character}, \hyperpage{24}
+  \item {increaseAgility}
+    \subitem {Character}, \hyperpage{24}
+  \item {increaseHealth}
+    \subitem {Character}, \hyperpage{24}
+  \item {increaseIntelligence}
+    \subitem {Character}, \hyperpage{24}
+  \item {increaseMana}
+    \subitem {Character}, \hyperpage{24}
+  \item {increaseMaxHealth}
+    \subitem {Character}, \hyperpage{25}
+  \item {increaseMaxMana}
+    \subitem {Character}, \hyperpage{25}
+  \item {increaseStrength}
+    \subitem {Character}, \hyperpage{25}
+  \item {incrementAttackCount}
+    \subitem {Character}, \hyperpage{25}
+  \item {initial\_ap}
+    \subitem {Constants}, \hyperpage{10}
+  \item {intelligence}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {Inventory}, \hyperpage{51}
+    \subitem {addItem}, \hyperpage{51}
+    \subitem {display}, \hyperpage{51}
+    \subitem {getItemCount}, \hyperpage{52}
+    \subitem {getSize}, \hyperpage{52}
+    \subitem {inventorySize}, \hyperpage{53}
+    \subitem {isEmpty}, \hyperpage{52}
+    \subitem {isFull}, \hyperpage{52}
+    \subitem {m\_items}, \hyperpage{53}
+    \subitem {newSize}, \hyperpage{52}
+    \subitem {operator[]}, \hyperpage{52}
+    \subitem {removeBrokenItems}, \hyperpage{52}
+    \subitem {removeItem}, \hyperpage{53}
+    \subitem {useItem}, \hyperpage{53}
+  \item {inventorySize}
+    \subitem {Inventory}, \hyperpage{53}
+  \item {invest\_cost}
+    \subitem {Constants}, \hyperpage{11}
+  \item {Investigate}, \hyperpage{54}
+    \subitem {combineModifiers}, \hyperpage{55}
+    \subitem {commonProfile}, \hyperpage{57}
+    \subitem {createEpicItem}, \hyperpage{55}
+    \subitem {createGenericItem}, \hyperpage{56}
+    \subitem {execute}, \hyperpage{56}
+    \subitem {generateModifier}, \hyperpage{56}
+    \subitem {generateMultiModifierName}, \hyperpage{56}
+    \subitem {getFriendlyNameForSingle}, \hyperpage{56}
+    \subitem {getName}, \hyperpage{56}
+    \subitem {Investigate}, \hyperpage{55}
+    \subitem {isSumValid}, \hyperpage{57}
+    \subitem {rareProfile}, \hyperpage{57}
+    \subitem {uncommonProfile}, \hyperpage{57}
+  \item {Investigate::ModifierProfile}, \hyperpage{68}
+    \subitem {maxMods}, \hyperpage{69}
+    \subitem {mediocreChance}, \hyperpage{69}
+    \subitem {mediocreMax}, \hyperpage{69}
+    \subitem {mediocreMin}, \hyperpage{69}
+    \subitem {minMods}, \hyperpage{69}
+    \subitem {negativeChance}, \hyperpage{69}
+    \subitem {strongChance}, \hyperpage{69}
+    \subitem {strongMax}, \hyperpage{69}
+    \subitem {strongMin}, \hyperpage{70}
+    \subitem {weakChance}, \hyperpage{70}
+    \subitem {weakMax}, \hyperpage{70}
+    \subitem {weakMin}, \hyperpage{70}
+  \item {investigateCost}
+    \subitem {PlayerCharacter}, \hyperpage{79}
+  \item {isBlocking}
+    \subitem {Character}, \hyperpage{25}
+  \item {isBroken}
+    \subitem {Equipment}, \hyperpage{43}
+  \item {isCombatOver}
+    \subitem {CombatSystem}, \hyperpage{34}
+  \item {isDamageBuffActive}
+    \subitem {Warrior}, \hyperpage{91}
+  \item {isDead}
+    \subitem {Character}, \hyperpage{25}
+  \item {isEmpty}
+    \subitem {Inventory}, \hyperpage{52}
+  \item {isFull}
+    \subitem {Inventory}, \hyperpage{52}
+  \item {isSpell}
+    \subitem {DamageCalculator}, \hyperpage{38}
+  \item {isSumValid}
+    \subitem {Investigate}, \hyperpage{57}
+  \item {Item}, \hyperpage{58}
+    \subitem {$\sim$Item}, \hyperpage{59}
+    \subitem {getModifiers}, \hyperpage{59}
+    \subitem {getName}, \hyperpage{59}
+    \subitem {getRarity}, \hyperpage{59}
+    \subitem {getRarityName}, \hyperpage{59}
+    \subitem {Item}, \hyperpage{58, 59}
+    \subitem {m\_customEffect}, \hyperpage{60}
+    \subitem {m\_effectApplied}, \hyperpage{60}
+    \subitem {m\_modifiers}, \hyperpage{60}
+    \subitem {m\_name}, \hyperpage{60}
+    \subitem {m\_rarity}, \hyperpage{61}
+    \subitem {runCustomEffect}, \hyperpage{60}
+    \subitem {setCustomEffect}, \hyperpage{60}
+    \subitem {use}, \hyperpage{60}
+  \item {Item.h}
+    \subitem {common}, \hyperpage{113}
+    \subitem {epic}, \hyperpage{113}
+    \subitem {rare}, \hyperpage{113}
+    \subitem {Rarity}, \hyperpage{113}
+    \subitem {uncommon}, \hyperpage{113}
+
+  \indexspace
+
+  \item {low\_bonus}
+    \subitem {Constants}, \hyperpage{11}
+
+  \indexspace
+
+  \item {m\_actionPoints}
+    \subitem {Character}, \hyperpage{28}
+  \item {m\_agility}
+    \subitem {Character}, \hyperpage{28}
+  \item {m\_armorDamage}
+    \subitem {DamageCalculator}, \hyperpage{39}
+  \item {m\_attackCount}
+    \subitem {Character}, \hyperpage{28}
+  \item {m\_blockSuccess}
+    \subitem {Warrior}, \hyperpage{92}
+  \item {m\_combatSystem}
+    \subitem {CombatInterface}, \hyperpage{33}
+  \item {m\_cost}
+    \subitem {Skill}, \hyperpage{82}
+  \item {m\_currentDurability}
+    \subitem {Equipment}, \hyperpage{44}
+  \item {m\_customEffect}
+    \subitem {Item}, \hyperpage{60}
+  \item {m\_damage}
+    \subitem {TargetedSkill}, \hyperpage{88}
+  \item {m\_damageBuff}
+    \subitem {Warrior}, \hyperpage{92}
+  \item {m\_effectApplied}
+    \subitem {Item}, \hyperpage{60}
+  \item {m\_enemy}
+    \subitem {CombatSystem}, \hyperpage{35}
+  \item {m\_finalDamage}
+    \subitem {DamageCalculator}, \hyperpage{39}
+  \item {m\_hasBuff}
+    \subitem {NPC}, \hyperpage{75}
+  \item {m\_hasEquippedBackup}
+    \subitem {NPC}, \hyperpage{75}
+  \item {m\_healAmount}
+    \subitem {Heal}, \hyperpage{51}
+  \item {m\_health}
+    \subitem {Character}, \hyperpage{28}
+  \item {m\_intelligence}
+    \subitem {Character}, \hyperpage{28}
+  \item {m\_inventory}
+    \subitem {MediumEnemy}, \hyperpage{66}
+    \subitem {PlayerCharacter}, \hyperpage{79}
+  \item {m\_isBlocking}
+    \subitem {Character}, \hyperpage{28}
+  \item {m\_isSpell}
+    \subitem {DamageCalculator}, \hyperpage{39}
+  \item {m\_items}
+    \subitem {Inventory}, \hyperpage{53}
+  \item {m\_mana}
+    \subitem {Character}, \hyperpage{28}
+  \item {m\_manaCost}
+    \subitem {SpellCast}, \hyperpage{85}
+  \item {m\_maxActionPoints}
+    \subitem {Character}, \hyperpage{28}
+  \item {m\_maxDurability}
+    \subitem {Equipment}, \hyperpage{44}
+  \item {m\_maxHealth}
+    \subitem {Character}, \hyperpage{29}
+  \item {m\_maxMana}
+    \subitem {Character}, \hyperpage{29}
+  \item {m\_modifiers}
+    \subitem {Item}, \hyperpage{60}
+  \item {m\_name}
+    \subitem {Character}, \hyperpage{29}
+    \subitem {Item}, \hyperpage{60}
+  \item {m\_player}
+    \subitem {CombatInterface}, \hyperpage{33}
+    \subitem {CombatSystem}, \hyperpage{35}
+  \item {m\_playerTurn}
+    \subitem {CombatSystem}, \hyperpage{35}
+  \item {m\_rarity}
+    \subitem {Item}, \hyperpage{61}
+  \item {m\_strength}
+    \subitem {Character}, \hyperpage{29}
+  \item {m\_turnCounter}
+    \subitem {Mage}, \hyperpage{63}
+  \item {m\_turnsSinceUltra}
+    \subitem {MediumEnemy}, \hyperpage{66}
+  \item {m\_type}
+    \subitem {Skill}, \hyperpage{83}
+  \item {m\_ultraAttacksUsed}
+    \subitem {MediumEnemy}, \hyperpage{66}
+  \item {m\_usedUltra}
+    \subitem {EasyEnemy}, \hyperpage{41}
+  \item {Mage}, \hyperpage{61}
+    \subitem {getTurnCounter}, \hyperpage{62}
+    \subitem {m\_turnCounter}, \hyperpage{63}
+    \subitem {Mage}, \hyperpage{62}
+    \subitem {startNewTurn}, \hyperpage{63}
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{126}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{126}
+  \item {mana}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {markAsSpell}
+    \subitem {DamageCalculator}, \hyperpage{38}
+  \item {max\_armor\_reduce}
+    \subitem {Constants}, \hyperpage{11}
+  \item {max\_attack\_bonus}
+    \subitem {Constants}, \hyperpage{11}
+  \item {max\_block\_reduce}
+    \subitem {Constants}, \hyperpage{11}
+  \item {max\_crit\_multiplier}
+    \subitem {Constants}, \hyperpage{11}
+  \item {max\_weapon\_decoy}
+    \subitem {Constants}, \hyperpage{11}
+  \item {maxHealth}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {maxInventorySize}
+    \subitem {Constants}, \hyperpage{11}
+  \item {maxMana}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {maxMods}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{69}
+  \item {mediocreChance}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{69}
+  \item {mediocreMax}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{69}
+  \item {mediocreMin}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{69}
+  \item {MediumEnemy}, \hyperpage{63}
+    \subitem {$\sim$MediumEnemy}, \hyperpage{65}
+    \subitem {equipBackup}, \hyperpage{65}
+    \subitem {evaluateInventory}, \hyperpage{65}
+    \subitem {evaluateItem}, \hyperpage{65}
+    \subitem {m\_inventory}, \hyperpage{66}
+    \subitem {m\_turnsSinceUltra}, \hyperpage{66}
+    \subitem {m\_ultraAttacksUsed}, \hyperpage{66}
+    \subitem {MediumEnemy}, \hyperpage{64}
+    \subitem {performTurn}, \hyperpage{65}
+    \subitem {performUseItem}, \hyperpage{65}
+    \subitem {shouldUseUltra}, \hyperpage{66}
+  \item {melee\_cost}
+    \subitem {Constants}, \hyperpage{12}
+  \item {MeleeAttack}, \hyperpage{67}
+    \subitem {execute}, \hyperpage{68}
+    \subitem {getName}, \hyperpage{68}
+    \subitem {MeleeAttack}, \hyperpage{68}
+  \item {min\_armor\_reduce}
+    \subitem {Constants}, \hyperpage{12}
+  \item {min\_attack\_bonus}
+    \subitem {Constants}, \hyperpage{12}
+  \item {min\_block\_reduce}
+    \subitem {Constants}, \hyperpage{12}
+  \item {min\_crit\_multiplier}
+    \subitem {Constants}, \hyperpage{12}
+  \item {min\_weapon\_decoy}
+    \subitem {Constants}, \hyperpage{12}
+  \item {minMods}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{69}
+  \item {modifyStat}
+    \subitem {Character}, \hyperpage{25}
+  \item {monkTraining}
+    \subitem {PlayerCharacter}, \hyperpage{79}
+  \item {mt}
+    \subitem {Random}, \hyperpage{14}
+
+  \indexspace
+
+  \item {negativeChance}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{69}
+  \item {newSize}
+    \subitem {Inventory}, \hyperpage{52}
+  \item {none}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {NPC}, \hyperpage{71}
+    \subitem {$\sim$NPC}, \hyperpage{72}
+    \subitem {displayStatus}, \hyperpage{72}
+    \subitem {equipBackup}, \hyperpage{73}
+    \subitem {m\_hasBuff}, \hyperpage{75}
+    \subitem {m\_hasEquippedBackup}, \hyperpage{75}
+    \subitem {NPC}, \hyperpage{72}
+    \subitem {performBuff}, \hyperpage{73}
+    \subitem {performHeal}, \hyperpage{73}
+    \subitem {performMeleeAttack}, \hyperpage{73}
+    \subitem {performRestoreMana}, \hyperpage{73}
+    \subitem {performSpellAttack}, \hyperpage{73}
+    \subitem {performTurn}, \hyperpage{73}
+    \subitem {performUltraAttack}, \hyperpage{74}
+    \subitem {shouldBuff}, \hyperpage{74}
+    \subitem {shouldHeal}, \hyperpage{74}
+    \subitem {shouldRestoreMana}, \hyperpage{74}
+    \subitem {shouldSpellCast}, \hyperpage{74}
+    \subitem {shouldUseUltra}, \hyperpage{74}
+
+  \indexspace
+
+  \item {openInventory}
+    \subitem {CombatInterface}, \hyperpage{32}
+  \item {operator[]}
+    \subitem {Inventory}, \hyperpage{52}
+
+  \indexspace
+
+  \item {performAttack}
+    \subitem {CombatInterface}, \hyperpage{32}
+  \item {performBlock}
+    \subitem {HardEnemy}, \hyperpage{48}
+  \item {performBuff}
+    \subitem {NPC}, \hyperpage{73}
+  \item {performHeal}
+    \subitem {NPC}, \hyperpage{73}
+  \item {performMeleeAttack}
+    \subitem {NPC}, \hyperpage{73}
+  \item {performRestoreMana}
+    \subitem {NPC}, \hyperpage{73}
+  \item {performSpellAttack}
+    \subitem {NPC}, \hyperpage{73}
+  \item {performTurn}
+    \subitem {EasyEnemy}, \hyperpage{41}
+    \subitem {HardEnemy}, \hyperpage{48}
+    \subitem {MediumEnemy}, \hyperpage{65}
+    \subitem {NPC}, \hyperpage{73}
+  \item {performUltraAttack}
+    \subitem {NPC}, \hyperpage{74}
+  \item {performUseItem}
+    \subitem {MediumEnemy}, \hyperpage{65}
+  \item {player}
+    \subitem {Game}, \hyperpage{46}
+  \item {PlayerCharacter}, \hyperpage{75}
+    \subitem {boostConcentration}, \hyperpage{77}
+    \subitem {canHeal}, \hyperpage{79}
+    \subitem {canUseSpell}, \hyperpage{77}
+    \subitem {displayStatus}, \hyperpage{77}
+    \subitem {easyBlock}, \hyperpage{79}
+    \subitem {enableSpellCast}, \hyperpage{77}
+    \subitem {getInventory}, \hyperpage{77, 78}
+    \subitem {getInvestigateCost}, \hyperpage{78}
+    \subitem {getStrengthBonus}, \hyperpage{78}
+    \subitem {hasEasyBlock}, \hyperpage{78}
+    \subitem {hasHealing}, \hyperpage{78}
+    \subitem {hasMonkTraining}, \hyperpage{78}
+    \subitem {hasSpellCastSkill}, \hyperpage{79}
+    \subitem {investigateCost}, \hyperpage{79}
+    \subitem {m\_inventory}, \hyperpage{79}
+    \subitem {monkTraining}, \hyperpage{79}
+    \subitem {PlayerCharacter}, \hyperpage{76, 77}
+    \subitem {reduceBlockCost}, \hyperpage{78}
+    \subitem {strengthBonus}, \hyperpage{80}
+    \subitem {unlockHealing}, \hyperpage{78}
+    \subitem {updateArmorBonuses}, \hyperpage{79}
+  \item {playerLost}
+    \subitem {CombatSystem}, \hyperpage{34}
+  \item {points\_to\_distribute}
+    \subitem {Constants}, \hyperpage{12}
+  \item {processInput}
+    \subitem {CombatInterface}, \hyperpage{32}
+
+  \indexspace
+
+  \item {Random}, \hyperpage{13}
+    \subitem {generate}, \hyperpage{13}
+    \subitem {get}, \hyperpage{13}
+    \subitem {mt}, \hyperpage{14}
+  \item {rare}
+    \subitem {Item.h}, \hyperpage{113}
+  \item {rareProfile}
+    \subitem {Investigate}, \hyperpage{57}
+  \item {Rarity}
+    \subitem {Item.h}, \hyperpage{113}
+  \item {reduceBlockCost}
+    \subitem {PlayerCharacter}, \hyperpage{78}
+  \item {removeBrokenItems}
+    \subitem {Inventory}, \hyperpage{52}
+  \item {removeItem}
+    \subitem {Inventory}, \hyperpage{53}
+  \item {repair}
+    \subitem {Equipment}, \hyperpage{43}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {repairArmor}
+    \subitem {Character}, \hyperpage{26}
+  \item {repairWeapon}
+    \subitem {Character}, \hyperpage{26}
+  \item {resetActionPoints}
+    \subitem {Character}, \hyperpage{26}
+    \subitem {Warrior}, \hyperpage{91}
+  \item {resetAttackCount}
+    \subitem {Character}, \hyperpage{26}
+  \item {resetDamageBuff}
+    \subitem {Warrior}, \hyperpage{91}
+  \item {runCustomEffect}
+    \subitem {Item}, \hyperpage{60}
+
+  \indexspace
+
+  \item {self}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {setBlocking}
+    \subitem {Character}, \hyperpage{26}
+  \item {setBlockSuccess}
+    \subitem {Warrior}, \hyperpage{91}
+  \item {setCustomEffect}
+    \subitem {Item}, \hyperpage{60}
+  \item {setStats}
+    \subitem {Character}, \hyperpage{26}
+  \item {shouldBlock}
+    \subitem {HardEnemy}, \hyperpage{48}
+  \item {shouldBuff}
+    \subitem {NPC}, \hyperpage{74}
+  \item {shouldHeal}
+    \subitem {NPC}, \hyperpage{74}
+  \item {shouldRestoreMana}
+    \subitem {NPC}, \hyperpage{74}
+  \item {shouldSpellCast}
+    \subitem {NPC}, \hyperpage{74}
+  \item {shouldUseUltra}
+    \subitem {MediumEnemy}, \hyperpage{66}
+    \subitem {NPC}, \hyperpage{74}
+  \item {Skill}, \hyperpage{80}
+    \subitem {$\sim$Skill}, \hyperpage{82}
+    \subitem {Damage}, \hyperpage{82}
+    \subitem {Defense}, \hyperpage{82}
+    \subitem {getCost}, \hyperpage{82}
+    \subitem {getName}, \hyperpage{82}
+    \subitem {Heal}, \hyperpage{82}
+    \subitem {m\_cost}, \hyperpage{82}
+    \subitem {m\_type}, \hyperpage{83}
+    \subitem {Skill}, \hyperpage{82}
+    \subitem {Type}, \hyperpage{81}
+    \subitem {Utility}, \hyperpage{82}
+  \item {SpellCast}, \hyperpage{83}
+    \subitem {execute}, \hyperpage{84}
+    \subitem {getName}, \hyperpage{85}
+    \subitem {m\_manaCost}, \hyperpage{85}
+    \subitem {SpellCast}, \hyperpage{84}
+  \item {src/Character/Character.cpp}, \hyperpage{95}
+  \item {src/Character/Character.h}, \hyperpage{95}
+  \item {src/Character/EasyEnemy.cpp}, \hyperpage{96}
+  \item {src/Character/EasyEnemy.h}, \hyperpage{97}
+  \item {src/Character/HardEnemy.cpp}, \hyperpage{98}
+  \item {src/Character/HardEnemy.h}, \hyperpage{98}
+  \item {src/Character/Mage.cpp}, \hyperpage{99}
+  \item {src/Character/Mage.h}, \hyperpage{100}
+  \item {src/Character/MediumEnemy.cpp}, \hyperpage{101}
+  \item {src/Character/MediumEnemy.h}, \hyperpage{101}
+  \item {src/Character/NPC.cpp}, \hyperpage{102}
+  \item {src/Character/NPC.h}, \hyperpage{103}
+  \item {src/Character/PlayerCharacter.cpp}, \hyperpage{104}
+  \item {src/Character/PlayerCharacter.h}, \hyperpage{104}
+  \item {src/Character/Warrior.cpp}, \hyperpage{105}
+  \item {src/Character/Warrior.h}, \hyperpage{106}
+  \item {src/Constants.h}, \hyperpage{107}
+  \item {src/Equipment/Armor.cpp}, \hyperpage{108}
+  \item {src/Equipment/Armor.h}, \hyperpage{109}
+  \item {src/Equipment/Equipment.cpp}, \hyperpage{109}
+  \item {src/Equipment/Equipment.h}, \hyperpage{110}
+  \item {src/Equipment/Inventory.cpp}, \hyperpage{111}
+  \item {src/Equipment/Inventory.h}, \hyperpage{111}
+  \item {src/Equipment/Item.cpp}, \hyperpage{112}
+  \item {src/Equipment/Item.h}, \hyperpage{112}
+  \item {src/Equipment/StatModifier.h}, \hyperpage{113}
+  \item {src/Equipment/Weapon.cpp}, \hyperpage{115}
+  \item {src/Equipment/Weapon.h}, \hyperpage{115}
+  \item {src/Game/calculateDamage.cpp}, \hyperpage{116}
+  \item {src/Game/CharacterCreation.cpp}, \hyperpage{117}
+  \item {src/Game/CharacterCreation.h}, \hyperpage{117}
+  \item {src/Game/CombatInterface.cpp}, \hyperpage{118}
+  \item {src/Game/CombatInterface.h}, \hyperpage{119}
+  \item {src/Game/CombatSystem.cpp}, \hyperpage{120}
+  \item {src/Game/CombatSystem.h}, \hyperpage{121}
+  \item {src/Game/computeStatBonus.cpp}, \hyperpage{121}
+  \item {src/Game/computeStatBonus.h}, \hyperpage{123}
+  \item {src/Game/DamageCalculator.h}, \hyperpage{124}
+  \item {src/Game/Game.cpp}, \hyperpage{124}
+  \item {src/Game/Game.h}, \hyperpage{125}
+  \item {src/main.cpp}, \hyperpage{126}
+  \item {src/Random.h}, \hyperpage{127}
+  \item {src/Skills/Block.cpp}, \hyperpage{128}
+  \item {src/Skills/Block.h}, \hyperpage{128}
+  \item {src/Skills/Concentrate.cpp}, \hyperpage{129}
+  \item {src/Skills/Concentrate.h}, \hyperpage{130}
+  \item {src/Skills/Heal.cpp}, \hyperpage{131}
+  \item {src/Skills/Heal.h}, \hyperpage{131}
+  \item {src/Skills/Investigate.cpp}, \hyperpage{132}
+  \item {src/Skills/Investigate.h}, \hyperpage{133}
+  \item {src/Skills/MeleeAttack.cpp}, \hyperpage{134}
+  \item {src/Skills/MeleeAttack.h}, \hyperpage{134}
+  \item {src/Skills/Skill.cpp}, \hyperpage{135}
+  \item {src/Skills/Skill.h}, \hyperpage{136}
+  \item {src/Skills/SpellCast.cpp}, \hyperpage{137}
+  \item {src/Skills/SpellCast.h}, \hyperpage{137}
+  \item {src/Skills/TargetedSkill.h}, \hyperpage{138}
+  \item {src/Skills/UntargetedSkill.h}, \hyperpage{139}
+  \item {start}
+    \subitem {Game}, \hyperpage{45}
+  \item {startCombat}
+    \subitem {CombatSystem}, \hyperpage{35}
+    \subitem {Game}, \hyperpage{45}
+  \item {startNewTurn}
+    \subitem {Mage}, \hyperpage{63}
+  \item {Stat}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {stat}
+    \subitem {StatModifier}, \hyperpage{85}
+  \item {StatModifier}, \hyperpage{85}
+    \subitem {stat}, \hyperpage{85}
+    \subitem {target}, \hyperpage{86}
+    \subitem {value}, \hyperpage{86}
+  \item {StatModifier.h}
+    \subitem {actionPoints}, \hyperpage{114}
+    \subitem {agility}, \hyperpage{114}
+    \subitem {armor}, \hyperpage{114}
+    \subitem {damage}, \hyperpage{114}
+    \subitem {enemy}, \hyperpage{114}
+    \subitem {health}, \hyperpage{114}
+    \subitem {intelligence}, \hyperpage{114}
+    \subitem {mana}, \hyperpage{114}
+    \subitem {maxHealth}, \hyperpage{114}
+    \subitem {maxMana}, \hyperpage{114}
+    \subitem {none}, \hyperpage{114}
+    \subitem {repair}, \hyperpage{114}
+    \subitem {self}, \hyperpage{114}
+    \subitem {Stat}, \hyperpage{114}
+    \subitem {strength}, \hyperpage{114}
+    \subitem {Target}, \hyperpage{114}
+    \subitem {weapon}, \hyperpage{114}
+  \item {statThreshold}
+    \subitem {Constants}, \hyperpage{12}
+  \item {strength}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {strengthBonus}
+    \subitem {PlayerCharacter}, \hyperpage{80}
+  \item {strongChance}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{69}
+  \item {strongMax}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{69}
+  \item {strongMin}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{70}
+
+  \indexspace
+
+  \item {takeActionPoints}
+    \subitem {Character}, \hyperpage{27}
+  \item {takeDamage}
+    \subitem {Armor}, \hyperpage{17}
+    \subitem {Character}, \hyperpage{27}
+    \subitem {Equipment}, \hyperpage{43}
+  \item {Target}
+    \subitem {StatModifier.h}, \hyperpage{114}
+  \item {target}
+    \subitem {StatModifier}, \hyperpage{86}
+  \item {TargetedSkill}, \hyperpage{86}
+    \subitem {execute}, \hyperpage{87}
+    \subitem {getDamage}, \hyperpage{88}
+    \subitem {m\_damage}, \hyperpage{88}
+    \subitem {TargetedSkill}, \hyperpage{87}
+  \item {Type}
+    \subitem {Skill}, \hyperpage{81}
+
+  \indexspace
+
+  \item {uncommon}
+    \subitem {Item.h}, \hyperpage{113}
+  \item {uncommonProfile}
+    \subitem {Investigate}, \hyperpage{57}
+  \item {unlockHealing}
+    \subitem {PlayerCharacter}, \hyperpage{78}
+  \item {UntargetedSkill}, \hyperpage{88}
+    \subitem {execute}, \hyperpage{89}
+    \subitem {UntargetedSkill}, \hyperpage{89}
+  \item {updateArmorBonuses}
+    \subitem {PlayerCharacter}, \hyperpage{79}
+  \item {use}
+    \subitem {Armor}, \hyperpage{17}
+    \subitem {Equipment}, \hyperpage{43}
+    \subitem {Item}, \hyperpage{60}
+    \subitem {Weapon}, \hyperpage{94}
+  \item {useItem}
+    \subitem {Inventory}, \hyperpage{53}
+  \item {useMana}
+    \subitem {Character}, \hyperpage{27}
+  \item {Utility}
+    \subitem {Skill}, \hyperpage{82}
+
+  \indexspace
+
+  \item {value}
+    \subitem {StatModifier}, \hyperpage{86}
+
+  \indexspace
+
+  \item {Warrior}, \hyperpage{90}
+    \subitem {isDamageBuffActive}, \hyperpage{91}
+    \subitem {m\_blockSuccess}, \hyperpage{92}
+    \subitem {m\_damageBuff}, \hyperpage{92}
+    \subitem {resetActionPoints}, \hyperpage{91}
+    \subitem {resetDamageBuff}, \hyperpage{91}
+    \subitem {setBlockSuccess}, \hyperpage{91}
+    \subitem {Warrior}, \hyperpage{91}
+  \item {weakChance}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{70}
+  \item {weakMax}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{70}
+  \item {weakMin}
+    \subitem {Investigate::ModifierProfile}, \hyperpage{70}
+  \item {Weapon}, \hyperpage{92}
+    \subitem {baseDamage}, \hyperpage{94}
+    \subitem {getBaseDamage}, \hyperpage{93}
+    \subitem {use}, \hyperpage{94}
+    \subitem {Weapon}, \hyperpage{93}
+  \item {weapon}
+    \subitem {StatModifier.h}, \hyperpage{114}
+
+\end{theindex}

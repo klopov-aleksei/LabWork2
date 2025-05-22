@@ -1,0 +1,128 @@
+\hypertarget{classInventory}{}\doxysection{Inventory Class Reference}
+\label{classInventory}\index{Inventory@{Inventory}}
+
+
+{\ttfamily \#include $<$Inventory.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classInventory_a2857c6265d41a5b8e458d394dbe29e27}{get\+Item\+Count}} () const
+\item 
+bool \mbox{\hyperlink{classInventory_ae64c114e81d5ee14653161f425510a26}{is\+Full}} () const
+\item 
+void \mbox{\hyperlink{classInventory_a0feda84374702dc909b393a76dcb6044}{new\+Size}} ()
+\item 
+int \mbox{\hyperlink{classInventory_af018f37abdb64bbb32ec587a7dc0b6a9}{get\+Size}} () const
+\item 
+const \mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classInventory_a6791d60abe0a90cf8d9da8001a9c6aca}{operator\mbox{[}$\,$\mbox{]}}} (int index) const
+\item 
+void \mbox{\hyperlink{classInventory_a83bb32ecec67e45aac9a7bc864fda8a8}{add\+Item}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$ item)
+\item 
+void \mbox{\hyperlink{classInventory_adbb662dee2105fd4fd3782c941e48eaa}{remove\+Item}} (int index)
+\item 
+void \mbox{\hyperlink{classInventory_a3ed66dff8cbc0b857e67ae8338b85e08}{remove\+Broken\+Items}} ()
+\item 
+void \mbox{\hyperlink{classInventory_a6145277946abab65d1202f7baf96e104}{use\+Item}} (int index, \mbox{\hyperlink{classCharacter}{Character}} \&user, \mbox{\hyperlink{classCharacter}{Character}} $\ast$\mbox{\hyperlink{StatModifier_8h_a31488d29805a596498c0234ae392d35dacde2fde1fa1551a704d775ce2315915d}{enemy}}=nullptr)
+\item 
+void \mbox{\hyperlink{classInventory_a6dc6f891146662505d32183a743fc682}{display}} () const
+\item 
+bool \mbox{\hyperlink{classInventory_a42bcc644f45886493adee7aa7a8a00b3}{is\+Empty}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $>$ \mbox{\hyperlink{classInventory_a6eb0ecbace83e7e8537b8df90e3605b4}{m\+\_\+items}}
+\item 
+int \mbox{\hyperlink{classInventory_aef9df842e7d3426772417309c22b7ab9}{inventory\+Size}} \{ 5 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInventory_a83bb32ecec67e45aac9a7bc864fda8a8}\label{classInventory_a83bb32ecec67e45aac9a7bc864fda8a8}} 
+\index{Inventory@{Inventory}!addItem@{addItem}}
+\index{addItem@{addItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily void Inventory\+::add\+Item (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classItem}{Item}} $>$}]{item }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInventory_a6dc6f891146662505d32183a743fc682}\label{classInventory_a6dc6f891146662505d32183a743fc682}} 
+\index{Inventory@{Inventory}!display@{display}}
+\index{display@{display}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Inventory\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInventory_a2857c6265d41a5b8e458d394dbe29e27}\label{classInventory_a2857c6265d41a5b8e458d394dbe29e27}} 
+\index{Inventory@{Inventory}!getItemCount@{getItemCount}}
+\index{getItemCount@{getItemCount}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{getItemCount()}{getItemCount()}}
+{\footnotesize\ttfamily int Inventory\+::get\+Item\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInventory_af018f37abdb64bbb32ec587a7dc0b6a9}\label{classInventory_af018f37abdb64bbb32ec587a7dc0b6a9}} 
+\index{Inventory@{Inventory}!getSize@{getSize}}
+\index{getSize@{getSize}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Inventory\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInventory_a42bcc644f45886493adee7aa7a8a00b3}\label{classInventory_a42bcc644f45886493adee7aa7a8a00b3}} 
+\index{Inventory@{Inventory}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Inventory\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInventory_ae64c114e81d5ee14653161f425510a26}\label{classInventory_ae64c114e81d5ee14653161f425510a26}} 
+\index{Inventory@{Inventory}!isFull@{isFull}}
+\index{isFull@{isFull}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily bool Inventory\+::is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInventory_a0feda84374702dc909b393a76dcb6044}\label{classInventory_a0feda84374702dc909b393a76dcb6044}} 
+\index{Inventory@{Inventory}!newSize@{newSize}}
+\index{newSize@{newSize}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{newSize()}{newSize()}}
+{\footnotesize\ttfamily void Inventory\+::new\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInventory_a6791d60abe0a90cf8d9da8001a9c6aca}\label{classInventory_a6791d60abe0a90cf8d9da8001a9c6aca}} 
+\index{Inventory@{Inventory}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classItem}{Item}} $\ast$ Inventory\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classInventory_a3ed66dff8cbc0b857e67ae8338b85e08}\label{classInventory_a3ed66dff8cbc0b857e67ae8338b85e08}} 
+\index{Inventory@{Inventory}!removeBrokenItems@{removeBrokenItems}}
+\index{removeBrokenItems@{removeBrokenItems}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{removeBrokenItems()}{removeBrokenItems()}}
+{\footnotesize\ttfamily void Inventory\+::remove\+Broken\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInventory_adbb662dee2105fd4fd3782c941e48eaa}\label{classInventory_adbb662dee2105fd4fd3782c941e48eaa}} 
+\index{Inventory@{Inventory}!removeItem@{removeItem}}
+\index{removeItem@{removeItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{removeItem()}{removeItem()}}
+{\footnotesize\ttfamily void Inventory\+::remove\+Item (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInventory_a6145277946abab65d1202f7baf96e104}\label{classInventory_a6145277946abab65d1202f7baf96e104}} 
+\index{Inventory@{Inventory}!useItem@{useItem}}
+\index{useItem@{useItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{useItem()}{useItem()}}
+{\footnotesize\ttfamily void Inventory\+::use\+Item (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{\mbox{\hyperlink{classCharacter}{Character}} \&}]{user,  }\item[{\mbox{\hyperlink{classCharacter}{Character}} $\ast$}]{enemy = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classInventory_aef9df842e7d3426772417309c22b7ab9}\label{classInventory_aef9df842e7d3426772417309c22b7ab9}} 
+\index{Inventory@{Inventory}!inventorySize@{inventorySize}}
+\index{inventorySize@{inventorySize}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{inventorySize}{inventorySize}}
+{\footnotesize\ttfamily int Inventory\+::inventory\+Size \{ 5 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInventory_a6eb0ecbace83e7e8537b8df90e3605b4}\label{classInventory_a6eb0ecbace83e7e8537b8df90e3605b4}} 
+\index{Inventory@{Inventory}!m\_items@{m\_items}}
+\index{m\_items@{m\_items}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{m\_items}{m\_items}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classItem}{Item}}$>$ $>$ Inventory\+::m\+\_\+items\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Equipment/\mbox{\hyperlink{Inventory_8h}{Inventory.\+h}}\item 
+src/\+Equipment/\mbox{\hyperlink{Inventory_8cpp}{Inventory.\+cpp}}\end{DoxyCompactItemize}

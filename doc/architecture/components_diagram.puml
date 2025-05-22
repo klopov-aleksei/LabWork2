@@ -1,0 +1,87 @@
+@startuml
+!theme reddress-lightred
+
+package "Core" {
+  [Game]
+  [CharacterCreation]
+  [CombatSystem]
+  [CombatInterface]
+  [DamageCalculator]
+}
+
+package "Characters" {
+  [Character]
+  [PlayerCharacter]
+  [NPC]
+}
+
+package "Entities" {
+  [Warrior]
+  [Mage]
+  [EasyEnemy]
+  [MediumEnemy]
+  [HardEnemy]
+}
+
+package "Equipment & Inventory" {
+  [Inventory]
+  [Item]
+  [Weapon]
+  [Armor]
+  [StatModifier]
+}
+
+package "Skills" {
+  [Skill]
+  [TargetedSkill]
+  [UntargetedSkill]
+  [MeleeAttack]
+  [SpellCast]
+  [Block]
+  [Concentrate]
+  [Heal]
+  [Investigate]
+}
+
+'Core Flows'
+Game *-- CharacterCreation : creates
+Game *-- CombatSystem      : manages
+CombatSystem --> CombatInterface : interacts
+CombatSystem --> DamageCalculator: computes damage
+CombatInterface --> PlayerCharacter : displays/status
+
+'Character Setup'
+CharacterCreation --> PlayerCharacter : instantiates
+CharacterCreation --> Weapon          : equips
+CharacterCreation --> Armor           : equips
+CharacterCreation --> Inventory       : populates
+
+'Runtime Associations'
+PlayerCharacter *-- Inventory : holds
+PlayerCharacter *-- Weapon    : equips
+PlayerCharacter *-- Armor     : equips
+NPC             *-- Weapon    : equips
+NPC             *-- Armor     : equips
+
+Inventory *-- Item        : contains
+Item       *-- StatModifier : applies
+
+CombatSystem --> Skill            : invokes
+Skill        <|-- TargetedSkill   
+Skill        <|-- UntargetedSkill 
+TargetedSkill --> MeleeAttack     
+TargetedSkill --> SpellCast       
+UntargetedSkill --> Block         
+UntargetedSkill --> Concentrate   
+UntargetedSkill --> Heal          
+UntargetedSkill --> Investigate   
+
+Character <|-- PlayerCharacter
+Character <|-- NPC
+PlayerCharacter <|-- Warrior
+PlayerCharacter <|-- Mage
+NPC <|-- EasyEnemy
+NPC <|-- MediumEnemy
+MediumEnemy <|-- HardEnemy
+
+@enduml
