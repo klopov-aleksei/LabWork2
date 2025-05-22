@@ -1,0 +1,59 @@
+name: C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake libgtest-dev build-essential
+        
+    - name: Build
+      working-directory: src
+      run: make
+
+  run_tests:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake libgtest-dev build-essential
+
+    - name: Check for test target
+      id: check-test
+      working-directory: src
+      run: |
+        # Check if 'test' target exists in Makefile
+        if grep -q '^test:' Makefile; then
+          echo "TEST_EXISTS=true" >> $GITHUB_OUTPUT
+        else
+          echo "TEST_EXISTS=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Build Google Tests
+      if: steps.check-test.outputs.TEST_EXISTS == 'true'
+      working-directory: tests
+      run: make test
+
+    - name: Run Tests
+      if: steps.check-test.outputs.TEST_EXISTS == 'true'
+      working-directory: tests
+      run: ./test_game
+
